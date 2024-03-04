@@ -1,0 +1,49 @@
+/* stylelint-disable */
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-Thin.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+}

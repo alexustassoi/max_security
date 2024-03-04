@@ -1,0 +1,119 @@
+body {
+    padding: 0;
+    margin: 0;
+    color: #46494D;
+    font-family: Turbine, sans-serif;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.custom-container {
+    width: 1078px;
+    margin: 0 auto;
+}
+
+svg {
+    pointer-events: none;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main-wrapper {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.cover-bg {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.responsive-image {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+p {
+    margin-top: 0;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #17181A;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Turbine, sans-serif;
+    font-size: 66px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.51;
+    margin-top: 0;
+}
+
+h3 {
+    color: #2F3034;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Turbine, sans-serif;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.46;
+    margin-top: 0;
+}
+
+h4 {
+    color: #2F3034;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Turbine, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.46;
+    margin-top: 0;
+}
+
+h5 {
+    color: #46494D;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Turbine, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.26;
+    margin-top: 0;
+}
