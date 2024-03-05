@@ -85,7 +85,7 @@ export default class Popup {
                     ? event.target.getAttribute('href')
                     : event.target.dataset.href;
 
-            // this.body.classList.add('popup-opened');
+            this.body.classList.add('popup-opened');
             // this.html.classList.add('popup-opened');
             fadeIn(elHref);
             return true;

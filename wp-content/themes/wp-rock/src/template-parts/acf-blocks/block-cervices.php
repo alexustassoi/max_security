@@ -42,7 +42,7 @@ $bottom_content = get_field_value( $fields, 'bottom_content' );
                     $description = $service['description'];
                     ?>
 
-                    <a href="#services-popup-<?php echo $services_counter; ?>" class="services__item" style="background-color: <?php echo $color; ?>">
+                    <a href="#services-popup-<?php echo $services_counter; ?>" class="services__item js-open-popup-activator" style="background-color: <?php echo $color; ?>">
                         <figure class="services__item-icon">
                             <?php if($icon): ?>
                                 <img  src="<?php echo $icon; ?>" alt="service icon">
@@ -81,3 +81,72 @@ $bottom_content = get_field_value( $fields, 'bottom_content' );
         <?php endif; ?>
     </div>
 </div>
+
+<?php if($services): ?>
+    <?php
+    $popup_counter = 1;
+     foreach ($services as $item):
+        $popup = $item['service_popup'];
+        $popup_image = $popup['image'];
+        $popup_icon = $popup['icon'];
+        $popup_title = $popup['title'];
+        $popup_subtitle = $popup['subtitle'];
+        $popup_content = $popup['content'];
+        $popup_color = $popup['background_color'];
+        $link = $popup['link'];
+
+    ?>
+    <div id="services-popup-<?php echo $popup_counter; ?>" class="popup popup__service js-popup-close">
+        <div class="popup__wrapper-inner popup__service-inner" style="background-color: <?php echo $popup_color; ?>">
+
+            <button class="popup__btn-close js-popup-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="close">
+                        <path fill="#fff" id="x" d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
+                    </g>
+                </svg>
+            </button>
+
+            <figure class="popup__service-image">
+                <?php if($popup_image): ?>
+                    <img src="<?php echo $popup_image; ?>" alt="popup image">
+                <?php endif; ?>
+            </figure>
+
+            <div class="popup__service-content">
+                <div class="popup__service-icon">
+                    <?php if($popup_icon): ?>
+                        <img src="<?php echo $popup_icon; ?>" alt="popup icon">
+                    <?php endif; ?>
+                </div>
+
+                <div class="popup__service-right">
+                    <?php if($popup_title): ?>
+                        <h3 class="popup__service-title"><?php echo $popup_title; ?></h3>
+                    <?php endif; ?>
+
+                    <?php if($popup_subtitle): ?>
+                        <p class="popup__service-subtitle"><?php echo $popup_subtitle; ?></p>
+                    <?php endif; ?>
+
+                    <?php if($popup_content): ?>
+                        <div class="popup__service-text">
+                            <?php echo $popup_content; ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if($link): ?>
+                        <a target="<?php echo $link['target']; ?>" href="<?php echo $link['url']; ?>"
+                           class="popup__service-link">
+                            <?php echo $link['title']; ?> →
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php $popup_counter++; endforeach; ?>
+<?php endif; ?>
+
+

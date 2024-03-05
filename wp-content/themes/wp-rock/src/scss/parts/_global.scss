@@ -4,6 +4,10 @@ body {
     color: #46494D;
     font-family: Turbine, sans-serif;
 
+    &.popup-opened {
+        overflow: hidden;
+    }
+
     * {
         box-sizing: border-box;
     }
@@ -71,6 +75,19 @@ iframe {
 
 h1 {
     margin: 0;
+}
+
+li {
+    color: #F3F0EC;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Turbine, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    position: relative;
+    list-style: none;
+    margin-bottom: 0;
 }
 
 h2 {

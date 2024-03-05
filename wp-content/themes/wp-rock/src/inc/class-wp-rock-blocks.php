@@ -18,11 +18,16 @@ class WP_Rock_Blocks {
      */
     protected $blocks = array(
         'block-top-page' => array(
-            'title'         => 'Block - Top page',
+            'title'      => 'Block - Top page',
         ),
-
         'block-cervices' => array(
-            'title'         => 'Block - Cervices',
+            'title'      => 'Block - Cervices',
+        ),
+        'block-benefts' => array(
+            'title'     => 'Block - Benefts',
+        ),
+        'block-clients' => array(
+            'title'     => 'Block - Clients',
         ),
     );
 

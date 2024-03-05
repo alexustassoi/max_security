@@ -53,6 +53,10 @@
         overflow: hidden;
         text-decoration: none;
 
+        & * {
+           pointer-events: none;
+        }
+
         &-icon {
             height: 63px;
             width: 63px;
