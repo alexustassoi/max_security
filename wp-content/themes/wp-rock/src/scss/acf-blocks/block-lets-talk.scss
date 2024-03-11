@@ -1,0 +1,32 @@
+.lets-talk {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 156px 0;
+    text-align: center;
+
+    &__title {
+        color: #F3F0EC;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    &__link {
+        display: inline-block;
+        color: #F3F0EC;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.45;
+        margin: 0;
+        text-decoration: none;
+        position: relative;
+    }
+}

@@ -1,4 +1,5 @@
 import Swiper, { EffectFade, Navigation } from 'swiper';
+
 const initBlockExample = () => {
     const scrollBottom = document.querySelector('.js-scroll-bottom') as HTMLElement;
     const topPageSwiper = document.querySelector('.js-top-page-swiper') as HTMLElement;

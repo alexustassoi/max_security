@@ -1,0 +1,244 @@
+/* stylelint-disable */
+.journey {
+    padding: 80px 0;
+
+    &__title {
+        color: var(--Black-100, #17181A);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.45;
+        text-align: center;
+        margin: 0;
+    }
+
+    &__subtitle {
+        color: var(--Black-80, #2F3034);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.26;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    &__history {
+        display: flex;
+        gap: 156px;
+        padding-left: 30px;
+        margin-bottom: 100px;
+
+        &-item {
+            border-radius: 20px;
+            border: 4px solid  #CC7510;
+            display: flex;
+            gap: 20px;
+            position: relative;
+            width: 342px;
+            min-height: 200px;
+            flex-shrink: 0;
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                right: -50px;
+                width: 22px;
+                height: 22px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMjAyXzc1MjgpIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEyLjI4OTYgNC44OTk5NlY0Ljg5MjI5QzEyLjIzNTcgNC44OTIyOSAxMi4xODIgNC44OTQ4NSAxMi4xMjg2IDQuODk5OTZDMTEuODEwOCA0LjkzMDM1IDExLjUwMzEgNS4wNTA4NSAxMS4yNDIgNS4yNTgzNUMxMS4xOTA3IDUuMjk5MTEgMTEuMTQxMSA1LjM0MzIxIDExLjA5MzcgNS4zOTA2NkMxMC40MjY4IDYuMDU3NTUgMTAuNDI2OCA3LjEyMjk2IDExLjA5MzcgNy43ODk4NUwxMy4xMDk3IDkuODA1OTZINS4zMDYyQzQuMzYzMzQgOS44MDU5NiAzLjYxMjE1IDEwLjU2NDggMy42MTIxNSAxMS41QzMuNjEyMTUgMTIuNDM1MiA0LjM3MTAxIDEzLjE5NCA1LjMwNjIgMTMuMTk0SDEzLjEwOTdMMTEuMDkzNyAxNS4yMTAxQzEwLjQyNjggMTUuODc3IDEwLjQyNjggMTYuOTQyNCAxMS4wOTM3IDE3LjYwOTNDMTEuNzYwNiAxOC4yNzYyIDEyLjgyNjEgMTguMjc2MiAxMy40OTMgMTcuNjA5M0wxOS4yNDk4IDExLjg1MjZDMTkuNDQxNSAxMS42NjA5IDE5LjQ0MTUgMTEuMzQ2NyAxOS4yNDk4IDExLjE1NTFMMTMuNDkzIDUuMzk4MzNDMTMuMTYzNCA1LjA2ODcyIDEyLjcyNjUgNC44OTk5NiAxMi4yODk2IDQuODk5OTZaTTEwLjM1MjkgMTQuNDY5NEMxMC4zNTI5IDE0LjQ2OTQgMTAuMzUyOSAxNC40Njk0IDEwLjM1MjkgMTQuNDY5NEwxMC41ODA2IDE0LjI0MTdINS4zMDYyQzMuNzkyNDMgMTQuMjQxNyAyLjU2NDUzIDEzLjAxMzggMi41NjQ1MyAxMS41QzIuNTY0NTMgOS45ODkzMiAzLjc4MTY4IDguNzU4MzUgNS4zMDYyIDguNzU4MzVIMTAuNTgwNkwxMC4zNTI5IDguNTMwNjNDOS4yNzY5MSA3LjQ1NDYyIDkuMjc2OTEgNS43MjU4OSAxMC4zNTI5IDQuNjQ5ODdDMTAuODgyNCA0LjEyMDQxIDExLjU3OTYgMy44NDQ2NyAxMi4yODk2IDMuODQ0NjdIMTMuMzM3MlY0LjA1OTZDMTMuNjY0NCA0LjE5NDI1IDEzLjk3MDMgNC4zOTQwNCAxNC4yMzM4IDQuNjU3NTVMMTkuOTkwNiAxMC40MTQzQzIwLjU5MTQgMTEuMDE1MSAyMC41OTE0IDExLjk5MjYgMTkuOTkwNiAxMi41OTM0TDE0LjIzMzggMTguMzUwMUMxMy4xNTc4IDE5LjQyNjEgMTEuNDI5IDE5LjQyNjEgMTAuMzUyOSAxOC4zNTAxQzkuMjc2OTEgMTcuMjc0MSA5LjI3NjkyIDE1LjU0NTQgMTAuMzUyOSAxNC40Njk0Wk0xOS4wMTE0IDMuNTkyOTRDMTcuNDYzNyAyLjE3NCAxNS4wNDggMS41NDc2MiAxMS41IDEuNTQ3NjJDNy45NTE5NyAxLjU0NzYyIDUuNTM2MjcgMi4xNzQgMy45ODg2MyAzLjU5Mjk0QzIuNDYwOTIgNC45OTM2MiAxLjU0NzYyIDcuMzg1MTYgMS41NDc2MiAxMS41QzEuNTQ3NjIgMTUuNjE0OCAyLjQ2MDkyIDE4LjAwNjQgMy45ODg2MyAxOS40MDcxQzUuNTM2MjcgMjAuODI2IDcuOTUxOTcgMjEuNDUyNCAxMS41IDIxLjQ1MjRDMTUuMDQ4IDIxLjQ1MjQgMTcuNDYzNyAyMC44MjYgMTkuMDExNCAxOS40MDcxQzIwLjUzOTEgMTguMDA2NCAyMS40NTI0IDE1LjYxNDggMjEuNDUyNCAxMS41QzIxLjQ1MjQgNy4zODUxNiAyMC41MzkxIDQuOTkzNjIgMTkuMDExNCAzLjU5Mjk0Wk0yMi41IDExLjVDMjIuNSAzLjAyMjAxIDE4Ljc1MTYgMC41IDExLjUgMC41QzQuMjQ4NDIgMC41IDAuNSAzLjAyMjAxIDAuNSAxMS41QzAuNSAxOS45NzggNC4yNDg0MiAyMi41IDExLjUgMjIuNUMxOC43NTE2IDIyLjUgMjIuNSAxOS45NzggMjIuNSAxMS41WiIgZmlsbD0iI0NDNzUxMCIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImNsaXAwXzIwMl83NTI4Ij48cmVjdCB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjUgMC41KSIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==);
+
+            }
+
+            &-image {
+                border-radius: 59px;
+                border: 4px solid  #CC7510;
+                position: relative;
+                margin-left: -84px;
+                width: 168px;
+                height: 168px;
+                overflow: hidden;
+                top: 50%;
+                transform: translateY(-50%);
+                flex-shrink: 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-content {
+                width: 100%;
+                padding: 10px 25px 10px 0;
+            }
+
+            &-year {
+                color:  #17181A;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Turbine, sans-serif;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.26;
+                margin-bottom: 0;
+            }
+
+            &-title {
+                color: #2F3034;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Turbine, sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.33;
+                margin-bottom: 4px;
+            }
+
+            &-text {
+                color: #46494D;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Turbine, sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.42;
+                margin: 0;
+            }
+        }
+    }
+
+    .reviews {
+        &__swiper {
+            position: relative;
+        }
+
+        &__button {
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+
+            &.prev {
+                left: 0;
+            }
+
+            &.next {
+                right: 0;
+            }
+        }
+
+        &__slide {
+            padding: 40px 95px;
+
+            &-wrap {
+                background-color: #fff;
+                display: flex;
+                gap: 40px;
+                border-radius: 135px 0 0 135px;
+            }
+
+            &-image {
+                width: 332px;
+                height: 332px;
+                border-radius: 135px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                background-image: url('../images/acf-blocks/Rectangle 13.png');
+
+                img {
+                    display: block;
+                    width: 232px;
+                    height: 232px;
+                    object-fit: cover;
+                    border-radius: 92px;
+                }
+            }
+
+            &-content {
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-right: 37px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 91px;
+                    height: 74px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    left: 0;
+                    top: -40px;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTEiIGhlaWdodD0iNzQiIHZpZXdCb3g9IjAgMCA5MSA3NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDYuMTgyNSA3NEw1MS4wNjkyIDM5LjMxOTZMNzIuMjYwMiAwSDkxTDc1LjI0NjUgMzcuNDA5M0w4Ni45Mjc4IDM3LjQwOTNMODEuNzY5OCA3NEw0Ni4xODI1IDc0Wk0wIDc0TDQuODg2NDkgMzkuMzE5NkwyNi4wNzc1IDBINDQuODE3NUwyOS4zMzUyIDM3LjQwOTNINDAuNzQ1M0wzNS41ODcxIDc0TDAgNzRaIiBmaWxsPSIjNjQ1RDc1Ii8+PC9zdmc+);
+
+                }
+
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 91px;
+                    height: 74px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    right: 35px;
+                    bottom: -40px;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTEiIGhlaWdodD0iNzQiIHZpZXdCb3g9IjAgMCA5MSA3NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNDQuODE3NSAwTDM5LjkzMDggMzQuNjgwNEwxOC43Mzk4IDc0SDBMMTUuNzUzNSAzNi41OTA3SDQuMDcyMkw5LjIzMDI1IDBINDQuODE3NVpNOTEgMEw4Ni4xMTM1IDM0LjY4MDRMNjQuOTIyNSA3NEg0Ni4xODI1TDYxLjY2NDggMzYuNTkwN0g1MC4yNTQ3TDU1LjQxMjkgMEg5MVoiIGZpbGw9IiM2NDVENzUiLz48L3N2Zz4=);
+                }
+
+            }
+
+            &-review {
+                color: var(--Black-80, #2F3034);
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Turbine, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.3;
+                margin-bottom: 24px;
+            }
+
+            &-name {
+                color: #17181A;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Turbine, sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.33;
+                margin: 0;
+            }
+
+            &-position {
+                color: var(--Black-80, #2F3034);
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Turbine, sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.42;
+                margin: 0;
+            }
+        }
+    }
+
+}

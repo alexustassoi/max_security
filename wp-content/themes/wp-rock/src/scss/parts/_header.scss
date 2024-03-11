@@ -1,14 +1,60 @@
 .site-header {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: $zindex-sticky;
     width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.3s;
 
-    &__absolute {
-        position: absolute;
+    &.scroll-header {
+        background-color: #151836;
     }
-    &__sticky {
-        position: sticky;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu {
+        margin-left: auto;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                a, span {
+                    color: #F3F0EC;
+                    font-family: Turbine, sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__login {
+        background-color: #5B8CAB;
+        padding: 0 24px;
+        color: var(--White-Text, #F3F0EC);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.57;
+        margin-left: 60px;
     }
 }

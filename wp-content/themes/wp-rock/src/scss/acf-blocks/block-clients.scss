@@ -1,0 +1,30 @@
+.clients {
+    padding: 80px 0;
+
+    &__title {
+        color:#17181A;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.45;
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: #2F3034;
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.26;
+        margin-bottom: 80px;
+    }
+
+    &__slide {
+        width: auto;
+    }
+}

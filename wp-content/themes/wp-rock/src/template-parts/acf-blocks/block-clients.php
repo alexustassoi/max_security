@@ -19,11 +19,23 @@ $clients    = get_field_value($fields, 'clients');
         <?php if ($title): ?>
             <h2 class="clients__title"><?php echo $title; ?></h2>
         <?php endif; ?>
+
+        <?php if ($subtitle): ?>
+            <h5 class="clients__subtitle"><?php echo $subtitle; ?></h5>
+        <?php endif; ?>
     </div>
 
     <?php if ($clients): ?>
         <div class="clients__wrap">
-
+            <div class="swiper js-clients-swiper">
+                <div class="swiper-wrapper">
+                    <?php foreach ($clients as $icon): ?>
+                        <div class="swiper-slide clients__slide">
+                            <img src="<?php echo $icon; ?>" alt="clients logo">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
         </div>
     <?php endif; ?>
 </div>

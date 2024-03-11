@@ -29,6 +29,15 @@ class WP_Rock_Blocks {
         'block-clients' => array(
             'title'     => 'Block - Clients',
         ),
+        'block-experts' => array(
+            'title'     => 'Block - Experts',
+        ),
+        'block-journey' => array(
+            'title'     => 'Block - Journey',
+        ),
+        'block-lets-talk' => array(
+            'title'     => 'Block - Let’s talk',
+        ),
     );
 
     /**

@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     color: #46494D;
+    background-color: #F5F5F5;
     font-family: Turbine, sans-serif;
 
     &.popup-opened {
@@ -125,7 +126,6 @@ h4 {
 
 h5 {
     color: #46494D;
-    text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
     font-size: 30px;
