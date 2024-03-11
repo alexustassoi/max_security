@@ -21,6 +21,19 @@ body {
 .custom-container {
     width: 1078px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1200px) {
+        width: 1000px;
+    }
+
+    @media screen and (max-width: 992px) {
+        width: 700px;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 24px;
+    }
 }
 
 svg {
@@ -31,6 +44,7 @@ svg {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 #main-wrapper {

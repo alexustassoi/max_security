@@ -4,20 +4,86 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 0;
     transition: all 0.3s;
+    background-color: #151836;
+    height: 88px;
+
+    &__max-words {
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        top: 100%;
+        background-color: rgba(21, 24, 54, 0.9);
+        padding: 80px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s;
+
+        &.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        &-wrap {
+            display: grid;
+            gap: 42px;
+            grid-template-columns: repeat(4,minmax(100px,1fr));
+
+            .services__item {
+                transition: all 0.3s;
+
+                &:hover {
+                    box-shadow: 0px 0px 34px 0px #AA6902;
+                }
+            }
+        }
+    }
+
+    &__logo {
+
+        img {
+            max-width: 185px;
+            height: auto;
+
+            @media screen and (max-width: 768px) {
+                width: 150px;
+            }
+
+            @media screen and (max-width: 480px) {
+                width: 120px;
+            }
+        }
+    }
+
+    &__hamburger {
+        display: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin-left: auto;
+
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
+    }
 
     &.scroll-header {
-        background-color: #151836;
+
     }
 
     &__container {
         display: flex;
         align-items: center;
+        height: 100%;
     }
 
     &__menu {
         margin-left: auto;
+        height: 100%;
+
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
 
         ul {
             display: flex;
@@ -25,11 +91,15 @@
             gap: 60px;
             padding: 0;
             margin: 0;
+            height: 100%;
 
             li {
                 padding: 0;
                 margin: 0;
                 list-style: none;
+                height: 100%;
+                display: flex;
+                align-items: center;
 
                 a, span {
                     color: #F3F0EC;
@@ -56,5 +126,9 @@
         font-weight: 400;
         line-height: 1.57;
         margin-left: 60px;
+
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
     }
 }

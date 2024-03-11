@@ -4,6 +4,39 @@ Swiper.use([Navigation]);
 
 const initBlockJourney = () => {
     const expertsSwiper = document.querySelector('.js-reviews-slider') as HTMLElement;
+    const historySwiper = document.querySelector('.js-history-slider') as HTMLElement;
+
+    if (historySwiper) {
+        const historySlider = new Swiper(historySwiper, {
+            spaceBetween: 156,
+            loop: true,
+            slidesPerView: 'auto',
+            freeMode: true,
+
+            breakpoints: {
+                320: {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    spaceBetween: 88,
+                },
+                768: {
+                    spaceBetween: 100,
+                    loop: false,
+                    centeredSlides: false,
+                },
+                992: {
+                    spaceBetween: 100,
+                    loop: false,
+                    centeredSlides: false,
+                },
+                1200: {
+                    spaceBetween: 156,
+                },
+            },
+        });
+    }
+
     if (expertsSwiper) {
         const expertsSlider = new Swiper(expertsSwiper, {
             loop: true,

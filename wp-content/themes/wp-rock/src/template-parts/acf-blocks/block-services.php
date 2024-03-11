@@ -29,43 +29,50 @@ $bottom_content = get_field_value( $fields, 'bottom_content' );
         <?php if($text): ?>
             <h5 class="services__text"><?php echo $text; ?></h5>
         <?php endif; ?>
+    </div>
 
+    <div class="custom-container services__custom-container">
         <?php if($services): ?>
-            <div class="services__wrap">
-                <?php
-                $services_counter = 1;
-                foreach ($services as $item):
-                    $service = $item['service'];
-                    $icon = $service['icon'];
-                    $title = $service['title'];
-                    $color = $service['background_color'];
-                    $description = $service['description'];
-                    ?>
+            <div class="swiper js-services-slider services__wrap">
+                <div class="swiper-wrapper">
+                    <?php
+                    $services_counter = 1;
+                    foreach ($services as $item):
+                        $service = $item['service'];
+                        $icon = $service['icon'];
+                        $title = $service['title'];
+                        $color = $service['background_color'];
+                        $description = $service['description'];
+                        ?>
 
-                    <a href="#services-popup-<?php echo $services_counter; ?>" class="services__item js-open-popup-activator" style="background-color: <?php echo $color; ?>">
-                        <figure class="services__item-icon">
-                            <?php if($icon): ?>
-                                <img  src="<?php echo $icon; ?>" alt="service icon">
+                        <a href="#services-popup-<?php echo $services_counter; ?>" class="services__item swiper-slide js-open-popup-activator" style="background-color: <?php echo $color; ?>">
+                            <figure class="services__item-icon">
+                                <?php if($icon): ?>
+                                    <img  src="<?php echo $icon; ?>" alt="service icon">
+                                <?php endif; ?>
+                            </figure>
+
+                            <?php if($title): ?>
+                                <p class="services__item-title"><?php echo $title; ?></p>
                             <?php endif; ?>
-                        </figure>
 
-                        <?php if($title): ?>
-                            <p class="services__item-title"><?php echo $title; ?></p>
-                        <?php endif; ?>
+                            <?php if($description): ?>
+                                <p class="services__item-desc"><?php echo $description; ?></p>
+                            <?php endif; ?>
 
-                        <?php if($description): ?>
-                            <p class="services__item-desc"><?php echo $description; ?></p>
-                        <?php endif; ?>
+                            <button class="services__item-button">
+                                <span> <?php echo __('EXPLORE', 'wp-rock'); ?></span>
+                            </button>
+                        </a>
 
-                        <button class="services__item-button">
-                            <span> <?php echo __('EXPLORE', 'wp-rock'); ?></span>
-                        </button>
-                    </a>
-
-                <?php $services_counter++; endforeach; ?>
+                        <?php $services_counter++; endforeach; ?>
+                </div>
             </div>
-        <?php endif; ?>
 
+        <?php endif; ?>
+    </div>
+
+    <div class="custom-container">
         <?php if($bottom_content):
             $bottom_title = $bottom_content['title'];
             $bottom_content = $bottom_content['content'];

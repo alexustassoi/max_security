@@ -20,8 +20,8 @@ class WP_Rock_Blocks {
         'block-top-page' => array(
             'title'      => 'Block - Top page',
         ),
-        'block-cervices' => array(
-            'title'      => 'Block - Cervices',
+        'block-services' => array(
+            'title'      => 'Block - services',
         ),
         'block-benefts' => array(
             'title'     => 'Block - Benefts',

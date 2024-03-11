@@ -19,12 +19,12 @@ const initBlockExample = () => {
         }
     });
 
-    if( topPageSwiper ) {
+    if (topPageSwiper) {
         const swiper = new Swiper(topPageSwiper, {
             spaceBetween: 55,
             loop: true,
-            slidesPerView: 'auto', // Автоматически определить количество слайдов в видимой области
-            freeMode: true, // Отключить строгую фиксацию слайдов в центре
+            slidesPerView: 'auto',
+            freeMode: true,
         });
     }
 };

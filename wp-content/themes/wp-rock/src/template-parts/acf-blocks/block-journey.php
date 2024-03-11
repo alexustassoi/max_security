@@ -27,36 +27,39 @@ $reviews    = get_field_value($fields, 'reviews');
     </div>
 
     <?php if ($history): ?>
-        <div class="journey__history">
-            <?php foreach ($history as $item):
-                $history_image = $item['image'];
-                $history_year = $item['year'];
-                $history_title = $item['title'];
-                $history_content = $item['content'];
-                ?>
-                <div class="journey__history-item">
-                    <div class="journey__history-item-image">
-                        <?php if($history_image): ?>
-                            <img src="<?php echo $history_image; ?>" alt="history image">
-                        <?php endif; ?>
+        <div class="swiper journey__history-swiper js-history-slider">
+            <div class="swiper-wrapper">
+                <?php foreach ($history as $item):
+                    $history_image = $item['image'];
+                    $history_year = $item['year'];
+                    $history_title = $item['title'];
+                    $history_content = $item['content'];
+                    ?>
+                    <div class="swiper-slide journey__history-item">
+                        <div class="journey__history-item-image">
+                            <?php if($history_image): ?>
+                                <img src="<?php echo $history_image; ?>" alt="history image">
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="journey__history-item-content">
+                            <?php if($history_year): ?>
+                                <p class="journey__history-item-year"><?php echo $history_year; ?></p>
+                            <?php endif; ?>
+
+                            <?php if($history_title): ?>
+                                <p class="journey__history-item-title"><?php echo $history_title; ?></p>
+                            <?php endif; ?>
+
+                            <?php if($history_content): ?>
+                                <p class="journey__history-item-text"> <?php echo $history_content; ?></p>
+                            <?php endif; ?>
+                        </div>
                     </div>
-
-                    <div class="journey__history-item-content">
-                        <?php if($history_year): ?>
-                            <p class="journey__history-item-year"><?php echo $history_year; ?></p>
-                        <?php endif; ?>
-
-                        <?php if($history_title): ?>
-                            <p class="journey__history-item-title"><?php echo $history_title; ?></p>
-                        <?php endif; ?>
-
-                        <?php if($history_content): ?>
-                            <p class="journey__history-item-text"> <?php echo $history_content; ?></p>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
+
     <?php endif; ?>
 
 

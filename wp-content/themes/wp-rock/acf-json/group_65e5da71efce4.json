@@ -415,7 +415,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-cervices"
+                "value": "acf\/block-services"
             }
         ]
     ],
@@ -428,5 +428,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709628565
+    "modified": 1710155226
 }
