@@ -8,8 +8,7 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields      = get_fields();
-$title = get_field_value( $fields, 'title' );
-$title_icon = get_field_value( $fields, 'title_icon' );
+$titles = get_field_value( $fields, 'titles' );
 $video = get_field_value( $fields, 'video' );
 
 ?>
@@ -23,15 +22,31 @@ $video = get_field_value( $fields, 'video' );
             </video>
         <?php endif; ?>
 
-        <h1 class="top-page__title">
-            <?php if($title_icon): ?>
-                <img src="<?php echo $title_icon; ?>" alt="title icon">
-            <?php endif; ?>
+        <?php if($titles): ?>
+            <div class="swiper top-page__titles js-top-page-titles">
+                <div class="swiper-wrapper">
+                    <?php foreach ($titles as $item):
+                        $title_icon = $item['title_icon'];
+                        $title = $item['title'];
+                    ?>
 
-            <?php if($title): ?>
-                <?php echo $title; ?>
-            <?php endif; ?>
-        </h1>
+                    <?php endforeach; ?>
+                    <div class="swiper-slide top-page__title">
+                        <?php if($title_icon): ?>
+                            <img src="<?php echo $title_icon; ?>" alt="title icon">
+                        <?php endif; ?>
+
+                        <?php if($title): ?>
+                            <?php echo $title; ?>
+                        <?php endif; ?>
+                    </div>
+
+                </div>
+            </div>
+
+        <?php endif; ?>
+
+
 
         <button class="top-page__scroll-bottom js-scroll-bottom">
             <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">

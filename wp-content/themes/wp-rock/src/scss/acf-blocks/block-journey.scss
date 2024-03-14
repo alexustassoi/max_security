@@ -2,6 +2,18 @@
 .journey {
     padding: 80px 0;
 
+    @media screen and (max-width: 992px) {
+        padding: 60px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 50px 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 40px 0 0;
+    }
+
     &__history-swiper {
         margin-bottom: 100px;
 
@@ -491,9 +503,12 @@
                     font-size: 14px;
                 }
 
+                @media screen and (max-width: 560px) {
+                    max-width: 160px;
+                }
+
                 @media screen and (max-width: 480px) {
                     font-size: 10px;
-                    max-width: 160px;
                 }
             }
         }

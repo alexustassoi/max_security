@@ -1,8 +1,9 @@
-import Swiper, { EffectFade, Navigation } from 'swiper';
+import Swiper, { Autoplay, EffectCreative } from 'swiper';
 
 const initBlockExample = () => {
     const scrollBottom = document.querySelector('.js-scroll-bottom') as HTMLElement;
     const topPageSwiper = document.querySelector('.js-top-page-swiper') as HTMLElement;
+    const topPageTitles = document.querySelector('.js-top-page-titles') as HTMLElement;
 
     scrollBottom?.addEventListener('click', (event: MouseEvent) => {
         event.preventDefault();
@@ -18,6 +19,19 @@ const initBlockExample = () => {
             });
         }
     });
+
+    if (topPageTitles) {
+        const swiperTitles = new Swiper(topPageTitles, {
+            slidesPerView: 1,
+            loop: true,
+            direction: 'vertical',
+            modules: [Autoplay],
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    }
 
     if (topPageSwiper) {
         const swiper = new Swiper(topPageSwiper, {

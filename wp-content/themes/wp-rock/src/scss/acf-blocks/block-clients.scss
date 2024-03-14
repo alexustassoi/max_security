@@ -1,6 +1,18 @@
 .clients {
     padding: 80px 0;
 
+    @media screen and (max-width: 992px) {
+        padding: 70px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 50px 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 24px 0;
+    }
+
     &__title {
         color:#17181A;
         font-feature-settings: 'clig' off, 'liga' off;
@@ -10,6 +22,20 @@
         font-weight: 700;
         line-height: 1.45;
         text-align: center;
+        margin: 0;
+
+        @media screen and (max-width: 992px) {
+            font-size: 45px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 38px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
     }
 
     &__subtitle {
@@ -22,9 +48,39 @@
         font-weight: 300;
         line-height: 1.26;
         margin-bottom: 80px;
+
+        @media screen and (max-width: 1024px) {
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: 992px) {
+            font-size: 26px;
+            margin-bottom: 70px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 22px;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: center;
     }
 
     &__slide {
         width: auto;
+
+        img {
+            @media screen and (max-width: 480px) {
+                max-width: 100px;
+                height: auto;
+            }
+        }
     }
 }

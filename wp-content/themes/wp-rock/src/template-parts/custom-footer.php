@@ -23,17 +23,33 @@ $bottom_text = get_field_value( $global_options, 'bottom_text' );
 <footer id="site-footer" class="site-footer">
     <div class="custom-container">
         <div class="site-footer__container">
-            <a class="site-footer__logo" href="<?php echo get_site_url(); ?>">
-                <?php if($footer_logo): ?>
-                    <img src="<?php echo $footer_logo; ?>" alt="foter logo">
+            <div class="site-footer__left">
+                <a class="site-footer__logo" href="<?php echo get_site_url(); ?>">
+                    <?php if($footer_logo): ?>
+                        <img src="<?php echo $footer_logo; ?>" alt="foter logo">
+                    <?php endif; ?>
+                </a>
+
+                <?php if($portal_log_in_link): ?>
+                    <a class="site-footer__login mobile" target="<?php echo $portal_log_in_link['target']; ?>" href="<?php echo $portal_log_in_link['url']; ?>">
+                        <?php echo $portal_log_in_link['title'] ?>
+                    </a>
                 <?php endif; ?>
-            </a>
+            </div>
+
+            <?php if($phone && $phone_link): ?>
+            <div class="site-footer__phone-mobile">
+                <a class="site-footer__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
+            </div>
+            <?php endif; ?>
 
             <div class="site-footer__locations">
                 <?php if($locations): ?>
                     <?php foreach ($locations as $location): ?>
-                        <p class="site-footer__locations-country"><?php echo $location['country']; ?></p>
-                        <p class="site-footer__locations-city"><?php echo $location['city']; ?></p>
+                        <div class="site-footer__locations-item">
+                            <p class="site-footer__locations-country"><?php echo $location['country']; ?></p>
+                            <p class="site-footer__locations-city"><?php echo $location['city']; ?></p>
+                        </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
 
@@ -51,7 +67,7 @@ $bottom_text = get_field_value( $global_options, 'bottom_text' );
             ])
             ?>
 
-            <div class="site-footer__left">
+            <div class="site-footer__right">
                 <?php if($portal_log_in_link): ?>
                     <a class="site-footer__login" target="<?php echo $portal_log_in_link['target']; ?>" href="<?php echo $portal_log_in_link['url']; ?>">
                         <?php echo $portal_log_in_link['title'] ?>
