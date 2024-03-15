@@ -107,10 +107,17 @@ $bottom_content = get_field_value( $fields, 'bottom_content' );
         <div class="popup__wrapper-inner popup__service-inner" style="background-color: <?php echo $popup_color; ?>">
 
             <button class="popup__btn-close js-popup-close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <g id="close">
-                        <path fill="#fff" id="x" d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_412_1882)">
+                        <path d="M23 1H1V23H23V1Z" stroke="#F3F0EC" stroke-width="0.57" stroke-miterlimit="10"/>
+                        <path d="M4.81604 4.82324L19.5467 19.5539" stroke="#F3F0EC" stroke-width="0.57" stroke-miterlimit="10"/>
+                        <path d="M19.5467 4.82324L4.81604 19.5539" stroke="#F3F0EC" stroke-width="0.57" stroke-miterlimit="10"/>
                     </g>
+                    <defs>
+                        <clipPath id="clip0_412_1882">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
                 </svg>
             </button>
 
@@ -121,21 +128,25 @@ $bottom_content = get_field_value( $fields, 'bottom_content' );
             </figure>
 
             <div class="popup__service-content">
-                <div class="popup__service-icon">
-                    <?php if($popup_icon): ?>
-                        <img src="<?php echo $popup_icon; ?>" alt="popup icon">
-                    <?php endif; ?>
+                <div class="popup__service-title-wrap">
+                    <div class="popup__service-icon">
+                        <?php if($popup_icon): ?>
+                            <img src="<?php echo $popup_icon; ?>" alt="popup icon">
+                        <?php endif; ?>
+                    </div>
+
+                    <div>
+                        <?php if($popup_title): ?>
+                            <h3 class="popup__service-title"><?php echo $popup_title; ?></h3>
+                        <?php endif; ?>
+
+                        <?php if($popup_subtitle): ?>
+                            <p class="popup__service-subtitle"><?php echo $popup_subtitle; ?></p>
+                        <?php endif; ?>
+                    </div>
                 </div>
 
-                <div class="popup__service-right">
-                    <?php if($popup_title): ?>
-                        <h3 class="popup__service-title"><?php echo $popup_title; ?></h3>
-                    <?php endif; ?>
-
-                    <?php if($popup_subtitle): ?>
-                        <p class="popup__service-subtitle"><?php echo $popup_subtitle; ?></p>
-                    <?php endif; ?>
-
+                <div class="popup__service-content-wrap">
                     <?php if($popup_content): ?>
                         <div class="popup__service-text">
                             <?php echo $popup_content; ?>

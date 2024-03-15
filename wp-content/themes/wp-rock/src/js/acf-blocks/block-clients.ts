@@ -8,6 +8,11 @@ const initBlockClients = () => {
             loop: true,
             slidesPerView: 'auto',
             freeMode: true,
+            modules: [Autoplay],
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
         });
     }
 };

@@ -29,18 +29,16 @@ $video = get_field_value( $fields, 'video' );
                         $title_icon = $item['title_icon'];
                         $title = $item['title'];
                     ?>
+                        <div class="swiper-slide top-page__title">
+                            <?php if($title_icon): ?>
+                                <img src="<?php echo $title_icon; ?>" alt="title icon">
+                            <?php endif; ?>
 
+                            <?php if($title): ?>
+                                <?php echo $title; ?>
+                            <?php endif; ?>
+                        </div>
                     <?php endforeach; ?>
-                    <div class="swiper-slide top-page__title">
-                        <?php if($title_icon): ?>
-                            <img src="<?php echo $title_icon; ?>" alt="title icon">
-                        <?php endif; ?>
-
-                        <?php if($title): ?>
-                            <?php echo $title; ?>
-                        <?php endif; ?>
-                    </div>
-
                 </div>
             </div>
 
