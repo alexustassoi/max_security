@@ -40,6 +40,7 @@ class WP_Rock_Blocks {
         ),
         'block-service-top' => array(
             'title'     => 'Block - Service top',
+
         ),
     );
 
