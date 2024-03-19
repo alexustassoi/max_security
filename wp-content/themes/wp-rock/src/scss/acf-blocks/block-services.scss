@@ -20,7 +20,7 @@
     }
 
     &__title {
-        color: #17181A;
+        color: #17181a;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 66px;
@@ -45,7 +45,7 @@
     }
 
     &__subtitle {
-        color: #2F3034;
+        color: #2f3034;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 52px;
@@ -73,7 +73,7 @@
     }
 
     &__text {
-        color: #46494D;
+        color: #46494d;
         text-align: center;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
@@ -108,6 +108,7 @@
     }
 
     &__wrap {
+        padding: 16px;
         margin-bottom: 86px;
 
         @media screen and (max-width: 1200px) {
@@ -137,6 +138,7 @@
         text-decoration: none;
         height: auto;
         width: 238px;
+        transition: all 0.3s;
 
         @media screen and (max-width: 480px) {
             width: 155px;
@@ -146,6 +148,10 @@
 
         & * {
             pointer-events: none;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 22px 0px #aa6902;
         }
 
         &-icon {
@@ -169,7 +175,7 @@
         }
 
         &-title {
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 20px;
@@ -190,7 +196,7 @@
         }
 
         &-desc {
-            color: #F3F0EC;
+            color: #f3f0ec;
             text-align: center;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
@@ -216,7 +222,7 @@
 
         &-button {
             margin-top: auto;
-            color: var(--Orange, #CC7510);
+            color: var(--Orange, #cc7510);
             font-family: Turbine, sans-serif;
             font-size: 12px;
             font-style: normal;
@@ -239,7 +245,7 @@
             }
 
             &:before {
-                content: "";
+                content: '';
                 position: absolute;
                 top: 0;
                 width: 100%;
@@ -247,7 +253,7 @@
                 left: 50%;
                 transform: translateX(-50%);
                 border-radius: 200px 200px 0px 0px;
-                background: #17181A;
+                background: #17181a;
 
                 @media screen and (max-width: 480px) {
                     height: 46px;
@@ -267,13 +273,13 @@
         }
 
         &-title {
-            color: #17181A;
+            color: #17181a;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 52px;
             font-style: normal;
             font-weight: 700;
-            line-height: 1.46;
+            line-height: 1.153;
             margin: 0;
 
             @media screen and (max-width: 1200px) {
@@ -296,14 +302,14 @@
         }
 
         &-content {
-            color: #2F3034;
+            color: #2f3034;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
             margin: 0;
-            line-height: 1.30;
+            line-height: 1.3;
 
             @media screen and (max-width: 992px) {
                 font-size: 18px;
@@ -319,5 +325,4 @@
             }
         }
     }
-
 }

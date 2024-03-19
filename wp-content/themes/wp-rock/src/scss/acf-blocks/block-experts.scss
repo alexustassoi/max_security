@@ -3,7 +3,7 @@
     background-color: #151836;
 
     &__title {
-        color: #F3F0EC;
+        color: #f3f0ec;
         text-align: center;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
@@ -45,6 +45,7 @@
         transform: translateY(-50%);
         z-index: 2;
         cursor: pointer;
+        transition: opacity 0.3s;
 
         @media screen and (max-width: 992px) {
             top: 130px;
@@ -74,6 +75,10 @@
 
         &.next {
             right: 0;
+        }
+
+        &:hover {
+            opacity: 0.6;
         }
     }
 
@@ -154,7 +159,7 @@
         }
 
         &-name {
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 18px;
@@ -179,7 +184,7 @@
         }
 
         &-position {
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 14px;
@@ -204,7 +209,7 @@
         }
 
         &-direction {
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 20px;
@@ -243,7 +248,7 @@
         }
 
         &-description {
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 30px;
@@ -267,7 +272,7 @@
         }
 
         &-date {
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 14px;
@@ -284,7 +289,7 @@
         }
 
         &-example {
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 18px;
@@ -310,9 +315,9 @@
         }
 
         &-link {
-            background-color: #CC7510;
+            background-color: #cc7510;
             text-decoration: none;
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 14px;
@@ -321,6 +326,8 @@
             line-height: 1.57;
             padding: 0 8px;
             display: inline-block;
+            border: 1px solid transparent;
+            transition: background-color 0.3s, border-color 0.3s;
 
             @media screen and (max-width: 992px) {
                 position: relative;
@@ -330,6 +337,11 @@
 
             @media screen and (max-width: 480px) {
                 font-size: 13px;
+            }
+
+            &:hover {
+                border: 1px solid #cc7510;
+                background-color: transparent;
             }
         }
     }

@@ -253,6 +253,7 @@
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
+            transition: opacity 0.3s;
 
             @media screen and (max-width: 768px) {
                 top: 130px;
@@ -285,6 +286,10 @@
                 @media screen and (max-width: 768px) {
                     right: 24px;
                 }
+            }
+
+            &:hover {
+                opacity: 0.6;
             }
         }
 
