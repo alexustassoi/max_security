@@ -69,6 +69,14 @@
         position: relative;
         padding: 0 8px;
         border: 2px solid #CC7510;
+        transition: 0.3s;
+
+        &:hover {
+            @media screen and (min-width: 768px) {
+                background-color: #CC7510;
+            }
+
+        }
 
         @media screen and (max-width: 480px) {
             font-size: 16px;

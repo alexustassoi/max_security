@@ -3,14 +3,16 @@ import Swiper, { Autoplay } from 'swiper';
 const initBlockClients = () => {
     const clientSwiper = document.querySelector('.js-clients-swiper') as HTMLElement;
     if (clientSwiper) {
-        const clientSlider = new Swiper(clientSwiper, {
-            spaceBetween: 32,
+        const clientSlider = new Swiper(clientSwiper,{
+            spaceBetween: 40,
+            grabCursor: true,
+            freeMode: true,
+            speed: 11000,
             loop: true,
             slidesPerView: 'auto',
-            freeMode: true,
             modules: [Autoplay],
             autoplay: {
-                delay: 2000,
+                delay: 0,
                 disableOnInteraction: false,
             },
         });

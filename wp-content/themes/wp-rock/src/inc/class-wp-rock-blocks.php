@@ -38,6 +38,9 @@ class WP_Rock_Blocks {
         'block-lets-talk' => array(
             'title'     => 'Block - Let’s talk',
         ),
+        'block-service-top' => array(
+            'title'     => 'Block - Service top',
+        ),
     );
 
     /**

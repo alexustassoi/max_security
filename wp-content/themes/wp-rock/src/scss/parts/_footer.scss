@@ -250,6 +250,13 @@
         padding: 0 8px;
         border: 1px solid  #CC7510;
         text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover {
+            @media screen and (min-width: 768px) {
+                background-color: #CC7510;
+            }
+        }
 
         &.mobile {
             display: none;
@@ -304,7 +311,13 @@
         line-height: 1.57;
         margin: 0;
         text-decoration: none;
+        transition: all 0.3s;
 
+        @media screen and (min-width: 768px) {
+            &:hover {
+                background-color: #CC7510;
+            }
+        }
         @media screen and (max-width: 480px) {
             font-size: 16px;
         }
