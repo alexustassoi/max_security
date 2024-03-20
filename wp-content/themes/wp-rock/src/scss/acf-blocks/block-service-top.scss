@@ -1,17 +1,121 @@
 .service-top {
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
 
     &:before {
-        content :"";
+        content: '';
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
+        z-index: 1;
         background-color: rgba(23, 24, 26, 0.4);
     }
 
-    &__title {
+    &__custom-container {
+        position: relative;
+        z-index: 2;
+        padding-top: 200px;
+        padding-bottom: 264px;
 
+        @media screen and (max-width: 1200px) {
+            padding-top: 140px;
+            padding-bottom: 200px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-top: 70px;
+            padding-bottom: 150px;
+        }
+
+        @media screen and (max-width: 570px) {
+            padding-top: 100px;
+            padding-bottom: 70px;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        color: #f3f0ec;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 700;
+        gap: 32px;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 46px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            font-size: 36px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 570px) {
+            gap: 16px;
+        }
+
+        img {
+            @media screen and (max-width: 570px) {
+                width: 56px;
+                height: 56px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: 300;
+        color: #f3f0ec;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 52px;
+        font-style: normal;
+        padding-left: 150px;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 46px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            font-size: 36px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 570px) {
+            padding-left: 74px;
+        }
+    }
+
+    &__scroll-bottom {
+        margin: 0 auto 20px;
+        position: relative;
+        z-index: 2;
+
+        @media screen and (max-width: 570px) {
+            margin: 0 auto 8px;
+        }
+
+        svg {
+            @media screen and (max-width: 768px) {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 }

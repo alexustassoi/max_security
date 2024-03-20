@@ -105,22 +105,11 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
-        animation: blink 1s infinite alternate-reverse;
 
         @media screen and (max-width: 768px) {
             display: none;
         }
 
-        @keyframes blink {
-            from {
-                opacity: 1;
-                transform: scale(1, 1);
-            }
-            to {
-                opacity: 0.5;
-                transform: scale(1.1, 1.1);
-            }
-        }
     }
 
     &__bottom {

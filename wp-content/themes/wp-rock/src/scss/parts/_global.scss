@@ -152,3 +152,18 @@ h5 {
     line-height: 1.26;
     margin-top: 0;
 }
+
+.blink-animation {
+    animation: blink 1s infinite alternate-reverse;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    to {
+        opacity: 0.5;
+        transform: scale(1.1, 1.1);
+    }
+}

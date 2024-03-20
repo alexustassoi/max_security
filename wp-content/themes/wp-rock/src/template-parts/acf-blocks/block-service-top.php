@@ -15,7 +15,7 @@ $subtitle = get_field_value( $fields, 'subtitle' );
 ?>
 
 <div class="service-top js-top-block  <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>" style="background-image: url(<?php echo $background_image; ?>)">
-    <div class="custom-container">
+    <div class="service-top__custom-container custom-container">
         <h1 class="service-top__title">
             <?php if($icon): ?>
                 <img src="<?php echo $icon ?>" alt="service icon">
@@ -29,7 +29,7 @@ $subtitle = get_field_value( $fields, 'subtitle' );
         <?php endif; ?>
     </div>
 
-    <button class="service-top__scroll-bottom js-scroll-bottom">
+    <button class="service-top__scroll-bottom blink-animation js-scroll-bottom">
         <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_202_7598)">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M44.753 43.8099C48.1282 40.1276 49.608 34.3909 49.608 26C49.608 17.6091 48.1282 11.8724 44.753 8.19014C41.4197 4.55352 35.7383 2.392 26 2.392C16.2617 2.392 10.5803 4.55352 7.24696 8.19014C3.87176 11.8724 2.392 17.6091 2.392 26C2.392 34.3909 3.87176 40.1276 7.24696 43.8099C10.5803 47.4465 16.2617 49.608 26 49.608C35.7383 49.608 41.4197 47.4465 44.753 43.8099ZM26 52C46.0436 52 52 43.1364 52 26C52 8.86364 46.0436 1.90735e-06 26 1.90735e-06C5.95636 1.90735e-06 0 8.86364 0 26C0 43.1364 5.95636 52 26 52Z" fill="#CC7510"/>
