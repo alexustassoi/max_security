@@ -32,7 +32,7 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
                     if (!empty($tabs_repeater)) {
                         foreach ($tabs_repeater as $key => $tab_link) {
 
-                            $active_class = $key === 0 ? '' : '';
+                            $active_class = $key === 0 ? 'active' : '';
 
                             if (!empty($tab_link['icon']) && !empty($tab_link['title'])) {
                                 echo '  <a href="#tab-' . $key . '"
