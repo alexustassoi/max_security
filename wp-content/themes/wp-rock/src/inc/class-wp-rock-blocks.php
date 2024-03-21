@@ -47,6 +47,9 @@ class WP_Rock_Blocks {
         'block-text-repeater' => array(
             'title'     => 'Block - Text repeater',
         ),
+        'block-tabs' => array(
+            'title'     => 'Block - Tabs',
+        ),
     );
 
     /**

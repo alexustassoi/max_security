@@ -12,13 +12,13 @@ $fields      = get_fields();
 $title = get_field_value($fields, 'title');
 $description = get_field_value($fields, 'description');
 $slides = get_field_value($fields, 'slides');
-$is_change_color = get_field_value($fields, 'is_change_color');
 
+$no_margin = empty($slides) ? 'mb0' : '';
 ?>
 
 <div class="slider-popup <?php echo $class_name; ?>">
     <div class="custom-container">
-        <div class="slider-popup__top-wrapper">
+        <div class="slider-popup__top-wrapper <?php echo $no_margin; ?>">
             <?php
             if (!empty($title)) {
                 echo '<h3 class="slider-popup__title">' . do_shortcode($title) . '</h3>';

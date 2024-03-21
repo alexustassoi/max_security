@@ -370,3 +370,14 @@ export function anchorLinkScroll(
             });
         });
 }
+
+export const setHeightEqualToWidth = (elementSelector) => {
+    const elements = document.querySelectorAll(elementSelector);
+    // @ts-ignore
+    elements &&
+        elements.forEach((element) => {
+            const width = element.offsetWidth;
+            // eslint-disable-next-line no-param-reassign
+            element.style.height = `${width}px`;
+        });
+};

@@ -6,6 +6,8 @@ import '../scss/frontend.scss';
  * JavaScript
  */
 import Sliders from './components/swiper-init';
+import { setHeightEqualToWidth } from './parts/helpers';
+import tabsNavigation from './parts/navi-tabs';
 import Popup from './parts/popup-window';
 
 function ready() {
@@ -17,6 +19,8 @@ function ready() {
     const mobileMenu = document.querySelector('.js-mobile-menu') as HTMLElement;
     const openMobileMenu = document.querySelector('.js-open-mobile-menu') as HTMLElement;
     const openSubmenu = document.querySelectorAll('.js-open-submenu > a') as NodeListOf<Element>;
+
+    tabsNavigation('.js-tab-block-link', '.js-tab-block-panel');
 
     openMobileMenu &&
         openMobileMenu.addEventListener('click', (event) => {

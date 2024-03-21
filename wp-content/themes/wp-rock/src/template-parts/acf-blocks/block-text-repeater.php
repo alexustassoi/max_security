@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Block - Slider popup.
+ * Block - Text repeater.
  *
  * @package WP-rock
  * @since   4.4.0

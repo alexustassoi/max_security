@@ -17,10 +17,14 @@
             flex-direction: column;
             margin-bottom: 32px;
         }
+
+        &.mb0 {
+            margin-bottom: 0;
+        }
     }
 
     &__title {
-        max-width: 320px;
+        max-width: 430px;
         width: 100%;
         margin-bottom: 0;
         color: #445c5a;
