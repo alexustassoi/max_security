@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Block - Top page.
+ * Block - Slider popup.
  *
  * @package WP-rock
  * @since   4.4.0

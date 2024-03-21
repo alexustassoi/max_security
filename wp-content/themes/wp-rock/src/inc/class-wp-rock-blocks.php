@@ -42,7 +42,10 @@ class WP_Rock_Blocks {
             'title'     => 'Block - Service top',
         ),
         'block-slider-popup' => array(
-            'title'     => 'Block - slider popup',
+            'title'     => 'Block - Slider popup',
+        ),
+        'block-text-repeater' => array(
+            'title'     => 'Block - Text repeater',
         ),
     );
 
