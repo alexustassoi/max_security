@@ -23,13 +23,11 @@ body {
 }
 
 .custom-container {
-    width: 1078px;
+    max-width: 1078px;
     margin: 0 auto;
 
     @media screen and (max-width: 1200px) {
         width: 1000px;
-        padding-right: 16px;
-        padding-left: 16px;
     }
 
     @media screen and (max-width: 992px) {
@@ -102,6 +100,10 @@ p {
 
     @media screen and (max-width: 670px) {
         font-size: 12px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 

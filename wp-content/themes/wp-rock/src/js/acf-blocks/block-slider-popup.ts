@@ -6,7 +6,7 @@ const initBlockSliderPopup = () => {
     const sliderPopupSwiper1 = document.querySelector('.js-slider-popup-1') as HTMLElement;
     if (sliderPopupSwiper1) {
         const sliderPopupBlock = new Swiper(sliderPopupSwiper1, {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
             breakpoints: {
                 991: {
@@ -14,6 +14,10 @@ const initBlockSliderPopup = () => {
                 },
                 670: {
                     slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+                330: {
+                    slidesPerView: 2,
                 },
             },
         });
@@ -33,14 +37,13 @@ const initBlockSliderPopup = () => {
 
         sliderPopupsBtn &&
             sliderPopupsBtn.forEach((btn) => {
-                btn.addEventListener('click', (e) => {
+                btn.addEventListener('click', () => {
                     const btnElem = btn as HTMLElement;
-                    const slide = btnElem.closest('.slider-popup__slide') as HTMLElement;
 
-                    if (slide?.dataset.swiperSlideIndex) {
-                        const index = parseInt(slide.dataset.swiperSlideIndex, 10);
+                    if (btnElem?.dataset.slideIndex) {
+                        const index = parseInt(btnElem.dataset.slideIndex, 10);
 
-                        sliderPopup.slideTo(index + 1);
+                        sliderPopup.slideTo(index);
                     }
                 });
             });
@@ -56,4 +59,4 @@ if (window['acf']) {
     window['acf']?.addAction('render_block_preview', initBlockSliderPopup);
 }
 
-export { };
+export {};

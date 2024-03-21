@@ -12,6 +12,8 @@ $fields      = get_fields();
 $title = get_field_value($fields, 'title');
 $description = get_field_value($fields, 'description');
 $slides = get_field_value($fields, 'slides');
+$is_change_color = get_field_value($fields, 'is_change_color');
+
 ?>
 
 <div class="slider-popup <?php echo $class_name; ?>">
@@ -29,10 +31,10 @@ $slides = get_field_value($fields, 'slides');
         <?php if ($slides) : ?>
             <div class="slider-popup__slider js-slider-popup-1">
                 <div class="swiper-wrapper">
-                    <?php foreach ($slides as $slide) {
+                    <?php foreach ($slides as $key => $slide) {
                         echo '<div class="slider-popup__slide swiper-slide js-open-popup-activator">';
 
-                        echo '<a href="#slider-popup" class="js-open-slide-popup-link js-open-popup-activator"></a>';
+                        echo '<a href="#slider-popup" data-slide-index="' . $key . '" class="js-open-slide-popup-link js-open-popup-activator"></a>';
 
                         echo '<div class="slider-popup__slide-title">
                                     ' . do_shortcode($slide['title']) .
@@ -55,9 +57,7 @@ $slides = get_field_value($fields, 'slides');
 </div>
 
 
-<?php
-//ob_start();
-if ($slides) : ?>
+<?php if ($slides) : ?>
     <div id="slider-popup" class="popup popup__slider-popup js-popup-close">
         <div class="popup__wrapper-inner popup__slider-popup-inner">
             <div class="custom-container popup__container-inner">
@@ -113,13 +113,7 @@ if ($slides) : ?>
             </div>
         </div>
     </div>
-<?php endif;
-// $html_popup_content = ob_get_clean();
-
-// if (!empty($html_popup_content)) {
-//     echo do_shortcode('[popup_box box_id="slider-popup"]' . do_shortcode($html_popup_content) . '[/popup_box]');
-// }
-?>
+<?php endif; ?>
 
 
 <script>
