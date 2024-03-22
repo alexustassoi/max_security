@@ -10,9 +10,19 @@ $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields     = get_fields();
 $title      = get_field_value($fields, 'title');
 $experts    = get_field_value($fields, 'experts');
+$bg_color = get_field_value($fields, 'colors_select');
+$bg_color_mobile = get_field_value($fields, 'colors_select_mobile');
+
+$bg_color_mobile = !empty($bg_color_mobile) ? $bg_color_mobile : '#5A7153';
+$bg_color = !empty($bg_color) ? $bg_color : '#5A7153';
+
 ?>
 
-<div class="experts  <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
+<div class="experts  <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>"
+    style="
+    --var-color : <?php echo $bg_color; ?>;
+    --var-color-mobile : <?php echo $bg_color_mobile; ?>
+    ">
     <div class="custom-container">
         <?php if ($title): ?>
             <h2 class="experts__title"><?php echo $title; ?></h2>

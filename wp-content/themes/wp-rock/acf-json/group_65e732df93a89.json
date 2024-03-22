@@ -240,6 +240,34 @@
                     "parent_repeater": "field_65e7331b81526"
                 }
             ]
+        },
+        {
+            "key": "field_65fd61facbe49",
+            "label": "Colors select mobile",
+            "name": "colors_select_mobile",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#5A7153": "Green",
+                "#445C5A": "Dark-green",
+                "#685B4C": "Brown",
+                "#645D75": "Purple"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -260,5 +288,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709652749
+    "modified": 1711112045
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_65facf94ca807",
-    "title": "Block - slider popup",
+    "title": "Block - Slider popup",
     "fields": [
         {
             "key": "field_65facf969c317",
@@ -170,5 +170,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710941673
+    "modified": 1711111539
 }

@@ -12,11 +12,16 @@ $fields      = get_fields();
 $title = get_field_value($fields, 'title');
 $description = get_field_value($fields, 'description');
 $slides = get_field_value($fields, 'slides');
+$bg_color = get_field_value($fields, 'colors_select');
+
+$bg_color = !empty($bg_color) ? $bg_color : '#5A7153';
+
 
 $no_margin = empty($slides) ? 'mb0' : '';
 ?>
 
 <div class="slider-popup <?php echo $class_name; ?>">
+
     <div class="custom-container">
         <div class="slider-popup__top-wrapper <?php echo $no_margin; ?>">
             <?php
@@ -32,7 +37,9 @@ $no_margin = empty($slides) ? 'mb0' : '';
             <div class="slider-popup__slider js-slider-popup-1">
                 <div class="swiper-wrapper">
                     <?php foreach ($slides as $key => $slide) {
-                        echo '<div class="slider-popup__slide swiper-slide js-open-popup-activator">';
+                        echo '<div class="slider-popup__slide swiper-slide js-open-popup-activator"
+                        style="background-color: '.$bg_color.'"
+                        >';
 
                         echo '<a href="#slider-popup" data-slide-index="' . $key . '" class="js-open-slide-popup-link js-open-popup-activator"></a>';
 
@@ -59,7 +66,7 @@ $no_margin = empty($slides) ? 'mb0' : '';
 
 <?php if ($slides) : ?>
     <div id="slider-popup" class="popup popup__slider-popup js-popup-close">
-        <div class="popup__wrapper-inner popup__slider-popup-inner">
+        <div class="popup__wrapper-inner popup__slider-popup-inner" style="background-color: <?php echo $bg_color; ?>">
             <div class="custom-container popup__container-inner">
                 <button class="popup__slider-popup-close js-popup-close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -85,13 +92,10 @@ $no_margin = empty($slides) ? 'mb0' : '';
                     <div class="swiper-wrapper">
                         <?php foreach ($slides as $slide) {
                             echo '<div class="popup__slide swiper-slide js-ope-popup-activator">
-                                        <h4 class="popup__slide-title">
-                                            ' . do_shortcode($slide['title']) .
-                                '</h4>
 
                                         <div class="popup__slide-description">
                                             ' . do_shortcode($slide['content']) .
-                                '</div>';
+                                        '</div>';
 
                             if (isset($slide['link']['url']) && isset($slide['link']['title'])) {
                                 echo '<a href="' . $slide['link']['url'] . '" class="popup__slide-link">

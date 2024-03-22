@@ -13,7 +13,7 @@
 
         @media screen and (max-width: 768px) {
             flex-wrap: wrap;
-            gap : 30px 0;
+            gap: 30px 0;
         }
 
         @media screen and (max-width: 480px) {
@@ -59,7 +59,6 @@
                 max-width: 52px;
                 height: auto;
             }
-
         }
     }
 
@@ -89,7 +88,7 @@
         }
 
         &-country {
-            color: #CC7510;
+            color: #cc7510;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
             font-size: 14px;
@@ -110,7 +109,7 @@
         }
 
         &-city {
-            color: #F3F0EC;
+            color: #f3f0ec;
             font-family: Turbine, sans-serif;
             font-size: 14px;
             font-style: normal;
@@ -130,7 +129,7 @@
     }
 
     &__phone {
-        color: var(--White-Text, #F3F0EC);
+        color: var(--White-Text, #f3f0ec);
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 14px;
@@ -162,7 +161,6 @@
     }
 
     &__menu {
-
         @media screen and (max-width: 768px) {
             width: 33.33%;
         }
@@ -190,14 +188,15 @@
             li {
                 margin-bottom: 16px;
                 list-style: none;
-                line-height: 1.0;
+                line-height: 1;
 
                 @media screen and (max-width: 480px) {
                     margin-bottom: 8px;
                 }
 
-                a, span {
-                    color: var(--White-Text, #F3F0EC);
+                a,
+                span {
+                    color: var(--White-Text, #f3f0ec);
                     font-feature-settings: 'clig' off, 'liga' off;
                     font-family: Turbine, sans-serif;
                     font-size: 14px;
@@ -238,7 +237,7 @@
     }
 
     &__login {
-        color: var(--White-Text, #F3F0EC);
+        color: var(--White-Text, #f3f0ec);
         display: inline-block;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
@@ -248,13 +247,13 @@
         line-height: 1.57;
         margin-bottom: 8px;
         padding: 0 8px;
-        border: 1px solid  #CC7510;
+        border: 1px solid #cc7510;
         text-decoration: none;
         transition: all 0.3s;
 
         &:hover {
             @media screen and (min-width: 768px) {
-                background-color: #CC7510;
+                background-color: #cc7510;
             }
         }
 
@@ -273,7 +272,7 @@
 
     &__social-title {
         margin-bottom: 8px;
-        color:  #F3F0EC;
+        color: #f3f0ec;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 10px;
@@ -294,15 +293,27 @@
         margin-bottom: 16px;
 
         a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1px solid #CC7510;
             text-decoration: none;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #CC7510;
+            }
         }
     }
 
     &__talk {
-        border: 1px solid  #CC7510;
+        border: 1px solid #cc7510;
         padding: 0 8px;
         display: inline-block;
-        color:  #F3F0EC;
+        color: #f3f0ec;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 14px;
@@ -315,7 +326,7 @@
 
         @media screen and (min-width: 768px) {
             &:hover {
-                background-color: #CC7510;
+                background-color: #cc7510;
             }
         }
         @media screen and (max-width: 480px) {
@@ -325,7 +336,7 @@
 
     &__bottom {
         margin-top: 40px;
-        border-top: 1px solid #F3F0EC;
+        border-top: 1px solid #f3f0ec;
         padding: 10px 0;
         display: flex;
         justify-content: space-between;
@@ -338,7 +349,7 @@
     }
 
     &__copyright {
-        color:  #F3F0EC;
+        color: #f3f0ec;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 10px;
@@ -362,7 +373,7 @@
     }
 
     &__bottom-text {
-        color: var(--White-Text, #F3F0EC);
+        color: var(--White-Text, #f3f0ec);
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 10px;

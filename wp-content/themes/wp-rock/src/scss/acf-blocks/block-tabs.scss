@@ -72,12 +72,12 @@
         text-decoration: none;
         border-radius: 200px;
         border: 3px solid #f3f0ec;
-        //height: 247px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         transition: opacity 0.3s, transform 0.3s;
+        opacity: 0.7;
 
         .icon {
             pointer-events: none;
@@ -114,7 +114,7 @@
         &.active,
         &:hover {
             transform: scale(1.1, 1.1);
-            opacity: 0.7;
+            opacity: 1;
         }
     }
 

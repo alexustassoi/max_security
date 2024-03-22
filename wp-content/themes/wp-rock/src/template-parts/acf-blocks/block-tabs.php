@@ -53,8 +53,8 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
                     foreach ($tabs_repeater as $key => $tab_panel) {
 
 
-                        $link_url = isset($tab_link['link']['url']) ? $tab_link['link']['url'] : null;
-                        $link_title = isset($tab_link['link']['title']) ? $tab_link['link']['title'] : null;
+                        $link_url = isset($tab_panel['link']['url']) ? $tab_panel['link']['url'] : null;
+                        $link_title = isset($tab_panel['link']['title']) ? $tab_panel['link']['title'] : null;
                         $active_class = $key === 0 ? 'active' : '';
 
                         if (!empty($tab_panel['content'])) {

@@ -61,7 +61,6 @@
         position: relative;
         height: 282px;
         border-radius: 15px 15px 0px 0px;
-        background-color: #5a7153;
         display: flex;
         flex-direction: column;
         text-decoration: none;
@@ -90,6 +89,7 @@
 
     &__slide-title {
         padding: 24px 10px 10px;
+        text-transform: uppercase;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -170,7 +170,6 @@
     }
 
     &__slider-popup-inner {
-        background-color: #5a7153;
         padding: 90px 0;
         position: relative;
 
@@ -226,27 +225,10 @@
         display: flex;
         flex-direction: column;
         padding: 4px;
-    }
 
-    &__slide-title {
-        color: #f3f0ec;
-        font-feature-settings: 'clig' off, 'liga' off;
-        font-family: Turbine, sans-serif;
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 700;
-        margin-bottom: 16px;
-
-        @media screen and (max-width: 1024px) {
-            font-size: 36px;
-        }
-
-        @media screen and (max-width: 768px) {
-            font-size: 26px;
-        }
-
-        @media screen and (max-width: 670px) {
-            font-size: 16px;
+        h1,h2,h3,h4,h5,h6 {
+            color: #f3f0ec;
+            margin-bottom: 16px;
         }
     }
 
@@ -301,9 +283,9 @@
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
-        transition: border-color 0.3s;
+        transition: background-color 0.3s;
         padding: 4px 8px;
-        border: 1px solid transparent;
+        border: 1px solid #cc7510;
         margin: 0 auto;
 
         @media screen and (max-width: 768px) {
@@ -320,7 +302,7 @@
         }
 
         &:hover {
-            border: 1px solid #cc7510;
+            background-color: #cc7510;
         }
     }
 

@@ -11,9 +11,11 @@ $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields = get_fields();
 $title = get_field_value($fields, 'title');
 $text_repeater = get_field_value($fields, 'text_repeater');
+$bg_color = get_field_value($fields, 'colors_select');
+$bg_color = !empty($bg_color) ? $bg_color : '#5A7153';
 
 ?>
-<div class="text-repeater">
+<div class="text-repeater" style="background-color: <?php echo $bg_color; ?>">
     <div class="custom-container">
         <?php
         if (!empty($title)) {

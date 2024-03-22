@@ -116,7 +116,7 @@
             width: 320px;
             height: 320px;
             border-radius: 135px;
-            background-color: lightgray;
+            background-color: var(--var-color);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -130,6 +130,7 @@
                 width: 250px;
                 height: 250px;
                 border-radius: 100px;
+                background-color: var(--var-color-mobile);
             }
 
             @media screen and (max-width: 480px) {
@@ -315,7 +316,8 @@
         }
 
         &-link {
-            background-color: #cc7510;
+            background-color: transparent;
+            border: 1px solid #cc7510;
             text-decoration: none;
             color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
@@ -326,7 +328,6 @@
             line-height: 1.57;
             padding: 0 8px;
             display: inline-block;
-            border: 1px solid transparent;
             transition: background-color 0.3s, border-color 0.3s;
 
             @media screen and (max-width: 992px) {
@@ -340,8 +341,7 @@
             }
 
             &:hover {
-                border: 1px solid #cc7510;
-                background-color: transparent;
+                background-color: #cc7510;
             }
         }
     }
