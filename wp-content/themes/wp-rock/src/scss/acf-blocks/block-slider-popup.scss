@@ -8,6 +8,33 @@
         padding-bottom: 32px;
     }
 
+    &__upper-description {
+        color: #17181a;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: 80px;
+
+        @media screen and (max-width: 1024px) {
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 26px;
+        }
+
+        @media screen and (max-width: 670px) {
+            font-size: 22px;
+        }
+
+        @media screen and (max-width: 470px) {
+            font-size: 16px;
+        }
+    }
+
     &__top-wrapper {
         display: flex;
         justify-content: space-between;
@@ -226,7 +253,12 @@
         flex-direction: column;
         padding: 4px;
 
-        h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             color: #f3f0ec;
             margin-bottom: 16px;
         }

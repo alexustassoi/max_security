@@ -50,6 +50,9 @@ class WP_Rock_Blocks {
         'block-tabs' => array(
             'title'     => 'Block - Tabs',
         ),
+        'block-about-us' => array(
+            'title'     => 'Block - About us',
+        ),
     );
 
     /**

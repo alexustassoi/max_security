@@ -3,6 +3,26 @@
     "title": "Block - Slider popup",
     "fields": [
         {
+            "key": "field_65fda19ce127a",
+            "label": "Upper description",
+            "name": "upper_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_65facf969c317",
             "label": "Title",
             "name": "title",
@@ -170,5 +190,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711111539
+    "modified": 1711120865
 }

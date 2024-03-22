@@ -9,6 +9,7 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields      = get_fields();
+$upper_description = get_field_value($fields, 'upper_description');
 $title = get_field_value($fields, 'title');
 $description = get_field_value($fields, 'description');
 $slides = get_field_value($fields, 'slides');
@@ -23,6 +24,13 @@ $no_margin = empty($slides) ? 'mb0' : '';
 <div class="slider-popup <?php echo $class_name; ?>">
 
     <div class="custom-container">
+        <?php
+        if (!empty($upper_description)) {
+            echo '<div class="slider-popup__upper-description">
+                        ' . do_shortcode($upper_description) . '
+                    </div>';
+        }
+        ?>
         <div class="slider-popup__top-wrapper <?php echo $no_margin; ?>">
             <?php
             if (!empty($title)) {
@@ -38,7 +46,7 @@ $no_margin = empty($slides) ? 'mb0' : '';
                 <div class="swiper-wrapper">
                     <?php foreach ($slides as $key => $slide) {
                         echo '<div class="slider-popup__slide swiper-slide js-open-popup-activator"
-                        style="background-color: '.$bg_color.'"
+                        style="background-color: ' . $bg_color . '"
                         >';
 
                         echo '<a href="#slider-popup" data-slide-index="' . $key . '" class="js-open-slide-popup-link js-open-popup-activator"></a>';
@@ -95,7 +103,7 @@ $no_margin = empty($slides) ? 'mb0' : '';
 
                                         <div class="popup__slide-description">
                                             ' . do_shortcode($slide['content']) .
-                                        '</div>';
+                                '</div>';
 
                             if (isset($slide['link']['url']) && isset($slide['link']['title'])) {
                                 echo '<a href="' . $slide['link']['url'] . '" class="popup__slide-link">
