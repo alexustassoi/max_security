@@ -103,4 +103,17 @@ $bottom_text = get_field_value( $global_options, 'bottom_text' );
         </div>
 
     </div>
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <clipPath id="svg-clip-desktop">
+                <path d="M334 167C334 277.055 295.74 334 167 334C38.2602 334 0 277.055 0 167C0 56.9447 38.2602 0 167 0C295.74 0 334 56.9447 334 167Z" fill="#7E97A6" />
+            </clipPath>
+            <clipPath id="svg-clip-tablet">
+                <path d="M300 150C300 248.852 265.635 300 150 300C34.3654 300 0 248.852 0 150C0 51.1479 34.3654 0 150 0C265.635 0 300 51.1479 300 150Z" fill="#7E97A6"/>
+            </clipPath>
+            <clipPath id="svg-clip-mob">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M77.5 156.281C137.229 156.281 155 129.636 155 78.1405C155 26.645 137.229 0 77.5 0C17.7705 0 0 26.645 0 78.1405C0 129.636 17.7705 156.281 77.5 156.281Z" />
+            </clipPath>
+        </defs>
+    </svg>
 </footer>
