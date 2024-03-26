@@ -27,7 +27,7 @@ const initBlockExample = () => {
             direction: 'vertical',
             modules: [Autoplay],
             autoplay: {
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
         });

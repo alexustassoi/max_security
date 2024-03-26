@@ -16,14 +16,14 @@ const initBlockClients = () => {
                     slidesPerView: 3,
                 },
             },
-            on: {
-                init: () => {
-                    setHeightEqualToWidth('.js-tab-block-link');
-                },
-                resize: () => {
-                    setHeightEqualToWidth('.js-tab-block-link');
-                },
-            },
+            // on: {
+            //     init: () => {
+            //         setHeightEqualToWidth('.js-tab-block-link');
+            //     },
+            //     resize: () => {
+            //         setHeightEqualToWidth('.js-tab-block-link');
+            //     },
+            // },
         });
     }
 };

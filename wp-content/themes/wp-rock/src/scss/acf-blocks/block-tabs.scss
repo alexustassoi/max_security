@@ -54,9 +54,9 @@
     }
 
     &__tabs-slider {
-        padding: 14px;
         overflow: hidden;
         margin-bottom: 80px;
+        height: 300px;
 
         @media screen and (max-width: 991px) {
             overflow: visible;
@@ -64,20 +64,31 @@
 
         @media screen and (max-width: 768px) {
             margin-bottom: 24px;
+            width: 700px;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
         }
     }
 
     &__tab-link {
-        padding: 20px;
         text-decoration: none;
-        border-radius: 200px;
+        clip-path: url(#svg-clip-238);
+        background-color: #f3f0ec;
         border: 3px solid #f3f0ec;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         transition: opacity 0.3s, transform 0.3s;
         opacity: 0.7;
+        height: 100%;
+
+        @media screen and (max-width: 1024px) {
+            clip-path: url(#svg-clip-223);
+        }
+
+        @media screen and (max-width: 991px) {
+            clip-path: url(#svg-clip-207);
+        }
 
         .icon {
             pointer-events: none;
@@ -115,6 +126,26 @@
         &:hover {
             transform: scale(1.1, 1.1);
             opacity: 1;
+        }
+    }
+
+    &__tab-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #685b4c;
+        clip-path: url(#svg-clip-236);
+        height: 100%;
+        padding: 20px;
+        pointer-events: none;
+
+        @media screen and (max-width: 1024px) {
+            clip-path: url(#svg-clip-219);
+        }
+
+        @media screen and (max-width: 991px) {
+            clip-path: url(#svg-clip-204);
         }
     }
 

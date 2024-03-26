@@ -6,7 +6,7 @@ const initBlockServices = () => {
         const clientSlider = new Swiper(servicesSwiper, {
             spaceBetween: 42,
             slidesPerView: 4,
-            freeMode: true,
+            // freeMode: true,
             breakpoints: {
                 320: {
                     loop: true,
@@ -18,16 +18,16 @@ const initBlockServices = () => {
                     loop: true,
                     slidesPerView: 'auto',
                     centeredSlides: true,
-                    spaceBetween: 25,
+                    spaceBetween: 15,
                 },
                 993: {
                     slidesPerView: 4,
-                    spaceBetween: 30,
+                    spaceBetween: 15,
                     loop: false,
                     centeredSlides: false,
                 },
                 1200: {
-                    spaceBetween: 42,
+                    spaceBetween: 32,
                     slidesPerView: 4,
                 },
             },

@@ -35,11 +35,12 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
                             $active_class = $key === 0 ? 'active' : '';
 
                             if (!empty($tab_link['icon']) && !empty($tab_link['title'])) {
-                                echo '  <a href="#tab-' . $key . '"
+                                echo '<a href="#tab-' . $key . '"
                                     class="tabs__tab-link swiper-slide js-tab-block-link ' . $active_class . '">
-
-                                    <img class="icon" src="' . $tab_link['icon'] . '" alt="icon">
-                                    <span class="title">' . esc_html($tab_link['title']) . '</span>
+                                    <div class="tabs__tab-inner">
+                                        <img class="icon" src="' . $tab_link['icon'] . '" alt="icon">
+                                        <span class="title">' . esc_html($tab_link['title']) . '</span>
+                                    </div>
                                 </a>';
                             }
                         }

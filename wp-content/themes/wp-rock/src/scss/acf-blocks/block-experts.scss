@@ -115,7 +115,7 @@
         &-avatar {
             width: 320px;
             height: 320px;
-            border-radius: 135px;
+            clip-path: url(#svg-clip-320);
             background-color: var(--var-color);
             display: flex;
             justify-content: center;
@@ -129,30 +129,30 @@
             @media screen and (max-width: 768px) {
                 width: 250px;
                 height: 250px;
-                border-radius: 100px;
+                clip-path: url(#svg-clip-250);
                 background-color: var(--var-color-mobile);
             }
 
             @media screen and (max-width: 480px) {
                 width: 171px;
                 height: 171px;
-                border-radius: 60px;
+                clip-path: url(#svg-clip-171);
             }
 
             img {
                 width: 232px;
                 height: 232px;
-                border-radius: 92px;
+                clip-path: url(#svg-clip-232);
                 object-fit: cover;
 
                 @media screen and (max-width: 768px) {
-                    border-radius: 50px;
+                    clip-path: url(#svg-clip-180);
                     width: 180px;
                     height: 180px;
                 }
 
                 @media screen and (max-width: 480px) {
-                    border-radius: 40px;
+                    clip-path: url(#svg-clip-120);
                     width: 119px;
                     height: 119px;
                 }
