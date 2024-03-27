@@ -81,10 +81,10 @@ $bottom_content = get_field_value($fields, 'bottom_content');
         ?>
             <div class="services__bottom">
                 <?php if ($bottom_title) : ?>
-                    <p class="services__bottom-title"><?php echo $bottom_title; ?></p>
+                    <p class="services__bottom-title animated-element from-left"><?php echo $bottom_title; ?></p>
                 <?php endif; ?>
                 <?php if ($bottom_content) : ?>
-                    <p class="services__bottom-content"><?php echo $bottom_content; ?></p>
+                    <p class="services__bottom-content animated-element from-right"><?php echo $bottom_content; ?></p>
                 <?php endif; ?>
             </div>
         <?php endif; ?>

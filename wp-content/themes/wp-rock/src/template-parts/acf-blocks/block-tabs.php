@@ -18,10 +18,10 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
         <div class="tabs__top-wrapper">
             <?php
             if (!empty($title)) {
-                echo '<h2 class="tabs__title">' . do_shortcode($title) . '</h2>';
+                echo '<h2 class="tabs__title animated-element from-left">' . do_shortcode($title) . '</h2>';
             }
             if (!empty($description)) {
-                echo '<div class="tabs__description">' . do_shortcode($description) . '</div>';
+                echo '<div class="tabs__description animated-element from-right">' . do_shortcode($description) . '</div>';
             }
             ?>
         </div>

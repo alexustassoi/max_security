@@ -13,6 +13,10 @@ body {
         }
     }
 
+    &.no-scroll {
+        overflow: hidden;
+    }
+
     * {
         box-sizing: border-box;
     }
@@ -209,5 +213,48 @@ h5 {
     to {
         opacity: 0.5;
         transform: scale(1.1, 1.1);
+    }
+}
+
+
+.animated-element {
+    opacity: 0;
+}
+
+.from-left {
+    &.is-visible {
+        animation: 1s forwards linear ease-in-out;
+        animation-name: from-left;
+    }
+}
+
+.from-right {
+    &.is-visible {
+        animation: 1s forwards linear ease-in-out;
+        animation-name: from-right;
+    }
+}
+
+@keyframes from-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes from-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

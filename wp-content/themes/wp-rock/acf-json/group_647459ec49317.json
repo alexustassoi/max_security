@@ -45,6 +45,22 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_6603fe3376e7f",
+            "label": "Login link",
+            "name": "login_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_65e9b4e809a15",
             "label": "Footer",
             "name": "",
@@ -525,5 +541,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710150266
+    "modified": 1711537737
 }

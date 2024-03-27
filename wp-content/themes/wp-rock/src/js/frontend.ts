@@ -6,7 +6,7 @@ import '../scss/frontend.scss';
  * JavaScript
  */
 import Sliders from './components/swiper-init';
-import { setHeightEqualToWidth } from './parts/helpers';
+import initAnimation from './parts/animation';
 import tabsNavigation from './parts/navi-tabs';
 import Popup from './parts/popup-window';
 
@@ -21,11 +21,13 @@ function ready() {
     const openSubmenu = document.querySelectorAll('.js-open-submenu > a') as NodeListOf<Element>;
 
     tabsNavigation('.js-tab-block-link', '.js-tab-block-panel');
+    initAnimation();
 
     openMobileMenu &&
         openMobileMenu.addEventListener('click', (event) => {
             if (mobileMenu) {
                 mobileMenu.classList.add('open');
+                document.body.classList.add('no-scroll');
             }
         });
 
@@ -33,6 +35,7 @@ function ready() {
         closeMenu.addEventListener('click', (event) => {
             if (mobileMenu) {
                 mobileMenu.classList.remove('open');
+                document.body.classList.remove('no-scroll');
             }
         });
 
@@ -81,6 +84,16 @@ function ready() {
         const operationType = header && Math.floor(window.scrollY) > 100 ? 'add' : 'remove';
         header.classList[operationType]('scroll-header');
     }
+
+    document.body.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+
+        const hoverQuery = window.matchMedia('(hover: hover)');
+
+        if (target.classList.contains('menu-item-has-children') && !hoverQuery.matches) {
+            target.classList.toggle('opened');
+        }
+    });
 }
 
 window.document.addEventListener('DOMContentLoaded', ready);

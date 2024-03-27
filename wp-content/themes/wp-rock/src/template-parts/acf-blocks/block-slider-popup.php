@@ -34,10 +34,10 @@ $no_margin = empty($slides) ? 'mb0' : '';
         <div class="slider-popup__top-wrapper <?php echo $no_margin; ?>">
             <?php
             if (!empty($title)) {
-                echo '<h3 class="slider-popup__title">' . do_shortcode($title) . '</h3>';
+                echo '<h3 class="slider-popup__title animated-element from-left">' . do_shortcode($title) . '</h3>';
             }
             if (!empty($description)) {
-                echo '<div class="slider-popup__description">' . do_shortcode($description) . '</div>';
+                echo '<div class="slider-popup__description animated-element from-right">' . do_shortcode($description) . '</div>';
             }
             ?>
         </div>
