@@ -37,6 +37,9 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
                             if (!empty($tab_link['icon']) && !empty($tab_link['title'])) {
                                 echo '<a href="#tab-' . $key . '"
                                     class="tabs__tab-link swiper-slide js-tab-block-link ' . $active_class . '">
+                                    <svg class="shape-svg" width="265" height="265" viewBox="0 0 265 265" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M263 132.5C263 218.501 233.102 263 132.5 263C31.8979 263 2 218.501 2 132.5C2 46.4987 31.8979 2 132.5 2C233.102 2 263 46.4987 263 132.5Z" fill="transparent" stroke="#f3f0ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
                                     <div class="tabs__tab-inner">
                                         <img class="icon" src="' . $tab_link['icon'] . '" alt="icon">
                                         <span class="title">' . esc_html($tab_link['title']) . '</span>
