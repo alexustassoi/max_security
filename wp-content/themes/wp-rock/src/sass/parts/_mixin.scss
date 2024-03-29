@@ -1,0 +1,25 @@
+/*
+ Recommended breakpoints are:
+    - 1930
+    - 1650
+    - 1470
+    - 1280
+    - 1030
+    - 850
+    - 520
+    - 340
+ */
+
+
+
+@mixin max-break($point) {
+    @media only screen and (max-width : $point) {
+        @content;
+    }
+}
+
+@mixin min-break($point) {
+    @media only screen and (min-width : $point) {
+        @content;
+    }
+}

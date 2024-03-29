@@ -1,0 +1,123 @@
+%button-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $Poppins;
+    color: #F2F1ED;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.18;
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    border: none;
+    outline: none;
+    width: max-content;
+    cursor: pointer;
+    border-radius: 7px;
+
+    @include max-break('1030px') {
+        font-size: 14px;
+    }
+}
+
+.button {
+    @extend %button-style;
+    padding: 6px 17px;
+    height: 31px;
+    transition: background-color .5s ease, color .5s ease;
+}
+
+.red-btn {
+    background: #F44134;
+
+    &:hover {
+        background-color: #F2F1ED;
+        color: #F44134;
+    }
+}
+
+.white-brown-btn,
+.brown-btn {
+    border: 2px solid #F2F1ED;
+    background-color: #1E0202;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    &:hover {
+        background-color: #F2F1ED;
+        color: #1E0202;
+    }
+}
+
+.brown-transparent-btn {
+    border-radius: 5px;
+    border: 1px solid #1E0202;
+    background-color: #F2F1ED;
+    color: #1E0202;
+
+    &:hover {
+        background-color: #1E0202;
+        color: #F2F1ED;
+    }
+}
+
+.brown-btn {
+    border: unset;
+}
+
+.white-btn {
+    border: 2px solid #F2F1ED;
+    background-color: #F2F1ED;
+    color: #1E0202;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    &:hover {
+        background-color: transparent;
+        color: #F2F1ED;
+    }
+}
+
+.white-transparent-btn {
+    border-radius: 5px;
+    border: 1px solid #F2F1ED;
+    background-color: transparent;
+    color: #F2F1ED;
+
+    &:hover {
+        background-color: #1E0202;
+        color: #F2F1ED;
+    }
+}
+
+.brown-transparent-btn2 {
+    border-radius: 5px;
+    border: 2px solid #1E0202;
+    background-color: transparent;
+    color: #1E0202;
+
+    &:hover {
+        background-color: #1E0202;
+        color: white;
+    }
+}
+
+.more-btn {
+    color: #000;
+    line-height: 19px; /* 118.75% */
+
+    &:after {
+        content: "";
+        width: 9px;
+        height: 7.313px;
+        margin-left: 5px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='6' viewBox='0 0 7 6' fill='none'%3E%3Cpath d='M3.95853 5.51097C3.73428 5.82654 3.26571 5.82654 3.04147 5.51097L0.234113 1.5602C-0.0305362 1.18776 0.235748 0.671874 0.692639 0.671874L6.30736 0.671875C6.76425 0.671875 7.03054 1.18776 6.76589 1.5602L3.95853 5.51097Z' fill='%231E0202'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        font-size: 0;
+    }
+}

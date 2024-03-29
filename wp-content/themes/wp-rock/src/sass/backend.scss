@@ -1,0 +1,26 @@
+.acf-repeater .acf-row > td {
+    border-top: 10px solid #e6e6e6 !important;
+    border-bottom: 10px solid #e6e6e6 !important;
+}
+.acf-repeater .acf-row-handle.order {
+    color: #000;
+    font-size: 24px;
+}
+
+.acf-block-body .acf-block-fields {
+    border: #5a93ea solid 3px;
+}
+
+.mce-menu .mce-menu-item-normal.mce-active,
+.mce-menu .mce-menu-item-preview.mce-active,
+.mce-menu .mce-menu-item.mce-selected,
+.mce-menu .mce-menu-item:focus,
+.mce-menu .mce-menu-item:hover {
+    background: #94d2f0 !important;
+}
+.wp-block {
+    max-width: 1280px;
+}
+.wp-block-image .components-resizable-box__container {
+    overflow: hidden;
+}

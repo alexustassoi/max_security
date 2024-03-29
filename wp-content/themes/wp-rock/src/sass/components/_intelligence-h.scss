@@ -1,0 +1,281 @@
+.intelligence-h {
+    padding-top: 165px;
+    padding-bottom: 58px;
+    background: #1E0202;
+
+    &__container {
+        display: flex;
+    }
+
+    &__menu-wrap {
+        min-width: 291px;
+        max-width: 291px;
+        margin-right: 77px;
+
+        @include max-break('670px') {
+            display: none;
+        }
+    }
+
+    &__menu {
+        border-radius: 8px;
+        background: #F2F1ED;
+        margin-bottom: 23px;
+
+        .menu-item {
+            border-bottom: 1px solid #1E0202;
+            border-right: 1px solid #1E0202;
+            border-left: 1px solid #1E0202;
+
+            &:last-of-type {
+                border-bottom: unset;
+            }
+
+            a,
+            .like-link {
+                display: flex;
+                color: #1E0202;
+                font-family: $Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.37;
+                padding: 35px 37px 35px 32px;
+            }
+
+            &:first-of-type,
+            &:last-of-type {
+                border-radius: 8px;
+            }
+
+            &:first-of-type {
+                border-bottom-left-radius: unset;
+                border-bottom-right-radius: unset;
+
+                &.current-menu-item {
+                    border-top: 1px solid #F2F1ED;
+                }
+            }
+
+            &:last-of-type {
+                border-top-left-radius: unset;
+                border-top-right-radius: unset;
+
+                &.current-menu-item {
+                    border-bottom: 1px solid #F2F1ED;
+                }
+            }
+
+            &.current-menu-item {
+                border-right: 1px solid #F2F1ED;
+                border-left: 1px solid #F2F1ED;
+                background: #1E0202;
+
+                .like-link {
+                    color: #F2F1ED;
+                    font-family: $PP_Formula;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.38;
+                }
+            }
+        }
+    }
+
+    &__talk-btn {
+        width: 100%;
+    }
+
+    &__content-wrap {
+        width: 100%;
+        display: flex;
+    }
+
+    &__content {
+        max-width: 560px;
+        min-width: 560px;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__subtitle,
+    &__title,
+    &__desc {
+        color: #F2F1ED;
+        font-family: $PP_Formula;
+        font-style: normal;
+    }
+
+    &__subtitle {
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 1.28;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 62px;
+        padding-left: 33PX;
+
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            width: 21px;
+            height: 21px;
+            z-index: 1;
+            background-color: #F2F1ED;
+            border-radius: 50%;
+        }
+    }
+
+    &__title {
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 1.16;
+        margin-bottom: 35px;
+        text-transform: capitalize;
+    }
+
+    &__desc {
+        font-family: $Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.27;
+        margin-bottom: 35px;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__btn-1 {
+        margin-right: 17px;
+    }
+
+    &__btn-2 {
+
+    }
+
+    &__block-img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: calc(43% - 4px);
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+body {
+    &.intelligence-solution-1 {
+        .intelligence-h {
+
+            &__title {
+                max-width: 500px;
+            }
+
+            &__desc {
+                max-width: 560px;
+            }
+        }
+    }
+
+    &.intelligence-solution-2 {
+        .intelligence-h {
+
+            &__title {
+                max-width: 500px;
+            }
+
+            &__desc {
+                max-width: 560px;
+            }
+        }
+    }
+
+    &.intelligence-solution-3,
+    &.intelligence-research {
+        .intelligence-h {
+
+            &__desc {
+                max-width: 522px;
+            }
+        }
+    }
+
+    &.intelligence-portal {
+        .intelligence-h {
+
+            &__title {
+                max-width: 421px;
+            }
+
+            &__desc {
+                max-width: 392px;
+            }
+        }
+    }
+
+    &.intelligence-main {
+        .intelligence-h {
+
+            &__title {
+                max-width: 450px;
+            }
+
+            &__desc {
+                max-width: 440px;
+            }
+        }
+    }
+
+    &.intelligence-solution-1,
+    &.intelligence-solution-2,
+    &.intelligence-solution-3,
+    &.intelligence-research,
+    &.intelligence-portal,
+    &.intelligence-main {
+        .matter {
+            padding-bottom: 13px;
+            padding-top: 47px;
+
+            &__content {
+                padding-bottom: 191px;
+                padding-top: 250px;
+            }
+        }
+    }
+
+    &.intelligence-solution-1,
+    &.intelligence-solution-2,
+    &.intelligence-solution-3,
+    &.intelligence-research,
+    &.intelligence-portal {
+
+        .matter {
+            &__title {
+                font-size: 45px;
+                line-height: 1.11;
+                max-width: 683px;
+
+                @include max-break('1030px') {
+                    font-size: 40px;
+                }
+
+                @include max-break('850px') {
+                    font-size: 32px;
+                }
+
+                @include max-break('570px') {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

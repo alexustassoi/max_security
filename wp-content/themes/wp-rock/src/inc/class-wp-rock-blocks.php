@@ -16,7 +16,7 @@ class WP_Rock_Blocks {
      *
      * @var array[]
      */
-    protected $blocks = array(
+    public $blocks = array(
         'block-top-page' => array(
             'title'      => 'Block - Top page',
         ),
@@ -168,10 +168,10 @@ class WP_Rock_Blocks {
 
                 );
 
-                $style_file = THEME_DIR . '/assets/public/css/' . $id . '.css';
+                /*$style_file = THEME_DIR . '/assets/public/css/' . $id . '.css';
                 if (file_exists($style_file) && file_get_contents($style_file)) {
                     $args['enqueue_style'] = ASSETS_CSS . $id . '.css';
-                }
+                }*/
 
                 $script_file = THEME_DIR . '/assets/public/js/js-' . $id . '.js';
                 if (file_exists($script_file) && file_get_contents($script_file)) {

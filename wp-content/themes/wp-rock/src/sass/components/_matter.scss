@@ -1,0 +1,76 @@
+.matter {
+    padding-top: 78px;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @include max-break('1030px') {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    &__container {
+
+    }
+
+    &__content {
+        padding-top: 253px;
+        padding-bottom: 222px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+
+        @include max-break('1030px') {
+            padding-bottom: 190px;
+            padding-top: 220px;
+        }
+
+        @include max-break('991px') {
+            padding-bottom: 140px;
+            padding-top: 170px;
+        }
+
+        @include max-break('570px') {
+            padding-bottom: 110px;
+            padding-top: 140px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 38px;
+        max-width: 548px;
+        color: #1E0202;
+        text-align: center;
+        text-transform: capitalize;
+
+        @include max-break('991px') {
+            max-width: 430px;
+        }
+
+        @include max-break('670px') {
+            max-width: 356px;
+            margin-bottom: 25px;
+            font-size: 34px;
+        }
+
+        @include max-break('570px') {
+            font-size: 28px;
+            max-width: 295px;
+        }
+    }
+
+    &__btn {
+        padding-left: 22px;
+        padding-right: 22px;
+        height: 41px;
+        border: 1px solid transparent;
+
+        &:hover {
+            border: 1px solid #1E0202;
+        }
+    }
+}

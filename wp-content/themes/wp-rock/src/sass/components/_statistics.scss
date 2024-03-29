@@ -1,0 +1,118 @@
+.statistics {
+    padding-top: 100px;
+    padding-bottom: 14px;
+
+    @include max-break('1030px') {
+        padding-top: 90px;
+    }
+
+    @include max-break('670px') {
+        padding-top: 70px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 925px;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        flex: 1;
+        min-width: calc((100% - 40px) / 2);
+        max-width: calc((100% - 40px) / 2);
+        margin-bottom: 106px;
+
+        @include max-break('1199px') {
+            margin-bottom: 90px;
+        }
+
+        @include max-break('850px') {
+            gap: 30px;
+        }
+
+        @include max-break('670px') {
+            margin-bottom: 65px;
+        }
+
+        @include max-break('570px') {
+            margin-bottom: 45px;
+        }
+
+        &:nth-last-child(-n + 2) {
+            @include max-break('1199px') {
+                margin-bottom: 70px;
+            }
+
+            @include max-break('991px') {
+                margin-bottom: 70px;
+            }
+
+            @include max-break('670px') {
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+    &__number,
+    &__text {
+        text-align: center;
+        font-family: $PP_Formula;
+        font-style: normal;
+    }
+
+    &__number {
+        color: #8DAFCF;
+        font-size: 150px;
+        font-weight: 800;
+        line-height: 0.8;
+
+        @include max-break('1370px') {
+            font-size: 125px;
+        }
+
+        @include max-break('1199px') {
+            font-size: 105px;
+        }
+
+        @include max-break('991px') {
+            font-size: 85px;
+        }
+
+        @include max-break('768px') {
+            font-size: 70px;
+        }
+
+        @include max-break('670px') {
+            font-size: 60px;
+        }
+    }
+
+    &__text {
+        color: #1E0202;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.38;
+        max-width: 243px;
+
+        @include max-break('850px') {
+            max-width: 230px;
+            font-size: 16px;
+        }
+
+        @include max-break('670px') {
+            font-size: 14px;
+            max-width: 200px;
+        }
+    }
+}
