@@ -13,7 +13,7 @@ $benefts = get_field_value( $fields, 'benefts' );
 
 ?>
 
-<div class="benefts  <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
+<div class="benefts <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
     <div class="custom-container">
         <?php if($title): ?>
             <h2 class="benefts__title"><?php echo $title; ?></h2>

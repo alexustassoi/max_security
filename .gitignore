@@ -3599,3 +3599,10 @@
 /wp-content/backups-dup-lite/.htaccess
 /wp-content/backups-dup-lite/index.php
 /wp-content/backups-dup-lite/robots.txt
+/wp-content/deployment-folder/db_archive/max_security_05_10_2023.sql
+/wp-content/deployment-folder/db_archive/max_security_06_10_2023.sql
+/wp-content/deployment-folder/db_archive/max_security_09_10_2023.sql
+/wp-content/deployment-folder/db_archive/max_security_10_10_2023.sql
+/wp-content/deployment-folder/db_archive/max_security_11_10_2023.sql
+/wp-content/deployment-folder/db_archive/max_security_26_10_2023.sql
+/wp-content/deployment-folder/.gitignore

@@ -25,7 +25,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 add_action( 'wp_enqueue_scripts', 'register_acf_block_styles' );
 add_action( 'admin_enqueue_scripts', 'register_acf_block_styles' );
 
-function register_acf_block_styles() : void {
+function register_acf_block_styles() {
 
     $wrock_blocks  = new WP_Rock_Blocks();
     $custom_blocks = $wrock_blocks->blocks;
@@ -35,7 +35,7 @@ function register_acf_block_styles() : void {
         foreach (array_keys($custom_blocks) as $key) {
             if( has_block( 'acf/'.$key ) ) {
                 $style_file = ASSETS_CSS . $key . '.css';
-                wp_enqueue_style( 'acf-block-'.$key, $style_file, array(), wp_get_theme()?->get( 'Version' ) );
+                wp_enqueue_style( 'acf-block-'.$key, $style_file, array(), wp_get_theme()->get( 'Version' ) );
             }
         }
     }
@@ -67,4 +67,4 @@ function add_preconnect_rel_attribute($html, $handle, $href, $media) {
 
     return $html;
 }
-add_filter('style_loader_tag', 'add_preconnect_rel_attribute', 90, 4);
+//add_filter('style_loader_tag', 'add_preconnect_rel_attribute', 90, 4);
