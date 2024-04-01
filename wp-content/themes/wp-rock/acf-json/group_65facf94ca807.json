@@ -3,6 +3,35 @@
     "title": "Block - Slider popup",
     "fields": [
         {
+            "key": "field_660ad71d26584",
+            "label": "Background color",
+            "name": "background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#ffffff": "White",
+                "#5A7153": "Green",
+                "#445C5A": "Dark-green",
+                "#685B4C": "Brown",
+                "#7E97A6": "Blue"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_65fda19ce127a",
             "label": "Upper description",
             "name": "upper_description",
@@ -61,6 +90,56 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_660ad77b26586",
+            "label": "Show slides count",
+            "name": "show_slides_count",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_660ad75926585",
+            "label": "Blocks color",
+            "name": "blocks_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#5A7153": "Green",
+                "#445C5A": "Dark-green",
+                "#685B4C": "Brown",
+                "#7E97A6": "Blue"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_65facfc09c319",
@@ -190,5 +269,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711120865
+    "modified": 1711986955
 }
