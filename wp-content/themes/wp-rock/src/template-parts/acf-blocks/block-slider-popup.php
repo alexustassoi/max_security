@@ -21,13 +21,14 @@ $background_color = get_field_value($fields, 'background_color');
 
 $bg_color = !empty($bg_color) ? $bg_color : '#5A7153';
 $blocks_color = !empty($blocks_color) ? $blocks_color : '#5A7153';
-$background_color = !empty($background_color) ? $background_color : '#fff';
+$background_color = !empty($background_color) ? $background_color : '#ffffff';
 
 
+$white_text = $background_color !== '#ffffff' ? 'white-text' : '';
 $no_margin = empty($slides) ? 'mb0' : '';
 ?>
 
-<div class="slider-popup <?php echo $class_name; ?>" style="background-color: <?php echo $background_color; ?>;">
+<div class="slider-popup <?php echo $class_name .' ' . $white_text; ?>" style="background-color: <?php echo $background_color; ?>;">
 
     <div class="custom-container">
         <?php
@@ -48,7 +49,7 @@ $no_margin = empty($slides) ? 'mb0' : '';
             ?>
         </div>
         <?php if ($slides) : ?>
-            <div class="slider-popup__slider js-slider-popup-1">
+            <div data-slides_count="<?php echo $show_slides_count; ?>" class="slider-popup__slider js-slider-popup-1">
                 <div class="swiper-wrapper">
                     <?php foreach ($slides as $key => $slide) {
                         echo '<div class="slider-popup__slide swiper-slide js-open-popup-activator"

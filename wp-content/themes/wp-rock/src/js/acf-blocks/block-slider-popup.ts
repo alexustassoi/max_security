@@ -5,12 +5,14 @@ Swiper.use([Navigation]);
 const initBlockSliderPopup = () => {
     const sliderPopupSwiper1 = document.querySelector('.js-slider-popup-1') as HTMLElement;
     if (sliderPopupSwiper1) {
+        const slidesCount = sliderPopupSwiper1?.dataset.slides_count ? sliderPopupSwiper1?.dataset.slides_count : 5;
+
         const sliderPopupBlock = new Swiper(sliderPopupSwiper1, {
             slidesPerView: 1,
             spaceBetween: 20,
             breakpoints: {
                 991: {
-                    slidesPerView: 5,
+                    slidesPerView: slidesCount as number,
                 },
                 670: {
                     slidesPerView: 3,

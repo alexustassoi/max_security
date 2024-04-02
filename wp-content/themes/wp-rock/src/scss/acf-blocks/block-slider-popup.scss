@@ -3,6 +3,17 @@
     padding-bottom: 100px;
     background-color: #f5f5f5;
 
+    &.white-text {
+        .slider-popup__description,
+        .slider-popup__title {
+            color: #f3f0ec;
+
+            p {
+                color: #f3f0ec;
+            }
+        }
+    }
+
     @media screen and (max-width: 1024px) {
         padding-top: 32px;
         padding-bottom: 32px;
