@@ -361,3 +361,15 @@
         }
     }
 }
+
+body.filled-header {
+    .site-header {
+        background-color: #151836;
+
+        .site-header__menu {
+            .menu {
+                display: flex;
+            }
+        }
+    }
+}

@@ -1,0 +1,229 @@
+.mirror-repeater {
+    padding: 100px 0;
+
+    @media screen and (max-width: 992px) {
+        padding: 32px 0;
+    }
+
+    &__top-description {
+        color: #f3f0ec;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 80px;
+
+        @media screen and (max-width: 992px) {
+            font-size: 26px;
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 16px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+
+        @media screen and (max-width: 992px) {
+            gap: 24px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 42px;
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+            }
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+
+    &__item-inner {
+        margin-top: 24px;
+
+        @media screen and (max-width: 992px) {
+            margin-top: 0;
+        }
+    }
+
+    &__item-image {
+        clip-path: url(#svg-clip-332);
+        width: 332px;
+        height: 332px;
+        flex-shrink: 0;
+        margin: 0;
+
+        @media screen and (max-width: 768px) {
+            clip-path: url(#svg-clip-247);
+            width: 247px;
+            height: 247px;
+        }
+
+        @media screen and (max-width: 480px) {
+            clip-path: url(#svg-clip-155);
+            width: 155px;
+            height: 155px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__item-title {
+        color: #17181a;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 8px;
+
+        @media screen and (max-width: 992px) {
+            font-size: 26px;
+            color: #f3f0ec;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 16px;
+        }
+    }
+
+    &__item-description {
+        color: #f3f0ec;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 992px) {
+            font-size: 26px;
+            color: #f3f0ec;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 10px;
+        }
+    }
+
+    &__item-link {
+        text-decoration: none;
+        color: #f3f0ec;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        border: 1px solid #cc7510;
+        padding: 4px 8px;
+        transition: background-color 0.3s;
+
+        @media screen and (max-width: 992px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 10px;
+        }
+
+        &:hover {
+            background-color: #cc7510;
+        }
+    }
+
+    &__load-more {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        appearance: none;
+        color: #f3f0ec;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Turbine, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2;
+        transition: color 0.3s;
+
+        @media screen and (max-width: 992px) {
+            font-size: 26px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 16px;
+        }
+
+        &.hide {
+            display: none;
+        }
+
+        &:hover {
+            color: #cc7510;
+
+            svg path {
+                fill: #cc7510;
+            }
+        }
+
+        svg {
+            path {
+                transition: fill 0.3s;
+            }
+
+            @media screen and (max-width: 480px) {
+                width: 21px;
+                height: 21px;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

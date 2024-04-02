@@ -62,6 +62,15 @@ class WP_Rock_Blocks {
         'block-knowledge' => array(
             'title'     => 'Block - Knowledge',
         ),
+        'block-small-hero' => array(
+            'title'     => 'Block - Small hero',
+        ),
+        'block-text-content' => array(
+            'title'     => 'Block - Text content',
+        ),
+        'block-mirror-repeater' => array(
+            'title'     => 'Block - Mirror repeater',
+        ),
     );
 
     /**

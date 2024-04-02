@@ -59,6 +59,20 @@
                 "operator": "==",
                 "value": "acf\/block-text-repeater"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-small-hero"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-mirror-repeater"
+            }
         ]
     ],
     "menu_order": 0,
@@ -70,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711111588
+    "modified": 1712066622
 }
