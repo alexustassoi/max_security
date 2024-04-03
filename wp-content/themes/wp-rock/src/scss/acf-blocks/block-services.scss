@@ -146,10 +146,12 @@
 
         @media screen and (max-width: 991px) {
             width: 234px;
+            height: 234px;
         }
 
         @media screen and (max-width: 480px) {
             width: 155px;
+            height: 155px;
             clip-path: url(#svg-clip-155);
             padding-top: 15px;
         }

@@ -259,6 +259,7 @@
 
                 &.menu-item-has-children {
                     & > a {
+                        position: relative;
                         &.open {
                             &:after {
                                 transform: rotate(180deg);
@@ -272,6 +273,7 @@
                             display: inline-block;
                             width: 18px;
                             height: 18px;
+                            position: absolute;
                             background-repeat: no-repeat;
                             background-position: center center;
                             background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfNTI1XzI0NTk4KSI+PHBhdGggZD0iTTE4LjM1NTUgNC43OTA4NEMxOC4zNTU1IDQuNjM5NjcgMTguMjk1NyA0LjQ4NDk2IDE4LjE3OTcgNC4zNjg5NEMxNy45NDc3IDQuMTM2OTEgMTcuNTY4IDQuMTM2OTEgMTcuMzM1OSA0LjM2ODk0TDkuMzk0MTQgMTIuMzEwN0wxLjU2ODM2IDQuNDg0OTZDMS4zMzYzMyA0LjI1MjkzIDAuOTU2NjQxIDQuMjUyOTMgMC43MjQ2MDkgNC40ODQ5NkMwLjQ5MjU3OCA0LjcxNjk5IDAuNDkyNTc4IDUuMDk2NjggMC43MjQ2MDkgNS4zMjg3MUw4Ljk3MjI3IDEzLjU3OTlDOS4yMDQzIDEzLjgxMTkgOS41ODM5OCAxMy44MTE5IDkuODE2MDIgMTMuNTc5OUwxOC4xNzk3IDUuMjE2MjFDMTguMjk5MiA1LjA5NjY4IDE4LjM1NTUgNC45NDU1MyAxOC4zNTU1IDQuNzkwODRaIiBmaWxsPSIjRjNGMEVDIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDBfNTI1XzI0NTk4Ij48cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09Im1hdHJpeCgtMSAwIDAgLTEgMTguNSAxOCkiLz48L2NsaXBQYXRoPjwvZGVmcz48L3N2Zz4=);
@@ -292,7 +294,7 @@
                 }
 
                 .sub-menu {
-                    padding-left: 25px;
+                    //padding-left: 25px;
                     opacity: 0;
                     overflow: hidden;
                     max-height: 0;
