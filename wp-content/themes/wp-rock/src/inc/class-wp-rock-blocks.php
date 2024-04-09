@@ -71,6 +71,9 @@ class WP_Rock_Blocks {
         'block-mirror-repeater' => array(
             'title'     => 'Block - Mirror repeater',
         ),
+        'block-accordion' => array(
+            'title'     => 'Block - Accordion',
+        ),
     );
 
     /**

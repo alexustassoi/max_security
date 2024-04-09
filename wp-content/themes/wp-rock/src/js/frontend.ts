@@ -2,6 +2,7 @@
  * SASS
  */
 import '../scss/frontend.scss';
+import initAccordion from './components/accordion';
 /**
  * JavaScript
  */
@@ -22,6 +23,7 @@ function ready() {
 
     tabsNavigation('.js-tab-block-link', '.js-tab-block-panel');
     initAnimation();
+    initAccordion();
 
     openMobileMenu &&
         openMobileMenu.addEventListener('click', (event) => {

@@ -210,6 +210,7 @@ h5 {
         opacity: 1;
         transform: scale(1, 1);
     }
+
     to {
         opacity: 0.5;
         transform: scale(1.1, 1.1);
@@ -256,5 +257,27 @@ h5 {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+textarea,
+input[type="text"] {
+    width: 100%;
+    padding: 10px 16px;
+    color: #757981;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Turbine, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.2;
+
+    border-radius: 5px;
+    border: 1px solid #757981;
+    background-color: #fff;
+    resize: none;
+
+    @media screen and (max-width: 768px) {
+        font-size: 24px;
     }
 }
