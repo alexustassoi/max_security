@@ -1,8 +1,30 @@
 .text-content {
     padding: 100px 0 130px;
 
+    &.thank-you-page {
+        padding: 64px 0;
+
+        @media screen and (max-width: 992px) {
+            padding: 32px 0;
+        }
+
+
+        .text-content__content {
+            p {
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 992px) {
         padding: 32px 0;
+    }
+
+    &__custom-container {
+        display: flex;
+        flex-direction: column;
     }
 
     &__title {
@@ -24,6 +46,7 @@
 
         @media screen and (max-width: 480px) {
             font-size: 24px;
+            margin-bottom: 16px;
         }
     }
 
@@ -57,6 +80,41 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        margin-top: 40px;
+        text-decoration: none;
+        border: 1px solid #CC7510;
+        padding: 4px 8px;
+        color: #2F3034;
+        font-family: Turbine, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        transition: background-color 0.3s;
+        margin-right: auto;
+
+        @media screen and (max-width: 992px) {
+            margin-top: 24px;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 670px) {
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-color: #CC7510;
         }
     }
 }

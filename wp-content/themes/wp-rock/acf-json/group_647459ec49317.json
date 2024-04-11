@@ -61,6 +61,27 @@
             "return_format": "array"
         },
         {
+            "key": "field_6617f8b5aaf52",
+            "label": "Page to redirect",
+            "name": "page_to_redirect",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1
+        },
+        {
             "key": "field_65e9b4e809a15",
             "label": "Footer",
             "name": "",
@@ -521,6 +542,128 @@
                     "parent_repeater": "field_65eecc68520d7"
                 }
             ]
+        },
+        {
+            "key": "field_6617eb5b50a58",
+            "label": "Page 404",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6617eba850a5d",
+            "label": "Page 404 background image",
+            "name": "page_404_background_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6617eb6e50a59",
+            "label": "Page 404 big title",
+            "name": "page_404_big_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6617eb7e50a5a",
+            "label": "Page 404 title",
+            "name": "page_404_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6617eb8450a5b",
+            "label": "Page 404 description",
+            "name": "page_404_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6617eb9450a5c",
+            "label": "Page 404 link text",
+            "name": "page_404_link_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -541,5 +684,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711537737
+    "modified": 1712847123
 }

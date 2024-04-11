@@ -6,11 +6,13 @@
  * @package WP-rock
  * @since   4.4.0
  */
+$class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields = get_fields();
 $title = get_field_value($fields, 'title');
 $content = get_field_value($fields, 'content');
+$link = get_field_value($fields, 'link');
 ?>
-<div class="text-content">
+<div class="text-content <?php echo esc_html($class_name); ?>">
     <div class="custom-container text-content__custom-container">
         <?php
         if (!empty($title)) {
@@ -18,6 +20,11 @@ $content = get_field_value($fields, 'content');
         }
         if (!empty($content)) {
             echo '<div class="text-content__content">' . do_shortcode($content) . '</div>';
+        }
+        if (isset($link['url']) && isset($link['title'])) {
+            echo '<a href="' . esc_url($link['url']) . '" class="text-content__link">
+                        ' . do_shortcode($link['title']) . '
+                    </a>';
         }
         ?>
     </div>

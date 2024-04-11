@@ -96,6 +96,18 @@ function ready() {
             target.classList.toggle('opened');
         }
     });
+
+    document.addEventListener('wpcf7mailsent', (event) => {
+        const form = event.target as HTMLFormElement;
+        const isRedirect = form?.id && form.id === 'redirect-to-thank';
+        const header = document.querySelector('#site-header')as HTMLElement;
+        const pageToRedirect = header && header?.dataset.redirect_to ? header.dataset.redirect_to : false;
+
+        if (isRedirect && pageToRedirect) {
+            window.location.replace(pageToRedirect);
+        }
+
+    });
 }
 
 window.document.addEventListener('DOMContentLoaded', ready);

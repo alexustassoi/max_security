@@ -12,9 +12,11 @@ $header_logo = get_field_value($global_options, 'header_logo');
 $max_words = get_field_value($global_options, 'max_words');
 $lets_talk_link = get_field_value($global_options, 'lets_talk_link');
 $login_link = get_field_value($global_options, 'login_link');
+$page_to_redirect = get_field_value($global_options, 'page_to_redirect');
+$page_link = !empty($page_to_redirect) ? get_permalink($page_to_redirect) : '';
 ?>
 
-<header id="site-header" class="site-header js-site-header">
+<header id="site-header" class="site-header js-site-header" data-redirect_to="<?php echo $page_link; ?>">
     <div class="custom-container site-header__container">
         <a class="site-header__logo" href="<?php echo get_site_url(); ?>">
             <?php if ($header_logo) : ?>
