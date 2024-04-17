@@ -1,0 +1,6 @@
+(function(){"use strict";var __webpack_require__={};!function(){__webpack_require__.r=function(exports){if(typeof Symbol!=='undefined'&&Symbol.toStringTag){Object.defineProperty(exports,Symbol.toStringTag,{value:'Module'})}Object.defineProperty(exports,'__esModule',{value:!0})}}();var __webpack_exports__={};
+/*!********************************************!*\
+  !*** ./src/js/acf-blocks/block-benefts.ts ***!
+  \********************************************/
+__webpack_require__.r(__webpack_exports__);var _a;var initBlockBenefts=function initBlockBenefts(){var beneftsTitle=document.querySelectorAll('.js-benefts-title');beneftsTitle&&beneftsTitle.forEach(function(item){item.addEventListener('click',function(event){var _a;var screenWidth=window.innerWidth;var clickElem=event.target;clickElem.classList.toggle('open');if(screenWidth<=768){var parent=clickElem.closest('.js-benefts-item');(_a=parent.querySelector('.js-benefts-content'))===null||_a===void 0?void 0:_a.classList.toggle('open')}})})};document.addEventListener('DOMContentLoaded',initBlockBenefts,!1);if(window.acf){(_a=window.acf)===null||_a===void 0?void 0:_a.addAction('render_block_preview',initBlockBenefts)}})()
+;

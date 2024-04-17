@@ -3606,3 +3606,4 @@
 /wp-content/deployment-folder/db_archive/max_security_11_10_2023.sql
 /wp-content/deployment-folder/db_archive/max_security_26_10_2023.sql
 /wp-content/deployment-folder/.gitignore
+/wp-content/backups-dup-lite/

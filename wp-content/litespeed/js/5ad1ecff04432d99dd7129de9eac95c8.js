@@ -1,0 +1,6 @@
+(function(){"use strict";var __webpack_require__={};!function(){__webpack_require__.r=function(exports){if(typeof Symbol!=='undefined'&&Symbol.toStringTag){Object.defineProperty(exports,Symbol.toStringTag,{value:'Module'})}Object.defineProperty(exports,'__esModule',{value:!0})}}();var __webpack_exports__={};
+/*!****************************************************!*\
+  !*** ./src/js/acf-blocks/block-mirror-repeater.ts ***!
+  \****************************************************/
+__webpack_require__.r(__webpack_exports__);var _a;var initBlockJourney=function initBlockJourney(){var mirrorItem=document.querySelectorAll('.js-mirror-item');var loadMoreBtn=document.querySelector('.js-load-more');loadMoreBtn&&loadMoreBtn.addEventListener('click',function(){loadMoreBtn&&loadMoreBtn.classList.add('hide');mirrorItem&&mirrorItem.forEach(function(item){var el=item;el.classList.remove('hide')})})};document.addEventListener('DOMContentLoaded',initBlockJourney,!1);if(window.acf){(_a=window.acf)===null||_a===void 0?void 0:_a.addAction('render_block_preview',initBlockJourney)}})()
+;
