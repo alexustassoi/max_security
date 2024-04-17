@@ -14,6 +14,9 @@ html :where(.wp-block) {
 .block-editor-block-list__layout .block-editor-block-list__block {
     position: initial;
 }
+.block-editor-block-list__layout .block-editor-block-list__block {
+    margin-bottom: 50px;
+}
 
 .acf-block-preview {
     @import 'parts/normalize';

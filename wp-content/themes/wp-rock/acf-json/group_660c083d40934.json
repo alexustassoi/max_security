@@ -114,10 +114,10 @@
                 },
                 {
                     "key": "field_660c0888bccec",
-                    "label": "LInk",
-                    "name": "link",
+                    "label": "Connected Course for modal window",
+                    "name": "connected_course_for_modal_window",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -126,7 +126,14 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "post_type": [
+                        "courses"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
                     "parent_repeater": "field_660c085abcce9"
                 }
             ]
@@ -150,5 +157,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712067103
+    "modified": 1713338731
 }

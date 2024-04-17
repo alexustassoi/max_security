@@ -144,7 +144,5 @@ $no_margin = empty($slides) ? 'mb0' : '';
         popups.forEach(function(popup) {
             wrapper.insertAdjacentElement('afterend', popup);
         });
-
-
     })();
 </script>

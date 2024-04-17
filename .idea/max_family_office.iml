@@ -6,9 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/phpmyadmin/test/classes" isTestSource="true" packagePrefix="PhpMyAdmin\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/phpmyadmin/test/selenium" isTestSource="true" packagePrefix="PhpMyAdmin\Tests\Selenium\" />
       <sourceFolder url="file://$MODULE_DIR$/phpmyadmin/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/webp-express/lib/classes" isTestSource="false" packagePrefix="WebPExpress" />
       <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-all-import-pro/src" isTestSource="false" packagePrefix="Wpai\" />
       <sourceFolder url="file://$MODULE_DIR$/wp-includes/sodium_compat/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/deployment-folder/wp-content/plugins/wp-all-import-pro/src" isTestSource="false" packagePrefix="Wpai\" />
       <excludeFolder url="file://$MODULE_DIR$/phpmyadmin/vendor/bacon/bacon-qr-code" />
       <excludeFolder url="file://$MODULE_DIR$/phpmyadmin/vendor/code-lts/u2f-php-server" />
       <excludeFolder url="file://$MODULE_DIR$/phpmyadmin/vendor/composer" />

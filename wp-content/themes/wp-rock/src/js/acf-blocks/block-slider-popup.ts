@@ -1,4 +1,4 @@
-import Swiper, { EffectFade, Navigation } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 
 Swiper.use([Navigation]);
 
