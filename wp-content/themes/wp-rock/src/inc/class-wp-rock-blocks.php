@@ -77,6 +77,9 @@ class WP_Rock_Blocks {
         'block-image-text' => array(
             'title'     => 'Block - Image text',
         ),
+        'block-careers-posts' => array(
+            'title'     => 'Block - Careers posts',
+        ),
     );
 
     /**
