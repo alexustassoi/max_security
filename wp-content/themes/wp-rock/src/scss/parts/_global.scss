@@ -281,3 +281,49 @@ input[type="text"] {
         font-size: 24px;
     }
 }
+
+.checkbox {
+    position: relative;
+    padding-left: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    input {
+        cursor: pointer;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .text {
+        color: #1D1D1B;
+        font-family: Turbine, sans-serif;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border: 3px solid #CC7510;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    input:checked + .icon {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBoZWlnaHQ9IjEzcHgiIHdpZHRoPSIxM3B4IiB2ZXJzaW9uPSIxLjEiICB2aWV3Qm94PSIwIDAgMTcuODM3IDE3LjgzNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZmlsbD0iI0NDNzUxMCIgZD0iTTE2LjE0NSwyLjU3MWMtMC4yNzItMC4yNzMtMC43MTgtMC4yNzMtMC45OSwwTDYuOTIsMTAuODA0bC00LjI0MS00LjI3ICAgYy0wLjI3Mi0wLjI3NC0wLjcxNS0wLjI3NC0wLjk4OSwwTDAuMjA0LDguMDE5Yy0wLjI3MiwwLjI3MS0wLjI3MiwwLjcxNywwLDAuOTlsNi4yMTcsNi4yNThjMC4yNzIsMC4yNzEsMC43MTUsMC4yNzEsMC45OSwwICAgTDE3LjYzLDUuMDQ3YzAuMjc2LTAuMjczLDAuMjc2LTAuNzIsMC0wLjk5NEwxNi4xNDUsMi41NzF6Ii8+CjwvZz4KPC9zdmc+);
+    }
+}

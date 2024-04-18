@@ -22,7 +22,7 @@ $form = get_field_value($fields, 'form');
         <?php if (!empty($accordion)) : ?>
             <div class="accordion__wrapper wrock-accordion">
                 <?php foreach ($accordion as $item) : ?>
-                    <div class="accordion__item wrock-accordion__item">
+                    <div class="accordion__item wrock-accordion__item" id="<?php echo sanitize_title($item['title']); ?>">
                         <?php
                         if (!empty($item['title'])) {
                             $img =  !empty($item['icon']) ? '<img class="accordion__item-icon style-svg" src="' . $item['icon'] . '" alt="icon">' : '';

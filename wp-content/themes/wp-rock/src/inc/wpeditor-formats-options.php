@@ -40,3 +40,9 @@ function my_wpeditor_formats_options( $settings ) {
     return $settings;
 }
 
+// Callback function to insert 'styleselect' into the $buttons array
+function wpb_mce_buttons_2($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');

@@ -159,3 +159,23 @@ if ( ! function_exists( 'shortcode__boxpopup' ) ) {
     add_shortcode( 'popup_box', 'shortcode_popup_box' );
 
 }
+
+
+function custom_checkbox_shortcode($atts) {
+    $atts = shortcode_atts(
+        array(
+            'text' => '',
+            'name' => '',
+        ),
+        $atts,
+        'custom_shortcode'
+    );
+
+    return '<label class="checkbox">
+				<p class="text">'.$atts['text'].'</p>
+				<input class="js-custom-checkbox" type="checkbox" value="'.$atts['text'].'" name="dyn_field_'.sanitize_title($atts['text']).'">
+				<span class="icon"></span>
+			</label>';
+}
+
+add_shortcode('custom_checkbox', 'custom_checkbox_shortcode');
