@@ -74,6 +74,9 @@ class WP_Rock_Blocks {
         'block-accordion' => array(
             'title'     => 'Block - Accordion',
         ),
+        'block-image-text' => array(
+            'title'     => 'Block - Image text',
+        ),
     );
 
     /**
