@@ -36,6 +36,7 @@ function px_site_scripts() {
         }
     }
 
+    wp_enqueue_script( 'form_script', '//js.hsforms.net/forms/embed/v2.js', array(), $custom_js_ver, true );
     wp_enqueue_script( 'frontend_js', ASSETS_JS . 'frontend.js', array( 'jquery' ), $custom_js_ver, true );
 
     $vars = array(

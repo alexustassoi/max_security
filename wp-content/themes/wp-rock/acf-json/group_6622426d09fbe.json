@@ -1,9 +1,9 @@
 {
-    "key": "group_66213e36d8457",
-    "title": "Single careers - fields",
+    "key": "group_6622426d09fbe",
+    "title": "Block - Career content",
     "fields": [
         {
-            "key": "field_662142a9556ca",
+            "key": "field_66224295c0443",
             "label": "Big title",
             "name": "big_title",
             "aria-label": "",
@@ -23,9 +23,9 @@
             "append": ""
         },
         {
-            "key": "field_66213e37a38be",
-            "label": "Excerpt",
-            "name": "excerpt",
+            "key": "field_6622426dc0442",
+            "label": "Content",
+            "name": "content",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -43,7 +43,7 @@
             "delay": 0
         },
         {
-            "key": "field_66222e1eb3cf4",
+            "key": "field_662242abc0444",
             "label": "Form title",
             "name": "form_title",
             "aria-label": "",
@@ -63,9 +63,9 @@
             "append": ""
         },
         {
-            "key": "field_66222e28b3cf5",
-            "label": "Form descrition",
-            "name": "form_descrition",
+            "key": "field_662242b5c0445",
+            "label": "Form description",
+            "name": "form_description",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -83,7 +83,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_66222e37b3cf6",
+            "key": "field_66224361f4ff3",
             "label": "Form shortcode",
             "name": "form_shortcode",
             "aria-label": "",
@@ -106,9 +106,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "careers"
+                "value": "acf\/block-career-content"
             }
         ]
     ],
@@ -121,5 +121,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713516118
+    "modified": 1713521518
 }

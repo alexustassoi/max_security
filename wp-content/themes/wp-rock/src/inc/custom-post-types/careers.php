@@ -41,7 +41,7 @@ $args = array(
     'query_var'             => true,
     'rewrite'               => array( 'slug' => $cpt_slug ),
     'capability_type'       => 'post',
-    'show_in_rest'          => false,
+    'show_in_rest'          => true,
     'has_archive'           => true,
     'hierarchical'          => false,
     'menu_position'         => null,

@@ -40,6 +40,7 @@ class WP_Rock_Blocks {
         ),
         'block-service-top' => array(
             'title'     => 'Block - Service top',
+            'post_types' => array('page', 'careers')
         ),
         'block-slider-popup' => array(
             'title'     => 'Block - Slider popup',
@@ -79,6 +80,10 @@ class WP_Rock_Blocks {
         ),
         'block-careers-posts' => array(
             'title'     => 'Block - Careers posts',
+        ),
+        'block-career-content' => array(
+            'title'     => 'Block - Career content',
+            'post_types' => array('careers')
         ),
     );
 
