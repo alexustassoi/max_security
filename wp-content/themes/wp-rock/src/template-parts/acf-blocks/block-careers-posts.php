@@ -21,15 +21,32 @@ $query = new WP_Query($args);
 ?>
 <div class="careers-posts">
 	<div class="custom-container">
-		<h2 class="careers-posts__title"></h2>
-		<h4 class="careers-posts__container-title"></h4>
+		<?php
+		if (!empty($title)) {
+			echo '<h2 class="careers-posts__title">' . esc_html($title) . '</h2>';
+		}
+		if (!empty($container_title)) {
+			echo '<h4 class="careers-posts__container-title">' . esc_html($container_title) . '</h4>';
+		}
+		?>
 		<?php if (!empty($query->have_posts())) : ?>
-			<div class="careers-posts__container">
-				<?php while ($query->have_posts()) : $query->the_post(); ?>
+			<div class="careers-posts__posts-container">
+				<?php while ($query->have_posts()) : $query->the_post();
+					$career_fields = get_fields(get_the_ID());
+					$title = get_the_title();
+					$excerpt = get_field_value($career_fields, 'excerpt');
+					$link = get_the_permalink();
+				?>
 					<div class="careers-posts__post">
-						<h5 class="careers-posts__post-title"></h5>
-						<div class="careers-posts__post-excerpt"></div>
-						<a href="" class="careers-posts__post-link"></a>
+						<p class="careers-posts__post-title">
+							<?php echo $title; ?>
+						</p>
+						<div class="careers-posts__post-excerpt">
+							<?php echo do_shortcode($excerpt); ?>
+						</div>
+						<a href="<?php echo $link; ?>" class="careers-posts__post-link">
+							<?php echo __('READ  MORE & APPLY', 'wp-rock'); ?>
+						</a>
 					</div>
 				<?php endwhile; ?>
 			</div>
