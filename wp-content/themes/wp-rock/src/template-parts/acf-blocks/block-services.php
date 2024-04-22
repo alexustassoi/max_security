@@ -8,7 +8,7 @@
  */
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
-$fields      = get_fields();
+$fields = get_fields();
 $title = get_field_value($fields, 'title');
 $subtitle = get_field_value($fields, 'subtitle');
 $text = get_field_value($fields, 'text');
@@ -34,8 +34,8 @@ $bottom_content = get_field_value($fields, 'bottom_content');
 
     <div class="custom-container services__custom-container">
         <?php if ($services) : ?>
-            <div class="swiper js-services-slider services__wrap">
-                <div class="swiper-wrapper">
+            <div class="services__wrap">
+
                     <?php
                     $services_counter = 1;
                     foreach ($services as $item) :
@@ -44,31 +44,32 @@ $bottom_content = get_field_value($fields, 'bottom_content');
                         $title = $service['title'];
                         $color = $service['background_color'];
                         $description = $service['description'];
-                    ?>
+                        ?>
+                        <div class="services__item-wrapper">
+                            <a href="#services-popup-<?php echo $services_counter; ?>"
+                               class="services__item js-open-popup-activator"
+                               style="background-color: <?php echo $color; ?>">
+                                <figure class="services__item-icon">
+                                    <?php if ($icon) : ?>
+                                        <img src="<?php echo $icon; ?>" alt="service icon">
+                                    <?php endif; ?>
+                                </figure>
 
-                        <a href="#services-popup-<?php echo $services_counter; ?>" class="services__item swiper-slide js-open-popup-activator" style="background-color: <?php echo $color; ?>">
-                            <figure class="services__item-icon">
-                                <?php if ($icon) : ?>
-                                    <img src="<?php echo $icon; ?>" alt="service icon">
+                                <?php if ($title) : ?>
+                                    <p class="services__item-title"><?php echo $title; ?></p>
                                 <?php endif; ?>
-                            </figure>
 
-                            <?php if ($title) : ?>
-                                <p class="services__item-title"><?php echo $title; ?></p>
-                            <?php endif; ?>
+                                <?php if ($description) : ?>
+                                    <p class="services__item-desc"><?php echo $description; ?></p>
+                                <?php endif; ?>
 
-                            <?php if ($description) : ?>
-                                <p class="services__item-desc"><?php echo $description; ?></p>
-                            <?php endif; ?>
-
-                            <button class="services__item-button">
-                                <span> <?php echo __('EXPLORE', 'wp-rock'); ?></span>
-                            </button>
-                        </a>
-
-                    <?php $services_counter++;
+                                <button class="services__item-button">
+                                    <span> <?php echo __('EXPLORE', 'wp-rock'); ?></span>
+                                </button>
+                            </a>
+                        </div>
+                        <?php $services_counter++;
                     endforeach; ?>
-                </div>
             </div>
 
         <?php endif; ?>
@@ -78,7 +79,7 @@ $bottom_content = get_field_value($fields, 'bottom_content');
         <?php if ($bottom_content) :
             $bottom_title = $bottom_content['title'];
             $bottom_content = $bottom_content['content'];
-        ?>
+            ?>
             <div class="services__bottom">
                 <?php if ($bottom_title) : ?>
                     <p class="services__bottom-title animated-element from-left"><?php echo $bottom_title; ?></p>
@@ -104,20 +105,23 @@ $bottom_content = get_field_value($fields, 'bottom_content');
         $popup_color = $popup['background_color'];
         $link = $popup['link'];
 
-    ?>
+        ?>
         <div id="services-popup-<?php echo $popup_counter; ?>" class="popup popup__service js-popup-close">
-            <div class="popup__wrapper-inner popup__service-inner" style="background-color: <?php echo $popup_color; ?>">
+            <div class="popup__wrapper-inner popup__service-inner"
+                 style="background-color: <?php echo $popup_color; ?>">
 
                 <button class="popup__btn-close js-popup-close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g clip-path="url(#clip0_412_1882)">
-                            <path d="M23 1H1V23H23V1Z" stroke="#F3F0EC" stroke-width="0.57" stroke-miterlimit="10" />
-                            <path d="M4.81604 4.82324L19.5467 19.5539" stroke="#F3F0EC" stroke-width="0.57" stroke-miterlimit="10" />
-                            <path d="M19.5467 4.82324L4.81604 19.5539" stroke="#F3F0EC" stroke-width="0.57" stroke-miterlimit="10" />
+                            <path d="M23 1H1V23H23V1Z" stroke="#F3F0EC" stroke-width="0.57" stroke-miterlimit="10"/>
+                            <path d="M4.81604 4.82324L19.5467 19.5539" stroke="#F3F0EC" stroke-width="0.57"
+                                  stroke-miterlimit="10"/>
+                            <path d="M19.5467 4.82324L4.81604 19.5539" stroke="#F3F0EC" stroke-width="0.57"
+                                  stroke-miterlimit="10"/>
                         </g>
                         <defs>
                             <clipPath id="clip0_412_1882">
-                                <rect width="24" height="24" fill="white" />
+                                <rect width="24" height="24" fill="white"/>
                             </clipPath>
                         </defs>
                     </svg>
@@ -156,7 +160,8 @@ $bottom_content = get_field_value($fields, 'bottom_content');
                         <?php endif; ?>
 
                         <?php if ($link) : ?>
-                            <a target="<?php echo $link['target']; ?>" href="<?php echo $link['url']; ?>" class="popup__service-link">
+                            <a target="<?php echo $link['target']; ?>" href="<?php echo $link['url']; ?>"
+                               class="popup__service-link">
                                 <?php echo $link['title']; ?> →
                             </a>
                         <?php endif; ?>
@@ -165,17 +170,17 @@ $bottom_content = get_field_value($fields, 'bottom_content');
             </div>
         </div>
 
-    <?php $popup_counter++;
+        <?php $popup_counter++;
     endforeach; ?>
 <?php endif; ?>
 
 <script>
-    (function() {
+    (function () {
 
         let wrapper = document.getElementById('wrapper');
         let popupServices = document.querySelectorAll('.popup__service');
 
-        popupServices.forEach(function(service) {
+        popupServices.forEach(function (service) {
             wrapper.insertAdjacentElement('afterend', service);
         });
 
