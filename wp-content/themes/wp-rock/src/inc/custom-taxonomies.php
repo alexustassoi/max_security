@@ -11,7 +11,8 @@ add_action( 'init', 'register_taxonomies' );
 /**
  * Register taxonomies
  */
-function register_taxonomies() {
+function register_taxonomies(): void
+{
     foreach ( glob( get_template_directory() . '/src/inc/custom-taxonomies/*.php' ) as $file ) {
         require $file;
     }

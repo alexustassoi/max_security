@@ -31,3 +31,4 @@
 /wp-content/deployment-folder/
 /wp-content/backups-dup-lite/
 .idea/
+vendor/
