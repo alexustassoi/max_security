@@ -32,7 +32,7 @@ jobs:
               cd ../
             else
               echo "Deployment folder doesn't exist so we clone repository to it"
-              git clone --single-branch --branch origin/main https://${{secrets.PERSONAL_ACCESS_TOKENS}}@github.com/Israel-IT/MAX-security-NEW-WordPress-.git deployment-folder
+              git clone --single-branch --branch main https://${{secrets.PERSONAL_ACCESS_TOKENS}}@github.com/Israel-IT/MAX-security-NEW-WordPress-.git deployment-folder
             fi
             
             # 4. DEPLOY THE LATEST CODES
