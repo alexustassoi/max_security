@@ -1,0 +1,23 @@
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
+var initBlockExample = function initBlockExample() {
+  console.log('asd');
+  var scrollBottom = document.querySelector('.js-scroll-bottom');
+  scrollBottom === null || scrollBottom === void 0 ? void 0 : scrollBottom.addEventListener('click', function (event) {
+    event.preventDefault();
+    var target = event.target;
+    var parent = target.closest('.js-top-block');
+    if (parent) {
+      var height = parent.offsetHeight;
+      window.scrollBy({
+        top: height - 50,
+        behavior: 'smooth'
+      });
+    }
+  });
+};
+document.addEventListener('DOMContentLoaded', initBlockExample, false);
+
+/******/ })()
+;
