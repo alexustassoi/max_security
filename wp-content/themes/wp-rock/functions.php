@@ -29,6 +29,5 @@ require THEME_DIR . '/src/inc/custom-accept-cookies.php';
 require THEME_DIR . '/src/inc/custom-hooks.php';
 
 require THEME_DIR . '/src/inc/custom-shortcodes.php';
-
 require THEME_DIR . '/src/inc/class-mobile-detect.php';
 
