@@ -159,7 +159,7 @@ class WP_Rock_Blocks {
                     )
                 );
             }
-            add_filter( 'block_categories', 'wp_rock_category', 10, 2);
+            add_filter( 'block_categories_all', 'wp_rock_category', 10, 2);
 
             foreach ( $this->blocks as $id => $block ) {
 

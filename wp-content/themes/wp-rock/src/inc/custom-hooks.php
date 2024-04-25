@@ -55,31 +55,46 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 
 //add_action('wpcf7_before_send_mail', 'add_dynamic_fields_to_email');
 
-function add_dynamic_fields_to_email($contact_form) {
-    // Получаем ID формы
+
+/**
+ * Add dynamic fields to the email message of a contact form.
+ *
+ * This function retrieves the submitted data from a contact form submission and adds dynamic fields
+ * with names starting with 'dyn_field_' to the email message. It then updates the mail properties
+ * of the contact form with the added dynamic fields.
+ *
+ * @param object $contact_form The Contact Form 7 form object.
+ *
+ * @return void
+ */
+function add_dynamic_fields_to_email(object $contact_form): void
+{
+    // Get the form ID
     $form_id = $contact_form->id();
 
-
+    // Get the form submission instance
     $submission = WPCF7_Submission::get_instance();
 
-    // Проверяем, были ли данные отправлены
+    // Proceed if submission exists
     if ($submission) {
+        // Get the posted data from the submission
         $posted_data = $submission->get_posted_data();
 
-        // Добавляем динамические поля в сообщение
+        // Initialize additional fields string
         $additional_fields = '';
 
-         // Перебираем данные формы
-         foreach ($posted_data as $key => $value) {
-            // Пропускаем поля, которые не являются динамическими
+        // Iterate through the form data
+        foreach ($posted_data as $key => $value) {
+            // Check if the field is dynamic
             if (preg_match('/^dyn_field_/', $key)) {
-                // Добавляем динамические поля в массив posted_data
+                // Add dynamic fields to the posted data array
                 $posted_data[$key] = $value;
             }
         }
-        // Добавляем динамические поля в сообщение формы
-        $mail = $contact_form->prop('mail');
 
+        // Update mail properties with dynamic fields
+        $mail = $contact_form->prop('mail');
         $contact_form->set_properties(array('mail' => $mail));
     }
 }
+

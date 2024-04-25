@@ -6,14 +6,15 @@
  * @package WP-rock
  * @since   4.4.0
  */
-
+global $global_options;
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields = get_fields();
 $big_title = get_field_value($fields, 'big_title');
 $content = get_field_value($fields, 'content');
-$form_title = get_field_value($fields, 'form_title');
-$form_description = get_field_value($fields, 'form_description');
-$form_shortcode = get_field_value($fields, 'form_shortcode');
+$form_group = get_field_value($global_options, 'career_contact_form');
+$form_title = get_field_value($form_group, 'form_title');
+$form_description = get_field_value($form_group, 'form_description');
+$form_shortcode = get_field_value($form_group, 'form_shortcode');
 ?>
 <div class="career-content">
 	<div class="container">

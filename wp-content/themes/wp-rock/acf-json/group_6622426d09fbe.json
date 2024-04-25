@@ -41,66 +41,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_662242abc0444",
-            "label": "Form title",
-            "name": "form_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_662242b5c0445",
-            "label": "Form description",
-            "name": "form_description",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_66224361f4ff3",
-            "label": "Form shortcode",
-            "name": "form_shortcode",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -121,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713521518
+    "modified": 1713873289
 }

@@ -48,5 +48,5 @@ $wp_rock->px_custom_upload_size_limit( 5 );
  * @return mixed|null
  */
 function get_field_value( $data_arr, $key ) {
-     return ( isset( $data_arr[ $key ] ) ) ? $data_arr[ $key ] : null;
+    return ( isset( $data_arr[ $key ] ) ) ? $data_arr[ $key ] : null;
 }
