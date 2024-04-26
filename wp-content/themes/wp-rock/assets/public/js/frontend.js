@@ -1,7 +1,78 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 196:
+/***/ "./src/js/components/accordion.ts":
+/*!****************************************!*\
+  !*** ./src/js/components/accordion.ts ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var initAccordion = function initAccordion() {
+  var accordions = document.querySelectorAll('.wrock-accordion');
+  accordions && accordions.forEach(function (item) {
+    item.addEventListener('click', function (event) {
+      var target = event.target;
+      var btn = target.closest('.wrock-accordion__btn');
+      if (!btn) return;
+      var element = btn.parentElement;
+      var content = element.querySelector('.wrock-accordion__content');
+      var openItem = item.querySelector('.wrock-accordion__item.open');
+      element.classList.toggle('open');
+    });
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (initAccordion);
+
+/***/ }),
+
+/***/ "./src/js/parts/animation.ts":
+/*!***********************************!*\
+  !*** ./src/js/parts/animation.ts ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var observer = new IntersectionObserver(function (entries) {
+  entries && entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+    }
+  });
+}, {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+});
+var initAnimation = function initAnimation() {
+  var animatedElements = document.querySelectorAll('.animated-element');
+  animatedElements.forEach(function (element) {
+    observer.observe(element);
+  });
+};
+/* harmony default export */ __webpack_exports__["default"] = (initAnimation);
+
+/***/ }),
+
+/***/ "./src/scss/frontend.scss":
+/*!********************************!*\
+  !*** ./src/scss/frontend.scss ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./node_modules/smoothscroll-polyfill/dist/smoothscroll.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/smoothscroll-polyfill/dist/smoothscroll.js ***!
+  \*****************************************************************/
 /***/ (function(module) {
 
 /* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT License */
@@ -436,174 +507,36 @@
 }());
 
 
-/***/ })
+/***/ }),
 
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-!function() {
+/***/ "./src/js/parts/helpers.js":
+/*!*********************************!*\
+  !*** ./src/js/parts/helpers.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
 "use strict";
-
-;// CONCATENATED MODULE: ./src/js/components/accordion.ts
-var initAccordion = function initAccordion() {
-  var accordions = document.querySelectorAll('.wrock-accordion');
-  accordions && accordions.forEach(function (item) {
-    item.addEventListener('click', function (event) {
-      var target = event.target;
-      var btn = target.closest('.wrock-accordion__btn');
-      if (!btn) return;
-      var element = btn.parentElement;
-      var content = element.querySelector('.wrock-accordion__content');
-      var openItem = item.querySelector('.wrock-accordion__item.open');
-      element.classList.toggle('open');
-    });
-  });
-};
-/* harmony default export */ var accordion = (initAccordion);
-;// CONCATENATED MODULE: ./src/js/parts/animation.ts
-var observer = new IntersectionObserver(function (entries) {
-  entries && entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-    }
-  });
-}, {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5
-});
-var initAnimation = function initAnimation() {
-  var animatedElements = document.querySelectorAll('.animated-element');
-  animatedElements.forEach(function (element) {
-    observer.observe(element);
-  });
-};
-/* harmony default export */ var animation = (initAnimation);
-;// CONCATENATED MODULE: ./src/js/parts/navi-tabs.js
-/**
- * Tabs Navigation functionality
- *
- * @param {string} tabSwitchSelectors  -  css selectors
- * @param {string} tabPanelSelectors   -  css selectors
- * @param {boolean} closeToClick       -  close child tab by click (default false)
- */
-const tabsNavigation = (
-    tabSwitchSelectors,
-    tabPanelSelectors,
-    closeToClick = false
-) => {
-    tabSwitchSelectors &&
-        [...document.querySelectorAll(tabSwitchSelectors)].forEach((item) => {
-            item.addEventListener('click', (event) => {
-                event.preventDefault();
-
-                const TAB_ID =
-                    event.target.nodeName === 'A'
-                        ? event.target.getAttribute('href')
-                        : event.target.dataset.href;
-
-                if (closeToClick && event.target.classList.contains('active')) {
-                    // Remove active state from all switch elements
-                    [...document.querySelectorAll(tabSwitchSelectors)].forEach(
-                        (el) => el.classList.remove('active')
-                    );
-
-                    // Remove active state from all tabs panels
-                    [...document.querySelectorAll(tabPanelSelectors)].forEach(
-                        (el) => el.classList.remove('active')
-                    );
-                    return;
-                }
-                // Remove active state from all switch elements
-                [...document.querySelectorAll(tabSwitchSelectors)].forEach(
-                    (el) => el.classList.remove('active')
-                );
-
-                // Remove active state from all tabs panels
-                [...document.querySelectorAll(tabPanelSelectors)].forEach(
-                    (el) => el.classList.remove('active')
-                );
-
-                // Set active state to current
-                event.target.classList.add('active');
-                document.querySelector(TAB_ID).classList.add('active');
-
-                // force trigger resize event for the document
-                if (document.createEvent) {
-                    window.dispatchEvent(new Event('resize'));
-                } else {
-                    document.body.fireEvent('onresize');
-                }
-            });
-        });
-};
-
-/* harmony default export */ var navi_tabs = (tabsNavigation);
-
-// EXTERNAL MODULE: ./node_modules/smoothscroll-polyfill/dist/smoothscroll.js
-var smoothscroll = __webpack_require__(196);
-var smoothscroll_default = /*#__PURE__*/__webpack_require__.n(smoothscroll);
-;// CONCATENATED MODULE: ./src/js/parts/helpers.js
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   anchorLinkScroll: function() { return /* binding */ anchorLinkScroll; },
+/* harmony export */   closestPolyfill: function() { return /* binding */ closestPolyfill; },
+/* harmony export */   copyToClipboard: function() { return /* binding */ copyToClipboard; },
+/* harmony export */   debounce: function() { return /* binding */ debounce; },
+/* harmony export */   equalHeights: function() { return /* binding */ equalHeights; },
+/* harmony export */   fadeIn: function() { return /* binding */ fadeIn; },
+/* harmony export */   fadeOut: function() { return /* binding */ fadeOut; },
+/* harmony export */   isInViewport: function() { return /* binding */ isInViewport; },
+/* harmony export */   setHeightEqualToWidth: function() { return /* binding */ setHeightEqualToWidth; },
+/* harmony export */   throttle: function() { return /* binding */ throttle; },
+/* harmony export */   trimParagraph: function() { return /* binding */ trimParagraph; },
+/* harmony export */   validateField: function() { return /* binding */ validateField; }
+/* harmony export */ });
+/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! smoothscroll-polyfill */ "./node_modules/smoothscroll-polyfill/dist/smoothscroll.js");
+/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0__);
 
 
 // kick off the polyfill!
-smoothscroll_default().polyfill();
+smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0___default().polyfill();
 
 /**
  * Fade Out method
@@ -984,7 +917,92 @@ const setHeightEqualToWidth = (elementSelector) => {
         });
 };
 
-;// CONCATENATED MODULE: ./src/js/parts/popup-window.js
+
+/***/ }),
+
+/***/ "./src/js/parts/navi-tabs.js":
+/*!***********************************!*\
+  !*** ./src/js/parts/navi-tabs.js ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Tabs Navigation functionality
+ *
+ * @param {string} tabSwitchSelectors  -  css selectors
+ * @param {string} tabPanelSelectors   -  css selectors
+ * @param {boolean} closeToClick       -  close child tab by click (default false)
+ */
+const tabsNavigation = (
+    tabSwitchSelectors,
+    tabPanelSelectors,
+    closeToClick = false
+) => {
+    tabSwitchSelectors &&
+        [...document.querySelectorAll(tabSwitchSelectors)].forEach((item) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const TAB_ID =
+                    event.target.nodeName === 'A'
+                        ? event.target.getAttribute('href')
+                        : event.target.dataset.href;
+
+                if (closeToClick && event.target.classList.contains('active')) {
+                    // Remove active state from all switch elements
+                    [...document.querySelectorAll(tabSwitchSelectors)].forEach(
+                        (el) => el.classList.remove('active')
+                    );
+
+                    // Remove active state from all tabs panels
+                    [...document.querySelectorAll(tabPanelSelectors)].forEach(
+                        (el) => el.classList.remove('active')
+                    );
+                    return;
+                }
+                // Remove active state from all switch elements
+                [...document.querySelectorAll(tabSwitchSelectors)].forEach(
+                    (el) => el.classList.remove('active')
+                );
+
+                // Remove active state from all tabs panels
+                [...document.querySelectorAll(tabPanelSelectors)].forEach(
+                    (el) => el.classList.remove('active')
+                );
+
+                // Set active state to current
+                event.target.classList.add('active');
+                document.querySelector(TAB_ID).classList.add('active');
+
+                // force trigger resize event for the document
+                if (document.createEvent) {
+                    window.dispatchEvent(new Event('resize'));
+                } else {
+                    document.body.fireEvent('onresize');
+                }
+            });
+        });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (tabsNavigation);
+
+
+/***/ }),
+
+/***/ "./src/js/parts/popup-window.js":
+/*!**************************************!*\
+  !*** ./src/js/parts/popup-window.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ Popup; }
+/* harmony export */ });
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ "./src/js/parts/helpers.js");
 
 
 class Popup {
@@ -1028,7 +1046,7 @@ class Popup {
                 });
             }
 
-            fadeOut(item);
+            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(item);
             const MAIL_SENT_OK_BOX = item.querySelector('.wpcf7-mail-sent-ok');
             if (MAIL_SENT_OK_BOX) {
                 MAIL_SENT_OK_BOX.style.display = 'none';
@@ -1051,7 +1069,7 @@ class Popup {
         setTimeout(() => {
             this.body.classList.add('popup-opened');
             this.html.classList.add('popup-opened');
-            fadeIn(popupSelector);
+            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(popupSelector);
         }, timeOut);
     }
 
@@ -1074,7 +1092,7 @@ class Popup {
 
             this.body.classList.add('popup-opened');
             // this.html.classList.add('popup-opened');
-            fadeIn(elHref);
+            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(elHref);
             return true;
         });
     }
@@ -1114,14 +1132,103 @@ class Popup {
     }
 }
 
-;// CONCATENATED MODULE: ./src/js/frontend.ts
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+!function() {
+"use strict";
+/*!****************************!*\
+  !*** ./src/js/frontend.ts ***!
+  \****************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scss_frontend_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/frontend.scss */ "./src/scss/frontend.scss");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.ts");
+/* harmony import */ var _parts_animation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/animation */ "./src/js/parts/animation.ts");
+/* harmony import */ var _parts_navi_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parts/navi-tabs */ "./src/js/parts/navi-tabs.js");
+/* harmony import */ var _parts_popup_window__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./parts/popup-window */ "./src/js/parts/popup-window.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 
 
 
 
 
 function ready() {
-  var popupInstance = new Popup();
+  var popupInstance = new _parts_popup_window__WEBPACK_IMPORTED_MODULE_4__["default"]();
   var header = document.querySelector('.site-header');
   var maxWords = document.querySelectorAll('.js-max-words');
   var headerMaxWords = document.querySelector('.js-header-max-words');
@@ -1129,9 +1236,33 @@ function ready() {
   var mobileMenu = document.querySelector('.js-mobile-menu');
   var openMobileMenu = document.querySelector('.js-open-mobile-menu');
   var openSubmenu = document.querySelectorAll('.js-open-submenu > a');
-  navi_tabs('.js-tab-block-link', '.js-tab-block-panel');
-  animation();
-  accordion();
+  var handleBrowseTopicActivefilter = function handleBrowseTopicActivefilter() {
+    var bTopicLoadMoreBtn = window.document.querySelector('.js-b-topic-load-more');
+    var browseTopicFilters = window.document.querySelectorAll('.js-browse-topic-filter');
+    if (!browseTopicFilters || !bTopicLoadMoreBtn) return;
+    _toConsumableArray(browseTopicFilters).forEach(function (item) {
+      var filetCategory = item.dataset.category;
+      var activeFilterCategory = bTopicLoadMoreBtn.dataset.category;
+      if (!filetCategory || !activeFilterCategory) return;
+      var actionType = filetCategory === activeFilterCategory ? 'add' : 'remove';
+      item.classList[actionType]('active');
+    });
+  };
+  handleBrowseTopicActivefilter();
+  var checkScrollPosition = function checkScrollPosition() {
+    var scrollPosition = localStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
+      localStorage.removeItem('scrollPosition');
+    }
+  };
+  checkScrollPosition();
+  (0,_parts_navi_tabs__WEBPACK_IMPORTED_MODULE_3__["default"])('.js-tab-block-link', '.js-tab-block-panel');
+  (0,_parts_animation__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_components_accordion__WEBPACK_IMPORTED_MODULE_1__["default"])();
   openMobileMenu && openMobileMenu.addEventListener('click', function (event) {
     if (mobileMenu) {
       mobileMenu.classList.add('open');
@@ -1181,9 +1312,56 @@ function ready() {
   }
   document.body.addEventListener('click', function (e) {
     var target = e.target;
+    var role = target.dataset.role;
     var hoverQuery = window.matchMedia('(hover: hover)');
     if (target.classList.contains('menu-item-has-children') && !hoverQuery.matches) {
       target.classList.toggle('opened');
+    }
+    if (!role) return;
+    switch (role) {
+      case 'load-more-browse-topic':
+        {
+          e.preventDefault();
+          var currentOffset = target.dataset.offset;
+          var currentCategory = target.dataset.category;
+          var totalCountPosts = target.dataset.count;
+          var browseTopicPosts = window.document.querySelector('.js-browse-topic-posts');
+          if (!currentOffset || !browseTopicPosts) return;
+          var data = new FormData();
+          data.append('action', 'load_more_browse_topic_post');
+          data.append('offset', +currentOffset);
+          data.append('category', currentCategory);
+          fetch(var_from_php.ajax_url, {
+            method: 'POST',
+            credentials: 'same-origin',
+            body: data
+          }).then(function (response) {
+            return response.json();
+          }).then(function (data) {
+            if (data.success && data.data) {
+              browseTopicPosts.insertAdjacentHTML('beforeend', data.data);
+              target.dataset.offset = +currentOffset + +var_from_php.posts_per_page;
+              if (+currentOffset + +var_from_php.posts_per_page >= +totalCountPosts) {
+                var BTopicLoadMoreBtn = window.document.querySelector('.js-b-topic-load-more');
+                if (!BTopicLoadMoreBtn) return;
+                BTopicLoadMoreBtn.classList.remove('active');
+              }
+            }
+          });
+          break;
+        }
+      case 'browse-topic-filter':
+        {
+          e.preventDefault();
+          var targetHref = target.getAttribute('href');
+          localStorage.setItem('scrollPosition', window.scrollY);
+          setTimeout(function () {
+            window.location.href = targetHref;
+          }, 300);
+          break;
+        }
+      default:
+        break;
     }
   });
   window.document.addEventListener('wpcf7mailsent', function (event) {
@@ -1200,3 +1378,4 @@ window.document.addEventListener('DOMContentLoaded', ready);
 }();
 /******/ })()
 ;
+//# sourceMappingURL=frontend.js.map

@@ -22,7 +22,7 @@ $labels = array(
 
 register_taxonomy(
     'resources-category',
-    array( 'events' ),
+    array( 'resources' ),
     array(
         'labels' => $labels,
         'public' => true,

@@ -85,6 +85,12 @@ class WP_Rock_Blocks {
             'title'     => 'Block - Career content',
             'post_types' => array('careers')
         ),
+        'block-browse-by-topic' => array(
+            'title'     => 'Block - Browse by topic',
+        ),
+        'block-sign-up-offer' => array(
+            'title'     => 'Block - Sign up offer',
+        ),
     );
 
     /**

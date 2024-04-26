@@ -17,6 +17,46 @@
         background-color: rgba(23, 24, 26, 0.4);
     }
 
+    &.icon-is-missing {
+        .service-top {
+            &__custom-container {
+                width: 100%;
+                padding-top: 224px;
+                padding-bottom: 160px;
+
+                @media screen and (max-width: 1600px) {
+                    padding-bottom: 140px;
+                    padding-top: 170px;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    padding-bottom: 115px;
+                    padding-top: 140px;
+                }
+
+                @media screen and (max-width: 1030px) {
+                    width: calc(100% - 30px);
+                    padding-bottom: 100px;
+                    padding-top: 120px;
+                }
+
+                @media screen and (max-width: 992px) {
+                    width: 700px;
+                }
+
+                @media screen and (max-width: 850px) {
+                    padding-bottom: 70px;
+                    padding-top: 110px;
+                }
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    padding: 75px 24px 54px;
+                }
+            }
+        }
+    }
+
     &__custom-container {
         position: relative;
         z-index: 2;
@@ -67,6 +107,50 @@
             gap: 16px;
         }
 
+        &.icon-is-missing {
+            margin-bottom: 32px;
+            font-size: 80px;
+            font-weight: 300;
+            line-height: 1.37;
+            max-width: 980px;
+
+            @media screen and (max-width: 1540px) {
+                font-size: 68px;
+                max-width: 830px;
+            }
+
+            @media screen and (max-width: 1280px) {
+                margin-bottom: 20px;
+            }
+
+            @media screen and (max-width: 1030px) {
+                font-size: 56px;
+                max-width: 680px;
+            }
+
+            @media screen and (max-width: 850px) {
+                font-size: 50px;
+                max-width: 600px;
+                margin-bottom: 16px;
+            }
+
+            @media screen and (max-width: 670px) {
+                font-size: 40px;
+                max-width: 500px;
+            }
+
+            @media screen and (max-width: 570px) {
+                font-size: 36px;
+                max-width: 440px;
+            }
+
+            @media screen and (max-width: 480px) {
+                font-size: 24px;
+                line-height: 1.16;
+                max-width: 305px;
+            }
+        }
+
         img {
             @media screen and (max-width: 570px) {
                 width: 56px;
@@ -100,6 +184,54 @@
         @media screen and (max-width: 570px) {
             padding-left: 74px;
         }
+
+        &.icon-is-missing {
+            padding-left: 0;
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 1.26;
+
+            @media screen and (max-width: 1600px) {
+                font-size: 26px;
+            }
+
+            @media screen and (max-width: 1540px) {
+                font-size: 24px;
+            }
+
+            @media screen and (max-width: 1540px) {
+                font-size: 24px;
+            }
+
+            @media screen and (max-width: 1280px) {
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: 1199px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 1030px) {
+                font-size: 18px;
+            }
+
+            @media screen and (max-width: 991px) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: 850px) {
+                font-size: 14px;
+            }
+
+            @media screen and (max-width: 670px) {
+                font-size: 12px;
+            }
+
+            @media screen and (max-width: 480px) {
+                font-size: 10px;
+                line-height: 1.4;
+            }
+        }
     }
 
     &__scroll-bottom {
@@ -109,6 +241,10 @@
 
         @media screen and (max-width: 570px) {
             margin: 0 auto 8px;
+        }
+
+        @media screen and (max-width: 480px) {
+            display: none;
         }
 
         svg {
@@ -139,7 +275,7 @@
         font-weight: 300;
         line-height: 1.3;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1540px) {
             font-size: 68px;
         }
 

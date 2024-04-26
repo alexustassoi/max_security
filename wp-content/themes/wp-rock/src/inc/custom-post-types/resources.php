@@ -7,7 +7,8 @@
  */
 
 $cpt_title      = 'Resources';
-$cpt_category   = 'resources_cat';
+$cpt_category_1   = 'resources-category';
+$cpt_category_2   = 'resources-tag';
 $cpt_slug       = 'resources';
 
 // TODO: Don't forget to change {CPT_CATEGORY} and {cpt_title} and {CPT_SLUG}.
@@ -46,7 +47,7 @@ $args = array(
     'hierarchical'          => false,
     'menu_position'         => null,
     'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
-    'taxonomies'            => array( $cpt_category ),
+    'taxonomies'            => array( $cpt_category_1, $cpt_category_2 ),
 );
 
 register_post_type( $cpt_slug, $args );

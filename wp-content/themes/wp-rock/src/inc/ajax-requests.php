@@ -61,3 +61,46 @@ function more_blog_posts() {
 
     die();
 }
+
+
+/**
+ * Load more browse topic post.
+ *
+ * @return void
+ */
+function load_more_browse_topic_post() {
+    if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+        $offset = filter_input( INPUT_POST, 'offset', FILTER_SANITIZE_NUMBER_INT );
+        $target_category = filter_input( INPUT_POST, 'category', FILTER_SANITIZE_STRING );
+        $posts_per_page = get_option( 'posts_per_page', 10 );
+
+        if ( ! $offset || ! $posts_per_page ) {
+            die;
+        }
+
+        $args = array(
+            'post_type' => 'resources',
+            'post_status' => 'publish',
+            'posts_per_page' => $posts_per_page,
+            'offset' => $offset,
+        );
+
+        if ( $target_category !== 'all' ) {
+            $args['tax_query'] = array(
+                array(
+                    'taxonomy' => 'resources-category',
+                    'field'    => 'slug',
+                    'terms'    => $target_category,
+                ),
+            );
+        }
+
+        ob_start();
+        include( locate_template( 'template-blowre-topic-posts.php', false, false, $args ) );
+        wp_send_json_success( ob_get_clean() );
+
+        wp_die();
+    }
+}
+add_action( 'wp_ajax_load_more_browse_topic_post', 'load_more_browse_topic_post' );
+add_action( 'wp_ajax_nopriv_load_more_browse_topic_post', 'load_more_browse_topic_post' );

@@ -39,10 +39,13 @@ function px_site_scripts() {
     wp_enqueue_script( 'form_script', '//js.hsforms.net/forms/embed/v2.js', array(), $custom_js_ver, true );
     wp_enqueue_script( 'frontend_js', ASSETS_JS . 'frontend.js', array( 'jquery' ), $custom_js_ver, true );
 
+    $posts_per_page = get_option( 'posts_per_page' );
+
     $vars = array(
         'ajax_url'   => admin_url( 'admin-ajax.php' ),
         'theme_path' => get_stylesheet_directory_uri(),
         'site_url'   => get_site_url(),
+        'posts_per_page' => $posts_per_page,
     );
 
     wp_localize_script( 'frontend_js', 'var_from_php', $vars );

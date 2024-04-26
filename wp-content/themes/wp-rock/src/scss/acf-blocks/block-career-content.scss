@@ -1,417 +1,420 @@
+/* stylelint-disable */
 .career-content {
-	padding: 56px 0;
+    padding: 56px 0;
 
-	@media screen and (max-width: 991px) {
-		padding: 40px 0;
-		background-color: #F3F0EC;
-	}
+    @media screen and (max-width: 991px) {
+        padding: 40px 0;
+        background-color: #F3F0EC;
+    }
 
-	&__big-title {
-		text-align: center;
-		color: #151836;
-		font-family: Turbine;
-		font-size: 66px;
-		font-style: normal;
-		font-weight: 700;
-		margin-bottom: 80px;
-		line-height: 1.2;
+    &__big-title {
+        text-align: center;
+        color: #151836;
+        font-family: Turbine;
+        font-size: 66px;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 80px;
+        line-height: 1.2;
 
-		@media screen and (max-width: 1200px) {
-			font-size: 56px;
-		}
+        @media screen and (max-width: 1200px) {
+            font-size: 56px;
+        }
 
-		@media screen and (max-width: 1024px) {
-			font-size: 46px;
-			margin-bottom: 40px;
-		}
+        @media screen and (max-width: 1024px) {
+            font-size: 46px;
+            margin-bottom: 40px;
+        }
 
-		@media screen and (max-width: 991px) {
-			font-size: 40px;
-		}
+        @media screen and (max-width: 991px) {
+            font-size: 40px;
+        }
 
-		@media screen and (max-width: 768px) {
-			font-size: 32px;
-		}
-	}
+        @media screen and (max-width: 768px) {
+            font-size: 32px;
+        }
+    }
 
-	&__content-title {
-		margin-bottom: 0;
-		background-color: #151836;
-		padding: 8px 16px;
-		min-height: 54px;
-		display: flex;
-		align-items: flex-start;
-		justify-content: flex-start;
+    &__content-title {
+        margin-bottom: 0;
+        background-color: #151836;
+        padding: 8px 16px;
+        min-height: 54px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
 
-		color: #F3F0EC;
-		font-size: 30px;
-		font-style: normal;
-		font-weight: 700;
+        color: #F3F0EC;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
 
-		@media screen and (max-width: 991px) {
-			font-size: 26px;
-			min-height: 34px;
-		}
+        @media screen and (max-width: 991px) {
+            font-size: 26px;
+            min-height: 34px;
+        }
 
-		@media screen and (max-width: 768px) {
-			font-size: 18px;
-		}
-	}
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+    }
 
-	&__content-container {
-		padding: 32px 0 56px;
-		border-bottom: 1px solid #151836;
-		margin-bottom: 56px;
+    &__content-container {
+        padding: 32px 0 56px;
+        border-bottom: 1px solid #151836;
+        margin-bottom: 56px;
 
-		@media screen and (max-width: 991px) {
-			padding: 24px 0 40px;
-			margin-bottom: 40px;
-		}
+        @media screen and (max-width: 991px) {
+            padding: 24px 0 40px;
+            margin-bottom: 40px;
+        }
 
-		* {
-			color: #000;
-		}
+        * {
+            color: #000;
+        }
 
-		ul {
-			padding-left: 0;
-			display: flex;
-			flex-direction: column;
-			gap: 16px;
-			margin-bottom: 34px;
+        ul {
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 34px;
 
-			@media screen and (max-width: 768px) {
-				gap: 8px;
-			}
+            @media screen and (max-width: 768px) {
+                gap: 8px;
+            }
 
-			li {
-				padding-left: 15px;
-				position: relative;
-				color: #000;
-				font-size: 18px;
-				font-style: normal;
-				font-weight: 400;
-				line-height: 1.4;
+            li {
+                padding-left: 15px;
+                position: relative;
+                color: #000;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.4;
 
-				@media screen and (max-width: 991px) {
-					font-size: 16px;
-				}
+                @media screen and (max-width: 991px) {
+                    font-size: 16px;
+                }
 
-				@media screen and (max-width: 670px) {
-					font-size: 12px;
-				}
+                @media screen and (max-width: 670px) {
+                    font-size: 12px;
+                }
 
-				&::after {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 6px;
-					left: 0;
-					width: 3px;
-					height: 3px;
-					background-color: #000;
-				}
-			}
-		}
-	}
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                    width: 3px;
+                    height: 3px;
+                    background-color: #000;
+                }
+            }
+        }
+    }
 
-	&__form-top-wrapper {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 42px;
-		margin-bottom: 80px;
+    &__form-top-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+        margin-bottom: 80px;
 
-		@media screen and (max-width: 991px) {
-			grid-template-columns: 1fr;
-			gap: 16px;
-		}
+        @media screen and (max-width: 991px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
 
-		@media screen and (max-width: 768px) {
-			margin-bottom: 40px;
-		}
+        @media screen and (max-width: 768px) {
+            margin-bottom: 40px;
+        }
 
-	}
+    }
 
-	&__form-title {
-		margin-bottom: 0;
-		color: #17181A;
-		font-size: 52px;
-		font-style: normal;
-		font-weight: 700;
+    &__form-title {
+        margin-bottom: 0;
+        color: #17181A;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 700;
 
-		@media screen and (max-width: 991px) {
-			font-size: 40px;
-		}
+        @media screen and (max-width: 991px) {
+            font-size: 40px;
+        }
 
-		@media screen and (max-width: 768px) {
-			font-size: 30px;
-		}
-	}
+        @media screen and (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
 }
 
 .vacancy-form.inputs-container {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-	.inputs-container-inner {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 42px;
-		align-items: flex-end;
-		margin-bottom: 42px;
+    .inputs-container-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+        align-items: flex-end;
+        margin-bottom: 42px;
 
-		@media screen and (max-width: 991px) {
-			grid-template-columns: 1fr;
-			margin-bottom: 24px;
-			gap: 24px;
-		}
-	}
+        @media screen and (max-width: 991px) {
+            grid-template-columns: 1fr;
+            margin-bottom: 24px;
+            gap: 24px;
+        }
+    }
 
-	.input-wrapper {
-		display: flex;
-		flex-direction: column;
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
 
-		span {
-			display: inline-block;
-			margin-bottom: 16px;
-			color: #2F3034;
-			font-family: Turbine, sans-serif;
-			font-size: 30px;
-			font-style: normal;
-			font-weight: 300;
+        span {
+            display: inline-block;
+            margin-bottom: 16px;
+            color: #2F3034;
+            font-family: Turbine, sans-serif;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 300;
 
-			@media screen and (max-width: 768px) {
-				font-size: 24px;
-			}
+            @media screen and (max-width: 768px) {
+                font-size: 24px;
+            }
 
-			@media screen and (max-width: 670px) {
-				font-size: 16px;
-			}
-		}
+            @media screen and (max-width: 670px) {
+                font-size: 16px;
+            }
+        }
 
-		.wpcf7-form-control-wrap {
-			margin-bottom: 0;
-		}
+        .wpcf7-form-control-wrap {
+            margin-bottom: 0;
+        }
 
-		.wpcf7-not-valid-tip {
-			font-size: 16px;
-			padding: 10px;
-			margin-bottom: 0;
-		}
+        .wpcf7-not-valid-tip {
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 0;
+        }
 
-		&.textarea {
-			.wpcf7-form-control-wrap {
-				margin-bottom: 0;
-			}
+        &.textarea {
+            .wpcf7-form-control-wrap {
+                margin-bottom: 0;
+            }
 
-			margin-bottom: 36px;
+            margin-bottom: 36px;
 
-			@media screen and (max-width: 768px) {
-				margin-bottom: 20px;
-			}
+            @media screen and (max-width: 768px) {
+                margin-bottom: 20px;
+            }
 
-		}
+        }
 
-		textarea {
-			height: 210px;
-		}
+        textarea {
+            height: 210px;
+        }
 
-	}
+    }
 
-	.btn-file-note {
-		color: #17181A;
-		font-family: Turbine, sans-serif;
-		font-size: 30px;
-		font-style: normal;
-		font-weight: 300;
+    .btn-file-note {
+        color: #17181A;
+        font-family: Turbine, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
 
-		@media screen and (max-width: 768px) {
-			font-size: 24px;
-		}
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
 
-		@media screen and (max-width: 670px) {
-			font-size: 16px;
-		}
+        @media screen and (max-width: 670px) {
+            font-size: 16px;
+        }
 
-		span {
-			color: #2F3034;
-		}
-	}
+        span {
+            color: #2F3034;
+        }
+    }
 
-	.file-button {
-		margin-bottom: 56px;
+    .file-button {
+        margin-bottom: 56px;
 
-		@media screen and (max-width: 768px) {
-			margin-bottom: 24px;
-		}
-	}
+        @media screen and (max-width: 768px) {
+            margin-bottom: 24px;
+        }
+    }
 
-	.wpcf7-submit {
-		border: 1px solid #CC7510;
-		color: #2F3034;
-		font-family: Turbine, sans-serif;
-		font-size: 24px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 1.2;
-		margin-top: 32px;
-		cursor: pointer;
-		transition: background-color 0.3s, color 0.3s;
-		margin-right: auto;
-		margin-left: auto;
+    .wpcf7-submit {
+        border: 1px solid #CC7510;
+        color: #2F3034;
+        font-family: Turbine, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-top: 32px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        margin-right: auto;
+        margin-left: auto;
 
-		@media screen and (max-width: 768px) {
-			margin-right: 0;
-			margin-left: auto;
-			font-size: 24px;
-			margin-top: 24px;
-		}
+        @media screen and (max-width: 768px) {
+            margin-right: 0;
+            margin-left: auto;
+            font-size: 24px;
+            margin-top: 24px;
+        }
 
-		@media screen and (max-width: 670px) {
-			font-size: 16px;
-		}
+        @media screen and (max-width: 670px) {
+            font-size: 16px;
+        }
 
-		&:hover {
-			color: #fff;
-			background-color: #CC7510;
-		}
-	}
+        &:hover {
+            color: #fff;
+            background-color: #CC7510;
+        }
+    }
 
 
-	.wpcf7-spinner {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+    .wpcf7-spinner {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
 }
+
 .wpcf7-response-output {
-	border-color: transparent !important;
-	padding: 0 !important;
-	margin: 20px 0 0 !important;
+    border-color: transparent !important;
+    padding: 0 !important;
+    margin: 20px 0 0 !important;
 }
 
 .file-button {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	gap: 32px;
-	padding: 0;
-	margin: 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
 
-	&-text {
-		padding: 4px 8px;
-		background-color: #151836;
-		color: #FFF;
-		font-family: Turbine, sans-serif;
-		font-size: 24px;
-		font-style: normal;
-		font-weight: 400;
+    &-text {
+        padding: 4px 8px;
+        background-color: #151836;
+        color: #FFF;
+        font-family: Turbine, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
 
-		@media screen and (max-width: 670px) {
-			font-size: 16px;
-		}
-	}
+        @media screen and (max-width: 670px) {
+            font-size: 16px;
+        }
+    }
 
-	.file-name {
-		color: #2F3034;
-		font-family: Turbine, sans-serif;
-		font-size: 30px;
-		font-style: normal;
-		font-weight: 300;
+    .file-name {
+        color: #2F3034;
+        font-family: Turbine, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
 
-		@media screen and (max-width: 768px) {
-			font-size: 24px;
-		}
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
 
-		@media screen and (max-width: 670px) {
-			font-size: 16px;
-		}
-	}
+        @media screen and (max-width: 670px) {
+            font-size: 16px;
+        }
+    }
 
-	.wpcf7-form-control-wrap {
-		z-index: 1;
-	}
+    .wpcf7-form-control-wrap {
+        z-index: 1;
+    }
 
-	.wpcf7-form-control-wrap,
-	input {
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 2;
-	}
+    .wpcf7-form-control-wrap,
+    input {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
 }
 
 .acceptance {
-	position: relative;
-	color: #1D1D1B;
-	font-family: Turbine, sans-serif;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 300;
+    position: relative;
+    color: #1D1D1B;
+    font-family: Turbine, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
 
-	@media screen and (max-width: 768px) {
-		font-size: 20px;
-	}
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
 
-	@media screen and (max-width: 670px) {
-		font-size: 16px;
-	}
+    @media screen and (max-width: 670px) {
+        font-size: 16px;
+    }
 
-	.wpcf7-list-item {
-		margin: 0;
-	}
+    .wpcf7-list-item {
+        margin: 0;
+    }
 
-	label {
-		position: relative;
+    label {
+        position: relative;
 
-		input[type="checkbox"] {
-			opacity: 0;
-			width: 26px;
-			height: 20px;
+        input[type="checkbox"] {
+            opacity: 0;
+            width: 26px;
+            height: 20px;
 
-			@media screen and (max-width: 670px) {
-				width: 20px;
-			}
-		}
+            @media screen and (max-width: 670px) {
+                width: 20px;
+            }
+        }
 
-		.wpcf7-list-item-label {
-			position: relative;
+        .wpcf7-list-item-label {
+            position: relative;
 
-			&:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 4px;
-				left: -26px;
-				width: 16px;
-				height: 16px;
-				border: 3px solid #CC7510;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: cover;
-
-
-				@media screen and (max-width: 768px) {
-					font-size: 20px;
-				}
-
-				@media screen and (max-width: 670px) {
-					font-size: 16px;
-					width: 10px;
-					height: 10px;
-					left: -20px;
-				}
-			}
-		}
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 4px;
+                left: -26px;
+                width: 16px;
+                height: 16px;
+                border: 3px solid #CC7510;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
 
 
-		input:checked+.wpcf7-list-item-label:before {
-			background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBoZWlnaHQ9IjEzcHgiIHdpZHRoPSIxM3B4IiB2ZXJzaW9uPSIxLjEiICB2aWV3Qm94PSIwIDAgMTcuODM3IDE3LjgzNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZmlsbD0iI0NDNzUxMCIgZD0iTTE2LjE0NSwyLjU3MWMtMC4yNzItMC4yNzMtMC43MTgtMC4yNzMtMC45OSwwTDYuOTIsMTAuODA0bC00LjI0MS00LjI3ICAgYy0wLjI3Mi0wLjI3NC0wLjcxNS0wLjI3NC0wLjk4OSwwTDAuMjA0LDguMDE5Yy0wLjI3MiwwLjI3MS0wLjI3MiwwLjcxNywwLDAuOTlsNi4yMTcsNi4yNThjMC4yNzIsMC4yNzEsMC43MTUsMC4yNzEsMC45OSwwICAgTDE3LjYzLDUuMDQ3YzAuMjc2LTAuMjczLDAuMjc2LTAuNzIsMC0wLjk5NEwxNi4xNDUsMi41NzF6Ii8+CjwvZz4KPC9zdmc+);
-		}
-	}
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
+
+                @media screen and (max-width: 670px) {
+                    font-size: 16px;
+                    width: 10px;
+                    height: 10px;
+                    left: -20px;
+                }
+            }
+        }
+
+
+        input:checked + .wpcf7-list-item-label:before {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBoZWlnaHQ9IjEzcHgiIHdpZHRoPSIxM3B4IiB2ZXJzaW9uPSIxLjEiICB2aWV3Qm94PSIwIDAgMTcuODM3IDE3LjgzNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZmlsbD0iI0NDNzUxMCIgZD0iTTE2LjE0NSwyLjU3MWMtMC4yNzItMC4yNzMtMC43MTgtMC4yNzMtMC45OSwwTDYuOTIsMTAuODA0bC00LjI0MS00LjI3ICAgYy0wLjI3Mi0wLjI3NC0wLjcxNS0wLjI3NC0wLjk4OSwwTDAuMjA0LDguMDE5Yy0wLjI3MiwwLjI3MS0wLjI3MiwwLjcxNywwLDAuOTlsNi4yMTcsNi4yNThjMC4yNzIsMC4yNzEsMC43MTUsMC4yNzEsMC45OSwwICAgTDE3LjYzLDUuMDQ3YzAuMjc2LTAuMjczLDAuMjc2LTAuNzIsMC0wLjk5NEwxNi4xNDUsMi41NzF6Ii8+CjwvZz4KPC9zdmc+);
+        }
+    }
 
 }
+/* stylelint-enable */

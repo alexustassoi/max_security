@@ -21,6 +21,39 @@ function ready() {
     const openMobileMenu = document.querySelector('.js-open-mobile-menu') as HTMLElement;
     const openSubmenu = document.querySelectorAll('.js-open-submenu > a') as NodeListOf<Element>;
 
+    const handleBrowseTopicActivefilter = () => {
+        const bTopicLoadMoreBtn = window.document.querySelector('.js-b-topic-load-more') as HTMLElement;
+        const browseTopicFilters = window.document.querySelectorAll('.js-browse-topic-filter') as NodeList;
+
+        if (!browseTopicFilters || !bTopicLoadMoreBtn) return;
+
+        [...browseTopicFilters].forEach((item) => {
+            // @ts-ignore
+            const filetCategory = item.dataset.category;
+            const activeFilterCategory = bTopicLoadMoreBtn.dataset.category;
+
+            if (!filetCategory || !activeFilterCategory) return;
+            const actionType = filetCategory === activeFilterCategory ? 'add' : 'remove';
+            // @ts-ignore
+            item.classList[actionType]('active');
+        });
+    };
+    handleBrowseTopicActivefilter();
+
+    const checkScrollPosition = () => {
+        const scrollPosition = localStorage.getItem('scrollPosition');
+        if (scrollPosition) {
+            window.scrollTo({
+                // @ts-ignore
+                top: scrollPosition,
+                behavior: 'smooth',
+            });
+
+            localStorage.removeItem('scrollPosition');
+        }
+    };
+    checkScrollPosition();
+
     tabsNavigation('.js-tab-block-link', '.js-tab-block-panel');
     initAnimation();
     initAccordion();
@@ -89,11 +122,76 @@ function ready() {
 
     document.body.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
+        const { role } = target.dataset;
 
         const hoverQuery = window.matchMedia('(hover: hover)');
 
         if (target.classList.contains('menu-item-has-children') && !hoverQuery.matches) {
             target.classList.toggle('opened');
+        }
+
+        if (!role) return;
+
+        switch (role) {
+            case 'load-more-browse-topic': {
+                e.preventDefault();
+                const currentOffset = target.dataset.offset;
+                const currentCategory = target.dataset.category;
+                const totalCountPosts = target.dataset.count;
+                const browseTopicPosts = window.document.querySelector('.js-browse-topic-posts') as HTMLElement;
+
+                if (!currentOffset || !browseTopicPosts) return;
+
+                const data = new FormData();
+                data.append('action', 'load_more_browse_topic_post');
+                // @ts-ignore
+                data.append('offset', +currentOffset);
+                // @ts-ignore
+                data.append('category', currentCategory);
+
+                // @ts-ignore
+                fetch(var_from_php.ajax_url, {
+                    method: 'POST',
+                    credentials: 'same-origin',
+                    body: data,
+                })
+                    .then((response) => response.json())
+                    // eslint-disable-next-line no-shadow
+                    .then((data) => {
+                        if (data.success && data.data) {
+                            browseTopicPosts.insertAdjacentHTML('beforeend', data.data);
+
+                            // @ts-ignore
+                            target.dataset.offset = +currentOffset + +var_from_php.posts_per_page;
+
+                            // @ts-ignore
+                            if (+currentOffset + +var_from_php.posts_per_page >= +totalCountPosts) {
+                                const BTopicLoadMoreBtn = window.document.querySelector(
+                                    '.js-b-topic-load-more'
+                                ) as HTMLElement;
+
+                                if (!BTopicLoadMoreBtn) return;
+                                BTopicLoadMoreBtn.classList.remove('active');
+                            }
+                        }
+                    });
+
+                break;
+            }
+
+            case 'browse-topic-filter': {
+                e.preventDefault();
+                const targetHref = target.getAttribute('href');
+                // @ts-ignore
+                localStorage.setItem('scrollPosition', window.scrollY);
+                setTimeout(() => {
+                    // @ts-ignore
+                    window.location.href = targetHref;
+                }, 300);
+                break;
+            }
+            default:
+                break;
         }
     });
 

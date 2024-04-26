@@ -1,0 +1,218 @@
+.sign-up-offer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    background: #D3C9BA;
+
+    @media screen and (max-width: 1030px) {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    @media screen and (max-width: 850px) {
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    &__inner {
+    }
+
+    &__desc {
+        color: #2F3034;
+        font-family: Turbine, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.26;
+        margin-bottom: 16px;
+
+        @media screen and (max-width: 1540px) {
+            font-size: 26px;
+        }
+
+        @media screen and (max-width: 1199px) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 850px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 570px) {
+            font-size: 16px;
+            line-height: 1.125;
+            margin-bottom: 24px;
+        }
+
+        @media screen and (max-width: 480px) {
+            max-width: 90%;
+        }
+    }
+
+    &__content {
+    }
+
+    &__form-wrap {
+        max-width: 623px;
+
+        @media screen and (max-width: 991px) {
+            max-width: 560px;
+        }
+
+        @media screen and (max-width: 850px) {
+            max-width: 515px;
+        }
+
+        @media screen and (max-width: 670px) {
+            max-width: 480px;
+        }
+
+        @media screen and (max-width: 480px) {
+            max-width: unset;
+            width: 100%;
+        }
+
+        .input-wrapper {
+            &__submit-wrap {
+                display: flex;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+
+                .wpcf7-spinner {
+                    position: absolute;
+                    z-index: 1;
+                    top: 50%;
+                    right: -70px;
+                    transform: translateY(-50%);
+
+                    @media screen and (max-width: 480px) {
+                        left: -65px;
+                    }
+                }
+            }
+        }
+
+        .wpcf7-form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .wpcf7-form-control-wrap {
+            position: relative;
+            z-index: 1;
+
+            .wpcf7-not-valid-tip {
+                position: absolute;
+                z-index: 1;
+                bottom: -38px;
+                left: 0;
+
+                @media screen and (max-width: 850px) {
+                    font-size: 12px;
+                    bottom: -30px;
+                }
+            }
+        }
+
+        .wpcf7 {
+            form.invalid .wpcf7-response-output,
+            form.sent .wpcf7-response-output {
+                width: 100%;
+                border-color: unset;
+                margin: 2.5em 0 0;
+                padding: 0;
+                border: unset;
+
+                @media screen and (max-width: 670px) {
+                    font-size: 14px;
+                }
+            }
+
+            form.sent .wpcf7-response-output {
+                margin: 1.5em 0 0;
+            }
+        }
+
+        .inputs-container {
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
+        }
+
+        .form-box {
+            &__inputs-row {
+                display: flex;
+                gap: 24px;
+
+                @media screen and (max-width: 480px) {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    width: 100%;
+                    gap: 16px;
+                }
+            }
+        }
+
+        .wpcf7-form-control {
+            @media screen and (max-width: 1030px) {
+                font-size: 24px;
+            }
+
+            @media screen and (max-width: 850px) {
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: 670px) {
+                font-size: 16px;
+            }
+        }
+
+        .wpcf7-submit {
+            padding-left: 8px;
+            padding-right: 8px;
+            color: #2F3034;
+            font-family: Turbine, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.25;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            appearance: none;
+            border: 1px solid #CC7510;
+            background: transparent;
+            cursor: pointer;
+
+            @media screen and (max-width: 1030px) {
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: 991px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 850px) {
+                font-size: 18px;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            &:hover {
+                background: #CC7510;
+                color: #f3f0ec;
+            }
+        }
+    }
+}

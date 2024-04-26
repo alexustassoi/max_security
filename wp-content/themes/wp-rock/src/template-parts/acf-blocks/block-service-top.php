@@ -14,9 +14,9 @@ $icon = get_field_value( $fields, 'icon' );
 $subtitle = get_field_value( $fields, 'subtitle' );
 ?>
 
-<div class="service-top js-top-block  <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>" style="background-image: url(<?php echo $background_image; ?>)">
+<div class="service-top js-top-block <?php echo (!$icon) ? 'icon-is-missing' : ''; echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>" style="background-image: url(<?php echo $background_image; ?>)">
     <div class="service-top__custom-container custom-container">
-        <h1 class="service-top__title">
+        <h1 class="service-top__title <?php echo (!$icon) ? 'icon-is-missing' : ''; ?>">
             <?php if($icon): ?>
                 <img src="<?php echo $icon ?>" alt="service icon">
             <?php endif; ?>
@@ -25,7 +25,7 @@ $subtitle = get_field_value( $fields, 'subtitle' );
         </h1>
 
         <?php if($subtitle): ?>
-            <h3 class="service-top__subtitle"><?php echo $subtitle; ?></h3>
+            <h3 class="service-top__subtitle <?php echo (!$icon) ? 'icon-is-missing' : ''; ?>"><?php echo $subtitle; ?></h3>
         <?php endif; ?>
     </div>
 
