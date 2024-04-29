@@ -1,0 +1,229 @@
+{
+    "key": "group_662a0fd55242b",
+    "title": "Resources post settings",
+    "fields": [
+        {
+            "key": "field_662a182de25f3",
+            "label": "Resources category",
+            "name": "resources_category",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "case_studies": "CASE STUDIES",
+                "testimonials": "TESTIMONIALS",
+                "intel_reports": "INTEL REPORTS",
+                "webinars": "WEBINARS",
+                "education": "EDUCATION"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_662a0fd6412c1",
+            "label": "Custom date",
+            "name": "custom_date",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "webinars"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "case_studies"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "intel_reports"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_662a102a412c2",
+            "label": "Card button text",
+            "name": "card_btn_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "webinars"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "case_studies"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "intel_reports"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "education"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_662a1a851a8dc",
+            "label": "Person name",
+            "name": "person_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "testimonials"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_662a1ab81a8dd",
+            "label": "Person status",
+            "name": "person_status",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "testimonials"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_662b5bab56183",
+            "label": "Webinar duration",
+            "name": "webinar_duration",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "webinars"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "resources"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1714117591
+}
