@@ -3,6 +3,26 @@
     "title": "Resources post settings",
     "fields": [
         {
+            "key": "field_663de8e207e47",
+            "label": "Hero text",
+            "name": "hero_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "This text will be displayed at the very beginning of the single page in the hero block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_662a182de25f3",
             "label": "Resources category",
             "name": "resources_category",
@@ -21,7 +41,8 @@
                 "testimonials": "TESTIMONIALS",
                 "intel_reports": "INTEL REPORTS",
                 "webinars": "WEBINARS",
-                "education": "EDUCATION"
+                "education": "EDUCATION",
+                "newsletter": "NEWSLETTER"
             },
             "default_value": false,
             "return_format": "value",
@@ -30,6 +51,26 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_663dfaa36e5e4",
+            "label": "Post content",
+            "name": "post_content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "This text will be displayed at the very beginning of the single page in the hero block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_662a0fd6412c1",
@@ -59,6 +100,13 @@
                         "field": "field_662a182de25f3",
                         "operator": "==",
                         "value": "intel_reports"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "newsletter"
                     }
                 ]
             ],
@@ -108,6 +156,13 @@
                         "field": "field_662a182de25f3",
                         "operator": "==",
                         "value": "education"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_662a182de25f3",
+                        "operator": "==",
+                        "value": "newsletter"
                     }
                 ]
             ],
@@ -205,6 +260,26 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_663e1f98ee4af",
+            "label": "Read more text",
+            "name": "read_more_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -225,5 +300,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714117591
+    "modified": 1715347543
 }

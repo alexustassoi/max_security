@@ -353,3 +353,16 @@ input[type="email"] {
         background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBoZWlnaHQ9IjEzcHgiIHdpZHRoPSIxM3B4IiB2ZXJzaW9uPSIxLjEiICB2aWV3Qm94PSIwIDAgMTcuODM3IDE3LjgzNyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZmlsbD0iI0NDNzUxMCIgZD0iTTE2LjE0NSwyLjU3MWMtMC4yNzItMC4yNzMtMC43MTgtMC4yNzMtMC45OSwwTDYuOTIsMTAuODA0bC00LjI0MS00LjI3ICAgYy0wLjI3Mi0wLjI3NC0wLjcxNS0wLjI3NC0wLjk4OSwwTDAuMjA0LDguMDE5Yy0wLjI3MiwwLjI3MS0wLjI3MiwwLjcxNywwLDAuOTlsNi4yMTcsNi4yNThjMC4yNzIsMC4yNzEsMC43MTUsMC4yNzEsMC45OSwwICAgTDE3LjYzLDUuMDQ3YzAuMjc2LTAuMjczLDAuMjc2LTAuNzIsMC0wLjk5NEwxNi4xNDUsMi41NzF6Ii8+CjwvZz4KPC9zdmc+);
     }
 }
+
+
+.alignleft {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.alignright {
+    float: right;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}

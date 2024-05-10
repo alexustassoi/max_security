@@ -10,6 +10,7 @@ import Sliders from './components/swiper-init';
 import initAnimation from './parts/animation';
 import tabsNavigation from './parts/navi-tabs';
 import Popup from './parts/popup-window';
+import initBlockBlogReadMore from "./acf-blocks/block-blog-read-more";
 
 function ready() {
     const popupInstance = new Popup();
@@ -53,6 +54,8 @@ function ready() {
         }
     };
     checkScrollPosition();
+
+    initBlockBlogReadMore();
 
     tabsNavigation('.js-tab-block-link', '.js-tab-block-panel');
     initAnimation();
