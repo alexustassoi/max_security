@@ -71,7 +71,12 @@ $target_category = filter_input( INPUT_GET, 'selected_category', FILTER_SANITIZE
                     $count_posts = $query->found_posts;
                     $args['posts_per_page'] = $posts_per_page;
 
-                    include( locate_template( 'template-blowre-topic-posts.php', false, false, $args ) );
+                    $template_settings = [
+                        'args' => $args,
+                        'is_slider' => false
+                    ];
+
+                    include( locate_template( 'template-blowre-topic-posts.php', false, false, $template_settings ) );
                     ?>
                 </div>
                 <?php
