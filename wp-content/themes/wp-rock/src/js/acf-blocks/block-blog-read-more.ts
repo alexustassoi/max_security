@@ -5,11 +5,8 @@ Swiper.use([Navigation]);
 const initBlockBlogReadMore = () => {
     const blogReadMoreSwiper = document.querySelector('.js-blog-read-more-slider') as HTMLElement;
 
-    console.log('Hello 987777');
-
     if (blogReadMoreSwiper) {
 
-        console.log('blogReadMoreSwiper', blogReadMoreSwiper);
         const blogReadMoreSlider = new Swiper(blogReadMoreSwiper, {
             spaceBetween: 42,
             slidesPerView: 3,

@@ -14,9 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
 var initBlockBlogReadMore = function initBlockBlogReadMore() {
   var blogReadMoreSwiper = document.querySelector('.js-blog-read-more-slider');
-  console.log('Hello 987777');
   if (blogReadMoreSwiper) {
-    console.log('blogReadMoreSwiper', blogReadMoreSwiper);
     var blogReadMoreSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](blogReadMoreSwiper, {
       spaceBetween: 42,
       slidesPerView: 3,
