@@ -70,10 +70,10 @@ a {
     all: unset;
     text-decoration: underline;
     cursor: pointer;
+}
 
-    &:hover {
-        text-decoration: none;
-    }
+a:hover {
+    text-decoration: none;
 }
 
 /**
