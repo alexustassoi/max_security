@@ -1,5 +1,5 @@
 .text-content {
-    padding: 100px 0 130px;
+    padding: 100px 0 50px;
 
     &.thank-you-page {
         padding: 64px 0;
@@ -20,6 +20,16 @@
 
     @media screen and (max-width: 992px) {
         padding: 32px 0;
+
+        body.filled-header & {
+            padding-top: 100px;
+        }
+    }
+    @media screen and (max-width: 512px) {
+
+        body.filled-header & {
+            padding-top: 70px;
+        }
     }
 
     &__custom-container {
@@ -59,6 +69,19 @@
             line-height: 1.2;
             margin-bottom: 16px;
 
+            &.body-type-1-regular {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.4;
+                margin-bottom: 24px;
+            }
+            &.body-type-1 {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 1.4;
+                margin-bottom: 24px;
+            }
+
             @media screen and (max-width: 992px) {
                 font-size: 26px;
                 font-weight: 400;
@@ -67,6 +90,12 @@
 
             @media screen and (max-width: 768px) {
                 font-size: 20px;
+
+                &.body-type-1-regular {
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 1.0;
+                }
             }
 
             @media screen and (max-width: 670px) {
@@ -80,6 +109,45 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+
+        h5 {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.26;
+            margin-bottom: 16px;
+
+            @media screen and (max-width: 512px) {
+                font-size: 24px;
+            }
+        }
+
+        ul, ol {
+            padding-left: 15px;
+            margin: 0 0 24px 0;
+        }
+
+        ul li, ol li {
+            color: #2f3034;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 0;
+
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 1.0;
+            }
+        }
+
+        ul li {
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+        ol li {
+            list-style-type: decimal;
+            list-style-position: inside;
         }
     }
 

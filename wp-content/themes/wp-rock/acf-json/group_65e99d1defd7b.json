@@ -71,6 +71,13 @@
                 "operator": "==",
                 "value": "acf\/block-lets-talk"
             }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
         ]
     ],
     "menu_order": 0,
@@ -82,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709809239
+    "modified": 1715719397
 }

@@ -40,9 +40,16 @@
 global $global_options;
 $page_class = '';
 $page_id    = get_queried_object_id();
+$resources_single_posts = get_field_value($global_options, 'resources_single_posts');
+$resources_posts_body_class = get_field_value($resources_single_posts, 'body_class');
+
+if ( $resources_posts_body_class ) {
+    $page_class.= ' '.$resources_posts_body_class.' ' ?: '';
+}
 
 if ( function_exists( 'get_field' ) ) {
-    $page_class = ( get_field( 'body_class', $page_id ) ) ?: '';
+    $page_body_class = get_field( 'body_class', $page_id ) ?: '';
+    $page_class.= ' '.$page_body_class.' ';
 }
 ?>
 

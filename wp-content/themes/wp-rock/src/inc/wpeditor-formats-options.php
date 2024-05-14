@@ -19,19 +19,14 @@ function my_wpeditor_formats_options( $settings ) {
 
     $style_formats = array(
         array(
-            'title' => 'BodyM',
+            'title' => 'body 1 (regular)',
             'block' => 'p',
-            'classes' => 'bodyM',
+            'classes' => 'body-type-1-regular',
         ),
         array(
-            'title' => 'Body Small',
+            'title' => 'body 1 (not regular)',
             'block' => 'p',
-            'classes' => 'bodySmall',
-        ),
-        array(
-            'title' => 'SubtitleM Bold',
-            'block' => 'p',
-            'classes' => 'subtitleMBold',
+            'classes' => 'body-type-1',
         ),
     );
 

@@ -228,6 +228,7 @@
             .browse-topic {
                 &__card-tags {
                     background: #5A7153;
+                    background: var(--color-term-intelligence);
                 }
             }
         }
@@ -237,6 +238,7 @@
             .browse-topic {
                 &__card-tags {
                     background: #7E97A6;
+                    background: var(--color-term-max-academy);
                 }
             }
         }
@@ -245,6 +247,7 @@
             .browse-topic {
                 &__card-tags {
                     background: #445C5A;
+                    background: var(--color-term-protection);
                 }
 
                 &__card-img-wrap {
@@ -266,6 +269,7 @@
             .browse-topic {
                 &__card-tags {
                     background: #685B4C;
+                    background: var(--color-term-family-office-services);
                 }
             }
         }
@@ -465,6 +469,7 @@
 
     &__card-custom-date {
         font-weight: 400;
+        margin-bottom: 20px;
     }
 
     &__card-text,
@@ -504,6 +509,12 @@
             li {
                 list-style: decimal;
             }
+        }
+    }
+
+    body.single-resources & {
+        &__card-text {
+            display: none;
         }
     }
 

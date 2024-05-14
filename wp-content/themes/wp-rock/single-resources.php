@@ -16,18 +16,21 @@ do_action( 'wp_rock_before_page_content' );
             if ( have_posts() ) {
                 while ( have_posts() ) {
                     the_post();
-                    $post_id = get_the_ID();
-                    $hero_text = get_field('hero_text', $post_id);
-                    $post_content = get_field('post_content', $post_id);
-                    $custom_date = get_field('custom_date', $post_id);
-                    $read_more_text = get_field('read_more_text', $post_id);
-                    $resource_category = wp_get_post_terms( $post_id, 'resources-category')[0];
+                    $post_id        = get_the_ID();
+                    $post_fields    = get_fields($post_id);
+                    $hero_text      = get_field_value($post_fields, 'hero_text');
+                    $post_content   = get_field_value($post_fields, 'post_content');
+                    $custom_date    = get_field_value($post_fields, 'custom_date');
+                    $read_more_text = get_field_value($post_fields, 'read_more_text');
+
+                    $resource_category      = wp_get_post_terms( $post_id, 'resources-category')[0];
                     $category_name_for_post = get_term_meta( $resource_category->term_id, 'category_name_for_post', true );
-                    $card_tag = wp_get_post_terms( $post_id, 'resource_tag' )[0];
-                    $card_icon_url = get_field('card_icon', 'resource_tag_' . $card_tag->term_id);
-                    $card_tag_name = $card_tag->name;
+
+                    $card_tag        = wp_get_post_terms( $post_id, 'resource_tag' )[0];
+                    $card_icon_url   = get_field('card_icon', 'resource_tag_' . $card_tag->term_id);
+                    $card_tag_name   = $card_tag->name;
                     $thumbnail_image = get_the_post_thumbnail( $post_id );
-                    $post_title = get_the_title();
+                    $post_title      = get_the_title();
                     ?>
                     <div class="single-blog__header">
                         <h1 class="single-blog__post-category">
@@ -83,6 +86,7 @@ do_action( 'wp_rock_before_page_content' );
             }
             ?>
         </div>
+
         <div class="single-blog__read-more-wrap">
             <?php
             echo ( $read_more_text )
@@ -118,6 +122,7 @@ do_action( 'wp_rock_before_page_content' );
                     include( locate_template( 'template-blowre-topic-posts.php', false, false, $template_settings ) );
                     ?>
                 </div>
+
                 <div class="single-blog__read-more-btn prev js-prev-read-more">
                     <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -128,6 +133,7 @@ do_action( 'wp_rock_before_page_content' );
                               fill="#CC7510"/>
                     </svg>
                 </div>
+
                 <div class="single-blog__read-more-btn next js-next-read-more">
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
