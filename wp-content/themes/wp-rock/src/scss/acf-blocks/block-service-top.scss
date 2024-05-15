@@ -1,8 +1,19 @@
+@keyframes zoomIn {
+    0% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 120% 120%;
+    }
+}
+
+
 .service-top {
     position: relative;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    animation: zoomIn 15s linear infinite;
     display: flex;
     flex-direction: column;
 

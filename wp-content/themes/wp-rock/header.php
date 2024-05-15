@@ -40,11 +40,18 @@
 global $global_options;
 $page_class = '';
 $page_id    = get_queried_object_id();
-$resources_single_posts = get_field_value($global_options, 'resources_single_posts');
-$resources_posts_body_class = get_field_value($resources_single_posts, 'body_class');
+$single_posts_pages_additional_class = get_field_value($global_options, 'single_posts_pages_additional_class');
 
-if ( $resources_posts_body_class ) {
-    $page_class.= ' '.$resources_posts_body_class.' ' ?: '';
+if ( !empty($single_posts_pages_additional_class) ) {
+    $current_post_post_type = get_post_type();
+    foreach ($single_posts_pages_additional_class as $single_posts_setting) {
+        $post_type  = $single_posts_setting['post_type'];
+        $body_class = $single_posts_setting['body_class'];
+
+        if ( is_singular($post_type) && $current_post_post_type === $post_type ) {
+            $page_class.= ' '.$body_class.' ' ?: '';
+        }
+    }
 }
 
 if ( function_exists( 'get_field' ) ) {

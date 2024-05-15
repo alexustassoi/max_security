@@ -1,7 +1,11 @@
 .single-blog {
     padding-top: 112px;
     padding-bottom: 40px;
-    max-width: 1080px;
+    max-width: 1110px;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 80px;
+    }
 
     h1,
     h2,
@@ -59,6 +63,10 @@
 
         &.single-blog__read-more-title {
             font-weight: 300;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
         }
     }
 
@@ -124,6 +132,10 @@
         font-style: normal;
         font-weight: 500;
         line-height: 1.33;
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     &__hero-content-wrap {
@@ -152,6 +164,10 @@
         height: 598px;
         margin-bottom: 0;
 
+        @media screen and (max-width: 768px) {
+            height: 240px;
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -162,6 +178,10 @@
     &__hero-content {
         padding: 40px;
         background: #C7CAC9;
+
+        @media screen and (max-width: 768px) {
+            padding: 16px;
+        }
     }
 
     &__post-title {
@@ -175,6 +195,18 @@
         font-style: normal;
         font-weight: 400;
         line-height: 1.4;
+
+        p, span, a {
+            color: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
     }
 
     &__post-text {
@@ -200,12 +232,24 @@
 
         img {
             width: calc(50% - 1rem);
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
         }
 
         p {
             &:last-of-type {
                 margin-bottom: 0;
             }
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+
+                strong {
+                    font-size: 16px;
+                }
+            }
+
         }
     }
 

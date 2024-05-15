@@ -9,7 +9,7 @@
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields     = get_fields();
 
-$external_data   = $args['external_data'];
+$external_data   = ( isset($args['external_data']) && !empty($args['external_data']) ) ? $args['external_data'] : [];
 
 if ( !empty($external_data) ) {
     $title      = get_field_value($external_data , 'title');
