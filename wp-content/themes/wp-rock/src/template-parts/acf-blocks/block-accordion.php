@@ -20,23 +20,24 @@ $form = get_field_value($fields, 'form');
             echo '<h3 class="accordion__title">' . do_shortcode($title) . '</h3>';
         } ?>
         <?php if (!empty($accordion)) : ?>
-            <div class="accordion__wrapper wrock-accordion">
+            <div class="accordion__wrapper wrock-accordion js-wrock-accordion">
                 <?php foreach ($accordion as $item) : ?>
-                    <div class="accordion__item wrock-accordion__item" id="<?php echo sanitize_title($item['title']); ?>">
+                    <div class="accordion__item wrock-accordion__item js-wrock-accordion__item"
+                         id="<?php echo sanitize_title($item['title']); ?>">
                         <?php
                         if (!empty($item['title'])) {
                             $img =  !empty($item['icon']) ? '<img class="accordion__item-icon style-svg" src="' . $item['icon'] . '" alt="icon">' : '';
 
                             $img_hover =  !empty($item['icon']) ? '<img class="accordion__item-icon hover style-svg" src="' . $item['icon_hover'] . '" alt="icon">' : '';
 
-                            echo '<button class="accordion__btn wrock-accordion__btn">
+                            echo '<button class="accordion__btn wrock-accordion__btn js-wrock-accordion__btn">
                                     ' . $img . '
                                     ' . $img_hover . '
                                     <span>' . $item['title'] . '</span>
                                 </button>';
                         }
                         if (!empty($item['content'])) {
-                            echo '<div class="accordion__item-content wrock-accordion__content">
+                            echo '<div class="accordion__item-content wrock-accordion__content js-wrock-accordion__content">
                                         ' . $item['content'] . '
                                     </div>';
                         }

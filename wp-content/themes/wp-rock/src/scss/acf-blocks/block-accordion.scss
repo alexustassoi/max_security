@@ -82,6 +82,10 @@
             gap: 16px;
         }
 
+        > * {
+            pointer-events: none;
+        }
+
         span {
             color: var(--Black-80, #2F3034);
             font-feature-settings: 'clig' off, 'liga' off;

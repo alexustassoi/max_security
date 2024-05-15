@@ -102,6 +102,11 @@ function add_dynamic_fields_to_email(object $contact_form): void
 function get_resource_tag_slugs($term_ids): array
 {
     global $wpdb;
+    $term_slugs = [];
+
+    if ( empty($term_ids) ) {
+        return $term_slugs;
+    }
 
     // Converting an array of term IDs into a string for use in an SQL query
     $term_ids_str = implode(',', array_map('intval', $term_ids));
@@ -116,7 +121,7 @@ function get_resource_tag_slugs($term_ids): array
 
     $results = $wpdb->get_results($sql, ARRAY_A);
 
-    $term_slugs = [];
+
     foreach ($results as $result) {
         $term_slugs[$result['term_id']] = $result['slug'];
     }

@@ -22,6 +22,7 @@ do_action( 'wp_rock_before_page_content' );
                     $post_content   = get_field_value($post_fields, 'post_content');
                     $custom_date    = get_field_value($post_fields, 'custom_date');
                     $read_more_text = get_field_value($post_fields, 'read_more_text');
+                    $type_of_banner = get_field_value($post_fields, 'type_of_banner_image');
 
                     $resource_category      = wp_get_post_terms( $post_id, 'resources-category')[0];
                     $category_name_for_post = get_term_meta( $resource_category->term_id, 'category_name_for_post', true );
@@ -58,13 +59,13 @@ do_action( 'wp_rock_before_page_content' );
                                 : '';
                             ?>
                         </div>
-                        <div class="single-blog__hero-content-wrap">
+                        <div class="single-blog__hero-content-wrap hero-type-<?php echo $type_of_banner; ?>">
                             <?php
                             echo ($thumbnail_image)
-                                ? '<figure class="single-blog__post-img-wrap">' . do_shortcode($thumbnail_image) . '</figure>'
+                                ? '<figure class="single-blog__post-img-wrap hero-content-part">' . do_shortcode($thumbnail_image) . '</figure>'
                                 : '';
                             ?>
-                            <div class="single-blog__hero-content">
+                            <div class="single-blog__hero-content hero-content-part">
                                 <?php
                                 echo ($post_title)
                                     ? '<h5 class="single-blog__post-title">' . do_shortcode($post_title) . '</h5>'

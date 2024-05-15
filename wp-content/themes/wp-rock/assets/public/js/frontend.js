@@ -55,15 +55,15 @@ var initBlockBlogReadMore = function initBlockBlogReadMore() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var initAccordion = function initAccordion() {
-  var accordions = document.querySelectorAll('.wrock-accordion');
+  var accordions = document.querySelectorAll('.js-wrock-accordion');
   accordions && accordions.forEach(function (item) {
     item.addEventListener('click', function (event) {
       var target = event.target;
-      var btn = target.closest('.wrock-accordion__btn');
+      var btn = target.closest('.js-wrock-accordion__btn');
       if (!btn) return;
       var element = btn.parentElement;
-      var content = element.querySelector('.wrock-accordion__content');
-      var openItem = item.querySelector('.wrock-accordion__item.open');
+      var content = element.querySelector('.js-wrock-accordion__content');
+      var openItem = item.querySelector('.js-wrock-accordion__item.open');
       element.classList.toggle('open');
     });
   });

@@ -164,6 +164,12 @@
                             }
                         }
                     }
+
+                    &.special-submenu-opener {
+                        > * {
+                            pointer-events: none;
+                        }
+                    }
                 }
 
                 a,
@@ -177,6 +183,9 @@
                     text-decoration: none;
                     text-transform: uppercase;
                 }
+
+
+
             }
         }
     }

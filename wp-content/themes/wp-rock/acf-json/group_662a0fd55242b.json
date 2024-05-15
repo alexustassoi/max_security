@@ -53,6 +53,32 @@
             "placeholder": ""
         },
         {
+            "key": "field_664455a12f169",
+            "label": "Type of Banner image",
+            "name": "type_of_banner_image",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full_width": "Fullwidth image",
+                "fifty_image": "50\/50 Image + Content"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_663dfaa36e5e4",
             "label": "Post content",
             "name": "post_content",
@@ -300,5 +326,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715347543
+    "modified": 1715754492
 }

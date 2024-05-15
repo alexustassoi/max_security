@@ -17,6 +17,10 @@
     h1 {
         font-size: 80px;
         line-height: 1.37;
+
+        @media screen and (max-width: 768px) {
+            font-size: 36px;
+        }
     }
 
     h2 {
@@ -29,6 +33,10 @@
 
         &.single-blog__custom-date {
             font-weight: 300;
+
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+            }
         }
     }
 
@@ -77,6 +85,11 @@
         display: flex;
         align-items: center;
         margin-bottom: 24px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 
     &__post-category {
@@ -114,7 +127,24 @@
     }
 
     &__hero-content-wrap {
+        display: flex;
+        flex-direction: column;
 
+        &.hero-type-fifty_image {
+            flex-direction: row;
+
+            > .hero-content-part {
+                flex: 1
+            }
+
+            .single-blog__post-img-wrap {
+                height: auto;
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
     }
 
     &__post-img-wrap {

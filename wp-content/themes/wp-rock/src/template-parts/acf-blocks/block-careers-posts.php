@@ -13,8 +13,11 @@ $title = get_field_value($fields, 'title');
 $container_title = get_field_value($fields, 'container_title');
 
 $args = array(
-	'post_type' => 'careers',
-	'post_status' => 'publish',
+    'post_type'      => 'careers',
+    'post_status'    => 'publish',
+    'meta_key'       => 'is_open_position',
+    'meta_value'     => true,
+    'meta_compare'   => '=',
 );
 
 $query = new WP_Query($args);
