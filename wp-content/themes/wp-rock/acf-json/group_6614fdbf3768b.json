@@ -165,7 +165,7 @@
             "label": "Form",
             "name": "form",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -175,10 +175,10 @@
                 "id": ""
             },
             "default_value": "",
+            "new_lines": "",
             "maxlength": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "rows": ""
         }
     ],
     "location": [
@@ -199,5 +199,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712670864
+    "modified": 1716183671
 }
