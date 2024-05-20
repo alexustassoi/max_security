@@ -76,7 +76,7 @@ $target_category = filter_input( INPUT_GET, 'selected_category', FILTER_SANITIZE
                         'is_slider' => false
                     ];
 
-                    include( locate_template( 'template-blowre-topic-posts.php', false, false, $template_settings ) );
+                    include( locate_template( 'template-blower-topic-posts.php', false, false, $template_settings ) );
                     ?>
                 </div>
                 <?php

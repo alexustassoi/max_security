@@ -2,48 +2,91 @@
 
 @font-face {
     font-family: 'Turbine';
-    src: url('../fonts/TurbineTrial-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Turbine';
-    src: url('../fonts/TurbineTrial-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-display: swap;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Turbine';
-    src: url('../fonts/TurbineTrial-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Turbine';
-    src: url('../fonts/TurbineTrial-Medium.woff2') format('woff2');
+    src: url('../fonts/TurbineTrial-MediumWeb.eot');
+    src: url('../fonts/TurbineTrial-MediumWeb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TurbineTrial-MediumWeb.woff2') format('woff2'),
+    url('../fonts/TurbineTrial-MediumWeb.woff') format('woff'),
+    url('../fonts/TurbineTrial-MediumWeb.ttf') format('truetype'),
+    url('../fonts/TurbineTrial-MediumWeb.svg#TurbineTrial-MediumWeb') format('svg');
     font-weight: 500;
-    font-display: swap;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Turbine';
-    src: url('../fonts/TurbineTrial-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
+    src: url('../fonts/TurbineTrial-BoldWeb.eot');
+    src: url('../fonts/TurbineTrial-BoldWeb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TurbineTrial-BoldWeb.woff2') format('woff2'),
+    url('../fonts/TurbineTrial-BoldWeb.woff') format('woff'),
+    url('../fonts/TurbineTrial-BoldWeb.ttf') format('truetype'),
+    url('../fonts/TurbineTrial-BoldWeb.svg#TurbineTrial-BoldWeb') format('svg');
+    font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Turbine';
-    src: url('../fonts/TurbineTrial-Thin.woff2') format('woff2');
+    src: url('../fonts/TurbineTrial-ExtraBoldWeb.eot');
+    src: url('../fonts/TurbineTrial-ExtraBoldWeb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TurbineTrial-ExtraBoldWeb.woff2') format('woff2'),
+    url('../fonts/TurbineTrial-ExtraBoldWeb.woff') format('woff'),
+    url('../fonts/TurbineTrial-ExtraBoldWeb.ttf') format('truetype'),
+    url('../fonts/TurbineTrial-ExtraBoldWeb.svg#TurbineTrial-ExtraBoldWeb') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-ExtraLightWeb.eot');
+    src: url('../fonts/TurbineTrial-ExtraLightWeb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TurbineTrial-ExtraLightWeb.woff2') format('woff2'),
+    url('../fonts/TurbineTrial-ExtraLightWeb.woff') format('woff'),
+    url('../fonts/TurbineTrial-ExtraLightWeb.ttf') format('truetype'),
+    url('../fonts/TurbineTrial-ExtraLightWeb.svg#TurbineTrial-ExtraLightWeb') format('svg');
     font-weight: 200;
-    font-display: swap;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-RegularWeb.eot');
+    src: url('../fonts/TurbineTrial-RegularWeb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TurbineTrial-RegularWeb.woff2') format('woff2'),
+    url('../fonts/TurbineTrial-RegularWeb.woff') format('woff'),
+    url('../fonts/TurbineTrial-RegularWeb.ttf') format('truetype'),
+    url('../fonts/TurbineTrial-RegularWeb.svg#TurbineTrial-RegularWeb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-LightWeb.eot');
+    src: url('../fonts/TurbineTrial-LightWeb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TurbineTrial-LightWeb.woff2') format('woff2'),
+    url('../fonts/TurbineTrial-LightWeb.woff') format('woff'),
+    url('../fonts/TurbineTrial-LightWeb.ttf') format('truetype'),
+    url('../fonts/TurbineTrial-LightWeb.svg#TurbineTrial-LightWeb') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Turbine';
+    src: url('../fonts/TurbineTrial-ThinWeb.eot');
+    src: url('../fonts/TurbineTrial-ThinWeb.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TurbineTrial-ThinWeb.woff2') format('woff2'),
+    url('../fonts/TurbineTrial-ThinWeb.woff') format('woff'),
+    url('../fonts/TurbineTrial-ThinWeb.ttf') format('truetype'),
+    url('../fonts/TurbineTrial-ThinWeb.svg#TurbineTrial-ThinWeb') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
 }

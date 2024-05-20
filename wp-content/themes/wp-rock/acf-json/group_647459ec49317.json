@@ -787,7 +787,7 @@
                     "label": "Form shortcode",
                     "name": "form_shortcode",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -798,9 +798,9 @@
                     },
                     "default_value": "",
                     "maxlength": "",
+                    "rows": 12,
                     "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "new_lines": ""
                 },
                 {
                     "key": "field_6627a15a2b244",
@@ -1030,5 +1030,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715794399
+    "modified": 1716175751
 }

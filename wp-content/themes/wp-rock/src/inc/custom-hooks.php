@@ -177,7 +177,7 @@ function wp_rock_color_panel(): void
 add_action('wp_head', 'wp_rock_color_panel');
 
 
-
+// This block will be rendered before site footer on "Single resources pages"
 function add_basic_footer_block(){
 
     if ( is_singular('resources') ) {

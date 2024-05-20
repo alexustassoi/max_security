@@ -161,21 +161,55 @@ if ( ! function_exists( 'shortcode__boxpopup' ) ) {
 }
 
 
-function custom_checkbox_shortcode($atts) {
-    $atts = shortcode_atts(
-        array(
-            'text' => '',
-            'name' => '',
-        ),
-        $atts,
-        'custom_shortcode'
-    );
+if ( ! function_exists( 'custom_checkbox_shortcode' ) ) {
+    function custom_checkbox_shortcode($atts)
+    {
+        $atts = shortcode_atts(
+            array(
+                'text' => '',
+                'name' => '',
+            ),
+            $atts,
+            'custom_shortcode'
+        );
 
-    return '<label class="checkbox">
-				<p class="text">'.$atts['text'].'</p>
-				<input class="js-custom-checkbox" type="checkbox" value="'.$atts['text'].'" name="dyn_field_'.sanitize_title($atts['text']).'">
-				<span class="icon"></span>
-			</label>';
+        return '<label class="checkbox">
+                    <p class="text">' . $atts['text'] . '</p>
+                    <input class="js-custom-checkbox" type="checkbox" value="' . $atts['text'] . '" name="dyn_field_' . sanitize_title($atts['text']) . '">
+                    <span class="icon"></span>
+                </label>';
+    }
+
+    add_shortcode('custom_checkbox', 'custom_checkbox_shortcode');
 }
 
-add_shortcode('custom_checkbox', 'custom_checkbox_shortcode');
+
+
+// Webinar box shortcode. Use it for single webinar page
+if ( ! function_exists( 'webinar_box_shortcode' ) ) {
+    /**
+     * Shortcode for "Webinar box".
+     *
+     * @param {array}       $atts    - shortcode attributes.
+     * @param {string|null} $content - content inside open/close shortcode tags.
+     *
+     * @return string
+     */
+    function webinar_box_shortcode($atts, $content = null)
+    {
+        extract(
+            shortcode_atts(
+                array(
+                    'class'      => '',
+                ),
+                $atts
+            )
+        );
+
+        return '<div class="webinar-box'.$class.'">
+                    '.do_shortcode($content).'
+                </div>';
+    }
+
+    add_shortcode('webinar_box', 'webinar_box_shortcode');
+}

@@ -179,28 +179,6 @@ class WP_Rock {
 
     }
 
-    /**
-     * Set custom upload size limit.
-     *
-     * @param {number} $value - number for set up as new file upload limit.
-     * @return void
-     */
-    public function px_custom_upload_size_limit( $value ) {
-        global $upload_size_limit;
-        $upload_size_limit = $value;
-
-        @ini_set( 'upload_max_size', $value . 'M' );
-        @ini_set( 'post_max_size', $value . 'M' );
-
-        set_time_limit( 300 );
-
-        add_filter(
-            'upload_size_limit',
-            function ( $new_limit ) use ( $upload_size_limit ) {
-                return $new_limit * 1048576; // megabytes.
-            }
-        );
-    }
 
     /**
      * Check if page is blog page.

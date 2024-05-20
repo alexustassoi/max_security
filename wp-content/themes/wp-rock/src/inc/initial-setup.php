@@ -33,10 +33,11 @@ add_action( 'after_setup_theme', array( $wp_rock, 'px_site_setup' ) );
 add_filter( 'sanitize_file_name', array( $wp_rock, 'custom_sanitize_file_name' ), 10, 1 );
 
 
-/**
- * Set custom upload size limit
- */
-$wp_rock->px_custom_upload_size_limit( 5 );
+function increase_upload_size_limit($size) {
+    return 30 * 1024 * 1024; // 25 MB
+}
+add_filter('upload_size_limit', 'increase_upload_size_limit');
+add_filter('post_max_size', 'increase_upload_size_limit');
 
 
 /**

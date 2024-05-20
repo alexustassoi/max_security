@@ -101,7 +101,7 @@ function load_more_browse_topic_post() {
         ];
 
         ob_start();
-        include( locate_template( 'template-blowre-topic-posts.php', false, false, $template_settings ) );
+        include( locate_template( 'template-blower-topic-posts.php', false, false, $template_settings ) );
         wp_send_json_success( ob_get_clean() );
 
         wp_die();

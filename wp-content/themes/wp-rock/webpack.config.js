@@ -24,15 +24,16 @@ const projectPaths = {
 
 /**
  * Generate entry point from provided files from directories
+ *
  * @param entryPointsData
- * @returns {{}}
+ * @return {{}}
  */
 const generateEntryPoints = (entryPointsData) => {
     const entries = {};
 
     // Function for adding files from a directory to the entries object
     const addEntriesFromDirectory = (dirPath, fileExtension, prefix = '') => {
-        fs.readdirSync(dirPath).forEach(file => {
+        fs.readdirSync(dirPath).forEach((file) => {
             if (path.extname(file) === `.${fileExtension}`) {
                 const basename = path.basename(file, `.${fileExtension}`);
                 entries[prefix + basename] = path.resolve(dirPath, file);
@@ -40,37 +41,41 @@ const generateEntryPoints = (entryPointsData) => {
         });
     };
 
-    if ( entryPointsData.length ) {
-        entryPointsData.forEach( entryPointData => {
-            addEntriesFromDirectory(entryPointData.path, entryPointData.ext, entryPointData.prefix);
-        } );
+    if (entryPointsData.length) {
+        entryPointsData.forEach((entryPointData) => {
+            addEntriesFromDirectory(
+                entryPointData.path,
+                entryPointData.ext,
+                entryPointData.prefix
+            );
+        });
     }
 
     return entries;
-}
+};
 
 const entryPoints = [
     {
-        'path': projectPaths.projectJsAcfPath,
-        'ext': 'ts',
-        'prefix': 'js-',
+        path: projectPaths.projectJsAcfPath,
+        ext: 'ts',
+        prefix: 'js-',
     },
     {
-        'path': projectPaths.projectScssAcfPath,
-        'ext': 'scss',
-        'prefix': '',
+        path: projectPaths.projectScssAcfPath,
+        ext: 'scss',
+        prefix: '',
     },
     {
-        'path': projectPaths.projectScssAloneBlockPath,
-        'ext': 'scss',
-        'prefix': '',
+        path: projectPaths.projectScssAloneBlockPath,
+        ext: 'scss',
+        prefix: '',
     },
 ];
 
 const entries = generateEntryPoints(entryPoints);
 
-entries['frontend'] = `${projectPaths.projectJsPath}/frontend.ts`;
-entries['backend']  = `${projectPaths.projectJsPath}/backend.ts`;
+entries.frontend = `${projectPaths.projectJsPath}/frontend.ts`;
+entries.backend = `${projectPaths.projectJsPath}/backend.ts`;
 
 // Files to bundle
 const projectFiles = {
