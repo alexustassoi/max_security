@@ -1,5 +1,5 @@
 const initBlockBenefts = () => {
-    const customCheckboxes = document.querySelectorAll('.js-custom-checkbox');
+    const customCheckboxes = document.querySelectorAll(`.js-custom-checkbox`);
 
     const scrollToElement = () => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -21,22 +21,25 @@ const initBlockBenefts = () => {
 
     scrollToElement();
 
-    const setHiddenInput = () => {
-        const inputOther = document.querySelector('input[name="other"]') as HTMLInputElement;
-        let allCheckedCheckboxes = '';
+    const setHiddenInput = (e) => {
+        if (!e.target.dataset.group) return;
+        const groupType = e.target.dataset.group;
+        const inputOther = document.querySelector(`input[name="${groupType}"]`) as HTMLInputElement;
+        let allCheckedCheckboxes = [];
+        const customCheckboxesGroup = document.querySelectorAll(`.js-custom-checkbox[data-group="${groupType}"]`);
 
-
-        customCheckboxes &&
-            customCheckboxes.forEach((el, index) => {
+        customCheckboxesGroup &&
+            customCheckboxesGroup.forEach((el, index) => {
                 const input = el as HTMLInputElement;
                 if (input.checked) {
-                    const coma = index + 1 === allCheckedCheckboxes.split(',').length ? '' : ', ';
-                    allCheckedCheckboxes += `${coma}${input.value}`
+                    const val = input.value;
+                    //@ts-ignore
+                    allCheckedCheckboxes.push(val);
                 }
             });
 
         if (inputOther) {
-            inputOther.value = allCheckedCheckboxes
+            inputOther.value = allCheckedCheckboxes.join(', ');
         }
     }
 

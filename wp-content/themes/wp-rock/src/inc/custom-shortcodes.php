@@ -168,6 +168,7 @@ if ( ! function_exists( 'custom_checkbox_shortcode' ) ) {
             array(
                 'text' => '',
                 'name' => '',
+                'group' => '',
             ),
             $atts,
             'custom_shortcode'
@@ -175,7 +176,7 @@ if ( ! function_exists( 'custom_checkbox_shortcode' ) ) {
 
         return '<label class="checkbox">
                     <p class="text">' . $atts['text'] . '</p>
-                    <input class="js-custom-checkbox" type="checkbox" value="' . $atts['text'] . '" name="dyn_field_' . sanitize_title($atts['text']) . '">
+                    <input class="js-custom-checkbox" data-group="'.$atts['group'].'" type="checkbox" value="' . $atts['text'] . '" name="dyn_field_' . sanitize_title($atts['text']) . '">
                     <span class="icon"></span>
                 </label>';
     }
