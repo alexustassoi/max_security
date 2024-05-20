@@ -1,56 +1,56 @@
 const initBlockBenefts = () => {
-	const customCheckboxes = document.querySelectorAll('.js-custom-checkbox');
+    const customCheckboxes = document.querySelectorAll('.js-custom-checkbox');
 
-	const scrollToElement = () => {
-		const urlParams = new URLSearchParams(window.location.search);
-		console.log(urlParams.get('from-page'));
+    const scrollToElement = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        console.log(urlParams.get('from-page'));
 
-		const accrodionToOpen = document.querySelector(`#${urlParams.get('from-page')}`) as HTMLElement;
+        const accrodionToOpen = document.querySelector(`#${urlParams.get('from-page')}`) as HTMLElement;
 
 
-		if (accrodionToOpen) {
+        if (accrodionToOpen) {
 
-			accrodionToOpen.classList.add('open');
+            accrodionToOpen.classList.add('open');
 
-			window.scrollTo({
-				top: accrodionToOpen.offsetTop - 100,
-				behavior: 'smooth',
-			});
-		}
-	}
+            window.scrollTo({
+                top: accrodionToOpen.offsetTop - 100,
+                behavior: 'smooth',
+            });
+        }
+    }
 
-	scrollToElement();
+    scrollToElement();
 
-	const setHiddenInput = (e) => {
-		const input = e.target as HTMLInputElement;
+    const setHiddenInput = () => {
+        const inputOther = document.querySelector('input[name="other"]') as HTMLInputElement;
+        let allCheckedCheckboxes = '';
 
-		if (input.checked) {
-			// Set hidden input inside form
-			const hiddenInput = document.createElement('input');
-			const form = document.querySelector('form');
 
-			hiddenInput.type = 'hidden';
-			hiddenInput.name = input.name;
-			hiddenInput.value = input.value;
-			form && form.appendChild(hiddenInput);
-		} else {
+        customCheckboxes &&
+            customCheckboxes.forEach((el, index) => {
+                const input = el as HTMLInputElement;
+                if (input.checked) {
+                    const coma = index + 1 === allCheckedCheckboxes.split(',').length ? '' : ', ';
+                    allCheckedCheckboxes += `${coma}${input.value}`
+                }
+            });
 
-			const findedHiddenInput = document.querySelector(`form [name="${input.name}"]`);
-			findedHiddenInput && findedHiddenInput.remove();
-		}
-	}
+        if (inputOther) {
+            inputOther.value = allCheckedCheckboxes
+        }
+    }
 
-	customCheckboxes &&
-		customCheckboxes.forEach((input) => {
-			input.addEventListener('change', setHiddenInput);
-		})
+    customCheckboxes &&
+        customCheckboxes.forEach((input) => {
+            input.addEventListener('change', setHiddenInput);
+        })
 };
 
 document.addEventListener('DOMContentLoaded', initBlockBenefts, false);
 
 // Initialize dynamic block preview (editor).
 if (window['acf']) {
-	window['acf']?.addAction('render_block_preview', initBlockBenefts);
+    window['acf']?.addAction('render_block_preview', initBlockBenefts);
 }
 
 export { };

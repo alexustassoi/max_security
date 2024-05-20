@@ -37,18 +37,18 @@ var initBlockBenefts = function initBlockBenefts() {
     }
   };
   scrollToElement();
-  var setHiddenInput = function setHiddenInput(e) {
-    var input = e.target;
-    if (input.checked) {
-      var hiddenInput = document.createElement('input');
-      var form = document.querySelector('form');
-      hiddenInput.type = 'hidden';
-      hiddenInput.name = input.name;
-      hiddenInput.value = input.value;
-      form && form.appendChild(hiddenInput);
-    } else {
-      var findedHiddenInput = document.querySelector("form [name=\"".concat(input.name, "\"]"));
-      findedHiddenInput && findedHiddenInput.remove();
+  var setHiddenInput = function setHiddenInput() {
+    var inputOther = document.querySelector('input[name="other"]');
+    var allCheckedCheckboxes = '';
+    customCheckboxes && customCheckboxes.forEach(function (el, index) {
+      var input = el;
+      if (input.checked) {
+        var coma = index + 1 === allCheckedCheckboxes.split(',').length ? '' : ', ';
+        allCheckedCheckboxes += "".concat(coma).concat(input.value);
+      }
+    });
+    if (inputOther) {
+      inputOther.value = allCheckedCheckboxes;
     }
   };
   customCheckboxes && customCheckboxes.forEach(function (input) {

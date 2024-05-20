@@ -82,7 +82,7 @@
             gap: 16px;
         }
 
-        > * {
+        >* {
             pointer-events: none;
         }
 
@@ -289,5 +289,61 @@
 }
 
 .hbspt-form {
+    max-width: 710px;
+    width: 100%;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
 
+    .hs-form-field {
+        label {
+            span {
+                display: none;
+            }
+        }
+
+        textarea {
+            height: 233px;
+            resize: none;
+
+            @media screen and (max-width: 768px) {
+                height: 185px;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+    }
+
+    .hs-button {
+        border: 1px solid #cc7510;
+        color: #2f3034;
+        cursor: pointer;
+        font-family: Turbine, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-right: auto;
+        margin-top: 0;
+        transition: background-color .3s, color .3s;
+
+        @media screen and (max-width: 1024px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-left: auto;
+            margin-right: 0;
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: #CC7510;
+        }
+    }
 }
