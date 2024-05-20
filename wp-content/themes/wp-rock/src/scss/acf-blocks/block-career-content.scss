@@ -424,15 +424,6 @@
     width: 100%;
 
     form {
-        /*display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 42px 42px;
-        grid-template-areas:
-            "column1 column2"
-            "column3 column3"
-            "column4 column4"
-            ". .";*/
         gap:42px;
         display: flex;
         flex-wrap: wrap;
