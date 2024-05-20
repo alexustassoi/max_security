@@ -312,6 +312,14 @@
                 height: 185px;
             }
         }
+
+        .hs-error-msgs {
+            padding-left: 0;
+            margin-bottom: 0;
+            li {
+                color: #dc5d5d;
+            }
+        }
     }
 
     .actions {
