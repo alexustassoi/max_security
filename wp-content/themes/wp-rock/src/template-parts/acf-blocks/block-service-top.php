@@ -9,12 +9,19 @@
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields      = get_fields();
 $title = get_field_value( $fields, 'title' );
+$banner_is_video = get_field_value( $fields, 'banner_is_video' );
 $background_image = get_field_value( $fields, 'background_image' );
+$video_link = get_field_value( $fields, 'video_link' );
 $icon = get_field_value( $fields, 'icon' );
 $subtitle = get_field_value( $fields, 'subtitle' );
 ?>
 
-<div class="service-top js-top-block <?php echo (!$icon) ? 'icon-is-missing' : ''; echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>" style="background-image: url(<?php echo $background_image; ?>)">
+<div class="service-top js-top-block <?php echo (!$icon) ? 'icon-is-missing' : ''; echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>" style="background-image: url(<?php echo !$banner_is_video ? $background_image : 'none'; ?>)">
+    <?php if($video_link): ?>
+        <video class="service-top__video" autoplay muted loop playsinline>
+            <source src="<?php echo $video_link; ?>" type="video/mp4">
+        </video>
+    <?php endif; ?>
     <div class="service-top__custom-container custom-container">
         <h1 class="service-top__title <?php echo (!$icon) ? 'icon-is-missing' : ''; ?>">
             <?php if($icon): ?>

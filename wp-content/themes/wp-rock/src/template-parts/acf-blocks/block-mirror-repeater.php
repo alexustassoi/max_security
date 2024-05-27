@@ -18,7 +18,7 @@ $posts_per_page = get_option('posts_per_page');
 $args = array(
     'post_type' => 'courses',
     'post_status' => 'publish',
-    'posts_per_page' => $posts_per_page,
+    'posts_per_page' => -1,
 );
 
 $query = new WP_Query($args);
@@ -42,13 +42,14 @@ $total_posts = $query->found_posts;
                     $post_id = get_the_ID();
                     $post_fields = get_fields($post_id);
                     $reverse_class        = $key % 2 ? 'reverse' : '';
+                    $hide_class        = $key > $posts_per_page - 1 ? 'hide' : '';
                     $connected_course     = $post_id;
                     $slider_courses_ids[] = $connected_course;
                     $image = get_the_post_thumbnail( $post_id, 'full');
                     $modal_window_content = get_field_value($post_fields, 'modal_window_content');
                     $description = isset($modal_window_content['description']) ? $modal_window_content['description'] : null;
                     ?>
-                    <div class="mirror-repeater__item js-mirror-item <?php echo $reverse_class; ?>">
+                    <div class="mirror-repeater__item js-mirror-item <?php echo $reverse_class . ' ' . $hide_class; ?>">
                         <?php
                         if (!empty($image)) {
                             echo '<figure class="mirror-repeater__item-image">
