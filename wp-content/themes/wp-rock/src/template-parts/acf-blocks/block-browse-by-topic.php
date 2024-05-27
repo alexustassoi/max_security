@@ -10,8 +10,9 @@
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 
 //$post_id = isset($args['post_id']) ? $args['post_id'] : get_the_ID();
-var_dump('post_id', $post_id);
+//var_dump('post_id', $post_id);
 var_dump('$args', $args);
+var_dump('$class_name', $class_name);
 $fields = get_fields();
 $title = get_field_value($fields, 'title');
 $text_first_category_filter = get_field_value($fields, 'text_first_category_filter');
