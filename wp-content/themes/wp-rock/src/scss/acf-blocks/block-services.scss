@@ -26,13 +26,16 @@
 		color: #17181a;
 		font-feature-settings: 'clig' off, 'liga' off;
 		font-family: Turbine, sans-serif;
-		font-size: 66px;
+		font-size: 90px;
 		font-style: normal;
 		font-weight: 700;
 		line-height: 1.51;
 		margin-bottom: 8px;
 		text-align: center;
 		
+		@media screen and (max-width: 1530px) {
+			font-size: 66px;
+		}
 		@media screen and (max-width: 992px) {
 			font-size: 60px;
 		}
@@ -49,14 +52,17 @@
 	
 	&__subtitle {
 		color: #2f3034;
-		font-feature-settings: 'clig' off, 'liga' off;
 		font-family: Turbine, sans-serif;
-		font-size: 52px;
+		font-size: 76px;
 		font-style: normal;
 		font-weight: 300;
 		line-height: 1.46;
 		margin-bottom: 8px;
 		text-align: center;
+
+		@media screen and (max-width: 1530px) {
+			font-size: 52px;
+		}
 		
 		@media screen and (max-width: 1200px) {
 			font-size: 45px;
@@ -78,13 +84,16 @@
 	&__text {
 		color: #46494d;
 		text-align: center;
-		font-feature-settings: 'clig' off, 'liga' off;
 		font-family: Turbine, sans-serif;
-		font-size: 30px;
+		font-size: 46px;
 		font-style: normal;
 		font-weight: 300;
 		line-height: 1.26;
 		margin-bottom: 57px;
+
+		@media screen and (max-width: 1530px) {
+			font-size: 30px;
+		}
 		
 		@media screen and (max-width: 1200px) {
 			font-size: 28px;
@@ -296,18 +305,20 @@
 			}
 			
 			&:before {
-				content: '';
+				background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTY4IiBoZWlnaHQ9IjQyIiB2aWV3Qm94PSIwIDAgMTY4IDQyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTY3Ljg2OCAyMUMxNDkuMzM3IDM0LjkzMzggMTIyLjI4MiA0MiA4NC4wMDAyIDQyQzQ1LjcxODMgNDIgMTguNjYzOCAzNC45MzM4IDAuMTMyODEyIDIxQzE4LjY2MzggNy4wNjYxOCA0NS43MTgzIDAgODQuMDAwMiAwQzEyMi4yODIgMCAxNDkuMzM3IDcuMDY2MTggMTY3Ljg2OCAyMVoiIGZpbGw9ImJsYWNrIi8+PC9zdmc+);
+
+				//background: #17181a;
+				//border-radius: 100% 100% 0 0;
+				content: "";
+				height: 42px;
+				left: 50%;
 				position: absolute;
 				top: 0;
-				width: 100%;
-				height: 95px;
-				left: 50%;
 				transform: translateX(-50%);
-				border-radius: 200px 200px 0px 0px;
-				background: #17181a;
+				width: 170px;
 				
 				@media screen and (max-width: 560px) {
-					height: 46px;
+					height: 42px;
 				}
 			}
 		}
@@ -327,12 +338,15 @@
 			color: #17181a;
 			font-feature-settings: 'clig' off, 'liga' off;
 			font-family: Turbine, sans-serif;
-			font-size: 52px;
+			font-size: 86px;
 			font-style: normal;
 			font-weight: 700;
 			line-height: 1.153;
 			margin: 0;
 			
+			@media screen and (max-width: 1530px) {
+				font-size: 52px;
+			}
 			@media screen and (max-width: 1200px) {
 				font-size: 45px;
 			}

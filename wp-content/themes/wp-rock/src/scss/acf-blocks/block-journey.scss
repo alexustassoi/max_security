@@ -46,6 +46,10 @@
         text-align: center;
         margin: 0;
 
+        @media screen and (max-width: 1530px) {
+            font-size: 48px;
+        }
+
         @media screen and (max-width: 768px) {
             font-size: 45px;
         }
@@ -61,12 +65,16 @@
         color: var(--Black-80, #2f3034);
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
-        font-size: 30px;
+        font-size: 64px;
         font-style: normal;
         font-weight: 300;
         line-height: 1.26;
         margin-bottom: 100px;
         text-align: center;
+
+        @media screen and (max-width: 1530px) {
+            font-size: 30px;
+        }
 
         @media screen and (max-width: 992px) {
             font-size: 28px;
@@ -514,7 +522,7 @@
                 font-family: Turbine, sans-serif;
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 700;
                 line-height: 1.33;
                 margin: 0;
 
