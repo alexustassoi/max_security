@@ -34,3 +34,4 @@ vendor/
 /wp-content/backups-dup-pro/robots.txt
 /.htaccess.bk
 /wp-content/backups-dup-pro
+.DS_Store
