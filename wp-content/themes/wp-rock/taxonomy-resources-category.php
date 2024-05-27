@@ -10,9 +10,12 @@ get_header();
 
 do_action( 'wp_rock_before_page_content' );
 
-include( locate_template( '/src/template-parts/acf-blocks/block-browse-by-topic.php', false, false, array(
-    'post_id' => 1
-)) );
+$tax_settings = [
+    'post_id' => 2344,
+];
+
+
+include( locate_template( '/src/template-parts/acf-blocks/block-browse-by-topic.php', false, false, $tax_settings) );
 ?>
 
 
