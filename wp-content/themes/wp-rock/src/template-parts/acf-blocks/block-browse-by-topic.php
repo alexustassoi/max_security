@@ -10,7 +10,6 @@
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 
 $post_id = isset($tax_settings['post_id']) ? $tax_settings['post_id'] : get_the_ID();
-var_dump('$post_id', $post_id);
 
 $fields = get_fields();
 $title = get_field_value($fields, 'title');

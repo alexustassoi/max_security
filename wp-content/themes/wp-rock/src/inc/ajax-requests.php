@@ -109,3 +109,51 @@ function load_more_browse_topic_post() {
 }
 add_action( 'wp_ajax_load_more_browse_topic_post', 'load_more_browse_topic_post' );
 add_action( 'wp_ajax_nopriv_load_more_browse_topic_post', 'load_more_browse_topic_post' );
+
+/**
+ * Load more courses post.
+ *
+ * @return void
+ */
+function load_more_courses_post() {
+    if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+        // Sanitize and retrieve input data from the AJAX request.
+        $offset = filter_input( INPUT_POST, 'offset', FILTER_SANITIZE_STRING );
+        $last_key = filter_input( INPUT_POST, 'last_key', FILTER_SANITIZE_STRING );
+
+        // Check if required input data is missing or invalid.
+        if ('' === $offset || is_null( $offset ) || '' === $last_key || is_null($last_key)) {
+            die;
+        }
+
+        $args = array(
+            'post_type' => 'courses',
+            'post_status' => 'publish',
+            'posts_per_page' => get_option('posts_per_page'),
+            'offset' => $offset
+        );
+
+        $query = new WP_Query($args);
+
+        $courses_query = [
+            'query' => $query,
+            'last_key' => 0
+        ];
+
+        // Buffer the output of the template.
+        ob_start();
+        include( locate_template( '/template-courses-item.php', false, false, $courses_query) );
+
+        // Send JSON response with posts and count.
+        wp_send_json_success(
+            array(
+                'posts' => ob_get_clean(),
+            )
+        );
+
+        // Terminate AJAX request.
+        wp_die();
+    }
+}
+add_action( 'wp_ajax_load_more_courses', 'load_more_courses_post' );
+add_action( 'wp_ajax_nopriv_load_more_courses', 'load_more_courses_post' );

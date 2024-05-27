@@ -14333,6 +14333,36 @@ function ready() {
           }, 300);
           break;
         }
+      case 'load-more-courses':
+        {
+          e.preventDefault();
+          var _currentOffset = target.dataset.offset;
+          var totalPost = target.dataset.postCounts;
+          var lastKey = target.dataset.lastKey;
+          var coursesWrap = window.document.querySelector('.js-mirror-repeater');
+          if (!_currentOffset || !coursesWrap || !lastKey) return;
+          var _data = new FormData();
+          _data.append('action', 'load_more_courses');
+          _data.append('offset', _currentOffset);
+          _data.append('last_key', lastKey);
+          fetch(var_from_php.ajax_url, {
+            method: 'POST',
+            credentials: 'same-origin',
+            body: _data
+          }).then(function (response) {
+            return response.json();
+          }).then(function (response) {
+            if (response.success && response.data) {
+              coursesWrap.insertAdjacentHTML('beforeend', response.data.posts);
+              target.dataset.offset = +_currentOffset + +var_from_php.posts_per_page;
+              target.dataset.lastKey = +lastKey + +var_from_php.posts_per_page;
+              if (+_currentOffset + +var_from_php.posts_per_page >= +totalPost) {
+                target.classList.add('hide');
+              }
+            }
+          });
+          break;
+        }
       default:
         break;
     }

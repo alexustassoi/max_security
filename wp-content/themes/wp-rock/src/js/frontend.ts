@@ -193,6 +193,45 @@ function ready() {
                 }, 300);
                 break;
             }
+
+            case 'load-more-courses': {
+                e.preventDefault();
+                const currentOffset = target.dataset.offset;
+                const totalPost = target.dataset.postCounts;
+                // @ts-ignore
+                const lastKey = target.dataset.lastKey;
+                const coursesWrap = window.document.querySelector('.js-mirror-repeater') as HTMLElement;
+
+                if (!currentOffset || !coursesWrap || !lastKey) return;
+                const data = new FormData();
+                data.append('action', 'load_more_courses');
+                data.append('offset', currentOffset);
+                data.append('last_key', lastKey);
+
+                // @ts-ignore
+                fetch(var_from_php.ajax_url, {
+                    method: 'POST',
+                    credentials: 'same-origin',
+                    body: data,
+                })
+                    .then((response) => response.json())
+                    .then((response) => {
+                        if (response.success && response.data) {
+                            coursesWrap.insertAdjacentHTML('beforeend', response.data.posts);
+                            // @ts-ignore
+                            target.dataset.offset = +currentOffset + +var_from_php.posts_per_page;
+                            // @ts-ignore
+                            target.dataset.lastKey = +lastKey + +var_from_php.posts_per_page;
+
+                            // @ts-ignore
+                            if (+currentOffset + +var_from_php.posts_per_page >= +totalPost) {
+                                target.classList.add('hide');
+                            }
+                        }
+                    });
+
+                break;
+            }
             default:
                 break;
         }
