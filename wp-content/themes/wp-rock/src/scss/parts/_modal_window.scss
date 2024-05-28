@@ -35,6 +35,7 @@ html {
     display: none;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.8);
 
     &__service {
         background-color: rgba(0, 0, 0, 0.8);
@@ -62,8 +63,9 @@ html {
         &-image {
             margin: 0;
             overflow: hidden;
-            border-radius: 0 180px 180px 0;
+            // border-radius: 0 180px 180px 0;
             height: 100%;
+            clip-path: url(#svg-clip-87);
 
             @media screen and (max-width: 768px) {
                 border-radius: 100px 100px 0 0;

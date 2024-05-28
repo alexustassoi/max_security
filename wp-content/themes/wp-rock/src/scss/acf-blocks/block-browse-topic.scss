@@ -476,13 +476,13 @@
     &__card-text,
     &__card-webinar-duration {
         color: #000;
-        font-size: 10px;
+        font-size: 14px;
         font-weight: 400;
         line-height: 1.4;
         margin-bottom: 16px;
 
         @media screen and (max-width: 480px) {
-            font-size: 8px;
+            font-size: 10px;
             line-height: 1.5;
         }
 

@@ -29,7 +29,11 @@ body {
 .custom-container {
     max-width: 1250px;
     margin: 0 auto;
+    padding: 0 20px;
 
+    @media screen and (min-width: 1700px) {
+        width: 1400px;
+    }
     @media screen and (max-width: 1350px) {
         width: 1100px;
     }
@@ -382,4 +386,8 @@ input[type="email"] {
 
 body.single-resources {
     background: #F3F0EC;
+}
+
+body #pojo-a11y-toolbar {
+    top: 80% !important;
 }
