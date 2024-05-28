@@ -217,6 +217,9 @@ $bottom_text = get_field_value($global_options, 'bottom_text');
                 <path d="M86 43C86 71.3376 76.1486 86 43 86C9.85142 86 0 71.3376 0 43C0 14.6624 9.85142 0 43 0C76.1486 0 86 14.6624 86 43Z"
                       fill="#7E97A6"/>
             </clipPath>
+            <clipPath id="svg-clip-87">
+                <path class="cls-1" d="M877.56,724.41c233.95,0,303.49-103.49,303.49-303.49s-69.54-303.49-303.49-303.49H138.07v606.98h739.49Z"/>
+            </clipPath>
         </defs>
     </svg>
 </footer>

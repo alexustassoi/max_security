@@ -42,7 +42,7 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
 </svg>
                                     <div class="tabs__tab-inner">
                                         <img class="icon" src="' . $tab_link['icon'] . '" alt="icon">
-                                        <span class="title">' . esc_html($tab_link['title']) . '</span>
+                                        <span class="title">' . do_shortcode($tab_link['title']) . '</span>
                                     </div>
                                 </a>';
                             }
