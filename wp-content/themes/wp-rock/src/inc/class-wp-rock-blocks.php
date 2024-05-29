@@ -91,6 +91,10 @@ class WP_Rock_Blocks {
         'block-sign-up-offer' => array(
             'title'     => 'Block - Sign up offer',
         ),
+        'block-custom-content' => array(
+            'title'     => 'Block - Custom content',
+            'post_types' => array('resources')
+        ),
     );
 
     /**
