@@ -190,7 +190,6 @@ class WP_Rock_Blocks {
 
                 $post_types[] = 'page';
                 $post_types[] = 'post';
-
                 $args = array(
                     'name' => $id,
                     'title' => __($title, 'wp-rock'),
