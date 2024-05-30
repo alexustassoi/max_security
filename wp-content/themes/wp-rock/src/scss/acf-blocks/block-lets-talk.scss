@@ -17,6 +17,10 @@
         padding: 50px 0;
     }
 
+    & + .lets-talk {
+        display: none;
+    }
+
     &__title {
         color: #F3F0EC;
         font-feature-settings: 'clig' off, 'liga' off;

@@ -93,7 +93,24 @@ class WP_Rock_Blocks {
         ),
         'block-custom-content' => array(
             'title'     => 'Block - Custom content',
-            'post_types' => array('resources')
+        ),
+        'block-level-repeater' => array(
+            'title'     => 'Block - Level repeater',
+        ),
+        'block-our-services' => array(
+            'title'     => 'Block - Our services',
+        ),
+        'block-select-tag' => array(
+            'title'     => 'Block - Select tag',
+        ),
+        'block-custom-map' => array(
+            'title'     => 'Block - Custom map',
+        ),
+        'block-custom-video' => array(
+            'title'     => 'Block - Custom video',
+        ),
+        'block-content-w-images' => array(
+            'title'     => 'Block - Content with images',
         ),
     );
 
@@ -103,7 +120,7 @@ class WP_Rock_Blocks {
      *
      * @var string[]
      */
-    protected array $allowed = array( 'core/freeform' );
+    protected array $allowed = array( 'core/freeform', 'core/columns' );
 
 
     /**

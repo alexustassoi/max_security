@@ -1,0 +1,105 @@
+.custom-video {
+    padding-top: 100px;
+    padding-bottom: 36px;
+    background: #5A7153;
+
+    @media screen and (max-width: 1370px) {
+        padding-top: 70px;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding-top: 50px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background: #151836;
+    }
+
+    &__inner {
+    }
+
+    &__video-wrap {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (max-width: 480px) {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .custom-video__video-caption {
+            @media screen and (max-width: 480px) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__video {
+        margin-bottom: 36px;
+
+        @media screen and (max-width: 1370px) {
+            margin-bottom: 26px;
+        }
+
+        @media screen and (max-width: 991px) {
+            padding-top: 56.25%;
+            position: relative;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 0;
+        }
+
+        iframe,
+        video {
+            width: 100%;
+            height: 376px;
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+
+            @media screen and (max-width: 991px) {
+                border-radius: 15px;
+            }
+
+            @media screen and (max-width: 480px) {
+                border-radius: 10px;
+            }
+        }
+
+        iframe {
+
+            @media screen and (max-width: 991px) {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    &__video-caption {
+        text-align: center;
+        color: #FFF;
+        font-family: Turbine, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.4;
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-weight: 300;
+            line-height: 1;
+            max-width: 312px;
+        }
+    }
+}

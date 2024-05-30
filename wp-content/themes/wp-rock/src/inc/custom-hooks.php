@@ -338,3 +338,45 @@ function load_custom_single_template($single_template) {
 add_filter('single_template', 'load_custom_single_template');
 
 
+
+/**
+ * Generates HTML for embedding a video.
+ *
+ * This function returns HTML code for either an embedded YouTube video
+ * or a self-hosted video depending on the $is_youtube parameter.
+ *
+ * @param bool   $is_youtube Determines whether the video is a YouTube video. Default is false.
+ * @param string $video_url  The URL of the video. Default is an empty string.
+ *
+ * @return string|null The HTML content for the video embed, or null if $video_url is not provided.
+ */
+function get_post_block_video( $is_youtube = false, $video_url = '' ) {
+    if ( ! $video_url ) {
+        return null;
+    }
+
+    $html_content = '';
+
+    if ( $is_youtube ) {
+        $html_content .= '<iframe class="single-blog__post-video-iframe" type="text/html" src="' . do_shortcode($video_url) . '" frameborder="0" allowfullscreen width="100%" height="100%"></iframe>';
+    } else {
+        $html_content .= '<video class="single-blog__post-video" preload="none" playsinline controls><source src="' . do_shortcode($video_url) . '.webm" type="video/webm"><source src="' . do_shortcode($video_url) . '.mp4" type="video/mp4"></video>';
+    }
+
+    return $html_content;
+}
+
+
+function wrap_columns_block_in_container( $block_content, $block ) {
+    // Check if the block is the 'core/columns' block
+    if ( 'core/columns' === $block['blockName'] ) {
+        // Wrap the block content in a div with the class 'custom-container'
+        return '<div class="custom-container">' . $block_content . '</div>';
+    }
+
+    // Return the block content unchanged for all other blocks
+    return $block_content;
+}
+add_filter( 'render_block', 'wrap_columns_block_in_container', 10, 2 );
+
+
