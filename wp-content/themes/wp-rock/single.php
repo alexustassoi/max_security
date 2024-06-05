@@ -10,7 +10,7 @@ get_header();
 
 do_action( 'wp_rock_before_page_content' );
 ?>
-    <div class="container single-blog">
+    <div class="custom-container single-blog">
         <div class="row">
             <div class="col-12">
                 <?php
