@@ -2,20 +2,62 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 156px 0 174px;
+    padding: 315px 0;
     text-align: center;
     position: relative;
     z-index: 1;
 
+    @media screen and (max-width: 1750px) {
+        padding-top: 280px;
+        padding-bottom: 280px;
+    }
+
+    @media screen and (max-width: 1650px) {
+        padding-top: 255px;
+        padding-bottom: 255px;
+    }
+
+    @media screen and (max-width: 1470px) {
+        padding-top: 215px;
+        padding-bottom: 215px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        padding-top: 185px;
+        padding-bottom: 185px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        padding-bottom: 170px;
+        padding-top: 170px;
+    }
+
+    @media screen and (max-width: 1030px) {
+        padding-bottom: 140px;
+        padding-top: 140px;
+    }
+
     @media screen and (max-width: 992px) {
-        padding: 120px 0;
+        padding: 135px 0;
+    }
+
+    @media screen and (max-width: 992px) {
+        padding: 110px 0;
     }
 
     @media screen and (max-width: 768px) {
-        padding: 80px 0;
+        padding: 100px 0;
+    }
+
+    @media screen and (max-width: 670px) {
+        padding: 75px 0;
     }
 
     @media screen and (max-width: 480px) {
+        padding: 70px 0;
+    }
+
+    @media screen and (max-width: 375px) {
         padding: 50px 0;
     }
 
