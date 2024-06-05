@@ -17,7 +17,7 @@ $form_description = get_field_value($form_group, 'form_description');
 $form_shortcode = get_field_value($form_group, 'form_shortcode');
 ?>
 <div class="career-content">
-	<div class="container">
+	<div class="custom-container">
 		<div class="career-content__inner">
 			<?php
 			if (!empty($big_title)) {

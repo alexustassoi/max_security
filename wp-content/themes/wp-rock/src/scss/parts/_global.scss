@@ -664,3 +664,8 @@ body #pojo-a11y-toolbar {
         }
     }
 }
+
+
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay {
+    transform: translateY(-87%);
+}
