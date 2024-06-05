@@ -393,6 +393,22 @@
             "append": ""
         },
         {
+            "key": "field_66605f329b886",
+            "label": "Subscribe button",
+            "name": "subscribe_btn",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_65eecc24520d6",
             "label": "Max word submenu",
             "name": "",
@@ -1010,6 +1026,43 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_666065f196c43",
+            "label": "Popup windows",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_66606a6e96c44",
+            "label": "Popup content",
+            "name": "popup_content",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -1030,5 +1083,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716175751
+    "modified": 1717598800
 }

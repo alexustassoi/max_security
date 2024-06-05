@@ -131,12 +131,12 @@ if ( ! function_exists( 'shortcode__boxpopup' ) ) {
             )
         );
 
-        $output  = '<div id="' . $box_id . '" class="popup">';
-        $output .= '<div class="my_overlay js-popup-close"></div>';
+        $output  = '<div id="' . $box_id . '" class="popup-2">';
+        $output .= '<div class="my_overlay-2 js-popup-close"></div>';
 
-        $output .= '<div class="popup-wrapper-inner">';
+        $output .= '<div class="popup-wrapper-inner-2">';
 
-        $output .= '<div class="in text-center js-popup-inner">';
+        $output .= '<div class="in-2 text-center js-popup-inner">';
 
         if ( ! empty( $box_caption ) ) {
             $output .= '<p class="box-caption">' . $box_caption . '</p>';
@@ -146,7 +146,7 @@ if ( ! function_exists( 'shortcode__boxpopup' ) ) {
         $output .= '</div>';
         $output .= '<button
                         data-role="login-close"
-                        class="popup-close js-popup-close js-open-popup-activator">
+                        class="popup-close-2 js-popup-close js-open-popup-activator">
                         close popup
                     </button>';
         $output .= '</div>';

@@ -9,7 +9,6 @@
 
     &__container {
         display: flex;
-        align-items: flex-start;
 
         @media screen and (max-width: 768px) {
             flex-wrap: wrap;
@@ -237,6 +236,8 @@
     &__right {
         margin-left: auto;
         text-align: center;
+        display: flex;
+        flex-direction: column;
 
         @media screen and (max-width: 768px) {
             margin-left: 0;
@@ -327,7 +328,8 @@
         }
     }
 
-    &__talk {
+    &__talk,
+    &__subscribe-btn {
         border: 1px solid #cc7510;
         padding: 0 8px;
         display: inline-block;
@@ -350,6 +352,18 @@
         @media screen and (max-width: 480px) {
             font-size: 16px;
         }
+    }
+
+    &__subscribe-btn-wrap {
+        width: 100%;
+        margin-top: auto;
+    }
+
+    &__subscribe-btn {
+        margin-top: auto;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
     }
 
     &__bottom {
