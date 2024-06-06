@@ -181,6 +181,33 @@ button {
     background-color: transparent;
 }
 
+%orange-button {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #FFF;
+    font-family: Turbine, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    appearance: none;
+    border: 1px solid #CC7510;
+    background: #CC7510;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        line-height: 1.5;
+    }
+
+    &:hover {
+        background: transparent;
+        color: #2F3034;
+    }
+}
+
 p {
     margin-top: 0;
     font-size: 20px;
