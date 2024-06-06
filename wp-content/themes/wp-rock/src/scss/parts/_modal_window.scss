@@ -290,7 +290,8 @@ html {
     }
 }
 
-#popup-subscribe {
+#popup-subscribe,
+#popup-portal-demo {
     background: none;
 
     .popup-wrapper-inner {
@@ -328,7 +329,8 @@ html {
         }
     }
 
-    .subscribe-form {
+    .subscribe-form,
+    .portal-demo {
 
         &__top,
         &__form-content-wrap {
@@ -589,6 +591,10 @@ html {
         margin-bottom: 0;
     }
 
+    .hs_error_rollup {
+        display: none;
+    }
+
     .hbspt-form .hs-form-field label {
         color: #2f3034;
         display: inline-block;
@@ -701,6 +707,96 @@ html {
             @media screen and (max-width: 320px) {
                 font-size: 18px;
             }
+        }
+    }
+}
+
+#popup-portal-demo {
+
+    .popup-close {
+        &:after {
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyNCAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjMgMC41SDFWMjIuNUgyM1YwLjVaIiBzdHJva2U9IiMxRDFEMUIiIHN0cm9rZS13aWR0aD0iMC41NyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIi8+PHBhdGggZD0iTTQuODE2NDEgNC4zMjMyNEwxOS41NDcxIDE5LjA1MzkiIHN0cm9rZT0iIzFEMUQxQiIgc3Ryb2tlLXdpZHRoPSIwLjU3IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiLz48cGF0aCBkPSJNMTkuNTQ3MSA0LjMyMzI0TDQuODE2NDEgMTkuMDUzOSIgc3Ryb2tlPSIjMUQxRDFCIiBzdHJva2Utd2lkdGg9IjAuNTciIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIvPjwvc3ZnPg==) center center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    .portal-demo {
+
+        &__wrapper {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        &__top,
+        &__form-content-wrap {
+
+        }
+
+        &__top {
+            background: #F3F0EC;
+        }
+
+        &__form-content-wrap {
+            position: relative;
+            z-index: 1;
+
+            &:after {
+                position: absolute;
+                content: '';
+                display: block;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-color: rgba(255, 255, 255, .8);
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 42px;
+
+                @media screen and (max-width: 1370px) {
+                    gap: 35px;
+                }
+
+                @media screen and (max-width: 1030px) {
+                    gap: 20px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    gap: 16px;
+                }
+
+                textarea {
+                    resize: none;
+                }
+            }
+        }
+
+        &__logo {
+
+        }
+
+        &__logo-title {
+            color: #151836;
+
+            &:after {
+                background-color: #000;
+            }
+        }
+    }
+
+    .hs_submit.hs-submit {
+        margin-top: 14px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: 480px) {
+            margin-top: 8px;
         }
     }
 }
