@@ -283,4 +283,13 @@ html {
             }
         }
     }
+
+    &-wrapper-inner {
+        position: relative;
+        z-index: 5;
+    }
+}
+
+#popup-subscribe {
+    background: none;
 }
