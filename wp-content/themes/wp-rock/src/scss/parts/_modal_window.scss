@@ -584,6 +584,11 @@ html {
         padding: 0;
     }
 
+    .hbspt-form form {
+        gap: 0;
+        margin-bottom: 0;
+    }
+
     .hbspt-form .hs-form-field label {
         color: #2f3034;
         display: inline-block;
