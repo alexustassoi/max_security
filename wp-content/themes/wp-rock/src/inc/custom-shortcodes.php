@@ -131,7 +131,7 @@ if ( ! function_exists( 'shortcode__boxpopup' ) ) {
             )
         );
 
-        $output  = '<div id="' . $box_id . '" class="popup-2">';
+        $output  = '<div id="' . $box_id . '" class="popup">';
         $output .= '<div class="my_overlay js-popup-close"></div>';
 
         $output .= '<div class="popup-wrapper-inner">';
