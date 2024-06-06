@@ -19,7 +19,6 @@ $social_link        = get_field_value($global_options, 'social_link');
 $social_links_title = get_field_value($global_options, 'social_links_title');
 $footer_logo        = get_field_value($global_options, 'footer_logo');
 $bottom_text        = get_field_value($global_options, 'bottom_text');
-$popup_content      = get_field_value($global_options, 'popup_content');
 $subscribe_btn      = get_field_value($global_options, 'subscribe_btn');
 ?>
 
@@ -260,7 +259,3 @@ $subscribe_btn      = get_field_value($global_options, 'subscribe_btn');
         </defs>
     </svg>
 </footer>
-
-<?php
-echo $popup_content ? do_shortcode($popup_content) : '';
-?>
