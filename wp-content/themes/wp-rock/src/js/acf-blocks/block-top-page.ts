@@ -46,6 +46,7 @@ const initBlockExample = () => {
 
 const openRequestDemoPopup = () => {
     const popupInstance = new Popup();
+    popupInstance.openOnePopup('#popup-request-demo');
 
     document.body.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;

@@ -11893,6 +11893,7 @@ var initBlockExample = function initBlockExample() {
 };
 var openRequestDemoPopup = function openRequestDemoPopup() {
   var popupInstance = new Popup();
+  popupInstance.openOnePopup('#popup-request-demo');
   document.body.addEventListener('click', function (e) {
     var target = e.target;
     var role = target.dataset.role;
