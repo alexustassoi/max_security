@@ -640,6 +640,25 @@
                     "enable_opacity": 0,
                     "return_format": "string",
                     "parent_repeater": "field_6643bdb00309e"
+                },
+                {
+                    "key": "field_6663164d7fabb",
+                    "label": "Color faq item",
+                    "name": "tag_term_faq_item_color",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "parent_repeater": "field_6643bdb00309e"
                 }
             ]
         },
@@ -1083,5 +1102,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717598800
+    "modified": 1717769861
 }

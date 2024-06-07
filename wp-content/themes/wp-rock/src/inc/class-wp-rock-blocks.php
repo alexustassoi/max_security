@@ -112,6 +112,9 @@ class WP_Rock_Blocks {
         'block-content-w-images' => array(
             'title'     => 'Block - Content with images',
         ),
+        'block-faq' => array(
+            'title'     => 'Block - FAQ',
+        ),
     );
 
     /**
