@@ -12172,6 +12172,15 @@ function ready() {
           });
           break;
         }
+      case 'open-popup-portal-demo':
+        {
+          e.preventDefault();
+          var targetPopupId = target.getAttribute('href');
+          if (!popupInstance && !targetPopupId) return;
+          popupInstance.forceCloseAllPopup();
+          popupInstance.openOnePopup(targetPopupId);
+          break;
+        }
       default:
         break;
     }

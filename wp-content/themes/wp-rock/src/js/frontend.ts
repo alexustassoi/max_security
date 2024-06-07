@@ -232,6 +232,18 @@ function ready() {
 
                 break;
             }
+
+            case 'open-popup-portal-demo': {
+                e.preventDefault();
+                const targetPopupId = target.getAttribute('href');
+
+                if (!popupInstance && !targetPopupId) return;
+                popupInstance.forceCloseAllPopup();
+                // @ts-ignore
+                popupInstance.openOnePopup(targetPopupId);
+
+                break;
+            }
             default:
                 break;
         }
