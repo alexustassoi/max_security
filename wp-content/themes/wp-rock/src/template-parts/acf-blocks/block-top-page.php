@@ -64,11 +64,11 @@ $video = get_field_value( $fields, 'video' );
     <div class="top-page__bottom">
         <div class="swiper js-top-page-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide top-page__bottom-item">Neque porro quisquam est qui dolorem ipsum »</div>
-                <div class="swiper-slide top-page__bottom-item">Israel Tactical: Protesters block Port of Ashdod</div>
-                <div class="swiper-slide top-page__bottom-item">Lorem ipsum dolor sit amet »</div>
-                <div class="swiper-slide top-page__bottom-item">Eaque ipsa quae ab illo inventore veritatis et </div>
-                <div class="swiper-slide top-page__bottom-item">Lorem ipsum dolor sit amet »</div>
+                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Neque porro quisquam est qui dolorem ipsum »</div>
+                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Israel Tactical: Protesters block Port of Ashdod</div>
+                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Lorem ipsum dolor sit amet »</div>
+                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Eaque ipsa quae ab illo inventore veritatis et </div>
+                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Lorem ipsum dolor sit amet »</div>
             </div>
         </div>
     </div>

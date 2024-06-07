@@ -1,4 +1,5 @@
 import Swiper, { Autoplay, EffectCreative } from 'swiper';
+import Popup from "../parts/popup-window";
 
 const initBlockExample = () => {
     const scrollBottom = document.querySelector('.js-scroll-bottom') as HTMLElement;
@@ -43,11 +44,41 @@ const initBlockExample = () => {
     }
 };
 
+const openRequestDemoPopup = () => {
+    const popupInstance = new Popup();
+
+    document.body.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const { role } = target.dataset;
+
+        if (!role) return;
+
+        switch (role) {
+            case 'open-request-demo-popup': {
+                e.preventDefault();
+                const targetPopup = window.document.getElementById('#popup-request-demo') as HTMLElement;
+
+                if (!popupInstance && !targetPopup) return;
+                popupInstance.forceCloseAllPopup();
+                // @ts-ignore
+                popupInstance.openOnePopup('#popup-request-demo');
+
+                break;
+            }
+            default:
+                break;
+        }
+    });
+    // popupInstance.openOnePopup('#popup-request-demo');
+};
+
 document.addEventListener('DOMContentLoaded', initBlockExample, false);
+document.addEventListener('DOMContentLoaded', openRequestDemoPopup, false);
 
 // Initialize dynamic block preview (editor).
 if (window['acf']) {
     window['acf']?.addAction('render_block_preview', initBlockExample);
+    window['acf']?.addAction('render_block_preview', openRequestDemoPopup);
 }
 
 export {};
