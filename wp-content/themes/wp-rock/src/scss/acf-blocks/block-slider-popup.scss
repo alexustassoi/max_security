@@ -77,12 +77,21 @@
         width: 100%;
         color: #445c5a;
         font-feature-settings: 'clig' off, 'liga' off;
-
         font-family: Turbine, sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.4;
+
+        &.title-is-empty {
+            max-width: unset;
+
+            p {
+                br {
+                    display: none;
+                }
+            }
+        }
     }
 
     &__slider {

@@ -40,11 +40,13 @@ $no_margin = empty($slides) ? 'mb0' : '';
         ?>
         <div class="slider-popup__top-wrapper <?php echo $no_margin; ?>">
             <?php
+            $title_is_empty = empty($title) ? 'title-is-empty' : '';
+
             if (!empty($title)) {
                 echo '<h3 class="slider-popup__title animated-element from-left">' . do_shortcode($title) . '</h3>';
             }
             if (!empty($description)) {
-                echo '<div class="slider-popup__description animated-element from-right">' . do_shortcode($description) . '</div>';
+                echo '<div class="slider-popup__description animated-element from-right ' . do_shortcode($title_is_empty) .  '">' . do_shortcode($description) . '</div>';
             }
             ?>
         </div>
