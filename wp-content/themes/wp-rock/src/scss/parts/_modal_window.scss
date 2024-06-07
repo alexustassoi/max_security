@@ -803,6 +803,43 @@ html {
             margin-top: 8px;
         }
     }
+
+    .portal-demo {
+        &__form-wrapper {
+            .inputs-list {
+                padding-left: 0;
+            }
+
+            .hs-form-checkbox label {
+                cursor: pointer;
+                padding-left: 35px;
+            }
+        }
+    }
+
+    .hs-form-checkbox {
+        input[type=checkbox] {
+            display: none;
+
+            &:checked + span:before {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTMiIHdpZHRoPSIxMyIgdmlld0JveD0iMCAwIDE3LjgzNyAxNy44MzciIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNDQzc1MTAiIGQ9Ik0xNi4xNDUgMi41NzFhLjcuNyAwIDAgMC0uOTkgMEw2LjkyIDEwLjgwNGwtNC4yNDEtNC4yN2EuNjk4LjY5OCAwIDAgMC0uOTg5IDBMLjIwNCA4LjAxOWEuNzAzLjcwMyAwIDAgMCAwIC45OWw2LjIxNyA2LjI1OGEuNzA0LjcwNCAwIDAgMCAuOTkgMEwxNy42MyA1LjA0N2EuNy43IDAgMCAwIDAtLjk5NGwtMS40ODUtMS40ODJ6Ii8+PC9zdmc+);
+            }
+        }
+
+        span:before {
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 3px solid #cc7510;
+            content: "";
+            display: block;
+            height: 16px;
+            left: 0;
+            position: absolute;
+            top: 2px;
+            width: 16px;
+        }
+    }
 }
 
 #popup-request-demo {
