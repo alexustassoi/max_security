@@ -111,7 +111,8 @@
         display: flex;
         gap: 8px;
         overflow: scroll;
-        justify-content: center;
+        justify-content: space-between;
+        padding: 0 20px;
 
         &::-webkit-scrollbar {
             display: none;
