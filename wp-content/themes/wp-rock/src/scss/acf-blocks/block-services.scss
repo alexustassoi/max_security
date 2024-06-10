@@ -1,4 +1,3 @@
-/* stylelint-disable */
 .services {
 	padding: 100px 0 70px;
 	
@@ -243,7 +242,7 @@
 			font-weight: 700;
 			line-height: 1.6;
 			text-align: center;
-			margin: 0;
+			margin: 0 0 5px 0;
 			
 			@media screen and (max-width: 768px) {
 				font-size: 18px;
@@ -263,7 +262,7 @@
 			font-size: 18px;
 			font-style: normal;
 			font-weight: 500;
-			line-height: 1.33;
+			line-height: 1.13;
 			margin-bottom: 8px;
 			
 			@media screen and (max-width: 992px) {
@@ -340,7 +339,7 @@
 			font-family: Turbine, sans-serif;
 			font-size: 86px;
 			font-style: normal;
-			font-weight: 700;
+			font-weight: 500;
 			line-height: 1.153;
 			margin: 0;
 			
