@@ -450,13 +450,15 @@
 
         label {
             color: #2f3034;
-            display: inline-block;
+            //display: inline-block;
             font-family: Turbine, sans-serif;
             font-size: 30px;
             font-style: normal;
             font-weight: 300;
             margin-bottom: 16px;
             text-transform: lowercase;
+
+            display: none;
 
             &:first-letter {
                 text-transform: uppercase;
