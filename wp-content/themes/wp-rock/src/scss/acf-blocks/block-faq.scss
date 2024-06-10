@@ -219,7 +219,7 @@
         max-height: 0;
         overflow: hidden;
         position: static;
-        transition: all .5s ease;
+        transition: padding .5s ease, max-height .15s ease;
         background-color: #fff;
 
         @media screen and (max-width: 1030px) {
