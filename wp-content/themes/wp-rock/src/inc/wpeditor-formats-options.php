@@ -28,6 +28,112 @@ function my_wpeditor_formats_options( $settings ) {
             'block' => 'p',
             'classes' => 'body-type-1',
         ),
+        array(
+            'title' => 'H1 with H3 styling',
+            'block' => 'h1',
+            'classes' => 'h1-like-h3',
+        ),
+        array(
+            'title' => 'H1 with H2 styling',
+            'block' => 'h1',
+            'classes' => 'h1-like-h2',
+        ),
+        array(
+            'title' => 'H1 with H4 styling',
+            'block' => 'h1',
+            'classes' => 'h1-like-h4',
+        ),
+        array(
+            'title' => 'H1 with H5 styling',
+            'block' => 'h1',
+            'classes' => 'h1-like-h5',
+        ),
+        array(
+            'title' => 'H1 with H6 styling',
+            'block' => 'h1',
+            'classes' => 'h1-like-h6',
+        ),
+        array(
+            'title' => 'H2 with H3 styling',
+            'block' => 'h2',
+            'classes' => 'h2-like-h3',
+        ),
+        array(
+            'title' => 'H2 with H1 styling',
+            'block' => 'h2',
+            'classes' => 'h2-like-h1',
+        ),
+        array(
+            'title' => 'H2 with H4 styling',
+            'block' => 'h2',
+            'classes' => 'h2-like-h4',
+        ),
+        array(
+            'title' => 'H2 with H5 styling',
+            'block' => 'h2',
+            'classes' => 'h2-like-h5',
+        ),
+        array(
+            'title' => 'H2 with H6 styling',
+            'block' => 'h2',
+            'classes' => 'h2-like-h6',
+        ),
+        array(
+            'title' => 'H3 with H4 styling',
+            'block' => 'h3',
+            'classes' => 'h3-like-h4',
+        ),
+        array(
+            'title' => 'H3 with H5 styling',
+            'block' => 'h3',
+            'classes' => 'h3-like-h5',
+        ),
+        array(
+            'title' => 'H3 with H6 styling',
+            'block' => 'h3',
+            'classes' => 'h3-like-h6',
+        ),
+        array(
+            'title' => 'H4 with H5 styling',
+            'block' => 'h4',
+            'classes' => 'h4-like-h5',
+        ),
+        array(
+            'title' => 'H4 with H6 styling',
+            'block' => 'h4',
+            'classes' => 'h4-like-h6',
+        ),
+
+        array(
+            'title' => 'Paragraph with H1 styling',
+            'block' => 'p',
+            'classes' => 'p-like-h1',
+        ),
+        array(
+            'title' => 'Paragraph with H2 styling',
+            'block' => 'p',
+            'classes' => 'p-like-h2',
+        ),
+        array(
+            'title' => 'Paragraph with H3 styling',
+            'block' => 'p',
+            'classes' => 'p-like-h3',
+        ),
+        array(
+            'title' => 'Paragraph with H4 styling',
+            'block' => 'p',
+            'classes' => 'p-like-h4',
+        ),
+        array(
+            'title' => 'Paragraph with H5 styling',
+            'block' => 'p',
+            'classes' => 'p-like-h5',
+        ),
+        array(
+            'title' => 'Paragraph with H6 styling',
+            'block' => 'p',
+            'classes' => 'p-like-h6',
+        ),
     );
 
     $settings['style_formats'] = json_encode( $style_formats );

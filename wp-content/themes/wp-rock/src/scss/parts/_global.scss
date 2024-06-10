@@ -300,7 +300,11 @@ li {
     margin-bottom: 0;
 }
 
-h2 {
+h1, .p-like-h1, .h2-like-h1 {
+
+}
+
+h2, .h1-like-h2, .p-like-h2 {
     color: #17181a;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
@@ -311,14 +315,13 @@ h2 {
     margin-top: 0;
 }
 
-h3 {
+h3, .h2-like-h3, .h1-like-h3, .p-like-h3 {
     color: #2f3034;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
     font-size: 52px;
     font-style: normal;
     font-weight: 300;
-    line-height: 1.46;
     margin-top: 0;
     line-height: 1.15;
 
@@ -335,7 +338,7 @@ h3 {
     }
 }
 
-h4 {
+h4, .h1-like-h4, .h2-like-h4, .h3-like-h4, .p-like-h4 {
     color: #2f3034;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
@@ -346,7 +349,7 @@ h4 {
     margin-top: 0;
 }
 
-h5 {
+h5, .h1-like-h5, .h2-like-h5, .h3-like-h5, .h4-like-h5, .p-like-h5 {
     color: #46494d;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
