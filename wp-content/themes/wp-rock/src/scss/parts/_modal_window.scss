@@ -65,7 +65,7 @@ html {
             overflow: hidden;
             // border-radius: 0 180px 180px 0;
             height: 100%;
-            //clip-path: url(#svg-clip-87);
+            position: relative;
 
             @media screen and (max-width: 768px) {
                 //border-radius: 100px 100px 0 0;
@@ -80,6 +80,7 @@ html {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                position: absolute;
             }
         }
 
