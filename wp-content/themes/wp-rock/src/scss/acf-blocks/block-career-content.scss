@@ -452,12 +452,10 @@
             color: #2f3034;
             //display: inline-block;
             font-family: Turbine, sans-serif;
-            font-size: 30px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 300;
             margin-bottom: 16px;
-            text-transform: lowercase;
-
             display: none;
 
             &:first-letter {
@@ -467,6 +465,12 @@
             &.hs-error-msg {
                 color: #f00;
                 font-size: 14px;
+            }
+        }
+
+        .hs-form-booleancheckbox {
+            label {
+                display: inline-block;
             }
         }
 
@@ -616,7 +620,7 @@
             color: #2f3034;
             display: inline-block;
             font-family: Turbine, sans-serif;
-            font-size: 30px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 300;
             margin-bottom: 16px;
