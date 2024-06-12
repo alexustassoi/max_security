@@ -10847,10 +10847,11 @@ var initBlockJourney = function initBlockJourney() {
       loop: true,
       slidesPerView: 'auto',
       freeMode: true,
+      navigation: {
+        prevEl: '.journey__history-btn-prev'
+      },
       breakpoints: {
         320: {
-          loop: true,
-          slidesPerView: 'auto',
           centeredSlides: true,
           spaceBetween: 88
         },
