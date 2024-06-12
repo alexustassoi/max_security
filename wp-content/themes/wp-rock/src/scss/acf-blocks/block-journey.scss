@@ -15,6 +15,10 @@
         padding: 0;
     }
 
+    &.about-us-page {
+        padding-bottom: 0;
+    }
+
     &__history-swiper {
         margin-bottom: 100px;
 
@@ -371,6 +375,11 @@
                 flex-shrink: 0;
                 background-image: url('../images/acf-blocks/Rectangle_13.png');
 
+                @media screen and (max-width: 1199px) {
+                    left: 60px;
+                    transform: translateY(-50%) scale(.85);
+                }
+
                 @media screen and (max-width: 991px) {
                     position: static;
                     transform: none;
@@ -428,7 +437,7 @@
                 }
 
                 @media screen and (max-width: 992px) {
-                    padding: 0 25px 41px;
+                    padding: 0 25px 0;
                     max-width: 100%;
                 }
 
@@ -480,7 +489,8 @@
                         height: 37px;
                         background-size: 100% auto;
                         right: 25px;
-                        bottom: 24px;
+                        //bottom: 24px;
+                        bottom: -12px;
                     }
 
                     @media screen and (max-width: 480px) {

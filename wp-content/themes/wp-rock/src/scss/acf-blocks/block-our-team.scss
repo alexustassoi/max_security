@@ -6,6 +6,18 @@
         padding: 30px 0 33px;
     }
 
+    &.about-us-page {
+        padding-top: 26px;
+
+        @media screen and (max-width: 992px) {
+            padding-top: 60px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-top: 76px;
+        }
+    }
+
     &__custom-container {
         max-width: 1078px;
         margin: 0 auto;

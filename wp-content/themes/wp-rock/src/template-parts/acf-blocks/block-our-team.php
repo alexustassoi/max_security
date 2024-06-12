@@ -15,7 +15,7 @@ $description = get_field_value($fields, 'description');
 $team_repeater = get_field_value($fields, 'team_repeater');
 $no_photo_url = get_template_directory_uri() . '/assets/public/images/no-photo.png';
 ?>
-<div class="our-team" id="our-team">
+<div class="our-team <?php echo esc_html($class_name); ?>" id="our-team">
     <div class="our-team__custom-container">
         <?php
         if (!empty($title)) {
