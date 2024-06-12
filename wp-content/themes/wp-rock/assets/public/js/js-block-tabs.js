@@ -10848,13 +10848,21 @@ var initBlockClients = function initBlockClients() {
           spaceBetween: 25,
           slidesPerView: 4
         },
-        991: {
+        481: {
+          slidesPerView: 4,
+          spaceBetween: 15
+        },
+        415: {
           slidesPerView: 3,
           spaceBetween: 15
         },
-        375: {
-          slidesPerView: 3,
-          spaceBetween: 15
+        376: {
+          slidesPerView: 2.5,
+          spaceBetween: 25
+        },
+        320: {
+          slidesPerView: 2.1,
+          spaceBetween: 10
         }
       }
     });
