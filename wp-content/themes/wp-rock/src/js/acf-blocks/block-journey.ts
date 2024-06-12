@@ -21,17 +21,10 @@ const initBlockJourney = () => {
                     centeredSlides: true,
                     spaceBetween: 88,
                 },
-                768: {
+                481: {
                     spaceBetween: 100,
-                    loop: false,
-                    centeredSlides: false,
                 },
-                992: {
-                    spaceBetween: 100,
-                    loop: false,
-                    centeredSlides: false,
-                },
-                1200: {
+                769: {
                     spaceBetween: 156,
                 },
             },
