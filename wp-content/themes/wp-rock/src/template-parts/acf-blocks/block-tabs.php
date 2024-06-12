@@ -15,16 +15,19 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
 ?>
 <div class="tabs">
     <div class="custom-container">
-        <div class="tabs__top-wrapper">
-            <?php
-            if (!empty($title)) {
-                echo '<h2 class="tabs__title animated-element from-left">' . do_shortcode($title) . '</h2>';
-            }
-            if (!empty($description)) {
-                echo '<div class="tabs__description animated-element from-right">' . do_shortcode($description) . '</div>';
-            }
-            ?>
-        </div>
+        <?php
+        if ($title || $description) { ?>
+            <div class="tabs__top-wrapper">
+                <?php
+                if (!empty($title)) {
+                    echo '<h2 class="tabs__title animated-element from-left">' . do_shortcode($title) . '</h2>';
+                }
+                if (!empty($description)) {
+                    echo '<div class="tabs__description animated-element from-right">' . do_shortcode($description) . '</div>';
+                }
+                ?>
+            </div>
+        <?php } ?>
         <div class="tabs__tab-container">
             <div class="tabs__tabs-slider js-tabs-swiper">
                 <div class="swiper-wrapper">
