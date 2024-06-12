@@ -10841,15 +10841,20 @@ var initBlockClients = function initBlockClients() {
   var tabsSwiper = document.querySelector('.js-tabs-swiper');
   if (tabsSwiper) {
     var tabsSlider = new core(tabsSwiper, {
-      spaceBetween: 16,
-      slidesPerView: 2,
+      spaceBetween: 25,
+      slidesPerView: 4,
       breakpoints: {
+        1920: {
+          spaceBetween: 25,
+          slidesPerView: 4
+        },
         991: {
-          slidesPerView: 4,
-          spaceBetween: 20
+          slidesPerView: 3,
+          spaceBetween: 15
         },
         375: {
-          slidesPerView: 3
+          slidesPerView: 3,
+          spaceBetween: 15
         }
       }
     });

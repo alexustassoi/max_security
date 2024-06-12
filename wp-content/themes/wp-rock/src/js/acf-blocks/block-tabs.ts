@@ -5,15 +5,20 @@ const initBlockClients = () => {
     const tabsSwiper = document.querySelector('.js-tabs-swiper') as HTMLElement;
     if (tabsSwiper) {
         const tabsSlider = new Swiper(tabsSwiper, {
-            spaceBetween: 16,
-            slidesPerView: 2,
+            spaceBetween: 25,
+            slidesPerView: 4,
             breakpoints: {
-                991: {
+                1920: {
+                    spaceBetween: 25,
                     slidesPerView: 4,
-                    spaceBetween: 20,
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
                 },
                 375: {
                     slidesPerView: 3,
+                    spaceBetween: 15,
                 },
             },
         });
