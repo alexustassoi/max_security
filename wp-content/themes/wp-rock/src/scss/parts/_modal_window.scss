@@ -85,10 +85,26 @@ html {
         }
 
         &-content {
-            padding: 32px 0 40px;
+            padding: 32px 242px 40px 0;
+
+            @media screen and (max-width: 1370px) {
+                padding-right: 135px;
+            }
+
+            @media screen and (max-width: 1199px) {
+                padding-right: 100px;
+            }
+
+            @media screen and (max-width: 1030px) {
+                padding-right: 50px;
+            }
 
             @media screen and (max-width: 768px) {
-                padding: 24px;
+                padding: 24px 75px 24px 24px;
+            }
+
+            @media screen and (max-width: 320px) {
+                padding-right: 45px;
             }
 
             &-wrap {

@@ -37,6 +37,7 @@
 
     &__swiper {
         position: relative;
+        max-width: 1080px;
     }
 
     &__button {
@@ -110,6 +111,11 @@
 
         &-right {
             width: 100%;
+            max-width: 438px;
+
+            @media screen and (max-width: 992px) {
+                max-width: unset;
+            }
         }
 
         &-avatar {
@@ -269,6 +275,7 @@
             @media screen and (max-width: 480px) {
                 font-size: 24px;
                 line-height: 1.16;
+                max-width: 310px;
             }
         }
 
@@ -312,6 +319,11 @@
                 font-size: 12px;
                 line-height: 1.16;
                 margin-bottom: 24px;
+                padding-right: 36px;
+            }
+
+            @media screen and (max-width: 320px) {
+                padding-right: 0;
             }
         }
 
