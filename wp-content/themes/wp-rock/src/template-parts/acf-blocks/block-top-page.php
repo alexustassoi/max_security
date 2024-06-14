@@ -11,6 +11,8 @@ $fields      = get_fields();
 $titles = get_field_value( $fields, 'titles' );
 $video = get_field_value( $fields, 'video' );
 
+$warning_class = new Get_Warnings();
+$warnings = $warning_class->get_custom_warning(null, true);
 ?>
 
 <div class="top-page js-top-block <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
@@ -60,16 +62,22 @@ $video = get_field_value( $fields, 'video' );
             </svg>
         </button>
     </div>
-
+	
+	<?php if (is_array($warnings)): ?>
     <div class="top-page__bottom">
         <div class="swiper js-top-page-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Neque porro quisquam est qui dolorem ipsum »</div>
-                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Israel Tactical: Protesters block Port of Ashdod</div>
-                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Lorem ipsum dolor sit amet »</div>
-                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Eaque ipsa quae ab illo inventore veritatis et </div>
-                <div class="swiper-slide top-page__bottom-item" data-role="open-request-demo-popup">Lorem ipsum dolor sit amet »</div>
+                
+                <?php foreach ($warnings as $warning): ?>
+                    <div class="swiper-slide top-page__bottom-item" data-id="<?php echo $warning['ID']; ?>" data-role="open-request-demo-popup">
+                        <?php
+                        $title = mb_strimwidth($warning['content']['title'], 0, 50, ' »');
+                        echo $title; ?>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
+	<?php endif; ?>
+ 
 </div>

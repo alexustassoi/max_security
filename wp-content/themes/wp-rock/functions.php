@@ -30,8 +30,20 @@ require THEME_DIR . '/src/inc/custom-hooks.php';
 
 require THEME_DIR . '/src/inc/custom-shortcodes.php';
 require THEME_DIR . '/src/inc/class-mobile-detect.php';
+require THEME_DIR . '/src/inc/class-get-warnings-api.php';
+
+$warning = new Get_Warnings();
+//var_dump($warning->get_custom_warning(605993));
+//
+//$warnings = $warning->request_api();
 
 
+
+//echo '<pre>';
+//
+//var_dump($warnings);
+//
+//echo '</pre>';
 
 /* Disable WordPress Admin Bar for all users */
 // add_filter( 'show_admin_bar', '__return_false' );
