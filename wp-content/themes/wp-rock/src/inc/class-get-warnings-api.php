@@ -16,6 +16,9 @@ class Get_Warnings {
     public function __construct() {
         // Add action to create custom table on init
         add_action('init', array($this, 'create_custom_table'));
+		
+		// Init ajax actions
+		$this->ajax_actions();
 
         // Check if ActionScheduler class exists
         if (class_exists('ActionScheduler')) {
@@ -26,6 +29,33 @@ class Get_Warnings {
             add_action('custom_daily_task', array($this, 'execute_daily_task'));
         }
     }
+	
+	/**
+	 * Function init all actions ajax in this class
+	 *
+	 * @return void
+	 */
+	function ajax_actions() {
+		add_action( 'wp_ajax_get_popup_warning', array($this, 'get_popup_warning') );
+		add_action( 'wp_ajax_nopriv_get_popup_warning', array($this, 'get_popup_warning') );
+	}
+	
+	/**
+	 * get HTML template popup body for in return ajax action
+	 * @return void
+	 */
+	function get_popup_warning () {
+		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+			$id = filter_input( INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT );
+			
+			$data = $this->get_custom_warning($id);
+			ob_start();
+			get_template_part( 'src/template-parts/popup-warning', null, $data );
+			$template = ob_get_clean();
+			
+			wp_send_json_success($template);
+		}
+	}
 
     /**
      * Schedule custom tasks using ActionScheduler.
@@ -162,6 +192,7 @@ class Get_Warnings {
 
         $company = get_field_value($global_options, 'company');
         $token = get_field_value($global_options, 'token');
+        $endpoint_api = get_field_value($global_options, 'endpoint_api');
 
         if ($company && $token) {
             $end_date_time = date('Y-m-d H:i:s');
@@ -181,7 +212,7 @@ class Get_Warnings {
                 ]
             ]);
 
-            $url = "https://api.max-security.com/wp-json/max-api-plugin/public-report-list-v3?" . $query_params;
+            $url = $endpoint_api . "?" . $query_params;
 
             $ch = curl_init();
 

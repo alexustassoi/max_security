@@ -1,6 +1,46 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/popup-warning.ts":
+/*!********************************************!*\
+  !*** ./src/js/components/popup-warning.ts ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var popupWarningTrigger = function popupWarningTrigger(button) {
+  if (button instanceof HTMLElement) {
+    var idWarning = button.getAttribute('data-id');
+    var formData = new FormData();
+    var action = 'get_popup_warning';
+    if (!idWarning) {
+      return false;
+    }
+    formData.append('action', action);
+    formData.append('id', idWarning);
+    var popupBody = document.querySelector('#popup-request-demo');
+    fetch(var_from_php.ajax_url, {
+      method: 'POST',
+      credentials: 'same-origin',
+      body: formData
+    }).then(function (response) {
+      return response.json();
+    }).then(function (response) {
+      if (response.success && response.data && popupBody) {
+        var wrap = popupBody.querySelector('.js-popup-inner');
+        if (wrap) {
+          wrap.innerHTML = response.data;
+        }
+      }
+    });
+    console.log('button', button, idWarning);
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (popupWarningTrigger);
+
+/***/ }),
+
 /***/ "./node_modules/smoothscroll-polyfill/dist/smoothscroll.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/smoothscroll-polyfill/dist/smoothscroll.js ***!
@@ -13999,7 +14039,9 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 /* harmony import */ var _parts_popup_window__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../parts/popup-window */ "./src/js/parts/popup-window.js");
+/* harmony import */ var _components_popup_warning__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/popup-warning */ "./src/js/components/popup-warning.ts");
 var _a, _b;
+
 
 
 var initBlockExample = function initBlockExample() {
@@ -14051,6 +14093,7 @@ var openRequestDemoPopup = function openRequestDemoPopup() {
           e.preventDefault();
           var targetPopup = window.document.getElementById('#popup-request-demo');
           if (!popupInstance && !targetPopup) return;
+          (0,_components_popup_warning__WEBPACK_IMPORTED_MODULE_2__["default"])(target);
           popupInstance.forceCloseAllPopup();
           popupInstance.openOnePopup('#popup-request-demo');
           break;
@@ -14062,9 +14105,9 @@ var openRequestDemoPopup = function openRequestDemoPopup() {
 };
 document.addEventListener('DOMContentLoaded', initBlockExample, false);
 document.addEventListener('DOMContentLoaded', openRequestDemoPopup, false);
-if (window['acf']) {
-  (_a = window['acf']) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockExample);
-  (_b = window['acf']) === null || _b === void 0 ? void 0 : _b.addAction('render_block_preview', openRequestDemoPopup);
+if (window.acf) {
+  (_a = window.acf) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockExample);
+  (_b = window.acf) === null || _b === void 0 ? void 0 : _b.addAction('render_block_preview', openRequestDemoPopup);
 }
 }();
 /******/ })()

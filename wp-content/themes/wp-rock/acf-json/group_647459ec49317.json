@@ -1139,6 +1139,26 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_666fece6f50da",
+            "label": "Endpoint api",
+            "name": "endpoint_api",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -1159,5 +1179,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718294084
+    "modified": 1718611196
 }
