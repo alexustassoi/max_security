@@ -11,9 +11,15 @@ $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields = get_fields();
 $image = get_field_value($fields, 'image');
 $text = get_field_value($fields, 'text');
+$title = get_field_value($fields, 'title');
 ?>
 <div class="image-text">
 	<div class="custom-container">
+        <?php if ($title): ?>
+        <h2 class="image-text__title">
+            <?php echo $title; ?>
+        </h2>
+        <?php endif; ?>
 		<div class="image-text__inner">
 			<?php
 			if ($image) {

@@ -35,3 +35,4 @@ vendor/
 /.htaccess.bk
 /wp-content/backups-dup-pro
 .DS_Store
+/wp-content/deployment-folder/
