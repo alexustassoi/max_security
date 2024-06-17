@@ -55,7 +55,7 @@ html {
             @media screen and (max-width: 768px) {
                 padding: 0 !important;
                 display: flex;
-                flex-direction: column-reverse;
+                flex-direction: column;
                 gap: 0;
             }
         }
@@ -297,6 +297,7 @@ html {
         position: absolute;
         top: 20px;
         right: 20px;
+        z-index: 200;
 
         svg {
             pointer-events: none;
