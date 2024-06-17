@@ -76,14 +76,12 @@ body {
 
 .custom-container {
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 
-    @media screen and (min-width: 1700px) {
-        width: 1400px;
-    }
     @media screen and (max-width: 1350px) {
-        width: 1100px;
+        max-width: 1100px;
     }
 
     @media screen and (max-width: 1440px) {
@@ -91,11 +89,11 @@ body {
     }
 
     @media screen and (max-width: 1200px) {
-        width: 1000px;
+        max-width: 1000px;
     }
 
     @media screen and (max-width: 992px) {
-        width: 700px;
+        max-width: 700px;
     }
 
     @media screen and (max-width: 768px) {
