@@ -28,6 +28,26 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_667045e1bd431",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_66213747dfac1",
             "label": "Text",
             "name": "text",
@@ -66,5 +86,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713452896
+    "modified": 1718633964
 }

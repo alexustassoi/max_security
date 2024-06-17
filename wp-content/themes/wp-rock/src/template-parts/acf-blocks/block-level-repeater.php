@@ -31,7 +31,7 @@ $level_repeater = get_field_value($fields, 'level_repeater');
                                     : '';
                                 ?>
                                 <h4 class="level-repeater__icon-number">
-                                    <?php echo do_shortcode($index); ?>
+                                    <?php echo do_shortcode($index + 1); ?>
                                 </h4>
                             </div>
                             <?php
