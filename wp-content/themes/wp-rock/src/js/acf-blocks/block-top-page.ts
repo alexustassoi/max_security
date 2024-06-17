@@ -1,5 +1,6 @@
 import Swiper, { Autoplay, EffectCreative } from 'swiper';
-import Popup from "../parts/popup-window";
+import Popup from '../parts/popup-window';
+import popupWarningTrigger from '../components/popup-warning';
 
 const initBlockExample = () => {
     const scrollBottom = document.querySelector('.js-scroll-bottom') as HTMLElement;
@@ -59,6 +60,9 @@ const openRequestDemoPopup = () => {
                 const targetPopup = window.document.getElementById('#popup-request-demo') as HTMLElement;
 
                 if (!popupInstance && !targetPopup) return;
+
+                popupWarningTrigger(target);
+
                 popupInstance.forceCloseAllPopup();
                 // @ts-ignore
                 popupInstance.openOnePopup('#popup-request-demo');
@@ -76,9 +80,9 @@ document.addEventListener('DOMContentLoaded', initBlockExample, false);
 document.addEventListener('DOMContentLoaded', openRequestDemoPopup, false);
 
 // Initialize dynamic block preview (editor).
-if (window['acf']) {
-    window['acf']?.addAction('render_block_preview', initBlockExample);
-    window['acf']?.addAction('render_block_preview', openRequestDemoPopup);
+if (window.acf) {
+    window.acf?.addAction('render_block_preview', initBlockExample);
+    window.acf?.addAction('render_block_preview', openRequestDemoPopup);
 }
 
 export {};

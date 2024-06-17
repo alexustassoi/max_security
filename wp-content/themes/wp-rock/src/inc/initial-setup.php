@@ -51,3 +51,42 @@ add_filter('post_max_size', 'increase_upload_size_limit');
 function get_field_value( $data_arr, $key ) {
     return ( isset( $data_arr[ $key ] ) ) ? $data_arr[ $key ] : null;
 }
+
+/**
+ *
+ * helper wrap text
+ * @param $text
+ *
+ * @return mixed|string
+ */
+function wrap_until_colon($text) {
+	$colon_pos = strpos($text, ':');
+	if ($colon_pos !== false) {
+		$before_colon = substr($text, 0, $colon_pos + 1);
+		$after_colon = substr($text, $colon_pos + 1);
+		return '<strong>' . $before_colon . '</strong>' . $after_colon;
+	} else {
+		return $text;
+	}
+}
+
+function get_prev_next_ids($warnings, $current_id) {
+	$prev_id = null;
+	$next_id = null;
+	
+	// Найти индекс текущего ID в массиве
+	foreach ($warnings as $key => $warning) {
+		if ($warning['ID'] == $current_id) {
+			if ($key > 0) {
+				$prev_id = $warnings[$key - 1]['ID'];
+			}
+			
+			if ($key + 1 < count($warnings)) {
+				$next_id = $warnings[$key + 1]['ID'];
+			}
+			break;
+		}
+	}
+	
+	return array('prev' => $prev_id, 'next' => $next_id);
+}
