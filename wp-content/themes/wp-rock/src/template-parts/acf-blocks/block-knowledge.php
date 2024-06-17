@@ -20,7 +20,8 @@ $slider = get_field_value($fields, 'slider');
         }
         ?>
         <?php if (!empty($slider)) : ?>
-            <div class="swiper knowledge__slider js-knowledge-slider">
+            <!--  Class for swiper slider => .js-knowledge-slider  -->
+            <div class="swiper knowledge__slider">
                 <div class="swiper-wrapper">
                     <?php foreach ($slider as $slide) : ?>
                         <div class="swiper-slide knowledge__slide">

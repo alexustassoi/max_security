@@ -265,6 +265,26 @@
             width: 12px;
             height: 12px;
         }
+
+        svg {
+            width: 35px;
+            height: 35px;
+
+            @media screen and (max-width: 1280px) {
+                width: 30px;
+                height: 30px;
+            }
+
+            @media screen and (max-width: 1030px) {
+                width: 25px;
+                height: 25px;
+            }
+
+            @media screen and (max-width: 480px) {
+                width: 22px;
+                height: 22px;
+            }
+        }
     }
 
     &__slide {
