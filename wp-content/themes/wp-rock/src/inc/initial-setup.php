@@ -69,3 +69,24 @@ function wrap_until_colon($text) {
 		return $text;
 	}
 }
+
+function get_prev_next_ids($warnings, $current_id) {
+	$prev_id = null;
+	$next_id = null;
+	
+	// Найти индекс текущего ID в массиве
+	foreach ($warnings as $key => $warning) {
+		if ($warning['ID'] == $current_id) {
+			if ($key > 0) {
+				$prev_id = $warnings[$key - 1]['ID'];
+			}
+			
+			if ($key + 1 < count($warnings)) {
+				$next_id = $warnings[$key + 1]['ID'];
+			}
+			break;
+		}
+	}
+	
+	return array('prev' => $prev_id, 'next' => $next_id);
+}

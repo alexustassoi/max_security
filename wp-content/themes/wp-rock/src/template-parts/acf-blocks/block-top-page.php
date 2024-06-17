@@ -68,8 +68,13 @@ $warnings = $warning_class->get_custom_warning(null, true);
         <div class="swiper js-top-page-swiper">
             <div class="swiper-wrapper">
                 
-                <?php foreach ($warnings as $warning): ?>
-                    <div class="swiper-slide top-page__bottom-item" data-id="<?php echo $warning['ID']; ?>" data-role="open-request-demo-popup">
+                <?php foreach ($warnings as $key => $warning):
+                    
+                    
+                    ?>
+                    <div class="swiper-slide top-page__bottom-item"
+                         data-id="<?php echo $warning['ID']; ?>"
+                         data-role="open-request-demo-popup">
                         <?php
                         $title = mb_strimwidth($warning['content']['title'], 0, 50, ' »');
                         echo $title; ?>

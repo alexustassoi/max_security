@@ -47,8 +47,8 @@ class Get_Warnings {
 	function get_popup_warning () {
 		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 			$id = filter_input( INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT );
-			
 			$data = $this->get_custom_warning($id);
+		
 			ob_start();
 			get_template_part( 'src/template-parts/popup-warning', null, $data );
 			$template = ob_get_clean();
