@@ -121,7 +121,7 @@ html {
             flex-shrink: 0;
 
             @media screen and (max-width: 480px) {
-                width: 30px;
+                width: 36px;
             }
 
             img {
@@ -153,7 +153,7 @@ html {
             }
 
             @media screen and (max-width: 480px) {
-                font-size: 16px;
+                font-size: 18px;
             }
 
             &-wrap {
@@ -187,7 +187,7 @@ html {
             }
 
             @media screen and (max-width: 480px) {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
 
@@ -293,10 +293,22 @@ html {
 
         svg {
             pointer-events: none;
+            width: 35px;
+            height: 35px;
+
+            @media screen and (max-width: 1280px) {
+                width: 30px;
+                height: 30px;
+            }
+
+            @media screen and (max-width: 1030px) {
+                width: 25px;
+                height: 25px;
+            }
 
             @media screen and (max-width: 480px) {
-                width: 12px;
-                height: 12px;
+                width: 22px;
+                height: 22px;
             }
         }
     }

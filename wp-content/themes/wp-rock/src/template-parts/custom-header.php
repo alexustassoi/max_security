@@ -20,7 +20,7 @@ $page_link = !empty($page_to_redirect) ? get_permalink($page_to_redirect) : '';
     <div class="custom-container site-header__container">
         <a class="site-header__logo" href="<?php echo get_site_url(); ?>">
             <?php if ($header_logo) : ?>
-                <img src="<?php echo $header_logo; ?>" alt="header logo">
+                <img width="222" height="55"  src="<?php echo $header_logo; ?>" alt="header logo">
             <?php endif; ?>
         </a>
 
@@ -91,7 +91,7 @@ $page_link = !empty($page_to_redirect) ? get_permalink($page_to_redirect) : '';
     <div class="mobile-menu__header">
         <a class="mobile-menu__logo" href="<?php echo get_site_url(); ?>">
             <?php if ($header_logo) : ?>
-                <img src="<?php echo $header_logo; ?>" alt="header logo">
+                <img width="222" height="55" src="<?php echo $header_logo; ?>" alt="header logo">
             <?php endif; ?>
         </a>
 
