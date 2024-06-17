@@ -6,6 +6,16 @@
     z-index: 1000;
     transition: all 0.3s;
     background-color: transparent;
+    display: flex;
+    height: 70px;
+
+    @media screen and (max-width: 1280px) {
+        height: 60px;
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 60px;
+    }
 
     &__max-words {
         position: absolute;
@@ -80,8 +90,6 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
     }
 
     &__menu {
