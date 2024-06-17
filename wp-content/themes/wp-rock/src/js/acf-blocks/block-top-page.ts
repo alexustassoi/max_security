@@ -80,8 +80,11 @@ document.addEventListener('DOMContentLoaded', initBlockExample, false);
 document.addEventListener('DOMContentLoaded', openRequestDemoPopup, false);
 
 // Initialize dynamic block preview (editor).
+// @ts-ignore
 if (window.acf) {
+    // @ts-ignore
     window.acf?.addAction('render_block_preview', initBlockExample);
+    // @ts-ignore
     window.acf?.addAction('render_block_preview', openRequestDemoPopup);
 }
 
