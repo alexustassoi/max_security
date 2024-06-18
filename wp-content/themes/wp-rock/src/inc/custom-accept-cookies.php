@@ -146,7 +146,7 @@ add_action(
         </style>
 
         <div class="accept-cookie-box js-accept-cookie-box">
-            <div class="container">
+            <div class="custom-container">
                 <div class="accept-cookie-box__inner">
                     <div class="accept-cookie-box__text">
                         <?php

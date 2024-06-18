@@ -6,12 +6,13 @@ var initBlockBenefts = function initBlockBenefts() {
   var customCheckboxes = document.querySelectorAll(".js-custom-checkbox");
   var scrollToElement = function scrollToElement() {
     var urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams.get('from-page'));
-    var accrodionToOpen = document.querySelector("#".concat(urlParams.get('from-page')));
-    if (accrodionToOpen) {
-      accrodionToOpen.classList.add('open');
+    var fromParam = urlParams.get('from-page');
+    fromParam = fromParam && fromParam.replace(/^\/+|\/+$/g, '');
+    var accordionToOpen = document.querySelector("#".concat(fromParam));
+    if (accordionToOpen) {
+      accordionToOpen.classList.add('open');
       window.scrollTo({
-        top: accrodionToOpen.offsetTop - 100,
+        top: accordionToOpen.offsetTop - 100,
         behavior: 'smooth'
       });
     }
@@ -39,8 +40,8 @@ var initBlockBenefts = function initBlockBenefts() {
   });
 };
 document.addEventListener('DOMContentLoaded', initBlockBenefts, false);
-if (window['acf']) {
-  (_a = window['acf']) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockBenefts);
+if (window === null || window === void 0 ? void 0 : window.acf) {
+  (_a = window === null || window === void 0 ? void 0 : window.acf) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockBenefts);
 }
 
 /******/ })()
