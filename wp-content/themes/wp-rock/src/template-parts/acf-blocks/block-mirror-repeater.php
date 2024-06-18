@@ -36,7 +36,6 @@ $total_posts = $query->found_posts;
         ?>
         <?php
         $courses_query = [
-            'query' => $query,
             'mirror_items' => $mirror_items,
             'last_key' => 0
         ];

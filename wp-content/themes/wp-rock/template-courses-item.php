@@ -5,19 +5,17 @@
  * @package WordPress
  */
 
-$query = isset($courses_query) ? get_field_value($courses_query, 'query') : null;
-$key   = isset($courses_query) ? get_field_value($courses_query, 'last_key') : null;
+$mirror_items = isset($courses_query) ? get_field_value($courses_query, 'mirror_items') : null;
+$key          = isset($courses_query) ? get_field_value($courses_query, 'last_key') : null;
 
-if (!$query || !isset($key)) die();
+if (!$mirror_items || !isset($key)) die();
 
-while ($query->have_posts()) : $query->the_post();
-    $post_id              = get_the_ID();
-    $post_fields          = get_fields($post_id);
-    $connected_course     = $post_id;
+foreach ($mirror_items as $item) :
+    $connected_course = get_field_value($item, 'connected_course_for_modal_window');
     $slider_courses_ids[] = $connected_course;
-    $image                = get_the_post_thumbnail($post_id, 'full');
-    $modal_window_content = get_field_value($post_fields, 'modal_window_content');
-    $description          = isset($modal_window_content['description']) ? $modal_window_content['description'] : null;
+    $image                             = get_field_value($item, 'image');
+    $title                             = get_field_value($item, 'title');
+    $description                       = get_field_value($item, 'description');
     ?>
     <div class="mirror-repeater__item js-mirror-item">
         <?php
@@ -27,7 +25,9 @@ while ($query->have_posts()) : $query->the_post();
         ?>
         <div class="mirror-repeater__item-inner">
             <?php
-            echo '<h4 class="mirror-repeater__item-title">' . do_shortcode(get_the_title()) . '</h4>';
+            if (!empty($title)) {
+                echo '<h4 class="mirror-repeater__item-title">' . do_shortcode($title) . '</h4>';
+            }
 
             if (!empty($description)) {
                 echo '<p class="mirror-repeater__item-description">' . do_shortcode($description) . '</p>';
@@ -39,7 +39,9 @@ while ($query->have_posts()) : $query->the_post();
             ?>
         </div>
     </div>
-    <?php $key++;
-endwhile;
+<?php
+    $key++;
+endforeach;
+
 
 
