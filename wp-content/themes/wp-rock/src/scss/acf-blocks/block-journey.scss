@@ -447,9 +447,12 @@
                 padding-right: 37px;
                 padding: 46px 36px 46px 160px;
                 background-color: #fff;
-                max-width: 678px;
+                max-width: 810px;
                 margin-left: auto;
 
+                @media screen and (max-width: 1440px) {
+                    max-width: 678px;
+                }
                 @media screen and (max-width: 1200px) {
                     padding: 46px 36px 46px 200px;
                 }

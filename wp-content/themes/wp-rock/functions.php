@@ -37,7 +37,17 @@ $warning = new Get_Warnings();
 //
 //$warnings = $warning->request_api();
 
-
+function fetchSvgContent($url) {
+	// Получаем содержимое файла по URL
+	$fileContent = file_get_contents($url);
+	
+	// Проверяем, является ли содержимое файлом SVG
+	if (strpos($fileContent, '<svg') !== false) {
+		return $fileContent;
+	} else {
+		return null;
+	}
+}
 
 //echo '<pre>';
 //
