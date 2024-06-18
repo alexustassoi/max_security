@@ -800,15 +800,7 @@ html {
             form {
                 display: flex;
                 flex-direction: column;
-                gap: 42px;
-
-                @media screen and (max-width: 1370px) {
-                    gap: 35px;
-                }
-
-                @media screen and (max-width: 1030px) {
-                    gap: 20px;
-                }
+                gap: 20px;
 
                 @media screen and (max-width: 480px) {
                     gap: 16px;
