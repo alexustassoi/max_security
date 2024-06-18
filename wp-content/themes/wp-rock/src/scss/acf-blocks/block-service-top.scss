@@ -77,6 +77,28 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        & + .service-top {
+            &__custom-container {
+                padding-bottom: 388px;
+
+                @media screen and (max-width: 1600px) {
+                    padding-bottom: 255px;
+                }
+
+                @media screen and (max-width: 1470px) {
+                    padding-bottom: 185px;
+                }
+
+                @media screen and (max-width: 768px) {
+                    padding-bottom: 175px;
+                }
+
+                @media screen and (max-width: 570px) {
+                    padding-bottom: 70px;
+                }
+            }
+        }
     }
 
     &__custom-container {
@@ -98,6 +120,20 @@
         @media screen and (max-width: 570px) {
             padding-top: 100px;
             padding-bottom: 70px;
+        }
+    }
+
+    &.black-content {
+
+        &:before {
+            display: none;
+        }
+
+        .service-top {
+            &__title,
+            &__subtitle {
+                color: #000;
+            }
         }
     }
 

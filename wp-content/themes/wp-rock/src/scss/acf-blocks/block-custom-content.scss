@@ -39,16 +39,12 @@
     h4,
     h5,
     h6 {
-        margin-bottom: 14px;
+        margin-bottom: 16px;
         font-weight: 700;
         line-height: 1.26;
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1370px) {
             margin-bottom: 10px;
-        }
-
-        @media screen and (max-width: 1030px) {
-            margin-bottom: 6px;
         }
 
         @media screen and (max-width: 768px) {
