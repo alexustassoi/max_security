@@ -992,8 +992,16 @@ html {
                 margin-bottom: 10px;
             }
 
+            @media screen and (max-width: 680px) {
+                margin-bottom: 16px;
+                min-height: 35px;
+                padding-right: 170px;
+                display: flex;
+                align-items: center;
+            }
             @media screen and (max-width: 480px) {
-                margin-bottom: 8px;
+                min-height: 26px;
+                padding-right: 107px;
             }
         }
 
@@ -1045,14 +1053,14 @@ html {
                 bottom: -22px;
             }
 
-            @media screen and (max-width: 670px) {
+            @media screen and (max-width: 680px) {
                 font-size: 16px;
                 height: 35px;
                 min-width: 170px;
-                bottom: -16px;
                 border-radius: 15px;
                 padding-left: 40px;
                 padding-right: 40px;
+                bottom: -51px
             }
 
             @media screen and (max-width: 480px) {
@@ -1063,7 +1071,7 @@ html {
                 padding-left: 25px;
                 padding-right: 25px;
                 border-radius: 10px;
-                bottom: -12px;
+                bottom: -42px;
             }
 
             &:before,
@@ -1367,18 +1375,38 @@ html {
         &__ipanel-item-value {
             font-weight: 400;
         }
-
+        &__wrap {
+            @media screen and (max-width: 680px) {
+                display: grid;
+                grid-template-columns: 75px 1fr;
+                gap: 16px;
+            }
+        }
         &__left-col {
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            &.desktop {
+                display: block;
+                @media screen and (max-width: 680px) {
+                    display: none;
+                }
+            }
+
+            &.mobile {
+                display: none;
+                @media screen and (max-width: 680px) {
+                    display: block;
+                }
+            }
         }
 
         &__date-time {
             margin-bottom: 40px;
 
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 680px) {
                 width: 100%;
                 margin-bottom: 16px;
             }
@@ -1396,9 +1424,11 @@ html {
                 padding-right: 25px;
             }
 
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 680px) {
                 padding-top: 4px;
                 padding-bottom: 4px;
+                padding-left: 10px;
+                padding-right: 10px;
                 gap: 4px;
             }
         }
@@ -1416,7 +1446,7 @@ html {
             display: flex;
             justify-content: center;
 
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 680px) {
                 font-size: 24px;
             }
         }
@@ -1431,8 +1461,8 @@ html {
                 font-size: 14px;
             }
 
-            @media screen and (max-width: 480px) {
-                font-size: 12px;
+            @media screen and (max-width: 680px) {
+                font-size: 10px;
                 line-height: 1.5;
             }
         }
@@ -1453,8 +1483,8 @@ html {
                 font-size: 14px;
             }
 
-            @media screen and (max-width: 480px) {
-                font-size: 12px;
+            @media screen and (max-width: 680px) {
+                font-size: 10px;
                 padding-top: 2px;
                 padding-bottom: 2px;
             }
@@ -1591,9 +1621,10 @@ html {
                 width: 95px;
             }
 
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 680px) {
                 height: 63px;
                 width: 63px;
+                margin: 0 auto;
             }
 
             &:after {
@@ -1955,3 +1986,6 @@ html {
     }
 }
 
+.scroll-off {
+    overflow: hidden;
+}

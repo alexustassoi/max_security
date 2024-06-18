@@ -33,6 +33,13 @@ $no_photo_url = get_template_directory_uri() . '/assets/public/images/no-photo.p
             <div class="our-team__container">
                 <?php foreach ($team_repeater as $member) : ?>
                     <div class="our-team__member js-member-item">
+                        <button class="our-team__member-btn js-member-item-btn">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.9978 1H0.257812V18.74H17.9978V1Z" stroke="#1D1D1B" stroke-width="0.34" stroke-miterlimit="10"/>
+                                <path d="M3.33594 4.08008L15.2059 15.9501" stroke="#1D1D1B" stroke-width="0.34" stroke-miterlimit="10"/>
+                                <path d="M15.2059 4.08008L3.33594 15.9501" stroke="#1D1D1B" stroke-width="0.34" stroke-miterlimit="10"/>
+                            </svg>
+                        </button>
                         <?php
                         if (!empty($member['photo'])) {
                             echo '<figure class="our-team__member-photo element-to-be-clipped">
