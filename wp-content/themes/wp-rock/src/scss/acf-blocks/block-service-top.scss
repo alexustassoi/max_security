@@ -18,16 +18,16 @@
     flex-direction: column;
     z-index: 1;
 
-    //&:before {
-    //    content: '';
-    //    position: absolute;
-    //    width: 100%;
-    //    height: 100%;
-    //    top: 0;
-    //    left: 0;
-    //    z-index: 1;
-    //    background-color: rgba(23, 24, 26, 0.4);
-    //}
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(23, 24, 26, 0.4);
+    }
 
     &.icon-is-missing {
         .service-top {
@@ -124,6 +124,10 @@
     }
 
     &.black-content {
+
+        &:before {
+            display: none;
+        }
 
         .service-top {
             &__title,

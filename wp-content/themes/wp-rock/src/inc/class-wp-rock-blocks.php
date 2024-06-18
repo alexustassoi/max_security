@@ -115,6 +115,9 @@ class WP_Rock_Blocks {
         'block-faq' => array(
             'title'     => 'Block - FAQ',
         ),
+        'block-bullets-list' => array(
+            'title'     => 'Block - Bullets list',
+        ),
     );
 
     /**
