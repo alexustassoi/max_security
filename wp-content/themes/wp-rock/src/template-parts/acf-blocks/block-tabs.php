@@ -36,6 +36,11 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
                         foreach ($tabs_repeater as $key => $tab_link) {
 
                             $active_class = $key === 0 ? 'active' : '';
+	                        
+	                        $img = fetchSvgContent($tab_link['icon']);
+	                        if (is_null($img)) {
+		                        $img = '<img class="icon" src="' . $tab_link['icon'] . '" alt="icon">';
+	                        }
 
                             if (!empty($tab_link['icon']) && !empty($tab_link['title'])) {
                                 echo '<a href="#tab-' . $key . '"
@@ -44,7 +49,7 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
 <path d="M263 132.5C263 218.501 233.102 263 132.5 263C31.8979 263 2 218.501 2 132.5C2 46.4987 31.8979 2 132.5 2C233.102 2 263 46.4987 263 132.5Z" fill="transparent" stroke="#f3f0ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                                     <div class="tabs__tab-inner">
-                                        <img class="icon" src="' . $tab_link['icon'] . '" alt="icon">
+                                        '.$img.'
                                         <span class="title">' . do_shortcode($tab_link['title']) . '</span>
                                     </div>
                                 </a>';

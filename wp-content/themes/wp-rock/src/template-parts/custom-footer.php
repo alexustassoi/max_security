@@ -71,6 +71,7 @@ $subscribe_btn      = get_field_value($global_options, 'subscribe_btn');
             ?>
 
             <div class="site-footer__right">
+                <div>
                 <?php if ($portal_log_in_link) : ?>
                     <a class="site-footer__login" target="<?php echo $portal_log_in_link['target']; ?>"
                        href="<?php echo $portal_log_in_link['url']; ?>">
@@ -82,26 +83,31 @@ $subscribe_btn      = get_field_value($global_options, 'subscribe_btn');
                     <p class="site-footer__social-title"><?php echo $social_links_title; ?></p>
                 <?php endif; ?>
 
-                <?php if ($social_link) : ?>
-                    <div class="site-footer__social-links">
-                        <?php foreach ($social_link as $link) : ?>
-                            <a href="<?php echo $link['link']; ?>"><img src="<?php echo $link['icon']; ?>"
-                                                                        alt="social icon"></a>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
+
 
                 <?php if ($lets_talk_link) : ?>
                     <a class="site-footer__talk" target="<?php echo $lets_talk_link['target']; ?>"
                        href="<?php echo $lets_talk_link['url'] ?>"><?php echo $lets_talk_link['title']; ?></a>
                 <?php endif;
-
+                ?>
+                </div>
+                <div class="site-footer__right-wrap">
+                <?php
                 if ($subscribe_btn) : ?>
                     <div class="site-footer__subscribe-btn-wrap">
                         <a class="site-footer__subscribe-btn js-open-popup-activator"
                            href="<?php echo $subscribe_btn['url'] ?>"><?php echo $subscribe_btn['title']; ?></a>
                     </div>
                 <?php endif; ?>
+	            <?php if ($social_link) : ?>
+                    <div class="site-footer__social-links">
+			            <?php foreach ($social_link as $link) : ?>
+                            <a href="<?php echo $link['link']; ?>"><img src="<?php echo $link['icon']; ?>"
+                                                                        alt="social icon"></a>
+			            <?php endforeach; ?>
+                    </div>
+	            <?php endif; ?>
+                </div>
             </div>
         </div>
 

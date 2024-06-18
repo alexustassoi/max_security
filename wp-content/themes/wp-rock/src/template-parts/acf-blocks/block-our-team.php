@@ -39,7 +39,7 @@ $no_photo_url = get_template_directory_uri() . '/assets/public/images/no-photo.p
                                     <img src="' . $member['photo'] . '" alt="photo">
                                 </figure>';
                         } else {
-                            echo '<figure class="our-team__member-photo">
+                            echo '<figure class="our-team__member-photo element-to-be-clipped">
                                     <img src="' . $no_photo_url . '" alt="no photo">
                                 </figure>';
                         }
