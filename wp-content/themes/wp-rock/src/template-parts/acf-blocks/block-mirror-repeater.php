@@ -37,6 +37,7 @@ $total_posts = $query->found_posts;
         <?php
         $courses_query = [
             'query' => $query,
+            'mirror_items' => $mirror_items,
             'last_key' => 0
         ];
 
@@ -116,6 +117,7 @@ $total_posts = $query->found_posts;
                             $title                 = get_field_value($fields, 'title');
                             $description           = get_field_value($fields, 'description');
                             $target_audience_title = get_field_value($fields, 'target_audience_title');
+                            $lets_talk_btn         = get_field_value($fields, 'lets_talk_btn');
 
                             $permalink             = get_the_permalink($connected_course_id);
                             $target_audience_items = get_field_value($fields, 'target_audience_items');
@@ -166,10 +168,11 @@ $total_posts = $query->found_posts;
                                                         ' . esc_html($certifcate_of_completion_text) . '
                                                     </p>';
                                 }
+
+                                echo $lets_talk_btn
+                                    ? '<a href="' . do_shortcode( $lets_talk_btn["url"] ) . '" class="course-popup__curiculum-items-link">' . do_shortcode( $lets_talk_btn["title"] ) . '</a>'
+                                    : '';
                                 ?>
-                                <a href="<?php echo $permalink ?>" class="course-popup__curiculum-items-link">
-                                    <?php _e('LET’S TALK', 'wp-rock'); ?>
-                                </a>
                             </div>
                             <?php
                         }
