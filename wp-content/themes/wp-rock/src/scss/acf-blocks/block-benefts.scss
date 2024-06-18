@@ -61,7 +61,6 @@
                 .benefts__item-content {
                     opacity: 1;
                     max-height: 100vh;
-                    max-width: 80%;
                 }
 
                 svg {
@@ -179,6 +178,10 @@
             opacity: 0;
             overflow: hidden;
             transition: 0.3s;
+
+            @media screen and (min-width: 769px) {
+                max-width: 80%;
+            }
 
             @media screen and (max-width: 768px) {
                 font-size: 12px;

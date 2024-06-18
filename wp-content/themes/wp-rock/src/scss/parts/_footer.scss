@@ -299,7 +299,8 @@
             display: none;
 
             &.mobile {
-                display: block;
+                display: inline-block;
+                width: auto;
             }
         }
     }

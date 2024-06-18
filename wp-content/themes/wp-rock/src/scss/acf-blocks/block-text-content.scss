@@ -18,6 +18,10 @@
         }
     }
 
+    .small-hero + & {
+        padding-top: 50px;
+    }
+
     @media screen and (max-width: 992px) {
         padding: 32px 0;
 

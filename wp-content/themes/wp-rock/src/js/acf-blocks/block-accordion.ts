@@ -3,21 +3,20 @@ const initBlockBenefts = () => {
 
     const scrollToElement = () => {
         const urlParams = new URLSearchParams(window.location.search);
-        console.log(urlParams.get('from-page'));
+        let fromParam = urlParams.get('from-page');
+        fromParam = fromParam && fromParam.replace(/^\/+|\/+$/g, '');
 
-        const accrodionToOpen = document.querySelector(`#${urlParams.get('from-page')}`) as HTMLElement;
+        const accordionToOpen = document.querySelector(`#${fromParam}`) as HTMLElement;
 
-
-        if (accrodionToOpen) {
-
-            accrodionToOpen.classList.add('open');
+        if (accordionToOpen) {
+            accordionToOpen.classList.add('open');
 
             window.scrollTo({
-                top: accrodionToOpen.offsetTop - 100,
+                top: accordionToOpen.offsetTop - 100,
                 behavior: 'smooth',
             });
         }
-    }
+    };
 
     scrollToElement();
 
@@ -25,7 +24,7 @@ const initBlockBenefts = () => {
         if (!e.target.dataset.group) return;
         const groupType = e.target.dataset.group;
         const inputOther = document.querySelector(`input[name="${groupType}"]`) as HTMLInputElement;
-        let allCheckedCheckboxes = [];
+        const allCheckedCheckboxes = [];
         const customCheckboxesGroup = document.querySelectorAll(`.js-custom-checkbox[data-group="${groupType}"]`);
 
         customCheckboxesGroup &&
@@ -33,7 +32,7 @@ const initBlockBenefts = () => {
                 const input = el as HTMLInputElement;
                 if (input.checked) {
                     const val = input.value;
-                    //@ts-ignore
+                    // @ts-ignore
                     allCheckedCheckboxes.push(val);
                 }
             });
@@ -41,19 +40,21 @@ const initBlockBenefts = () => {
         if (inputOther) {
             inputOther.value = allCheckedCheckboxes.join(', ');
         }
-    }
+    };
 
     customCheckboxes &&
         customCheckboxes.forEach((input) => {
             input.addEventListener('change', setHiddenInput);
-        })
+        });
 };
 
 document.addEventListener('DOMContentLoaded', initBlockBenefts, false);
 
 // Initialize dynamic block preview (editor).
-if (window['acf']) {
-    window['acf']?.addAction('render_block_preview', initBlockBenefts);
+// @ts-ignore
+if (window?.acf) {
+    // @ts-ignore
+    window?.acf?.addAction('render_block_preview', initBlockBenefts);
 }
 
-export { };
+export {};
