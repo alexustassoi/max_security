@@ -224,8 +224,8 @@ class WP_Rock_Blocks {
                     'mode' => array_key_exists('mode', $block) ? $block['mode'] : 'preview',
                     'multiple' => array_key_exists('multiple', $block) ? $block['multiple'] : true,
                     'supports' => array(
-                        'align' => false,
-                        'full_height' => false,
+                        'align' => true,
+                        'full_height' => true,
                         'anchor' => true,
                         'color' => array(
                             'gradients' => true,
@@ -238,6 +238,7 @@ class WP_Rock_Blocks {
                             'mode' => 'preview', // Important!
                             'data' => array(
                                 'preview_image' => file_exists(THEME_DIR . '/src/images/acf-blocks/' . $id . '.jpg') ? THEME_URI . '/src/images/acf-blocks/' . $id . '.jpg' : THEME_URI . '/src/images/acf-blocks/no-preview.jpg',
+                                //'is_example' => true
                             ),
                         )
                     )
@@ -262,8 +263,9 @@ class WP_Rock_Blocks {
              * return preview image
              */
             function block_render($block) {
-                if (isset($block['data']['preview_image'])) {
-                    echo '<img src="' . $block['data']['preview_image'] . '" style="width: 468px;">';
+
+                if ( is_admin() && isset($block['example']['attributes']['data']['preview_image'])) {
+                    echo '<img src="' . $block['example']['attributes']['data']['preview_image'] . '" style="width: 468px;">';
                     return;
                 }
                 $template = str_replace('.php', '', $block['render_template']);
