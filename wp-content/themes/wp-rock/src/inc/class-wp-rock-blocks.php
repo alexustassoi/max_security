@@ -264,7 +264,7 @@ class WP_Rock_Blocks {
              */
             function block_render($block) {
 
-                if (isset($block['example']['attributes']['data']['preview_image'])) {
+                if ( is_admin() && isset($block['example']['attributes']['data']['preview_image'])) {
                     echo '<img src="' . $block['example']['attributes']['data']['preview_image'] . '" style="width: 468px;">';
                     return;
                 }
