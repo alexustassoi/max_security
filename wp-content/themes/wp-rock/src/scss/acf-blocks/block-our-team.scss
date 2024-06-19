@@ -149,6 +149,15 @@
             position: absolute;
             right: 24px;
             top: 16px;
+            width: 30px;
+            height: 30px;
+            svg {
+                width: 30px;
+                height: 30px;
+                * {
+                    stroke-width: 0.8px;
+                }
+            }
             * {
                 pointer-events: none;
             }
@@ -163,6 +172,7 @@
                 top: 0;
                 left: 0;
                 width: 100%;
+                max-width: 100vh;
                 height: 100vh;
                 z-index: 9999;
                 border-radius: 0;
