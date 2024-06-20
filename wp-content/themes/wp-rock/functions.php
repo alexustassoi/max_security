@@ -33,27 +33,10 @@ require THEME_DIR . '/src/inc/class-mobile-detect.php';
 require THEME_DIR . '/src/inc/class-get-warnings-api.php';
 
 $warning = new Get_Warnings();
-//var_dump($warning->get_custom_warning(605993));
-//
-//$warnings = $warning->request_api();
+// You can uncomment it to update reposts immediately
+// $warnings = $warning->request_api();
 
-function fetchSvgContent($url) {
-	// Получаем содержимое файла по URL
-	$fileContent = file_get_contents($url);
-	
-	// Проверяем, является ли содержимое файлом SVG
-	if (strpos($fileContent, '<svg') !== false) {
-		return $fileContent;
-	} else {
-		return null;
-	}
-}
 
-//echo '<pre>';
-//
-//var_dump($warnings);
-//
-//echo '</pre>';
 
 /* Disable WordPress Admin Bar for all users */
 // add_filter( 'show_admin_bar', '__return_false' );

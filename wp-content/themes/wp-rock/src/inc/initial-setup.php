@@ -90,3 +90,20 @@ function get_prev_next_ids($warnings, $current_id) {
 	
 	return array('prev' => $prev_id, 'next' => $next_id);
 }
+
+/**
+ * Get SVG Content
+ * @param $url
+ *
+ * @return false|string|null
+ */
+function fetchSvgContent($url) {
+    $fileContent = file_get_contents($url);
+
+    // Check if the content is an SVG file
+    if (strpos($fileContent, '<svg') !== false) {
+        return $fileContent;
+    } else {
+        return null;
+    }
+}
