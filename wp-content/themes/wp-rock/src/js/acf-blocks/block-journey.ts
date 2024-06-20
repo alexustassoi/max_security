@@ -12,6 +12,9 @@ const initBlockJourney = () => {
             loop: true,
             slidesPerView: 'auto',
             freeMode: true,
+            autoplay: {
+                delay: 1500,
+            },
             navigation: {
                 // nextEl: '.journey__history-btn-next',
                 prevEl: '.journey__history-btn-prev',
@@ -31,7 +34,6 @@ const initBlockJourney = () => {
                 },
             },
         });
-
     }
 
     if (expertsSwiper) {
@@ -48,8 +50,10 @@ const initBlockJourney = () => {
 document.addEventListener('DOMContentLoaded', initBlockJourney, false);
 
 // Initialize dynamic block preview (editor).
-if (window['acf']) {
-    window['acf']?.addAction('render_block_preview', initBlockJourney);
+// @ts-ignore
+if (window?.acf) {
+    // @ts-ignore
+    window?.acf?.addAction('render_block_preview', initBlockJourney);
 }
 
 export {};

@@ -6,13 +6,9 @@ const initBlockJourney = () => {
     const mirrorItem = document.querySelectorAll('.js-mirror-item') as NodeList;
     const loadMoreBtn = document.querySelector('.js-load-more') as HTMLElement;
 
-    const openCoursesSliderLinks = document.querySelectorAll(
-        '.js-open-slide-course-popup-link'
-    ) as NodeList;
+    const openCoursesSliderLinks = document.querySelectorAll('.js-open-slide-course-popup-link') as NodeList;
 
-    const coursePopupSwiper = document.querySelector(
-        '.js-popup__ccs'
-    ) as HTMLElement;
+    const coursePopupSwiper = document.querySelector('.js-popup__ccs') as HTMLElement;
 
     let courseSwiper = null;
 
@@ -50,7 +46,7 @@ const initBlockJourney = () => {
                 const slideIndex = event.target.dataset?.slide_index;
                 setTimeout(() => {
                     // @ts-ignore
-                    courseSwiper && courseSwiper.slideTo(slideIndex, 100);
+                    courseSwiper && courseSwiper.slideTo(slideIndex, 10);
                 }, 50);
             });
         });

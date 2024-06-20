@@ -41,6 +41,9 @@ const initBlockExample = () => {
             loop: true,
             slidesPerView: 'auto',
             freeMode: true,
+            autoplay: {
+                delay: 1500,
+            },
         });
     }
 };

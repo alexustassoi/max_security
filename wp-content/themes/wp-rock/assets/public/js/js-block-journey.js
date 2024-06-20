@@ -12901,6 +12901,9 @@ var initBlockJourney = function initBlockJourney() {
       loop: true,
       slidesPerView: 'auto',
       freeMode: true,
+      autoplay: {
+        delay: 1500
+      },
       navigation: {
         prevEl: '.journey__history-btn-prev'
       },
@@ -12931,8 +12934,8 @@ var initBlockJourney = function initBlockJourney() {
   }
 };
 document.addEventListener('DOMContentLoaded', initBlockJourney, false);
-if (window['acf']) {
-  (_a = window['acf']) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockJourney);
+if (window === null || window === void 0 ? void 0 : window.acf) {
+  (_a = window === null || window === void 0 ? void 0 : window.acf) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockJourney);
 }
 }();
 /******/ })()

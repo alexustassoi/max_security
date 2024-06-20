@@ -14077,7 +14077,10 @@ var initBlockExample = function initBlockExample() {
       spaceBetween: 55,
       loop: true,
       slidesPerView: 'auto',
-      freeMode: true
+      freeMode: true,
+      autoplay: {
+        delay: 1500
+      }
     });
   }
 };

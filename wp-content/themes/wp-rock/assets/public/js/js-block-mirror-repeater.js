@@ -12927,7 +12927,7 @@ var initBlockJourney = function initBlockJourney() {
       console.log('openCoursesSliderLink');
       var slideIndex = (_a = event.target.dataset) === null || _a === void 0 ? void 0 : _a.slide_index;
       setTimeout(function () {
-        courseSwiper && courseSwiper.slideTo(slideIndex, 100);
+        courseSwiper && courseSwiper.slideTo(slideIndex, 10);
       }, 50);
     });
   });
