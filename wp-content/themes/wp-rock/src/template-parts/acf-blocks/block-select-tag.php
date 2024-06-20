@@ -46,3 +46,14 @@ endif;
         </div>
     </div>
 </div>
+
+
+<script>
+    (function(){
+        const selectTag = document.querySelector('#main-wrapper .select-tag');
+
+        if (selectTag.parentElement.firstElementChild === selectTag) {
+            document.body.classList.add('single-resources');
+        }
+    })()
+</script>
