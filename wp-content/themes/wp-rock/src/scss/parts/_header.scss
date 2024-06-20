@@ -76,7 +76,7 @@
         }
     }
 
-    &.scroll-header {
+    &.scroll-header, &.added-scroll-header {
         background-color: #151836;
 
         .site-header__menu {
