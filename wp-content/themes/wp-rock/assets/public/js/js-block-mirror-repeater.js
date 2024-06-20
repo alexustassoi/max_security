@@ -10874,7 +10874,7 @@ var initBlockJourney = function initBlockJourney() {
       var slideIndex = (_a = event.target.dataset) === null || _a === void 0 ? void 0 : _a.slide_index;
       setTimeout(function () {
         courseSwiper && courseSwiper.slideTo(slideIndex, 10);
-      }, 50);
+      }, 15);
     });
   });
 };
