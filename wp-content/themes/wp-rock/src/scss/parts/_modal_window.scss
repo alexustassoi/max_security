@@ -1167,6 +1167,12 @@ html {
                     height: 125px;
                 }
             }
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
         }
 
         &__info-wrapper {
