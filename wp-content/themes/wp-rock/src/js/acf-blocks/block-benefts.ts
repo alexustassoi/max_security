@@ -1,5 +1,3 @@
-import Swiper, { Autoplay } from 'swiper';
-
 const initBlockBenefts = () => {
     const beneftsTitle = document.querySelectorAll('.js-benefts-title') as NodeListOf<Element>;
 
@@ -22,8 +20,10 @@ const initBlockBenefts = () => {
 document.addEventListener('DOMContentLoaded', initBlockBenefts, false);
 
 // Initialize dynamic block preview (editor).
-if (window['acf']) {
-    window['acf']?.addAction('render_block_preview', initBlockBenefts);
+// @ts-ignore
+if (window.acf) {
+    // @ts-ignore
+    window.acf?.addAction('render_block_preview', initBlockBenefts);
 }
 
 export {};

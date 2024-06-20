@@ -14,7 +14,9 @@
     $incident_type = get_field_value($args, 'incident_type');
     $incident_risk_level = get_field_value($args, 'incident_risk_level');
     $strength_of_source = get_field_value($args, 'strength_of_source');
-    $title = get_field_value($args, 'title');
+    $country_risk_level = get_field_value($args, 'country_risk_level');
+    $map_image          = get_field_value($args, 'map_image');
+    $title              = get_field_value($args, 'title');
     
     $type_color = 'green';
     $incident_risk_color = 'green';
@@ -94,7 +96,9 @@
 		<div class="request-demo__content-inner">
 			<div class="request-demo__content">
 				<div class="request-demo__map-wrapper">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d98963.27031245815!2d20.99518992067948!3d52.23822324995184!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1717664422962!5m2!1sen!2sua" width="686" height="268" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <img src="<?php echo $map_image; ?>" alt="map_image" />
+                    <!--
+					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d98963.27031245815!2d20.99518992067948!3d52.23822324995184!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1717664422962!5m2!1sen!2sua" width="686" height="268" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
 				</div>
                 <div class="request-demo__wrap">
                     <div class="request-demo__left-col mobile">
@@ -132,7 +136,7 @@
                                 COUNTRY RISK LEVEL
                             </div>
                             <div class="request-demo__ipanel-item-value">
-                                High
+                                <?php echo $country_risk_level; ?>
                             </div>
                         </div>
                         <div class="request-demo__ipanel-item affected-area">

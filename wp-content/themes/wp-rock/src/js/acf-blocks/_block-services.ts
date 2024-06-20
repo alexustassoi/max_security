@@ -7,6 +7,10 @@ const initBlockServices = () => {
             spaceBetween: 42,
             slidesPerView: 4,
             // freeMode: true,
+            modules: [Autoplay],
+            autoplay: {
+                delay: 1500,
+            },
             breakpoints: {
                 320: {
                     loop: true,
@@ -38,8 +42,10 @@ const initBlockServices = () => {
 document.addEventListener('DOMContentLoaded', initBlockServices, false);
 
 // Initialize dynamic block preview (editor).
-if (window['acf']) {
-    window['acf']?.addAction('render_block_preview', initBlockServices);
+// @ts-ignore
+if (window.acf) {
+    // @ts-ignore
+    window.acf?.addAction('render_block_preview', initBlockServices);
 }
 
 export {};

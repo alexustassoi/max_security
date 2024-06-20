@@ -1,4 +1,4 @@
-import Swiper, { Autoplay, EffectCreative } from 'swiper';
+import Swiper, { Autoplay } from 'swiper';
 import Popup from '../parts/popup-window';
 import popupWarningTrigger from '../components/popup-warning';
 
@@ -41,6 +41,7 @@ const initBlockExample = () => {
             loop: true,
             slidesPerView: 'auto',
             freeMode: true,
+            modules: [Autoplay],
             autoplay: {
                 delay: 1500,
             },

@@ -11919,6 +11919,7 @@ var initBlockExample = function initBlockExample() {
       loop: true,
       slidesPerView: 'auto',
       freeMode: true,
+      modules: [Autoplay],
       autoplay: {
         delay: 1500
       }

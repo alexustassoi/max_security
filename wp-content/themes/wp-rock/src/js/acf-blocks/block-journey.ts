@@ -1,4 +1,4 @@
-import Swiper, { EffectFade, Navigation } from 'swiper';
+import Swiper, { Autoplay, Navigation } from 'swiper';
 
 Swiper.use([Navigation]);
 
@@ -12,6 +12,7 @@ const initBlockJourney = () => {
             loop: true,
             slidesPerView: 'auto',
             freeMode: true,
+            modules: [Autoplay],
             autoplay: {
                 delay: 1500,
             },

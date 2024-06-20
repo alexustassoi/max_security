@@ -18,8 +18,8 @@ var initBlockBenefts = function initBlockBenefts() {
   });
 };
 document.addEventListener('DOMContentLoaded', initBlockBenefts, false);
-if (window['acf']) {
-  (_a = window['acf']) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockBenefts);
+if (window.acf) {
+  (_a = window.acf) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockBenefts);
 }
 
 /******/ })()

@@ -1,5 +1,4 @@
-import Swiper, { Autoplay } from 'swiper';
-import { setHeightEqualToWidth } from '../parts/helpers';
+import Swiper from 'swiper';
 
 const initBlockClients = () => {
     const tabsSwiper = document.querySelector('.js-tabs-swiper') as HTMLElement;
@@ -36,6 +35,8 @@ const initBlockClients = () => {
 document.addEventListener('DOMContentLoaded', initBlockClients, false);
 
 // Initialize dynamic block preview (editor).
-if (window['acf']) {
-    window['acf']?.addAction('render_block_preview', initBlockClients);
+// @ts-ignore
+if (window.acf) {
+    // @ts-ignore
+    window.acf?.addAction('render_block_preview', initBlockClients);
 }

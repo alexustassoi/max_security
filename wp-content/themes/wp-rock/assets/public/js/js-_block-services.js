@@ -9424,7 +9424,7 @@ function Autoplay({
     }
 
     clearTimeout(timeout);
-    timeout = nextTick(() => {
+    timeout = utils_nextTick(() => {
       let autoplayResult;
 
       if (swiper.params.autoplay.reverseDirection) {
@@ -9501,7 +9501,7 @@ function Autoplay({
   }
 
   function onVisibilityChange() {
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
 
     if (document.visibilityState === 'hidden' && swiper.autoplay.running) {
       pause();
@@ -9566,7 +9566,7 @@ function Autoplay({
   on('init', () => {
     if (swiper.params.autoplay.enabled) {
       start();
-      const document = getDocument();
+      const document = ssr_window_esm_getDocument();
       document.addEventListener('visibilitychange', onVisibilityChange);
       attachMouseEvents();
     }
@@ -9601,7 +9601,7 @@ function Autoplay({
       stop();
     }
 
-    const document = getDocument();
+    const document = ssr_window_esm_getDocument();
     document.removeEventListener('visibilitychange', onVisibilityChange);
   });
   Object.assign(swiper.autoplay, {
@@ -10843,6 +10843,10 @@ var initBlockServices = function initBlockServices() {
     var clientSlider = new core(servicesSwiper, {
       spaceBetween: 42,
       slidesPerView: 4,
+      modules: [Autoplay],
+      autoplay: {
+        delay: 1500
+      },
       breakpoints: {
         320: {
           loop: true,
@@ -10871,8 +10875,8 @@ var initBlockServices = function initBlockServices() {
   }
 };
 document.addEventListener('DOMContentLoaded', initBlockServices, false);
-if (window['acf']) {
-  (_a = window['acf']) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockServices);
+if (window.acf) {
+  (_a = window.acf) === null || _a === void 0 ? void 0 : _a.addAction('render_block_preview', initBlockServices);
 }
 /******/ })()
 ;

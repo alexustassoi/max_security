@@ -255,6 +255,8 @@ class Get_Warnings {
                         "sections" => $report['sections'],
                         "incident_type" => $report['incident_type'],
                         "incident_risk_level" => $report['incident_risk_level'],
+                        "country_risk_level" => $report['country_risk_level'],
+                        "map_image" => $report['map_image'],
                     );
 
                     $this->insert_custom_warning($report['id'], $new_array);
