@@ -47,7 +47,7 @@ const initBlockJourney = () => {
                 setTimeout(() => {
                     // @ts-ignore
                     courseSwiper && courseSwiper.slideTo(slideIndex, 10);
-                }, 50);
+                }, 15);
             });
         });
 };
