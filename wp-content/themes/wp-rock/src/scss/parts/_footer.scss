@@ -101,11 +101,11 @@
             margin-bottom: 4px;
 
             @media screen and (max-width: 768px) {
-                font-size: 12px;
+                font-size: 14px;
             }
 
             @media screen and (max-width: 480px) {
-                font-size: 10px;
+                font-size: 14px;
                 line-height: 1.2;
                 margin-bottom: 8px;
             }
@@ -121,11 +121,11 @@
             margin-bottom: 16px;
 
             @media screen and (max-width: 768px) {
-                font-size: 12px;
+                font-size: 14px;
             }
 
             @media screen and (max-width: 480px) {
-                font-size: 10px;
+                font-size: 14px;
                 line-height: 1.2;
             }
         }
@@ -229,7 +229,7 @@
                     text-decoration: none;
 
                     @media screen and (max-width: 480px) {
-                        font-size: 10px;
+                        font-size: 14px;
                         line-height: 1.2;
                     }
                 }
@@ -310,13 +310,13 @@
         color: #f3f0ec;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.4;
 
         @media screen and (max-width: 480px) {
-            font-size: 12px;
+            font-size: 14px;
             margin-bottom: 16px;
         }
     }
@@ -410,7 +410,7 @@
         color: #f3f0ec;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.4;
@@ -437,7 +437,7 @@
     &__bottom-text {
         color: var(--White-Text, #f3f0ec);
         font-family: Turbine, sans-serif;
-        font-size: 10px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.4;
@@ -459,7 +459,7 @@
 
         @media screen and (max-width: 480px) {
             padding: 8px 0;
-            font-size: 8px;
+            font-size: 12px;
             display: flex;
             align-items: center;
             justify-content: space-between;
