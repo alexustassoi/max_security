@@ -3,6 +3,26 @@
     "title": "Block - Mirror repeater",
     "fields": [
         {
+            "key": "field_667532e0945b2",
+            "label": "Popup title",
+            "name": "popup_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_660c083dbcce8",
             "label": "Top description",
             "name": "top_description",
@@ -157,5 +177,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716815706
+    "modified": 1718956797
 }

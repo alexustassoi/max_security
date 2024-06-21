@@ -46,12 +46,16 @@
     &__tag-name {
         color: #F3F0EC;
         font-family: Turbine, sans-serif;
-        font-size: 18px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.33;
 
         @media screen and (max-width: 991px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 670px) {
             font-size: 16px;
         }
 

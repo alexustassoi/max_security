@@ -136,13 +136,15 @@
     }
 
     &__member {
+        position: relative;
         text-align: center;
+
         @media screen and (max-width: 680px) {
             .our-team__member-description {
                 transition: all 0s;
             }
         }
-        
+
         &-btn {
             display: none;
             padding: 0;
@@ -162,18 +164,19 @@
                 pointer-events: none;
             }
         }
-        
+
         &.opened {
             background-color: #FFF;
             border-radius: 200px 200px 0 0;
 
             @media screen and (max-width: 680px ) {
                 position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
                 max-width: 100vh;
-                height: 100vh;
+                height: auto;
                 z-index: 9999;
                 border-radius: 0;
 
@@ -193,10 +196,10 @@
                 max-height: 1500px;
                 margin-top: 16px;
                 padding: 0 24px 80px;
-    
+
                 @media screen and (max-width: 680px) {
                     text-align: left;
-                    padding: 0 16px 8px;
+                    padding: 0 16px 50px;
                     font-size: 12px;
                     margin-top: 8px;
                 }

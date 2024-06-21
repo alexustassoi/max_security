@@ -196,6 +196,10 @@ svg {
     pointer-events: none;
 }
 
+#pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a {
+    background-color: #151836 !important;
+}
+
 #wrapper {
     display: flex;
     flex-direction: column;

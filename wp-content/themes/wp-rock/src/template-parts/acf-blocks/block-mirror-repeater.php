@@ -6,10 +6,20 @@
  * @package WP-rock
  * @since   4.4.0
  */
+global $global_options;
+
 $fields          = get_fields();
 $colors_select   = get_field_value($fields, 'colors_select');
 $top_description = get_field_value($fields, 'top_description');
 $mirror_items    = get_field_value($fields, 'mirror_items');
+
+$popup_title    = get_field_value($fields, 'popup_title');
+
+$popup_title = !empty($popup_title) ? do_shortcode($popup_title) : __('MAX ACADEMY', 'wp-rock');
+
+$main_tags_colours = get_field_value($global_options, 'main_tags_colours');
+$tag_term_id       = get_field_value($fields, 'select_tag');
+$tag_term_color    = '';
 
 $colors_select      = !empty($colors_select) ? $colors_select : '#7E97A6';
 $slider_courses_ids = array();
@@ -24,8 +34,18 @@ $args = array(
 $query = new WP_Query($args);
 $total_posts = $query->found_posts;
 
+if (is_array($main_tags_colours) && !empty($main_tags_colours)) :
+    foreach ($main_tags_colours as $item):
+        $option_tag_id = get_field_value($item, 'title');
+
+        if ($option_tag_id === $tag_term_id) :
+            $tag_term_color = get_field_value($item, 'tag_term_color');
+        endif; ?>
+    <?php endforeach;
+endif;
+
 ?>
-<div class="mirror-repeater" style="background-color: <?php echo $colors_select; ?>;">
+<div class="mirror-repeater" style="background-color: <?php echo do_shortcode($tag_term_color); ?>;">
     <div class="custom-container mirror-repeater__custom-container">
         <?php
         if (!empty($top_description)) {
@@ -77,7 +97,9 @@ $total_posts = $query->found_posts;
                                 fill="#231F20"/>
                         </svg>
                         <span class="line"></span>
-                        <span class="name"><?php _e('MAX ACADEMY', 'wp-rock'); ?></span>
+                        <span class="name">
+                            <?php echo $popup_title; ?>
+                        </span>
                     </div>
 
                     <button class="course-popup__close js-popup-close">
