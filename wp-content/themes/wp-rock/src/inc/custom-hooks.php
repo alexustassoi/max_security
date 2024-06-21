@@ -380,3 +380,52 @@ function wrap_columns_block_in_container( $block_content, $block ) {
 add_filter( 'render_block', 'wrap_columns_block_in_container', 10, 2 );
 
 
+// Changing links filter
+function custom_post_permalink($permalink, $post, $leavename) {
+    // Check if post is = resources
+    if ($post->post_type == 'resources') {
+        // Get post category
+        $terms = get_the_terms($post->ID, 'resources-category');
+        $category_slug = '';
+
+        if ($terms && !is_wp_error($terms)) {
+            // Get only first category
+            $category_slug = $terms[0]->slug;
+
+            if (!empty($terms[0]->parent) && get_term($terms[0]->parent)) {
+                $parent_term = get_term($terms[0]->parent);
+                $category_slug = $parent_term->slug . '/' . $terms[0]->slug;
+            }
+        }
+
+        // Build new permalink
+        $permalink = str_replace('resources', 'resources/' . $category_slug, $permalink);
+    }
+
+    return $permalink;
+}
+add_filter('post_type_link', 'custom_post_permalink', 10, 3);
+
+function my_custom_rewrite_rules() {
+    // Have 2 categories in link
+    add_rewrite_rule(
+        '^resources/([^/]+)/([^/]+)/([^/]+)/?$',
+        'index.php?post_type=resources&category=$matches[1]&subcategory=$matches[2]&name=$matches[3]',
+        'top'
+    );
+
+    // Have 1 categories in link
+    add_rewrite_rule(
+        '^resources/([^/]+)/([^/]+)/?$',
+        'index.php?post_type=resources&category=$matches[1]&name=$matches[2]',
+        'top'
+    );
+
+    // Whiout categories
+    add_rewrite_rule(
+        '^resources/([^/]+)/?$',
+        'index.php?post_type=resources&name=$matches[1]',
+        'top'
+    );
+}
+add_action('init', 'my_custom_rewrite_rules');
