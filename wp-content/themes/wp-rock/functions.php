@@ -31,6 +31,8 @@ require THEME_DIR . '/src/inc/custom-hooks.php';
 require THEME_DIR . '/src/inc/custom-shortcodes.php';
 require THEME_DIR . '/src/inc/class-mobile-detect.php';
 require THEME_DIR . '/src/inc/class-get-warnings-api.php';
+require THEME_DIR . '/src/inc/custom-wordpress-tinymce-buttons.php';
+// require THEME_DIR . '/src/inc/custom_quick_tags.php';
 
 $warning = new Get_Warnings();
 // You can uncomment it to update reposts immediately

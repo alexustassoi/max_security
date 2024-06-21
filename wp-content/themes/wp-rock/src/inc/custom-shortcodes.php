@@ -214,3 +214,35 @@ if ( ! function_exists( 'webinar_box_shortcode' ) ) {
 
     add_shortcode('webinar_box', 'webinar_box_shortcode');
 }
+
+
+
+
+// styled_heading_tag shortcode. Use it for adding Styled Heading Tag based of resources tag selection
+if ( ! function_exists( 'styled_heading_tag_shortcode' ) ) {
+    /**
+     * Shortcode for "Webinar box".
+     *
+     * @param {array}       $atts    - shortcode attributes.
+     * @param {string|null} $content - content inside open/close shortcode tags.
+     *
+     * @return string
+     */
+    function styled_heading_tag_shortcode($atts, $content = null)
+    {
+        extract(
+            shortcode_atts(
+                array(
+                    'class'      => '',
+                    'tag_name'   => '',
+                    'tag_class'  => '',
+                ),
+                $atts
+            )
+        );
+
+        return @`<${tag_name} class="custom-content__title" style="color: var(--color-term-${$tag_term_color})">' . ${$title} . '</${tag_name}>`;
+    }
+
+    add_shortcode('styled_heading_tag', 'styled_heading_tag_shortcode');
+}
