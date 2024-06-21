@@ -239,6 +239,23 @@
         justify-content: center;
     }
 
+    &__popup-logo {
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        img {
+            width: 46px;
+            height: 46px;
+            object-fit: contain;
+
+            @media screen and (max-width: 768px) {
+                width: 1.8125rem;
+                height: 1.8125rem;
+            }
+        }
+    }
+
     &__container-inner {
         display: flex;
         padding: 2.5rem var(--11, 5rem);

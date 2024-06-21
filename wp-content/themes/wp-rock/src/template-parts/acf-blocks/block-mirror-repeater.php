@@ -13,13 +13,13 @@ $colors_select   = get_field_value($fields, 'colors_select');
 $top_description = get_field_value($fields, 'top_description');
 $mirror_items    = get_field_value($fields, 'mirror_items');
 
+$bg_color    = get_field_value($fields, 'bg_color');
 $popup_title    = get_field_value($fields, 'popup_title');
+$popup_logo     = get_field_value($fields, 'popup_logo');
 
 $popup_title = !empty($popup_title) ? do_shortcode($popup_title) : __('MAX ACADEMY', 'wp-rock');
 
-$main_tags_colours = get_field_value($global_options, 'main_tags_colours');
 $tag_term_id       = get_field_value($fields, 'select_tag');
-$tag_term_color    = '';
 
 $colors_select      = !empty($colors_select) ? $colors_select : '#7E97A6';
 $slider_courses_ids = array();
@@ -34,18 +34,9 @@ $args = array(
 $query = new WP_Query($args);
 $total_posts = $query->found_posts;
 
-if (is_array($main_tags_colours) && !empty($main_tags_colours)) :
-    foreach ($main_tags_colours as $item):
-        $option_tag_id = get_field_value($item, 'title');
-
-        if ($option_tag_id === $tag_term_id) :
-            $tag_term_color = get_field_value($item, 'tag_term_color');
-        endif; ?>
-    <?php endforeach;
-endif;
 
 ?>
-<div class="mirror-repeater" style="background-color: <?php echo do_shortcode($tag_term_color); ?>;">
+<div class="mirror-repeater" style="background-color: <?php echo $bg_color ? do_shortcode($bg_color) : '#FFF'; ?>;">
     <div class="custom-container mirror-repeater__custom-container">
         <?php
         if (!empty($top_description)) {
@@ -87,15 +78,11 @@ endif;
             <div class="custom-container course-popup__container-inner">
                 <div class="course-popup__header-area">
                     <div class="course-popup__header">
-                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23.5703 24.5553H25.528L24.5453 22.2148L23.5703 24.5553Z" fill="#231F20"/>
-                            <path
-                                d="M30.6949 19.5057H33.5818L35.074 21.486L43.6076 10.1815C40.6306 4.10551 34.5266 1 23.4961 1C6.1516 1 1 8.67378 1 23.5038C1 36.2559 4.8093 43.7197 16.9047 45.5575L33.6268 23.3988L30.6949 19.5132V19.5057ZM17.7296 27.4945H15.3151V23.3763L12.8555 26.7368L10.3959 23.3763V27.4945H7.98132V19.4757H10.0958L12.8555 23.2488L15.6149 19.4757H17.7296V27.4945ZM26.7729 27.5245L26.3231 26.4444H22.7762L22.3262 27.5245H19.7242L23.4435 19.5057H25.6706L29.3901 27.5245H26.7879H26.7729Z"
-                                fill="#231F20"/>
-                            <path
-                                d="M44.1479 11.3906L38.0289 19.4995H39.6337L36.6117 23.5051L39.6412 27.5183H36.7541L35.1645 25.4104L33.5747 27.5183H31.9701L18.2324 45.7239C19.8446 45.9114 21.5994 46.0013 23.504 46.0013C40.8485 46.0013 46.0001 38.3275 46.0001 23.4976C46.0001 18.7118 45.4602 14.6687 44.1554 11.3906H44.1479Z"
-                                fill="#231F20"/>
-                        </svg>
+                        <?php
+                        echo $popup_logo
+                            ? '<figure class="course-popup__popup-logo"><img width="46" height="46" src="' . do_shortcode($popup_logo) . '" alt="Popup logo" /></figure>'
+                            : '';
+                        ?>
                         <span class="line"></span>
                         <span class="name">
                             <?php echo $popup_title; ?>
