@@ -241,7 +241,7 @@ if ( ! function_exists( 'styled_heading_tag_shortcode' ) ) {
             )
         );
 
-        return @`<${tag_name} class="custom-content__title" style="color: var(--color-term-${$tag_term_color})">' . ${$title} . '</${tag_name}>`;
+        return @"<$tag_name class=\"custom-content__title\" style=\"color: var(--color-term-$tag_class)\">$content</$tag_name>";
     }
 
     add_shortcode('styled_heading_tag', 'styled_heading_tag_shortcode');
