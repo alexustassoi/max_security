@@ -7,7 +7,7 @@
  */
 
 $cpt_title      = 'Content for popups';
-$cpt_category   = 'courses_cat';
+$cpt_category   = 'popup-content-cat';
 $cpt_slug       = 'courses';
 
 // TODO: Don't forget to change {CPT_CATEGORY} and {cpt_title} and {CPT_SLUG}.
