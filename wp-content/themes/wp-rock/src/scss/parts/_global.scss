@@ -312,7 +312,26 @@ li {
 }
 
 h1, .p-like-h1, .h2-like-h1 {
+    color: #2f3034;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Turbine, sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 0;
+    line-height: 1.15;
 
+    @media screen and (max-width: 1024px) {
+        font-size: 65px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 60px;
+    }
+
+    @media screen and (max-width: 670px) {
+        font-size: 45px;
+    }
 }
 
 h2, .h1-like-h2, .p-like-h2 {
@@ -794,4 +813,10 @@ body #pojo-a11y-toolbar {
 
 #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay {
     transform: translateY(-87%);
+}
+
+
+
+body #hubspot-messages-iframe-container {
+    bottom: 120px !important;
 }

@@ -36,7 +36,7 @@
                 );
                 const tagText = prompt('Please add text to tag');
                 const tagClass = prompt(
-                    'Please coloured tag: family-office-services, intelligence, max-academy, protection'
+                    'Please coloured tag: family-office-services, intelligence, max-academy, protection or leave it empty'
                 );
 
                 if (tagName !== null && tagText !== null && tagClass !== null) {
