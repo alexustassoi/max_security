@@ -301,10 +301,8 @@ button {
     background-color: #CC7510;
 
     &:hover {
-        @media screen and (min-width: 768px) {
-            background-color: transparent;
-            color: #CC7510;
-        }
+        background-color: transparent;
+        color: #CC7510;
     }
 }
 
@@ -326,6 +324,11 @@ button {
     text-decoration: none;
     transition: all .3s;
     text-transform: uppercase;
+
+    @media screen and (max-width: 670px) {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 
 .orange-btn {
