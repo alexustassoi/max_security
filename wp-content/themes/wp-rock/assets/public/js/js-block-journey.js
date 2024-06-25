@@ -9424,7 +9424,7 @@ function Autoplay({
     }
 
     clearTimeout(timeout);
-    timeout = utils_nextTick(() => {
+    timeout = nextTick(() => {
       let autoplayResult;
 
       if (swiper.params.autoplay.reverseDirection) {
@@ -9501,7 +9501,7 @@ function Autoplay({
   }
 
   function onVisibilityChange() {
-    const document = ssr_window_esm_getDocument();
+    const document = getDocument();
 
     if (document.visibilityState === 'hidden' && swiper.autoplay.running) {
       pause();
@@ -9566,7 +9566,7 @@ function Autoplay({
   on('init', () => {
     if (swiper.params.autoplay.enabled) {
       start();
-      const document = ssr_window_esm_getDocument();
+      const document = getDocument();
       document.addEventListener('visibilitychange', onVisibilityChange);
       attachMouseEvents();
     }
@@ -9601,7 +9601,7 @@ function Autoplay({
       stop();
     }
 
-    const document = ssr_window_esm_getDocument();
+    const document = getDocument();
     document.removeEventListener('visibilitychange', onVisibilityChange);
   });
   Object.assign(swiper.autoplay, {
@@ -10847,12 +10847,8 @@ var initBlockJourney = function initBlockJourney() {
       loop: true,
       slidesPerView: 'auto',
       freeMode: true,
-      modules: [Autoplay],
-      autoplay: {
-        delay: 1500
-      },
       navigation: {
-        prevEl: '.journey__history-btn-prev'
+        nextEl: '.journey__history-btn-next'
       },
       breakpoints: {
         320: {

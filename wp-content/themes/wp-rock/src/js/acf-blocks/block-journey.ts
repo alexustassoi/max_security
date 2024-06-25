@@ -12,13 +12,9 @@ const initBlockJourney = () => {
             loop: true,
             slidesPerView: 'auto',
             freeMode: true,
-            modules: [Autoplay],
-            autoplay: {
-                delay: 1500,
-            },
             navigation: {
-                // nextEl: '.journey__history-btn-next',
-                prevEl: '.journey__history-btn-prev',
+                nextEl: '.journey__history-btn-next',
+                // prevEl: '.journey__history-btn-prev',
             },
             breakpoints: {
                 320: {

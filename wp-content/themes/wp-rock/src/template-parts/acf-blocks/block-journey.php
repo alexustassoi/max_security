@@ -55,7 +55,7 @@ $reviews    = get_field_value($fields, 'reviews');
                                 <p class="journey__history-item-text"> <?php echo $history_content; ?></p>
                             <?php endif; ?>
                         </div>
-                        <div class="journey__history-btn-prev"></div>
+                        <div class="journey__history-btn-next"></div>
                     </div>
                 <?php endforeach; ?>
             </div>
