@@ -27,9 +27,14 @@ $services_repeater = get_field_value($fields, 'services_repeater');
                     <?php
                     foreach ($services_repeater as $service):
                         $service_name = get_field_value($service, 'service_name');
+                        $service_link = get_field_value($service, 'service_link');
                         ?>
                         <div class="our-services__service">
                             <?php
+                            echo $service_link
+                                ? '<a href="' . do_shortcode( $service_link ) . '" class="our-services__service-link"></a>'
+                                : '';
+
                             echo $service_name
                                 ? '<div class="our-services__service-name">'. do_shortcode($service_name) . '</div>'
                                 : '';

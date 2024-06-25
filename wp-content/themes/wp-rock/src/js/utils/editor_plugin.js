@@ -17,6 +17,13 @@
                 text: 'Styled Heading Tag',
             });
 
+            ed.addButton('styled_custom_button', {
+                title: 'Add Styled Custom Button',
+                cmd: 'styled_custom_button',
+                // image : url + '/moon.png'
+                text: 'Styled Custom Button'
+            });
+
             /* ed.addCommand('styled_heading_tag', function () {
                 const url = prompt('Please add URL to link');
                 const btn_text = prompt('Please add text to link');
@@ -41,6 +48,27 @@
 
                 if (tagName !== null && tagText !== null && tagClass !== null) {
                     const return_text = `[styled_heading_tag tag_name=${tagName} tag_class=${tagClass}]${tagText}[/styled_heading_tag]`;
+                    ed.execCommand('mceInsertContent', 0, return_text);
+                }
+            });
+
+            ed.addCommand('styled_custom_button', function () {
+                const btnType = prompt(
+                    'Please specify what button you want to use(transparent-orange-btn, blue-btn, orange-btn, orange-transparent-btn)'
+                );
+                const btnText = prompt('Please add text to button');
+                const btnLink = prompt(
+                    'Please provide a link for the button'
+                );
+                const btnSize = prompt(
+                    'Please specify the button size (large-btn, small-btn)'
+                );
+                const isBtnPopup = prompt(
+                    'Please indicate whether the button will cause a popup? ( yes/no )'
+                );
+
+                if (btnType !== null && btnText !== null && btnLink !== null && isBtnPopup !== null && btnSize !== null) {
+                    const return_text = `[styled_custom_button btn_type=${btnType} btn_link=${btnLink} btn_size=${btnSize} is_btn_popup=${isBtnPopup}]${btnText}[/styled_custom_button]`;
                     ed.execCommand('mceInsertContent', 0, return_text);
                 }
             });

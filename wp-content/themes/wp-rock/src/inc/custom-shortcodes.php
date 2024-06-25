@@ -246,3 +246,37 @@ if ( ! function_exists( 'styled_heading_tag_shortcode' ) ) {
 
     add_shortcode('styled_heading_tag', 'styled_heading_tag_shortcode');
 }
+
+
+
+// styled_custom_button shortcode. Use it for adding Styled Custom Button.
+if ( ! function_exists( 'styled_custom_button_shortcode' ) ) {
+    /**
+     * Shortcode for show custom button.
+     *
+     * @param {array}       $atts    - shortcode attributes.
+     * @param {string|null} $content - content inside open/close shortcode tags.
+     *
+     * @return string
+     */
+    function styled_custom_button_shortcode($atts, $content = null)
+    {
+        extract(
+            shortcode_atts(
+                array(
+                    'class'      => '',
+                    'btn_type'   => '',
+                    'btn_link'   => '',
+                    'btn_size'   => '',
+                    'is_btn_popup'   => ''
+                ),
+                $atts
+            )
+        );
+        $is_popup = 'yes' === $is_btn_popup ? 'js-open-popup-activator' : '';
+
+        return @"<a href=\"$btn_link\" class=\"custom-content__button $btn_type $btn_size $is_popup\">$content</a>";
+    }
+
+    add_shortcode('styled_custom_button', 'styled_custom_button_shortcode');
+}

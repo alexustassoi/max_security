@@ -64,6 +64,24 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_6656e5ed7d463"
+                },
+                {
+                    "key": "field_667a6b255a7ee",
+                    "label": "Service link",
+                    "name": "service_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_6656e5ed7d463"
                 }
             ]
         }
@@ -86,5 +104,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716971053
+    "modified": 1719298888
 }

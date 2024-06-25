@@ -14,6 +14,7 @@ function wp_rock_custom_add_buttons( $plugin_array ) {
 
 function wp_rock_custom_register_buttons( $buttons ) {
     $buttons[] = 'styled_heading_tag';
+    $buttons[] = 'styled_custom_button';
     //$buttons[] = 'custom_link';
 
     return $buttons;

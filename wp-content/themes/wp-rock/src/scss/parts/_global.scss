@@ -233,11 +233,15 @@ svg {
     list-style: none;
 }
 
-button {
+%button {
     appearance: none;
     border: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+button {
+    @extend %button;
 }
 
 %orange-button {
@@ -264,6 +268,102 @@ button {
     &:hover {
         background: transparent;
         color: #2F3034;
+    }
+}
+
+.transparent-orange-btn,
+.orange-transparent-btn {
+    @extend %button;
+    display: inline-block;
+    color: #F3F0EC;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Turbine, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0;
+    text-decoration: none;
+    position: relative;
+    padding: 0 8px;
+    border: 2px solid #CC7510;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        @media screen and (min-width: 768px) {
+            background-color: #CC7510;
+        }
+
+    }
+}
+
+.orange-transparent-btn {
+    background-color: #CC7510;
+
+    &:hover {
+        @media screen and (min-width: 768px) {
+            background-color: transparent;
+            color: #CC7510;
+        }
+    }
+}
+
+.blue-btn {
+    @extend %button;
+    font-feature-settings: "clig" off, "liga" off;
+    background-color: #5b8cab;
+    color: var(--White-Text, #f3f0ec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    font-family: Turbine, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25;
+    padding: 0 24px;
+    text-decoration: none;
+    transition: all .3s;
+    text-transform: uppercase;
+}
+
+.orange-btn {
+    @extend %button;
+    appearance: none;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    border-radius: 0;
+    border: 1px solid var(--Orange, #cc7510);
+    color: #fff;
+    font-family: Turbine, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25;
+    cursor: pointer;
+    background-color: #cc7510;
+    text-decoration: none;
+}
+
+.large-btn {
+    font-size: 48px;
+    line-height: 1.45;
+
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+    }
+}
+
+.small-btn {
+    font-size: 24px;
+    line-height: 1.25;
+
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
     }
 }
 
@@ -606,7 +706,16 @@ body.single-resources {
 }
 
 body #pojo-a11y-toolbar {
-    top: 80% !important;
+    top: auto !important;
+    bottom: -250px !important;
+
+    @media screen and (max-width: 768px) {
+        bottom: -200px !important;
+    }
+
+    @media screen and (max-width: 670px) {
+        bottom: -128px !important;
+    }
 }
 
 
@@ -818,5 +927,5 @@ body #pojo-a11y-toolbar {
 
 
 body #hubspot-messages-iframe-container {
-    bottom: 120px !important;
+    bottom: 80px !important;
 }
