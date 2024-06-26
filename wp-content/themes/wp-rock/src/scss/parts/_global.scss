@@ -12,6 +12,13 @@ body {
             filter: blur(10px);
         }
     }
+    &.popup-opened-max {
+        overflow: hidden;
+
+        #wrapper {
+
+        }
+    }
 
     &.no-scroll {
         overflow: hidden;

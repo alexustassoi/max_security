@@ -9,6 +9,14 @@ html {
             height : 100vh;
         }
     }
+
+    &.popup-opened-max {
+        overflow : hidden;
+
+        @media screen and (max-width: 768px) {
+            height : 100vh;
+        }
+    }
 }
 
 .my_overlay-2 {

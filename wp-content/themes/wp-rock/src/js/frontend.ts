@@ -98,8 +98,8 @@ function ready() {
                     headerMaxWords.classList.add('open');
 
                     const html = window.document.querySelector('html');
-                    document.body.classList.add('popup-opened');
-                    html && html.classList.add('popup-opened');
+                    document.body.classList.add('popup-opened-max');
+                    html && html.classList.add('popup-opened-max');
                 }
             });
         });
@@ -112,8 +112,8 @@ function ready() {
                     headerMaxWords.classList.remove('open');
 
                     const html = window.document.querySelector('html');
-                    document.body.classList.remove('popup-opened');
-                    html && html.classList.remove('popup-opened');
+                    document.body.classList.remove('popup-opened-max');
+                    html && html.classList.remove('popup-opened-max');
                 }
             });
         });
