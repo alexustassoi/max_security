@@ -47,7 +47,7 @@ $bottom_content = get_field_value($fields, 'bottom_content');
                         $is_general_link = $item['is_general_link'];
                         $link = $item['link'];
 
-                        $href = ( $is_general_link ) ? $link['url'] : '#services-popup-'.$services_counter;
+                        $href = ( $is_general_link ) ? $link : '#services-popup-'.$services_counter;
                         ?>
                         <div class="services__item-wrapper">
                             <a href="<?php echo $href; ?>"
