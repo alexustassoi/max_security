@@ -38,12 +38,14 @@ const initBlockExample = () => {
     if (topPageSwiper) {
         const swiper = new Swiper(topPageSwiper, {
             spaceBetween: 55,
+            freeMode: true,
+            speed: 11000,
             loop: true,
             slidesPerView: 'auto',
-            freeMode: true,
             modules: [Autoplay],
             autoplay: {
-                delay: 1500,
+                delay: 0,
+                disableOnInteraction: false,
             },
         });
     }
