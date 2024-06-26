@@ -2109,9 +2109,17 @@ html {
             font-size: 26px;
         }
     }
-    input[type=submit] {
+    .hs_submit {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hs_submit input[type="submit"] {
         font-size: 30px;
-        font-weight: bold;
+        font-weight: 700;
+        padding: 5px 30px;
     }
 }
 
