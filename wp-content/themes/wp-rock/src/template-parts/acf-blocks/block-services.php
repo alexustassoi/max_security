@@ -44,8 +44,8 @@ $bottom_content = get_field_value($fields, 'bottom_content');
                         $title = $service['title'];
                         $color = $service['background_color'];
                         $description = $service['description'];
-                        $is_general_link = $service['is_general_link'];
-                        $link = $service['link'];
+                        $is_general_link = $item['is_general_link'];
+                        $link = $item['link'];
 
                         $href = ( $is_general_link ) ? $link['url'] : '#services-popup-'.$services_counter;
                         ?>
