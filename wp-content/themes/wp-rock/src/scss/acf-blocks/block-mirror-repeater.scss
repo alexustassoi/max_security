@@ -375,12 +375,12 @@
         gap: 1.1rem;
 
         @media screen and (max-width: 768px) {
-            font-size: 1rem;
+            font-size: 16px;
             gap: 0.5rem;
         }
 
         @media screen and (max-width: 470px) {
-            font-size: 0.75rem;
+            font-size: 16px;
         }
 
         .line {
@@ -423,7 +423,7 @@
         }
 
         @media screen and (max-width: 470px) {
-            font-size: 0.75rem;
+            font-size:16px;
         }
     }
 
@@ -444,11 +444,11 @@
         }
 
         @media screen and (max-width: 768px) {
-            font-size: 0.75rem;
+            font-size: 14px;
         }
 
         @media screen and (max-width: 470px) {
-            font-size: 0.5rem;
+            font-size: 14px;
         }
     }
 
@@ -500,7 +500,7 @@
         }
 
         @media screen and (max-width: 470px) {
-            font-size: 0.625rem;
+            font-size: 14px
         }
     }
 
@@ -518,7 +518,7 @@
         }
 
         @media screen and (max-width: 470px) {
-            font-size: 0.5rem;
+            font-size: 14px;
         }
 
         .icon {
@@ -540,11 +540,11 @@
         line-height: 1.42857;
 
         @media screen and (max-width: 768px) {
-            font-size: 0.75rem;
+            font-size: 14px;
         }
 
         @media screen and (max-width: 470px) {
-            font-size: 0.5rem;
+            font-size: 14px;
         }
     }
 
@@ -557,7 +557,7 @@
         margin-bottom: 0;
 
         @media screen and (max-width: 470px) {
-            font-size: 0.5rem;
+            font-size: 14px;
         }
     }
 
@@ -587,7 +587,7 @@
         }
 
         @media screen and (max-width: 470px) {
-            font-size: 0.625rem;
+            font-size: 14px;
         }
     }
 }

@@ -1604,6 +1604,10 @@ html {
         &__right-col {
             max-height: 300px;
             overflow: auto;
+
+            @media screen and (max-width: 480px) {
+                max-height: 3000px;
+            }
         }
 
         li,
