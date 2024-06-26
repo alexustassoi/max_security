@@ -97,8 +97,6 @@
 			<div class="request-demo__content">
 				<div class="request-demo__map-wrapper">
                     <img src="<?php echo $map_image; ?>" alt="map_image" />
-                    <!--
-					<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d98963.27031245815!2d20.99518992067948!3d52.23822324995184!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1717664422962!5m2!1sen!2sua" width="686" height="268" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
 				</div>
                 <div class="request-demo__wrap">
                     <div class="request-demo__left-col mobile">
@@ -191,54 +189,6 @@
                         </div>
                     </div>
                 </div>
-				<div class="request-demo__info-wrapper">
-					<div class="request-demo__left-col desktop">
-						<div class="request-demo__date-time">
-							<div class="request-demo__date-wrap">
-                                <?php if (isset($day)): ?>
-								<h3 class="request-demo__date-number">
-									<?php echo esc_html($day); ?>
-								</h3>
-                                <?php endif; ?>
-
-								<?php if (isset($month_year)): ?>
-								<div class="request-demo__date-info">
-									<?php echo esc_html($month_year); ?>
-								</div>
-								<?php endif; ?>
-							</div>
-                            <?php if (isset($time_utc)): ?>
-							<div class="request-demo__time">
-								<?php echo esc_html($time_utc); ?>
-							</div>
-                            <?php endif; ?>
-						</div>
-						<a href="#popup-portal-demo" class="request-demo__request-demo-btn" data-role="open-popup-portal-demo"></a>
-					</div>
-					<div class="request-demo__right-col">
-						<div class="request-demo__content-title">
-
-                            <?php if (!empty($title)):
-                                echo wrap_until_colon($title);
-                            endif; ?>
-<!--							<strong>USA Analysis:</strong> City Crime Series – Washington, DC: Violent crime rates to gradually decline over coming months amid increased security measures citywide-->
-						</div>
-						<div class="request-demo__content-items">
-							<div class="request-demo__content-item">
-                                <?php if (is_array($sections)): ?>
-                                <?php foreach ($sections as $section): ?>
-                                        <div class="request-demo__list-title">
-                                           <?php echo $section['section_title']; ?>
-                                        </div>
-
-                                        <?php echo $section['section_content']; ?>
-                                <?php endforeach; ?>
-                                <?php endif; ?>
-
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="request-demo__info-panel desktop">
 				<div class="request-demo__ipanel-item country-risk">
@@ -305,6 +255,60 @@
 					</div>
 				</div>
 			</div>
+            <div class="request-demo__info-wrapper">
+                <div class="request-demo__left-col desktop">
+                    <div class="request-demo__date-time">
+                        <div class="request-demo__date-wrap">
+                            <?php if (isset($day)): ?>
+                                <h3 class="request-demo__date-number">
+                                    <?php echo esc_html($day); ?>
+                                </h3>
+                            <?php endif; ?>
+
+                            <?php if (isset($month_year)): ?>
+                                <div class="request-demo__date-info">
+                                    <?php echo esc_html($month_year); ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <?php if (isset($time_utc)): ?>
+                            <div class="request-demo__time">
+                                <?php echo esc_html($time_utc); ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    <a href="#popup-portal-demo" class="request-demo__request-demo-btn" data-role="open-popup-portal-demo"></a>
+                </div>
+                <div class="request-demo__right-col">
+                    <div class="request-demo__content-title">
+
+                        <?php if (!empty($title)):
+                            echo wrap_until_colon($title);
+                        endif; ?>
+                        <!--							<strong>USA Analysis:</strong> City Crime Series – Washington, DC: Violent crime rates to gradually decline over coming months amid increased security measures citywide-->
+                    </div>
+                    <div class="request-demo__content-items">
+                        <div class="request-demo__content-item">
+                            <?php if (is_array($sections)): ?>
+                                <?php foreach ($sections as $section): ?>
+                                    <div class="request-demo__list-title">
+                                        <?php echo $section['section_title']; ?>
+                                    </div>
+
+                                    <?php echo $section['section_content']; ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="request-demo__request-demo-btn-mobile-wrapper">
+                <a href="#popup-portal-demo" class="request-demo__mobile-demo-btn" data-role="open-popup-portal-demo">
+                    <?php _e('LET’S TALK', 'wp-rock'); ?>
+                </a>
+            </div>
 		</div>
 	</div>
 </div>
