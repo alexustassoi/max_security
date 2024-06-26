@@ -264,7 +264,7 @@
         align-items: center;
         background: #FFF;
         position: relative;
-        max-width: 86%;
+        max-width: 1050px;
 
         @media screen and (max-width: 1200px) {
             padding: 1rem 0.5rem;
@@ -327,12 +327,13 @@
         justify-content: center;
         align-items: center;
         gap: 3.5rem;
-        width: calc(100% - 10rem);
+        // width: calc(100% - 10rem);
+        width: 100%;
         margin: 0 auto;
         overflow: hidden;
 
         @media screen and (max-width: 1200px) {
-            width: calc(100% - 2rem);
+            //width: calc(100% - 2rem);
             padding: 1rem 0 0;
             gap: 0;
         }
@@ -411,7 +412,7 @@
     &__slide-title {
         color: #151836;
         font-family: Turbine, sans-serif;
-        font-size: 1.875rem;
+        font-size: 2.2rem;
         font-style: normal;
         font-weight: 700;
         line-height: 1.26;
@@ -550,8 +551,8 @@
     &__certifcate-of-completion {
         color: #1D1D1B;
         font-family: Turbine, sans-serif;
-        font-size: 0.625rem;
-        font-style: normal;
+        font-size: 20px;
+        font-style: italic;
         font-weight: 400;
         margin-bottom: 0;
 
