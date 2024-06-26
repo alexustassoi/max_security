@@ -10,7 +10,6 @@ global $global_options;
 
 $fields          = get_fields();
 $colors_select   = get_field_value($fields, 'colors_select');
-$top_description = get_field_value($fields, 'top_description');
 $mirror_items    = get_field_value($fields, 'mirror_items');
 
 $bg_color    = get_field_value($fields, 'bg_color');
@@ -38,13 +37,6 @@ $total_posts = $query->found_posts;
 ?>
 <div class="mirror-repeater" style="background-color: <?php echo $bg_color ? do_shortcode($bg_color) : '#FFF'; ?>;">
     <div class="custom-container mirror-repeater__custom-container">
-        <?php
-        if (!empty($top_description)) {
-            echo '<p class="mirror-repeater__top-description">
-                    ' . do_shortcode($top_description) .
-                '</p>';
-        }
-        ?>
         <?php
         $courses_query = [
             'mirror_items' => $mirror_items,

@@ -4,7 +4,7 @@
 
     &__title {
         color: #f3f0ec;
-        text-align: center;
+        text-align: left;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 48px;
@@ -12,6 +12,12 @@
         font-weight: 700;
         line-height: 1.45;
         margin-bottom: 48px;
+        text-align: left;
+        margin-left: 600px;
+
+        @media screen and (max-width: 1470px) {
+            margin-left: 470px;
+        }
 
         @media screen and (max-width: 1200px) {
             font-size: 40px;
@@ -21,6 +27,8 @@
         @media screen and (max-width: 992px) {
             font-size: 35px;
             margin-bottom: 40px;
+            text-align: center;
+            margin-left: 0;
         }
 
         @media screen and (max-width: 768px) {

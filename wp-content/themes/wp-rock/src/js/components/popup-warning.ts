@@ -11,8 +11,10 @@ const popupWarningTrigger = (button) => {
         formData.append('action', action);
         formData.append('id', idWarning);
 
-        const popupBody = document.querySelector('#popup-request-demo');
+        const popupBody = document.querySelector('#popup-request-demo') as HTMLElement;
+        const wrap = popupBody.querySelector('.js-popup-inner');
 
+        wrap && wrap.classList.add('loader');
         // @ts-ignore
         fetch(var_from_php.ajax_url, {
             method: 'POST',
@@ -22,10 +24,10 @@ const popupWarningTrigger = (button) => {
             .then((response) => response.json())
             .then((response) => {
                 if (response.success && response.data && popupBody) {
-                    const wrap = popupBody.querySelector('.js-popup-inner');
 
                     if (wrap) {
                         wrap.innerHTML = response.data;
+                        wrap.classList.remove('loader');
                     }
                 }
             });

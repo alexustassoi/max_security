@@ -3,6 +3,26 @@
     "title": "Block - Services",
     "fields": [
         {
+            "key": "field_667c1095d32c6",
+            "label": "Title content",
+            "name": "title_content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_65e5da72fd620",
             "label": "Title",
             "name": "title",
@@ -149,6 +169,7 @@
                         "id": ""
                     },
                     "layout": "block",
+                    "parent_repeater": "field_65e5dacffd623",
                     "sub_fields": [
                         {
                             "key": "field_65e5db21fd624",
@@ -233,8 +254,7 @@
                             "enable_opacity": 0,
                             "return_format": "string"
                         }
-                    ],
-                    "parent_repeater": "field_65e5dacffd623"
+                    ]
                 },
                 {
                     "key": "field_65e5dc00fd629",
@@ -251,6 +271,7 @@
                         "id": ""
                     },
                     "layout": "block",
+                    "parent_repeater": "field_65e5dacffd623",
                     "sub_fields": [
                         {
                             "key": "field_65e5dc47fd62a",
@@ -396,8 +417,7 @@
                             "enable_opacity": 0,
                             "return_format": "string"
                         }
-                    ],
-                    "parent_repeater": "field_65e5dacffd623"
+                    ]
                 }
             ]
         },
@@ -478,5 +498,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719385942
+    "modified": 1719406763
 }

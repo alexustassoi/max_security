@@ -22,21 +22,25 @@ if ( $query->have_posts() ) {
         $person_name = get_field('person_name', $post_id);
         $person_status = get_field('person_status', $post_id);
         $webinar_duration = get_field('webinar_duration', $post_id);
-        $resource_category = wp_get_post_terms( $post_id, 'resources-category')[0];
-        $category_name_for_post = get_term_meta( $resource_category->term_id, 'category_name_for_post', true );
-        $is_newsletter = 'newsletter' === $resource_category->slug;
+        $resource_category = !empty(wp_get_post_terms( $post_id, 'resources-category')[0]) ? wp_get_post_terms( $post_id, 'resources-category')[0] : null;
+        $is_newsletter = '';
+        $category_name_for_post = null;
+        if($resource_category) {
+            $category_name_for_post = get_term_meta( $resource_category->term_id, 'category_name_for_post', true );
+            $is_newsletter = 'newsletter' === $resource_category->slug;
+        }
         $card_tags = null;
         $card_tag = null;
         $card_icon_url = null;
         $card_tag_name = null;
         $card_tag_slug = null;
 
-        if ( !$is_newsletter ) {
+        if ( !$is_newsletter && $card_tag ) {
             $card_tags = wp_get_post_terms( $post_id, 'resource_tag' );
             $card_tag = !empty($card_tags) ? $card_tags[0] : '';
             $card_icon_url = get_field('card_icon', 'resource_tag_' . $card_tag->term_id);
-            $card_tag_name = $card_tag->name;
-            $card_tag_slug = $card_tag->slug;
+            $card_tag_name = !empty($card_tag->name) ? $card_tag->name : '';
+            $card_tag_slug = !empty($card_tag->slug) ? $card_tag->slug : '';
         }
 
         $thumbnail_image = get_the_post_thumbnail( $post_id );

@@ -73,6 +73,15 @@ const openRequestDemoPopup = () => {
 
                 break;
             }
+            case 'load-content-demo-popup': {
+                e.preventDefault();
+                const targetPopup = window.document.getElementById('#popup-request-demo') as HTMLElement;
+
+                if (!popupInstance && !targetPopup) return;
+
+                popupWarningTrigger(target);
+                break;
+            }
             default:
                 break;
         }

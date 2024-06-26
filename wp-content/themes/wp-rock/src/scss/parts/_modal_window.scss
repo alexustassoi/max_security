@@ -357,6 +357,41 @@ html {
         @media screen and (max-width: 480px) {
             top: 20px;
         }
+
+        .text-center {
+            position: relative;
+
+            &.loader {
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 4;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    z-index: 6;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    animation: loader 2s infinite linear;
+                    transform: translate(-50%, -50%);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxsaW5lIHgxPSIxMiIgeTE9IjIiIHgyPSIxMiIgeTI9IjYiLz4KICAgIDxsaW5lIHgxPSIxMiIgeTE9IjE4IiB4Mj0iMTIiIHkyPSIyMiIvPgogICAgPGxpbmUgeDE9IjQuOTMiIHkxPSI0LjkzIiB4Mj0iNy43NiIgeTI9IjcuNzYiLz4KICAgIDxsaW5lIHgxPSIxNi4yNCIgeTE9IjE2LjI0IiB4Mj0iMTkuMDciIHkyPSIxOS4wNyIvPgogICAgPGxpbmUgeDE9IjIiIHkxPSIxMiIgeDI9IjYiIHkyPSIxMiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMTIiIHgyPSIyMiIgeTI9IjEyIi8+CiAgICA8bGluZSB4MT0iNC45MyIgeTE9IjE5LjA3IiB4Mj0iNy43NiIgeTI9IjE2LjI0Ii8+CiAgICA8bGluZSB4MT0iMTYuMjQiIHkxPSI3Ljc2IiB4Mj0iMTkuMDciIHkyPSI0LjkzIi8+Cjwvc3ZnPg==);
+                }
+            }
+        }
     }
 
     .subscribe-form,
@@ -738,6 +773,15 @@ html {
                 font-size: 18px;
             }
         }
+    }
+}
+
+@keyframes loader {
+    from {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
