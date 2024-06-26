@@ -44,10 +44,16 @@ $bottom_content = get_field_value($fields, 'bottom_content');
                         $title = $service['title'];
                         $color = $service['background_color'];
                         $description = $service['description'];
+                        $is_general_link = $service['is_general_link'];
+                        $link = $service['link'];
+
+                        var_dump('$service', $service);
+
+                        $href = ( $is_general_link ) ? $link['url'] : '#services-popup-'.$services_counter;
                         ?>
                         <div class="services__item-wrapper">
-                            <a href="#services-popup-<?php echo $services_counter; ?>"
-                               class="services__item js-open-popup-activator"
+                            <a href="<?php echo $href; ?>"
+                               class="services__item <?php echo ( $is_general_link ) ? '': 'js-open-popup-activator';?>"
                                style="background-color: <?php echo $color; ?>">
                                 <figure class="services__item-icon">
                                     <?php if ($icon) : ?>
