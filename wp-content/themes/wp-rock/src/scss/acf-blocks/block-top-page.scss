@@ -107,10 +107,15 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 20px;
+        bottom: 60px;
         background-color: transparent;
         border: none;
         cursor: pointer;
+
+        svg {
+            width: 75px;
+            height: auto;
+        }
 
         @media screen and (max-width: 768px) {
             display: none;
