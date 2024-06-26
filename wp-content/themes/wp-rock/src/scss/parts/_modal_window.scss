@@ -1627,6 +1627,8 @@ html {
                 height: 63px;
                 width: 63px;
                 margin: 0 auto;
+
+                display: none;
             }
 
             &:after {
@@ -1642,6 +1644,30 @@ html {
                 background-size: contain;
             }
         }
+    }
+
+    .request-demo__request-demo-btn-mobile-wrapper {
+        display: none;
+
+        @media screen and (max-width: 680px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    .request-demo__mobile-demo-btn {
+        color: #CC7510;
+        font-family: Turbine, sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.6;
+        text-decoration: none;
+        padding: 0 8px;
+        background: #17181A;
+        text-align: center;
     }
 }
 

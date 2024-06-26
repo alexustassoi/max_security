@@ -304,6 +304,12 @@
                     </div>
                 </div>
             </div>
+
+            <div class="request-demo__request-demo-btn-mobile-wrapper">
+                <a href="#popup-portal-demo" class="request-demo__mobile-demo-btn" data-role="open-popup-portal-demo">
+                    <?php _e('LET’S TALK', 'wp-rock'); ?>
+                </a>
+            </div>
 		</div>
 	</div>
 </div>
