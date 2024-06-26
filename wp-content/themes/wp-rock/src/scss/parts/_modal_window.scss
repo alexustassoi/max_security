@@ -2075,3 +2075,43 @@ html {
         z-index: 1001;
     }
 }
+
+
+#popup-subscribe {
+
+    .subscribe-form__main-img {
+        display: none;
+    }
+
+    .subscribe-form__logo-title {
+        font-size: 35px;
+        font-weight: 800;
+        @media screen and (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
+
+    .subscribe-form__form-title {
+        font-size: 57px;
+        font-weight: 400;
+
+        @media screen and (max-width: 768px) {
+            font-size: 45px;
+        }
+    }
+    .subscribe-form__form-desс {
+        font-size: 46px;
+        width: 100%;
+        max-width: 100%;
+        font-weight: 300;
+
+        @media screen and (max-width: 768px) {
+            font-size: 26px;
+        }
+    }
+    input[type=submit] {
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
