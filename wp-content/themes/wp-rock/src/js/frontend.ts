@@ -10,7 +10,7 @@ import Sliders from './components/swiper-init';
 import initAnimation from './parts/animation';
 import tabsNavigation from './parts/navi-tabs';
 import Popup from './parts/popup-window';
-import initBlockBlogReadMore from "./acf-blocks/block-blog-read-more";
+import initBlockBlogReadMore from './acf-blocks/block-blog-read-more';
 
 function ready() {
     const popupInstance = new Popup();
@@ -96,6 +96,10 @@ function ready() {
                 event.preventDefault();
                 if (headerMaxWords) {
                     headerMaxWords.classList.add('open');
+
+                    const html = window.document.querySelector('html');
+                    document.body.classList.add('popup-opened');
+                    html && html.classList.add('popup-opened');
                 }
             });
         });
@@ -106,6 +110,10 @@ function ready() {
                 event.preventDefault();
                 if (headerMaxWords) {
                     headerMaxWords.classList.remove('open');
+
+                    const html = window.document.querySelector('html');
+                    document.body.classList.remove('popup-opened');
+                    html && html.classList.remove('popup-opened');
                 }
             });
         });
@@ -199,7 +207,7 @@ function ready() {
                 const currentOffset = target.dataset.offset;
                 const totalPost = target.dataset.postCounts;
                 // @ts-ignore
-                const lastKey = target.dataset.lastKey;
+                const { lastKey } = target.dataset;
                 const coursesWrap = window.document.querySelector('.js-mirror-repeater') as HTMLElement;
 
                 if (!currentOffset || !coursesWrap || !lastKey) return;

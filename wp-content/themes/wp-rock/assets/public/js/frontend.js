@@ -12072,6 +12072,9 @@ function ready() {
       event.preventDefault();
       if (headerMaxWords) {
         headerMaxWords.classList.add('open');
+        var html = window.document.querySelector('html');
+        document.body.classList.add('popup-opened');
+        html && html.classList.add('popup-opened');
       }
     });
   });
@@ -12080,6 +12083,9 @@ function ready() {
       event.preventDefault();
       if (headerMaxWords) {
         headerMaxWords.classList.remove('open');
+        var html = window.document.querySelector('html');
+        document.body.classList.remove('popup-opened');
+        html && html.classList.remove('popup-opened');
       }
     });
   });
