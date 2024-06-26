@@ -33,13 +33,6 @@
                 "operator": "==",
                 "value": "acf\/block-select-tag"
             }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/block-mirror-repeater"
-            }
         ]
     ],
     "menu_order": 0,
@@ -51,5 +44,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718956338
+    "modified": 1719385354
 }
