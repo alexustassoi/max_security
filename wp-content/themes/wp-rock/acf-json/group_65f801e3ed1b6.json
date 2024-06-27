@@ -3,6 +3,26 @@
     "title": "Block - Service top",
     "fields": [
         {
+            "key": "field_667d2c8fc4d78",
+            "label": "Banner is small",
+            "name": "banner_is_small",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "By default, the banner is displayed in a large size with a down arrow. If you select this option the banner may be small and the down button will be hidden",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_65f802176cb83",
             "label": "Banner is a video?",
             "name": "banner_is_video",
@@ -164,5 +184,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716815961
+    "modified": 1719479639
 }

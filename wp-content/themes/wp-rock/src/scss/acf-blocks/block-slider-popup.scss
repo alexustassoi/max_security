@@ -102,6 +102,20 @@
         @media screen and (max-width: 670px) {
             padding: 0;
         }
+
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            @media screen and (max-width: 850px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media screen and (max-width: 480px) {
+                gap: 15px;
+            }
+        }
     }
 
     &__slide {
@@ -160,6 +174,11 @@
             font-size: 12px;
             font-weight: 400;
         }
+
+        @media screen and (max-width: 480px) {
+            padding: 16px 10px 10px;
+            margin-bottom: 0px;
+        }
     }
 
     &__slide-image {
@@ -170,6 +189,10 @@
 
         @media screen and (max-width: 670px) {
             height: 133px;
+        }
+
+        @media screen and (max-width: 320px) {
+            height: 145px;
         }
 
         img {

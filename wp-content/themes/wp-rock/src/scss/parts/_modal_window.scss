@@ -278,7 +278,7 @@ html {
         right: 20px;
         z-index: 200;
         padding: 0;
-        background-color: rgba(49,49,49,0.5);
+        background-color: rgba(49, 49, 49, 0.5);
 
         width: 35px;
         height: 35px;
@@ -1202,6 +1202,7 @@ html {
                 height: 100%;
                 display: block;
             }
+
             iframe {
                 width: 100%;
                 height: 268px;
@@ -1330,7 +1331,6 @@ html {
                 border-left: 1px solid #234762;
 
 
-
                 .request-demo {
                     &__ipanel-item-value {
                         color: #234762;
@@ -1340,7 +1340,6 @@ html {
 
             &.incident-risk {
                 border-left: 1px solid #0EA74F;
-
 
 
                 .request-demo {
@@ -1367,6 +1366,7 @@ html {
 
                 &.red {
                     border-left: 1px solid #FA4646;
+
                     .request-demo {
                         &__ipanel-item-value {
                             color: #FA4646;
@@ -1419,15 +1419,17 @@ html {
         &__ipanel-item-value {
             font-weight: 400;
         }
+
         &__wrap {
             @media screen and (max-width: 680px) {
-               /* display: grid;
-                grid-template-columns: 75px 1fr;
-                gap: 16px;*/
+                /* display: grid;
+                 grid-template-columns: 75px 1fr;
+                 gap: 16px;*/
 
                 display: block;
             }
         }
+
         &__left-col {
             flex-shrink: 0;
             display: flex;
@@ -1640,6 +1642,7 @@ html {
                 padding-left: 10px;
                 margin-top: 16px;
                 margin-bottom: 16px;
+
                 li {
                     list-style: square;
                     color: #000;
@@ -2031,6 +2034,7 @@ html {
         position: absolute;
         top: calc(50% - 25px);
         padding: 0;
+
         svg {
             pointer-events: none;
             @media screen and (max-width: 991px) {
@@ -2052,6 +2056,7 @@ html {
         }
 
     }
+
     &__prev {
         left: -80px;
         @media screen and (max-width: 991px) {
@@ -2102,6 +2107,7 @@ html {
             font-size: 45px;
         }
     }
+
     .subscribe-form__form-desс {
         font-size: 46px;
         width: 100%;
@@ -2112,6 +2118,7 @@ html {
             font-size: 26px;
         }
     }
+
     .hs_submit {
         width: 100% !important;
         text-align: center;
@@ -2119,6 +2126,7 @@ html {
         align-items: center;
         justify-content: center;
     }
+
     .hs_submit input[type="submit"] {
         font-size: 30px;
         font-weight: 700;

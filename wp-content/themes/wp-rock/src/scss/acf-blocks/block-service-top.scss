@@ -412,3 +412,35 @@
         }
     }
 }
+
+.banner-small.service-top {
+    .service-top {
+        &__custom-container {
+            padding-top: 160px;
+            padding-bottom: 160px;
+
+            @media screen and (max-width: 1440px) {
+                padding-top: 150px;
+                padding-bottom: 130px;
+            }
+
+            @media screen and (max-width: 1199px) {
+                padding-bottom: 95px;
+                padding-top: 130px;
+            }
+
+            @media screen and (max-width: 1030px) {
+                padding-bottom: 70px;
+                padding-top: 100px;
+            }
+
+            @media screen and (max-width: 768px) {
+                padding-bottom: 50px;
+            }
+        }
+
+        &__scroll-bottom {
+            display: none;
+        }
+    }
+}

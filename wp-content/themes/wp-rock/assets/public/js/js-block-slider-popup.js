@@ -10839,26 +10839,6 @@ var _a;
 
 core.use([Navigation]);
 var initBlockSliderPopup = function initBlockSliderPopup() {
-  var sliderPopupSwiper1 = document.querySelector('.js-slider-popup-1');
-  if (sliderPopupSwiper1) {
-    var slidesCount = (sliderPopupSwiper1 === null || sliderPopupSwiper1 === void 0 ? void 0 : sliderPopupSwiper1.dataset.slides_count) ? sliderPopupSwiper1 === null || sliderPopupSwiper1 === void 0 ? void 0 : sliderPopupSwiper1.dataset.slides_count : 5;
-    var sliderPopupBlock = new core(sliderPopupSwiper1, {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      breakpoints: {
-        991: {
-          slidesPerView: slidesCount
-        },
-        670: {
-          slidesPerView: 3,
-          spaceBetween: 16
-        },
-        330: {
-          slidesPerView: 2
-        }
-      }
-    });
-  }
   var sliderPopupSwiper2 = document.querySelector('.js-slider-popup-2');
   if (sliderPopupSwiper2) {
     var sliderPopupsBtn = document.querySelectorAll('.js-open-slide-popup-link    ');
