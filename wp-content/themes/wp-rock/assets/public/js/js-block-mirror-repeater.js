@@ -10861,6 +10861,7 @@ var initBlockJourney = function initBlockJourney() {
     courseSwiper = new core(coursePopupSwiper, {
       slidesPerView: 1,
       spaceBetween: 0,
+      autoHeight: true,
       navigation: {
         nextEl: '.js-next-course-slider-popup',
         prevEl: '.js-prev-course-slider-popup'
