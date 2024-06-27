@@ -7,23 +7,27 @@ const initBlockSliderPopup = () => {
     if (sliderPopupSwiper1) {
         const slidesCount = sliderPopupSwiper1?.dataset.slides_count ? sliderPopupSwiper1?.dataset.slides_count : 5;
 
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const sliderPopupBlock = new Swiper(sliderPopupSwiper1, {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            breakpoints: {
-                991: {
-                    slidesPerView: slidesCount as number,
+        const checkTabletAndUpper = window.matchMedia('(min-width:991px)');
+
+        if (checkTabletAndUpper) {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            const sliderPopupBlock = new Swiper(sliderPopupSwiper1, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                breakpoints: {
+                    991: {
+                        slidesPerView: slidesCount as number,
+                    },
+                    670: {
+                        slidesPerView: 3,
+                        spaceBetween: 16,
+                    },
+                    330: {
+                        slidesPerView: 2,
+                    },
                 },
-                670: {
-                    slidesPerView: 3,
-                    spaceBetween: 16,
-                },
-                330: {
-                    slidesPerView: 2,
-                },
-            },
-        });
+            });
+        }
     }
 
     const sliderPopupSwiper2 = document.querySelector('.js-slider-popup-2') as HTMLElement;
