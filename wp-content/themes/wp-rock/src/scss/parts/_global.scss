@@ -247,7 +247,12 @@ svg {
     background-color: transparent;
 }
 
-.primary-btn {
+%primary-btn {
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     border: 1px solid #cc7510;
     cursor: pointer;
     font-family: Turbine, sans-serif;
@@ -259,17 +264,35 @@ svg {
     color: #fff;
     padding: 0 8px;
 
+    @media screen and (max-width: 480px) {
+        font-size: 13px;
+    }
+
+    &.white-text-hover {
+
+        &:hover {
+            color: #fff;
+            background-color: transparent;
+        }
+    }
     &:hover {
-        color: #2f3034;
+        color: #151836;
         background-color: transparent;
     }
+
+}
+
+.primary-btn {
+    @extend %primary-btn;
 }
 
 button {
     @extend %button;
 }
 
+.orange-button ,
 %orange-button {
+    text-decoration: none;
     padding-left: 8px;
     padding-right: 8px;
     color: #FFF;
@@ -278,20 +301,21 @@ button {
     font-style: normal;
     font-weight: 400;
     line-height: 1.25;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-self: center;
     appearance: none;
     border: 1px solid #CC7510;
-    background: #CC7510;
+    background-color: #CC7510;
     cursor: pointer;
+    transition: background-color .3s, color .3s;
 
     @media screen and (max-width: 768px) {
         line-height: 1.5;
     }
 
     &:hover {
-        background: transparent;
+        background-color: transparent;
         color: #2F3034;
     }
 }

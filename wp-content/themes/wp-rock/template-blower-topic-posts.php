@@ -86,7 +86,7 @@ if ( $query->have_posts() ) {
                     : '';
 
                 echo ($card_btn_text)
-                    ? '<div class="browse-topic__card-btn-wrap"><a href="' . esc_html(get_permalink()) . '" class="browse-topic__card-btn">' . do_shortcode($card_btn_text) . '</a></div>'
+                    ? '<div class="browse-topic__card-btn-wrap"><a class="primary-btn" href="' . esc_html(get_permalink()) . '" class="browse-topic__card-btn">' . do_shortcode($card_btn_text) . '</a></div>'
                     : '';
 
                 echo ($person_name)

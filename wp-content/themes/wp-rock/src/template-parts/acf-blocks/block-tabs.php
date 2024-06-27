@@ -36,7 +36,7 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
                         foreach ($tabs_repeater as $key => $tab_link) {
 
                             $active_class = $key === 0 ? 'active' : '';
-	                        
+
 	                        $img = fetchSvgContent($tab_link['icon']);
 	                        if (is_null($img)) {
 		                        $img = '<img class="icon" src="' . $tab_link['icon'] . '" alt="icon">';
@@ -75,7 +75,7 @@ $tabs_repeater = get_field_value($fields, 'tabs_repeater');
 
                             if ($link_url && $link_title) {
                                 echo '  <a href="' . $link_url . '"
-                                                    class="tabs__panel-link">
+                                                    class="tabs__panel-link white-text-hover primary-btn">
 
                                                     ' . $link_title . '
                                                 </a>';

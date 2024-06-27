@@ -327,17 +327,19 @@
     }
 
     .hs-button {
-        border: 1px solid #cc7510;
-        color: #2f3034;
-        cursor: pointer;
-        font-family: Turbine, sans-serif;
+        // border: 1px solid #cc7510;
+        // color: #fff;
+        // cursor: pointer;
+        // font-family: Turbine, sans-serif;
+        @extend .primary-btn;
         font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.2;
-        margin-right: auto;
-        margin-top: 0;
-        transition: background-color .3s, color .3s;
+        // font-style: normal;
+        // font-weight: 400;
+        // line-height: 1.2;
+        // margin-right: auto;
+        // margin-top: 0;
+        // transition: background-color .3s, color .3s;
+        // background-color: #CC7510;
 
         @media screen and (max-width: 1024px) {
             font-size: 18px;
@@ -349,9 +351,9 @@
             font-size: 16px;
         }
 
-        &:hover {
-            color: #fff;
-            background-color: #CC7510;
-        }
+        // &:hover {
+        //     color: #2f3034;
+        //     background-color: transparent;
+        // }
     }
 }

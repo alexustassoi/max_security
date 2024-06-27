@@ -83,7 +83,7 @@ $bg_color = !empty($bg_color) ? $bg_color : '#5A7153';
 
 
                                 <?php if($link): ?>
-                                    <a class="experts__slide-link" target="<?php echo $link['target']; ?>" href="<?php echo $link['url'] ?>">
+                                    <a class="experts__slide-link white-text-hover primary-btn" target="<?php echo $link['target']; ?>" href="<?php echo $link['url'] ?>">
                                         <?php echo $link['title'] ?>
                                     </a>
                                 <?php endif; ?>

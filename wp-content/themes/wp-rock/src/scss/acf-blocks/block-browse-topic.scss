@@ -567,17 +567,8 @@
     }
 
     &__card-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #151836;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.62;
-        text-decoration: none;
         padding-left: 8px;
         padding-right: 8px;
-        border: 1px solid #CC7510;
 
         @media screen and (max-width: 991px) {
             font-size: 14px;

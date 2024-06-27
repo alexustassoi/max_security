@@ -336,20 +336,6 @@
         }
 
         &-link {
-            background-color: transparent;
-            border: 1px solid #cc7510;
-            text-decoration: none;
-            color: #f3f0ec;
-            font-feature-settings: 'clig' off, 'liga' off;
-            font-family: Turbine, sans-serif;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 1.57;
-            padding: 0 8px;
-            display: inline-block;
-            transition: background-color 0.3s, border-color 0.3s;
-
             @media screen and (max-width: 992px) {
                 position: relative;
                 left: 50%;
@@ -358,10 +344,6 @@
 
             @media screen and (max-width: 480px) {
                 font-size: 13px;
-            }
-
-            &:hover {
-                background-color: #cc7510;
             }
         }
     }

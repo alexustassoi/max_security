@@ -32,7 +32,7 @@ else {
         <?php endif; ?>
 
         <?php if($link): ?>
-            <a class="lets-talk__link" target="<?php echo $link['target']; ?>" href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a>
+            <a class="lets-talk__link white-text-hover primary-btn" target="<?php echo $link['target']; ?>" href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a>
         <?php endif; ?>
     </div>
 </div>

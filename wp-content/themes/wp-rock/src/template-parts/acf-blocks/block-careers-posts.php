@@ -47,7 +47,7 @@ $query = new WP_Query($args);
 						<div class="careers-posts__post-excerpt">
 							<?php echo do_shortcode($excerpt); ?>
 						</div>
-						<a href="<?php echo $link; ?>" class="careers-posts__post-link">
+						<a href="<?php echo $link; ?>" class="careers-posts__post-link primary-btn">
 							<?php echo __('READ  MORE & APPLY', 'wp-rock'); ?>
 						</a>
 					</div>

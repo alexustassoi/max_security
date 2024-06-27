@@ -245,27 +245,9 @@
     }
 
     &__login {
-        color: var(--White-Text, #f3f0ec);
-        display: inline-block;
-        font-feature-settings: 'clig' off, 'liga' off;
-        font-family: Turbine, sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.57;
         margin-bottom: 8px;
-        padding: 0 8px;
-        border: 1px solid #cc7510;
-        text-decoration: none;
-        transition: all 0.3s;
         width: 100%;
         max-width: 130px;
-
-        &:hover {
-            @media screen and (min-width: 768px) {
-                background-color: #cc7510;
-            }
-        }
 
         &.mobile {
             display: none;
@@ -323,28 +305,11 @@
 
     &__talk,
     &__subscribe-btn {
-        border: 1px solid #cc7510;
-        padding: 0 8px;
-        display: inline-block;
-        color: #f3f0ec;
-        font-feature-settings: 'clig' off, 'liga' off;
-        font-family: Turbine, sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.57;
         margin: 0;
-        text-decoration: none;
-        transition: all 0.3s;
         max-width: 130px;
         width: 100%;
         text-wrap: wrap;
 
-        @media screen and (min-width: 768px) {
-            &:hover {
-                background-color: #cc7510;
-            }
-        }
         @media screen and (max-width: 480px) {
             font-size: 16px;
         }
