@@ -780,6 +780,7 @@ html {
     from {
         transform: translate(-50%, -50%) rotate(0);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
@@ -805,9 +806,7 @@ html {
         }
 
         &__top,
-        &__form-content-wrap {
-
-        }
+        &__form-content-wrap {}
 
         &__top {
             background: #F3F0EC;
@@ -844,9 +843,7 @@ html {
             }
         }
 
-        &__logo {
-
-        }
+        &__logo {}
 
         &__logo-title {
             color: #151836;
@@ -894,7 +891,7 @@ html {
         input[type=checkbox] {
             display: none;
 
-            &:checked + span:before {
+            &:checked+span:before {
                 background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTMiIHdpZHRoPSIxMyIgdmlld0JveD0iMCAwIDE3LjgzNyAxNy44MzciIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNDQzc1MTAiIGQ9Ik0xNi4xNDUgMi41NzFhLjcuNyAwIDAgMC0uOTkgMEw2LjkyIDEwLjgwNGwtNC4yNDEtNC4yN2EuNjk4LjY5OCAwIDAgMC0uOTg5IDBMLjIwNCA4LjAxOWEuNzAzLjcwMyAwIDAgMCAwIC45OWw2LjIxNyA2LjI1OGEuNzA0LjcwNCAwIDAgMCAuOTkgMEwxNy42MyA1LjA0N2EuNy43IDAgMCAwIDAtLjk5NGwtMS40ODUtMS40ODJ6Ii8+PC9zdmc+);
             }
         }
@@ -937,9 +934,7 @@ html {
             top: 24px;
         }
 
-        &:after {
-
-        }
+        &:after {}
     }
 
     .request-demo {
@@ -989,9 +984,7 @@ html {
         }
 
         &__top,
-        &__form-content-wrap {
-
-        }
+        &__form-content-wrap {}
 
         &__top {
             padding-top: 32px;
@@ -1031,6 +1024,7 @@ html {
                 display: flex;
                 align-items: center;
             }
+
             @media screen and (max-width: 480px) {
                 min-height: 26px;
                 padding-right: 107px;
@@ -1299,6 +1293,7 @@ html {
                 height: 20px;
                 top: 50%;
                 transform: translateY(-50%);
+
                 @media screen and (max-width: 480px) {
                     left: 4px;
                 }
@@ -1423,8 +1418,8 @@ html {
         &__wrap {
             @media screen and (max-width: 680px) {
                 /* display: grid;
-                 grid-template-columns: 75px 1fr;
-                 gap: 16px;*/
+                grid-template-columns: 75px 1fr;
+                gap: 16px;*/
 
                 display: block;
             }
@@ -1438,6 +1433,7 @@ html {
 
             &.desktop {
                 display: block;
+
                 @media screen and (max-width: 680px) {
                     display: none;
                 }
@@ -1445,6 +1441,7 @@ html {
 
             &.mobile {
                 display: none;
+
                 @media screen and (max-width: 680px) {
                     display: block;
                 }
@@ -2030,13 +2027,16 @@ html {
 //}
 
 .request-demo {
-    &__next, &__prev {
+
+    &__next,
+    &__prev {
         position: absolute;
         top: calc(50% - 25px);
         padding: 0;
 
         svg {
             pointer-events: none;
+
             @media screen and (max-width: 991px) {
                 width: 35px;
                 height: 35px;
@@ -2051,6 +2051,7 @@ html {
         @media screen and (max-width: 991px) {
             right: -50px;
         }
+
         @media screen and (max-width: 768px) {
             right: -40px;
         }
@@ -2059,9 +2060,11 @@ html {
 
     &__prev {
         left: -80px;
+
         @media screen and (max-width: 991px) {
             left: -50px;
         }
+
         @media screen and (max-width: 768px) {
             left: -40px;
         }
@@ -2094,6 +2097,7 @@ html {
 
     .subscribe-form__logo-title {
         font-size: 35px;
+
         @media screen and (max-width: 768px) {
             font-size: 30px;
         }
@@ -2133,4 +2137,3 @@ html {
         padding: 5px 30px;
     }
 }
-

@@ -31,7 +31,7 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
                         <img src="<?php echo $footer_logo; ?>" alt="foter logo">
 					<?php endif; ?>
                 </a>
-				
+
 				<?php if ( $portal_log_in_link ) : ?>
                     <a class="site-footer__login mobile" target="<?php echo $portal_log_in_link[ 'target' ]; ?>"
                        href="<?php echo $portal_log_in_link[ 'url' ]; ?>">
@@ -39,7 +39,7 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
                     </a>
 				<?php endif; ?>
             </div>
-			
+
 			<?php if ( $phone && $phone_link ) : ?>
                 <div class="site-footer__phone-mobile">
                     <a class="site-footer__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
@@ -55,15 +55,19 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
                         </div>
 					<?php endforeach; ?>
 				<?php endif; ?>
-				
-				<?php if ( $phone && $phone_link ) : ?>
-                    <a class="site-footer__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
-				<?php endif; ?>
             </div>
-			
+
 			<?php
 			wp_nav_menu( [
-				'theme_location'  => 'footer_menu',
+				'menu'  => 'Footer menu 1',
+				'echo'            => true,
+				'container'       => 'div',
+				'container_class' => 'site-footer__menu',
+			] )
+			?>
+			<?php
+			wp_nav_menu( [
+				'menu'  => 'Footer menu 2',
 				'echo'            => true,
 				'container'       => 'div',
 				'container_class' => 'site-footer__menu',
@@ -78,13 +82,13 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
 							<?php echo $portal_log_in_link[ 'title' ] ?>
                         </a>
 					<?php endif; ?>
-					
+
 					<?php if ( $social_links_title ) : ?>
                         <p class="site-footer__social-title"><?php echo $social_links_title; ?></p>
 					<?php endif; ?>
-					
-					
-					
+
+
+
 					<?php if ( $lets_talk_link ) : ?>
                         <a class="site-footer__talk" target="<?php echo $lets_talk_link[ 'target' ]; ?>"
                            href="<?php echo $lets_talk_link[ 'url' ] ?>"><?php echo $lets_talk_link[ 'title' ]; ?></a>
@@ -109,6 +113,12 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
                         </div>
 					<?php endif; ?>
                 </div>
+
+                <?php if ( $phone && $phone_link ) : ?>
+                    <a class="site-footer__phone" href="tel:<?php echo $phone_link; ?>">
+                        <?php echo $phone; ?>
+                    </a>
+				<?php endif; ?>
             </div>
         </div>
 
@@ -116,7 +126,7 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
 			<?php if ( $copyright ) : ?>
                 <p class="site-footer__copyright"><?php echo $copyright ?></p>
 			<?php endif; ?>
-			
+
 			<?php if ( $bottom_text ) : ?>
                 <p class="site-footer__bottom-text"><?php echo $bottom_text; ?></p>
 			<?php endif; ?>
