@@ -62,7 +62,7 @@ $slides   = get_field_value($fields, 'slides');
                                     <?php endif; ?>
 
                                     <?php if ($link_url && $link_title) : ?>
-                                        <a href="<?php echo $link_url; ?>" class="courses__slide-link">
+                                        <a href="<?php echo $link_url; ?>" class="courses__slide-link primary-btn">
                                             <?php echo $link_title; ?>
                                         </a>
                                     <?php endif; ?>
