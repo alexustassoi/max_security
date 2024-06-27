@@ -193,6 +193,7 @@
         font-weight: 400;
         line-height: 1.42;
         padding-left: 30px;
+        padding-right: 100px;
         margin: 0;
         max-height: 0;
         opacity: 0;
@@ -201,6 +202,7 @@
 
         @media screen and (max-width: 768px) {
             font-size: 14px;
+            padding-right: 0;
 
             &.open {
                 opacity: 1;
