@@ -3,27 +3,28 @@ import Swiper, { Navigation } from 'swiper';
 Swiper.use([Navigation]);
 
 const initBlockSliderPopup = () => {
-    // const sliderPopupSwiper1 = document.querySelector('.js-slider-popup-1') as HTMLElement;
-    // if (sliderPopupSwiper1) {
-    //     const slidesCount = sliderPopupSwiper1?.dataset.slides_count ? sliderPopupSwiper1?.dataset.slides_count : 5;
-    //
-    //     const sliderPopupBlock = new Swiper(sliderPopupSwiper1, {
-    //         slidesPerView: 1,
-    //         spaceBetween: 20,
-    //         breakpoints: {
-    //             991: {
-    //                 slidesPerView: slidesCount as number,
-    //             },
-    //             670: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 16,
-    //             },
-    //             330: {
-    //                 slidesPerView: 2,
-    //             },
-    //         },
-    //     });
-    // }
+    const sliderPopupSwiper1 = document.querySelector('.js-slider-popup-1') as HTMLElement;
+    if (sliderPopupSwiper1) {
+        const slidesCount = sliderPopupSwiper1?.dataset.slides_count ? sliderPopupSwiper1?.dataset.slides_count : 5;
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const sliderPopupBlock = new Swiper(sliderPopupSwiper1, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                991: {
+                    slidesPerView: slidesCount as number,
+                },
+                670: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+                330: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+    }
 
     const sliderPopupSwiper2 = document.querySelector('.js-slider-popup-2') as HTMLElement;
     if (sliderPopupSwiper2) {
