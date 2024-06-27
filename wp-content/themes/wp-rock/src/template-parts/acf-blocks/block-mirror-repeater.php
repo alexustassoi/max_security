@@ -111,7 +111,7 @@ $total_posts = $query->found_posts;
                             $target_audience_items = get_field_value($fields, 'target_audience_items');
 
                             // convert {{☑}} to <span class="icon">☑</span>
-                            $target_audience_items = preg_replace('/{{(.*?)}}/', '<span class="icon">$1</span>', $target_audience_items);
+                            $target_audience_items = preg_replace('/{{(.*?)}}/', '<span class="icon"></span>', $target_audience_items);
 
                             $curiculum_title               = get_field_value($fields, 'curiculum_title');
                             $curiculum_items               = get_field_value($fields, 'curiculum_items:');
