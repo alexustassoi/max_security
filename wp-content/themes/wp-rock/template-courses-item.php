@@ -34,7 +34,7 @@ foreach ($mirror_items as $item) :
             }
 
             if ($connected_course) {
-                echo ' <a href="#connected-course-popup" data-slide_index="' . $key . '" class="mirror-repeater__item-link js-open-slide-course-popup-link js-open-popup-activator">' . __("Course overview", "wp-rock") . '</a>';
+                echo ' <a href="#connected-course-popup" data-slide_index="' . $key . '" class="mirror-repeater__item-link primary-btn js-open-slide-course-popup-link js-open-popup-activator">' . __("Course overview", "wp-rock") . '</a>';
             }
             ?>
         </div>

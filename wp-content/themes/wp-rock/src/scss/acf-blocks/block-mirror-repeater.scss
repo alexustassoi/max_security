@@ -144,15 +144,7 @@
     }
 
     &__item-link {
-        text-decoration: none;
-        color: #f3f0ec;
         font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.2;
-        border: 1px solid #cc7510;
-        padding: 4px 8px;
-        transition: background-color 0.3s;
 
         @media screen and (max-width: 992px) {
             font-size: 20px;
@@ -164,10 +156,6 @@
 
         @media screen and (max-width: 480px) {
             font-size: 12px;
-        }
-
-        &:hover {
-            background-color: #cc7510;
         }
     }
 

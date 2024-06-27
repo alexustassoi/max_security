@@ -34,7 +34,7 @@ $target_category = filter_input( INPUT_GET, 'selected_category', FILTER_SANITIZE
                         <div class="browse-topic__filters">
                             <?php
                             echo ($text_first_category_filter && $current_page_url)
-                                ? '<a href="' . esc_html($current_page_url) . '" class="browse-topic__filter browse-topic__filter-all js-browse-topic-filter" data-role="browse-topic-filter" data-category="all">' . do_shortcode($text_first_category_filter) . '</a>'
+                                ? '<a href="' . esc_html($current_page_url) . '" class="browse-topic__filter browse-topic__filter-all js-browse-topic-filter primary-btn white-text-hover" data-role="browse-topic-filter" data-category="all">' . do_shortcode($text_first_category_filter) . '</a>'
                                 : '';
 
                             $terms = get_terms( array(
@@ -44,7 +44,7 @@ $target_category = filter_input( INPUT_GET, 'selected_category', FILTER_SANITIZE
 
                             if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
                                 foreach ( $terms as $term ) {
-                                    echo '<a href="' . esc_html($current_page_url . '?selected_category=' . $term->slug) . '" class="browse-topic__filter js-browse-topic-filter" data-role="browse-topic-filter" data-category="' . do_shortcode($term->slug) . '">' . do_shortcode($term->name) . '</a>';
+                                    echo '<a href="' . esc_html($current_page_url . '?selected_category=' . $term->slug) . '" class="browse-topic__filter js-browse-topic-filter primary-btn white-text-hover" data-role="browse-topic-filter" data-category="' . do_shortcode($term->slug) . '">' . do_shortcode($term->name) . '</a>';
                                 }
                             }
                             ?>

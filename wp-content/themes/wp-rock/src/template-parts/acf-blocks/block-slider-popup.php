@@ -115,7 +115,7 @@ $no_margin = empty($slides) ? 'mb0' : '';
                                 '</div>';
 
                             if (isset($slide['link']['url']) && isset($slide['link']['title'])) {
-                                echo '<a href="' . $slide['link']['url'] . '" class="popup__slide-link">
+                                echo '<a href="' . $slide['link']['url'] . '" class="popup__slide-link primary-btn white-text-hover">
                                         ' . $slide['link']['title'] . '
                                     </a>';
                             }
