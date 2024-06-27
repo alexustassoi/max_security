@@ -71,6 +71,53 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 40px;
 
+            &.grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 42px calc((100% - (238px * 2))  / 2);
+            }
+            &.grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 42px calc((100% - (238px * 3))  / 3);
+            }
+
+            @media screen and (max-width: 1199px) {
+                gap: 42px calc(25% - 210px);
+
+                &.grid-2 {
+                    gap: 42px calc(50% - 210px);
+                }
+                &.grid-3 {
+                    gap: 42px calc(33% - 210px);
+                }
+            }
+
+            @media screen and (max-width: 991px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px calc(25% - 70px);
+                max-width: 470px;
+
+                &.grid-2 {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 40px calc(25% - 70px);
+                }
+                &.grid-3 {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 40px calc(25% - 70px);
+                }
+            }
+
+            @media screen and (max-width: 670px) {
+                gap: 25px calc(25% - 65px);
+                max-width: 395px;
+
+                &.grid-2 {
+                    gap: 25px calc(25% - 65px);
+                }
+                &.grid-3 {
+                    gap: 25px calc(25% - 65px);
+                }
+            }
+
             @media screen and (max-width: 1199px) {
                 grid-template-columns: repeat(2, 1fr);
             }

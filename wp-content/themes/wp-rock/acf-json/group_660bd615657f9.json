@@ -3,6 +3,46 @@
     "title": "Block - Knowledge",
     "fields": [
         {
+            "key": "field_667d8331f2dba",
+            "label": "Grid columns set",
+            "name": "grid_columns_set",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_667d8299aa8c3",
+            "label": "Heading color",
+            "name": "heading_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
             "key": "field_660bd615b5463",
             "label": "Title",
             "name": "title",
@@ -86,5 +126,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712052070
+    "modified": 1719501632
 }

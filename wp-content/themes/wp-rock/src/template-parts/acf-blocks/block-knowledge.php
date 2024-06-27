@@ -10,19 +10,23 @@
 $fields = get_fields();
 $title = get_field_value($fields, 'title');
 $slider = get_field_value($fields, 'slider');
+$section_background = get_field_value($fields, 'section_background');
+$heading_color = get_field_value($fields, 'heading_color');
+$grid_columns_set = get_field_value($fields, 'grid_columns_set') ?: 4;
 ?>
 
-<div class="knowledge">
+<div class="knowledge" style="background-color: <?php echo $section_background ?: '#5a7153'; ?>;">
     <div class="custom-container">
         <?php
+        $color_style = $heading_color ? 'color: '.$heading_color :  '';
         if (!empty($title)) {
-            echo '<h4 class="knowledge__title">' . do_shortcode($title) . '</h4>';
+            echo '<h4 class="knowledge__title" style="'.$color_style.'">' . do_shortcode($title) . '</h4>';
         }
         ?>
         <?php if (!empty($slider)) : ?>
             <!--  Class for swiper slider => .js-knowledge-slider  -->
             <div class="swiper knowledge__slider">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper grid-<?php echo $grid_columns_set; ?>">
                     <?php foreach ($slider as $slide) : ?>
                         <div class="swiper-slide knowledge__slide">
                             <?php if (!empty($slide['description'])) : ?>

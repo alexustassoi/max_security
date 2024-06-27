@@ -66,6 +66,27 @@
                 "operator": "==",
                 "value": "acf\/block-small-hero"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-text-repeater"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-knowledge"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-text-content"
+            }
         ]
     ],
     "menu_order": 0,
@@ -77,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718956285
+    "modified": 1719501337
 }
