@@ -247,6 +247,24 @@ svg {
     background-color: transparent;
 }
 
+.primary-btn {
+    border: 1px solid #cc7510;
+    cursor: pointer;
+    font-family: Turbine, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    transition: background-color .3s, color .3s;
+    background-color: #CC7510;
+    color: #fff;
+    padding: 0 8px;
+
+    &:hover {
+        color: #2f3034;
+        background-color: transparent;
+    }
+}
+
 button {
     @extend %button;
 }
