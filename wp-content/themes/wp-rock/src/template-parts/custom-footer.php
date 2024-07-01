@@ -40,12 +40,6 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
 				<?php endif; ?>
             </div>
 
-			<?php if ( $phone && $phone_link ) : ?>
-                <div class="site-footer__phone-mobile">
-                    <a class="site-footer__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
-                </div>
-			<?php endif; ?>
-
             <div class="site-footer__locations">
 				<?php if ( $locations ) : ?>
 					<?php foreach ( $locations as $location ) : ?>
@@ -111,7 +105,13 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
                                                                               alt="social icon"></a>
 							<?php endforeach; ?>
                         </div>
-					<?php endif; ?>
+					<?php endif;
+
+					if ( $phone && $phone_link ) : ?>
+                        <div class="site-footer__phone-mobile">
+                            <a class="site-footer__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
                 <?php if ( $phone && $phone_link ) : ?>

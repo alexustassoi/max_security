@@ -137,6 +137,7 @@
             @media screen and (max-width: 480px) {
                 display: block;
                 margin-bottom: 24px;
+                font-weight: 700;
 
                 a {
                     font-size: 16px;
@@ -293,6 +294,10 @@
         gap: 8px;
         margin-bottom: 16px;
         justify-content: center;
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 0;
+        }
 
         a {
             display: flex;
