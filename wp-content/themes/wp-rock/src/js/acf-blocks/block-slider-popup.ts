@@ -9,7 +9,7 @@ const initBlockSliderPopup = () => {
 
         const checkTabletAndUpper = window.matchMedia('(min-width:991px)');
 
-        if (checkTabletAndUpper) {
+        if (checkTabletAndUpper.matches) {
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const sliderPopupBlock = new Swiper(sliderPopupSwiper1, {
                 slidesPerView: 1,

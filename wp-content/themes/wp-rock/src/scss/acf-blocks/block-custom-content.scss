@@ -1,6 +1,7 @@
 .custom-content {
     padding-top: 40px;
     padding-bottom: 20px;
+    clear: both;
 
     @media screen and (max-width: 1199px) {
         padding-top: 35px;
@@ -85,5 +86,13 @@
         }
 
         // font-weight: 900;
+    }
+
+    ul {
+        padding: 0 0 0 15px;
+
+        li {
+            list-style-type: disc;
+        }
     }
 }
