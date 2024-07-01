@@ -10843,7 +10843,7 @@ var initBlockSliderPopup = function initBlockSliderPopup() {
   if (sliderPopupSwiper1) {
     var slidesCount = (sliderPopupSwiper1 === null || sliderPopupSwiper1 === void 0 ? void 0 : sliderPopupSwiper1.dataset.slides_count) ? sliderPopupSwiper1 === null || sliderPopupSwiper1 === void 0 ? void 0 : sliderPopupSwiper1.dataset.slides_count : 5;
     var checkTabletAndUpper = window.matchMedia('(min-width:991px)');
-    if (!checkTabletAndUpper) {
+    if (checkTabletAndUpper.matches) {
       var sliderPopupBlock = new core(sliderPopupSwiper1, {
         slidesPerView: 1,
         spaceBetween: 20,
