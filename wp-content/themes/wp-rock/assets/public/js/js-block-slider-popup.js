@@ -10867,6 +10867,7 @@ var initBlockSliderPopup = function initBlockSliderPopup() {
     var sliderPopupsBtn = document.querySelectorAll('.js-open-slide-popup-link    ');
     var sliderPopup = new core(sliderPopupSwiper2, {
       slidesPerView: 1,
+      autoHeight: true,
       navigation: {
         nextEl: '.js-next-slider-popup',
         prevEl: '.js-prev-slider-popup'

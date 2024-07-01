@@ -105,8 +105,11 @@
 
         .swiper-wrapper {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(5, 1fr);
+
+            @media screen and (max-width: 990px) {
+                gap: 20px;
+            }
 
             @media screen and (max-width: 850px) {
                 grid-template-columns: repeat(2, 1fr);
@@ -350,6 +353,7 @@
                 padding-left: 12px;
                 position: relative;
                 margin-bottom: 8px;
+                color: #F3F0EC;
 
                 &:last-child {
                     margin-bottom: 0;

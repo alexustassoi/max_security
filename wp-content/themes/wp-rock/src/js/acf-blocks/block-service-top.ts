@@ -1,7 +1,6 @@
 export {};
 
 const initBlockExample = () => {
-    console.log('asd');
 
     const scrollBottom = document.querySelector('.js-scroll-bottom') as HTMLElement;
 

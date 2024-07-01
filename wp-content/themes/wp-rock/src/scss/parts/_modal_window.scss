@@ -267,9 +267,9 @@ html {
     &__wrapper-inner {
         position: absolute;
         z-index: 2;
-        top: 50%;
+        top: 0;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0);
     }
 
     &__btn-close {

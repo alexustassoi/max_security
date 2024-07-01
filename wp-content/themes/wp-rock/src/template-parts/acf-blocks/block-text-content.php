@@ -11,8 +11,10 @@ $fields = get_fields();
 $title = get_field_value($fields, 'title');
 $content = get_field_value($fields, 'content');
 $link = get_field_value($fields, 'link');
-$section_background = get_field_value($fields, 'section_background');
+$section_background = get_field_value($fields, 'colors_select');
+
 ?>
+
 <div class="text-content <?php echo esc_html($class_name); ?>"
     style="background-color: <?php echo $section_background ?: '#5a7153'; ?>;">
     <div class="custom-container text-content__custom-container">
