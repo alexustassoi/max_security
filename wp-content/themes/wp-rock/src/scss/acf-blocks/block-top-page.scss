@@ -1,4 +1,6 @@
 .top-page {
+    clear: both;
+
     &__wrap {
         position: relative;
         height: calc(100vh - 52px);

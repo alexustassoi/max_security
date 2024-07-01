@@ -462,7 +462,7 @@
                     "label": "Content",
                     "name": "content",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -498,5 +498,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719406763
+    "modified": 1719408521
 }
