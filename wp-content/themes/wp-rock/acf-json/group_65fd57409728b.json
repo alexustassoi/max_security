@@ -21,7 +21,7 @@
                 "#445C5A": "Dark-green",
                 "#685B4C": "Brown",
                 "#7E97A6": "Blue",
-                "": "Empty"
+                "#ffffff": "White"
             },
             "default_value": "#5A7153",
             "return_format": "value",
@@ -106,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719769718
+    "modified": 1719847263
 }
