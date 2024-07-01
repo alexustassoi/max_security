@@ -14,10 +14,11 @@ $fields         = get_fields();
 $is_url_youtube = get_field_value($fields, 'is_url_youtube');
 $video_url      = get_field_value($fields, 'video_url');
 $video_caption  = get_field_value($fields, 'video_caption');
+$section_background = get_field_value($fields, 'colors_select');
 
 ?>
 
-<div class="custom-video <?php echo $class_name; ?>">
+<div class="custom-video <?php echo $class_name; ?>" style="background-color: <?php echo $section_background ?: '#5a7153'; ?>;">
     <div class="custom-video__inner">
         <div class="custom-container">
             <div class="custom-video__video-wrap">

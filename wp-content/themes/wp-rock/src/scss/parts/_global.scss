@@ -250,6 +250,14 @@ svg {
 
 .primary-btn {
     @extend %primary-btn;
+
+    &.site-footer {
+        &__login {
+            @media screen and (max-width: 480px) {
+                font-size: 18px;
+            }
+        }
+    }
 }
 
 button {
@@ -603,6 +611,10 @@ input[type="email"] {
 
     @media screen and (max-width: 670px) {
         font-size: 16px;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 14px;
     }
 
     &:focus {

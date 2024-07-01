@@ -87,6 +87,13 @@
                 "operator": "==",
                 "value": "acf\/block-text-content"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-custom-video"
+            }
         ]
     ],
     "menu_order": 0,
@@ -98,5 +105,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719501337
+    "modified": 1719830233
 }

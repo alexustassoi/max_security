@@ -358,7 +358,12 @@ function get_post_block_video( $is_youtube = false, $video_url = '' ) {
     $html_content = '';
 
     if ( $is_youtube ) {
-        $html_content .= '<iframe class="single-blog__post-video-iframe" type="text/html" src="' . do_shortcode($video_url) . '" frameborder="0" allowfullscreen width="100%" height="100%"></iframe>';
+        $wp_rock = new WP_Rock();
+        $embed_youtube_url = $wp_rock->px_get_youtube_embed_url($video_url);
+
+        if (!$embed_youtube_url) return null;
+
+        $html_content .= '<iframe class="single-blog__post-video-iframe" type="text/html" src="' . do_shortcode($embed_youtube_url) . '" frameborder="0" allowfullscreen width="100%" height="100%"></iframe>';
     } else {
         $html_content .= '<video class="single-blog__post-video" preload="none" playsinline controls><source src="' . do_shortcode($video_url) . '.webm" type="video/webm"><source src="' . do_shortcode($video_url) . '.mp4" type="video/mp4"></video>';
     }
