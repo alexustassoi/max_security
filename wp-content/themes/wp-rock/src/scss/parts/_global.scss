@@ -683,6 +683,13 @@ input[type="email"] {
     }
 }
 
+.aligncenter {
+    clear: both;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    display: block;
+}
 
 .alignleft {
     float: left;
