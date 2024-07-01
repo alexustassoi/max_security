@@ -33,7 +33,7 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
                 </a>
 
 				<?php if ( $portal_log_in_link ) : ?>
-                    <a class="site-footer__login mobile white-text-hover primary-btn" target="<?php echo $portal_log_in_link[ 'target' ]; ?>"
+                    <a class="site-footer__login mobile white-text-hover transparent-orange-btn" target="<?php echo $portal_log_in_link[ 'target' ]; ?>"
                        href="<?php echo $portal_log_in_link[ 'url' ]; ?>">
 						<?php echo $portal_log_in_link[ 'title' ] ?>
                     </a>
@@ -71,7 +71,7 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
             <div class="site-footer__right">
                 <div>
 					<?php if ( $portal_log_in_link ) : ?>
-                        <a class="site-footer__login white-text-hover primary-btn" target="<?php echo $portal_log_in_link[ 'target' ]; ?>"
+                        <a class="site-footer__login white-text-hover transparent-orange-btn" target="<?php echo $portal_log_in_link[ 'target' ]; ?>"
                            href="<?php echo $portal_log_in_link[ 'url' ]; ?>">
 							<?php echo $portal_log_in_link[ 'title' ] ?>
                         </a>
@@ -80,8 +80,6 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
 					<?php if ( $social_links_title ) : ?>
                         <p class="site-footer__social-title"><?php echo $social_links_title; ?></p>
 					<?php endif; ?>
-
-
 
 					<?php if ( $lets_talk_link ) : ?>
                         <a class="site-footer__talk" target="<?php echo $lets_talk_link[ 'target' ]; ?>"
@@ -94,7 +92,7 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
 					<?php
 					if ( $subscribe_btn ) : ?>
                         <div class="site-footer__subscribe-btn-wrap">
-                            <a class="site-footer__subscribe-btn white-text-hover primary-btn js-open-popup-activator"
+                            <a class="site-footer__subscribe-btn white-text-hover transparent-orange-btn js-open-popup-activator"
                                href="<?php echo $subscribe_btn[ 'url' ] ?>"><?php echo $subscribe_btn[ 'title' ]; ?></a>
                         </div>
 					<?php endif; ?>

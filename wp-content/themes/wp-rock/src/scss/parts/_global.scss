@@ -261,6 +261,17 @@ svg {
     }
 }
 
+.transparent-orange-btn {
+    &.site-footer {
+        &__login,
+        &__subscribe-btn {
+            @media screen and (max-width: 480px) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
 button {
     @extend %button;
 }
