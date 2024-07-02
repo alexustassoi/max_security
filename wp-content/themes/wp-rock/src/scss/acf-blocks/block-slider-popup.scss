@@ -246,9 +246,13 @@
     &__slider-popup-inner {
         padding: 90px 0;
         position: relative;
+        top: 15%;
 
         @media screen and (max-width: 1200px) {
             padding: 48px 0 24px;
+        }
+        @media screen and (max-width: 1200px) {
+            top: 5%;
         }
     }
 
