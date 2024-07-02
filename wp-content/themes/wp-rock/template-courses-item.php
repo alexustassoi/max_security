@@ -16,6 +16,7 @@ foreach ($mirror_items as $item) :
     $image                             = get_field_value($item, 'image');
     $title                             = get_field_value($item, 'title');
     $description                       = get_field_value($item, 'description');
+    $btn_name                          = get_field_value($item, 'btn_name');
     ?>
     <div class="mirror-repeater__item js-mirror-item">
         <?php
@@ -34,7 +35,7 @@ foreach ($mirror_items as $item) :
             }
 
             if ($connected_course) {
-                echo ' <a href="#connected-course-popup" data-slide_index="' . $key . '" class="mirror-repeater__item-link primary-btn js-open-slide-course-popup-link js-open-popup-activator">' . __("Course overview", "wp-rock") . '</a>';
+                echo ' <a href="#connected-course-popup" data-slide_index="' . $key . '" class="mirror-repeater__item-link primary-btn js-open-slide-course-popup-link js-open-popup-activator">' . __($btn_name, "wp-rock") . '</a>';
             }
             ?>
         </div>

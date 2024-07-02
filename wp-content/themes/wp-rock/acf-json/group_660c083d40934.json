@@ -196,6 +196,27 @@
                     "parent_repeater": "field_660c085abcce9"
                 },
                 {
+                    "key": "field_668418fae9b0b",
+                    "label": "Button name",
+                    "name": "btn_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_660c085abcce9"
+                },
+                {
                     "key": "field_660c0888bccec",
                     "label": "Connected Course for modal window",
                     "name": "connected_course_for_modal_window",
@@ -240,5 +261,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719923826
+    "modified": 1719933241
 }
