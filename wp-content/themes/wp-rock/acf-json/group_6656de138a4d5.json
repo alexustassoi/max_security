@@ -3,6 +3,46 @@
     "title": "Block - Level repeater",
     "fields": [
         {
+            "key": "field_66840bde8d981",
+            "label": "Block padding-top",
+            "name": "block_pt",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_66840bf48d982",
+            "label": "Block padding-bottom",
+            "name": "block_pb",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_6656de13c31b6",
             "label": "Level repeater",
             "name": "level_repeater",
@@ -87,5 +127,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716969240
+    "modified": 1719929864
 }

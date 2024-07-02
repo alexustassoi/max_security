@@ -377,7 +377,6 @@ button {
 .orange-btn {
     @extend %button;
     appearance: none;
-    height: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -396,8 +395,25 @@ button {
 }
 
 .large-btn {
-    font-size: 48px;
+    font-size: 60px;
     line-height: 1.45;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 50px;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+    }
+}
+
+.medium-btn {
+    font-size: 24px;
+    line-height: 1.45;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 20px;
+    }
 
     @media screen and (max-width: 480px) {
         font-size: 16px;
@@ -405,7 +421,7 @@ button {
 }
 
 .small-btn {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.25;
 
     @media screen and (max-width: 480px) {

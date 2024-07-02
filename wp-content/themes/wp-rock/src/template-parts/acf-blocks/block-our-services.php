@@ -9,15 +9,21 @@
 
 $class_name     = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields         = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $title = get_field_value($fields, 'title');
 $services_repeater = get_field_value($fields, 'services_repeater');
 
 $section_background = get_field_value($fields, 'section_background');
 $heading_color = get_field_value($fields, 'heading_color');
 $grid_columns_set = get_field_value($fields, 'grid_columns_set') ?: 4;
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
 ?>
 
-<div class="our-services <?php echo $class_name; ?>"
+<div class="our-services <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name; ?>"
      style="background-color: <?php echo $section_background ?: '#5a7153'; ?>;">
     <div class="our-services__inner">
         <div class="custom-container">

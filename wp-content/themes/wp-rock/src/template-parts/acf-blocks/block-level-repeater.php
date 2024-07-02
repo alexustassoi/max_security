@@ -9,11 +9,16 @@
 
 $class_name     = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields         = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $level_repeater = get_field_value($fields, 'level_repeater');
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
 ?>
 
-<div class="level-repeater <?php echo $class_name; ?>">
+<div class="level-repeater <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name; ?>">
     <div class="level-repeater__inner">
         <div class="custom-container">
             <?php if($level_repeater): ?>

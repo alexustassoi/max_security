@@ -12,6 +12,8 @@ global $global_options;
 $class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
 $main_tags_colours = get_field_value($global_options, 'main_tags_colours');
 $fields            = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $tag_term_id       = get_field_value($fields, 'select_tag');
 $tag_term_color    = '';
 
@@ -24,9 +26,12 @@ if (is_array($main_tags_colours) && !empty($main_tags_colours)) :
         endif; ?>
     <?php endforeach;
 endif;
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 ?>
 
-<div class="select-tag <?php echo $class_name; ?>"
+<div class="select-tag <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name; ?>"
      style="background-color: <?php echo do_shortcode($tag_term_color); ?>">
     <div class="select-tag__inner">
         <div class="custom-container">

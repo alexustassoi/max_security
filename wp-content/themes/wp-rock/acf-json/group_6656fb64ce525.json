@@ -3,6 +3,46 @@
     "title": "Block - Custom video",
     "fields": [
         {
+            "key": "field_66840ac4091aa",
+            "label": "Block padding-top",
+            "name": "block_pt",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_66840adb091ab",
+            "label": "Block padding-bottom",
+            "name": "block_pb",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_6656fb65f8666",
             "label": "Is url youtube?",
             "name": "is_url_youtube",
@@ -78,5 +118,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716980318
+    "modified": 1719929581
 }

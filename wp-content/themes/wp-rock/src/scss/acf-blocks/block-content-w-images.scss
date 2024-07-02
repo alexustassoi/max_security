@@ -1,0 +1,29 @@
+.content-w-images {
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    &__inner {
+    }
+
+    &__content {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #17181A;
+            font-weight: 700;
+            line-height: 1.26;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #17181A;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+    }
+}
