@@ -9,6 +9,8 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields      = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $upper_description = get_field_value($fields, 'upper_description');
 $title = get_field_value($fields, 'title');
 $description = get_field_value($fields, 'description');
@@ -23,12 +25,14 @@ $bg_color = !empty($bg_color) ? $bg_color : '#5A7153';
 $blocks_color = !empty($blocks_color) ? $blocks_color : '#5A7153';
 $background_color = !empty($background_color) ? $background_color : '#ffffff';
 
-
 $white_text = $background_color !== '#ffffff' ? 'white-text' : '';
 $no_margin = empty($slides) ? 'mb0' : '';
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 ?>
 
-<div class="slider-popup <?php echo $class_name .' ' . $white_text; ?>" style="background-color: <?php echo $background_color; ?>;">
+<div class="slider-popup <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name .' ' . $white_text; ?>" style="background-color: <?php echo $background_color; ?>;">
 
     <div class="custom-container">
         <?php

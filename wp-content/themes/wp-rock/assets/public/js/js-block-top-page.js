@@ -11928,6 +11928,12 @@ var initBlockExample = function initBlockExample() {
         disableOnInteraction: false
       }
     });
+    topPageSwiper.addEventListener('mouseenter', function () {
+      swiper.autoplay.stop();
+    });
+    topPageSwiper.addEventListener('mouseleave', function () {
+      swiper.autoplay.start();
+    });
   }
 };
 var openRequestDemoPopup = function openRequestDemoPopup() {

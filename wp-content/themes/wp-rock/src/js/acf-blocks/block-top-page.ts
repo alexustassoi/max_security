@@ -48,6 +48,16 @@ const initBlockExample = () => {
                 disableOnInteraction: false,
             },
         });
+
+        // Stop autoscrolling when hovering over a slider.
+        topPageSwiper.addEventListener('mouseenter', () => {
+            swiper.autoplay.stop();
+        });
+
+        // Resume autoscrolling when the cursor leaves the slider.
+        topPageSwiper.addEventListener('mouseleave', () => {
+            swiper.autoplay.start();
+        });
     }
 };
 

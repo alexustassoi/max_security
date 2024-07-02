@@ -8,14 +8,19 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields     = get_fields();
+$block_pt   = get_field_value($fields, 'block_pt');
+$block_pb   = get_field_value($fields, 'block_pb');
 $title      = get_field_value($fields, 'title');
 $subtitle   = get_field_value($fields, 'subtitle');
 $history    = get_field_value($fields, 'history');
 $reviews    = get_field_value($fields, 'reviews');
 
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
 ?>
 
-<div class="journey  <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
+<div class="journey  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
     <div class="custom-container">
         <?php if ($title): ?>
             <h2 class="journey__title"><?php echo $title; ?></h2>
@@ -37,21 +42,21 @@ $reviews    = get_field_value($fields, 'reviews');
                     ?>
                     <div class="swiper-slide journey__history-item">
                         <div class="journey__history-item-image">
-                            <?php if($history_image): ?>
+                            <?php if ($history_image): ?>
                                 <img src="<?php echo $history_image; ?>" alt="history image">
                             <?php endif; ?>
                         </div>
 
                         <div class="journey__history-item-content">
-                            <?php if($history_year): ?>
+                            <?php if ($history_year): ?>
                                 <p class="journey__history-item-year"><?php echo $history_year; ?></p>
                             <?php endif; ?>
 
-                            <?php if($history_title): ?>
+                            <?php if ($history_title): ?>
                                 <p class="journey__history-item-title"><?php echo $history_title; ?></p>
                             <?php endif; ?>
 
-                            <?php if($history_content): ?>
+                            <?php if ($history_content): ?>
                                 <p class="journey__history-item-text"> <?php echo $history_content; ?></p>
                             <?php endif; ?>
                         </div>
@@ -77,21 +82,21 @@ $reviews    = get_field_value($fields, 'reviews');
                         <div class="swiper-slide reviews__slide">
                             <div class="reviews__slide-wrap">
                                 <div class="reviews__slide-image">
-                                    <?php if($item_image): ?>
+                                    <?php if ($item_image): ?>
                                         <img src="<?php echo $item_image; ?>" alt="review image">
                                     <?php endif; ?>
                                 </div>
 
                                 <div class="reviews__slide-content">
-                                    <?php if($item_review): ?>
+                                    <?php if ($item_review): ?>
                                         <p class="reviews__slide-review"><?php echo $item_review; ?></p>
                                     <?php endif; ?>
 
-                                    <?php if($item_name): ?>
+                                    <?php if ($item_name): ?>
                                         <p class="reviews__slide-name"><?php echo $item_name; ?></p>
                                     <?php endif; ?>
 
-                                    <?php if($item_position): ?>
+                                    <?php if ($item_position): ?>
                                         <p class="reviews__slide-position"><?php echo $item_position; ?></p>
                                     <?php endif; ?>
                                 </div>

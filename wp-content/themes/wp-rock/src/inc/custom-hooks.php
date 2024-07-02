@@ -434,3 +434,157 @@ function my_custom_rewrite_rules() {
     );
 }
 add_action('init', 'my_custom_rewrite_rules');
+
+
+/**
+ * Output CSS styles for heading tags in the WordPress theme.
+ * This function retrieves heading tags from theme options and generates CSS variables.
+ *
+ * @return void
+ */
+function wp_rock_typo_size_panel(): void
+{
+    global $global_options;
+
+    // set array of typography variables
+    $typo_vars = array(
+        'font-h1-m',
+        'font-h1-t',
+        'font-h1-d',
+        'font-h1-w',
+        'font-h2-m',
+        'font-h2-t',
+        'font-h2-d',
+        'font-h2-w',
+        'font-h3-m',
+        'font-h3-t',
+        'font-h3-d',
+        'font-h3-w',
+        'font-h4-m',
+        'font-h4-t',
+        'font-h4-d',
+        'font-h4-w',
+        'font-h5-m',
+        'font-h5-t',
+        'font-h5-d',
+        'font-h5-w',
+        'font-h6-m',
+        'font-h6-t',
+        'font-h6-d',
+        'font-h6-w',
+        'font-body1-m',
+        'font-body1-t',
+        'font-body1-d',
+        'font-body1-w',
+        'font-body2-m',
+        'font-body2-t',
+        'font-body2-d',
+        'font-body2-w',
+        'font-body3-m',
+        'font-body3-t',
+        'font-body3-d',
+        'font-body3-w',
+        'font-body4-m',
+        'font-body4-t',
+        'font-body4-d',
+        'font-body4-w',
+    );
+
+    // Initialize an empty array to store CSS variable declarations
+    $heading_variable = array();
+
+    // Generate CSS variable declarations for each main tag color
+    if ( !empty($typo_vars) ) {
+        foreach ($typo_vars as $typo_var) {
+            $typo_size          = get_field_value( $global_options, $typo_var );
+            $heading_name_lower = strtolower($typo_var);
+            $heading_variable[] = '--typo-size-' . $heading_name_lower . ': ' . $typo_size . ';';
+        }
+    }
+
+    // Output CSS styles with the generated CSS variables
+    ?>
+    <style>
+        :root {
+        <?php echo implode('', $heading_variable); ?>
+        }
+    </style>
+    <?php
+}
+add_action('wp_head', 'wp_rock_typo_size_panel');
+
+
+/**
+ * Output CSS styles for block spaces in the WordPress theme.
+ * This function retrieves block spaces from theme options and generates CSS variables.
+ *
+ * @return void
+ */
+function wp_rock_block_space_panel(): void
+{
+    global $global_options;
+
+    // set array of block space variables
+    $block_space_vars = array(
+        'block-pt-m',
+        'block-pb-m',
+        'block-pt-t',
+        'block-pb-t',
+        'block-pt-d',
+        'block-pb-d',
+    );
+
+    // Initialize an empty array to store CSS variable declarations
+    $space_variable = array();
+
+    // Generate CSS variable declarations for each main tag color
+    if ( !empty($block_space_vars) ) {
+        foreach ($block_space_vars as $block_space_var) {
+            $block_space_size   = get_field_value( $global_options, $block_space_var );
+            $block_space_name_lower = strtolower($block_space_var);
+            $space_variable[] = '--typo-space-' . $block_space_name_lower . ': ' . $block_space_size . ';';
+        }
+    }
+
+    // Output CSS styles with the generated CSS variables
+    ?>
+    <style>
+        :root {
+        <?php echo implode('', $space_variable); ?>
+        }
+    </style>
+    <?php
+}
+add_action('wp_head', 'wp_rock_block_space_panel');
+
+
+/**
+ * Generates a CSS class for block padding based on given parameters.
+ *
+ * This function takes a boolean flag and a key, then returns a corresponding
+ * CSS class name for adding padding to the top or bottom of a block.
+ *
+ * @param bool   $is_block_space Boolean flag indicating whether to add the padding class.
+ * @param string $key            A key that specifies which padding class to generate.
+ *                               Accepted values are 'block_pt' for padding-top and 'block_pb' for padding-bottom.
+ *
+ * @return string Returns the corresponding CSS class name if $is_block_space is true; otherwise, returns an empty string.
+ */
+function wp_rock_block_space_class($is_block_space, $key) : string
+{
+    $block_space_class = '';
+
+    // Set Block space class.
+    switch ( $key ) {
+        case 'block_pt': // Block padding-top
+            $block_space_class = $is_block_space ? 'block-pt' : '';
+            break;
+        case 'block_pb': // Block padding-bottom
+            $block_space_class = $is_block_space ? 'block-pb' : '';
+            break;
+        default:
+            return $block_space_class;
+    }
+    return $block_space_class;
+}
+
