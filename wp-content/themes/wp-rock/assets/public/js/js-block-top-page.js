@@ -11918,11 +11918,14 @@ var initBlockExample = function initBlockExample() {
   if (topPageSwiper) {
     var swiper = new core(topPageSwiper, {
       spaceBetween: 55,
-      speed: 3000,
+      speed: 10000,
       loop: true,
       slidesPerView: 'auto',
       modules: [Autoplay],
-      autoplay: true
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      }
     });
     topPageSwiper.addEventListener('mouseenter', function () {
       swiper.autoplay.stop();

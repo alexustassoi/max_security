@@ -38,12 +38,14 @@ const initBlockExample = () => {
     if (topPageSwiper) {
         const swiper = new Swiper(topPageSwiper, {
             spaceBetween: 55,
-            // freeMode: true,
-            speed: 3000,
+            speed: 10000,
             loop: true,
             slidesPerView: 'auto',
             modules: [Autoplay],
-            autoplay: true
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
         });
 
         // Stop autoscrolling when hovering over a slider.
