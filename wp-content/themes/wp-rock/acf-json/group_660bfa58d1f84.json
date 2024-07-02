@@ -3,6 +3,46 @@
     "title": "Block - Small hero",
     "fields": [
         {
+            "key": "field_6683f33c58abf",
+            "label": "Block padding-top",
+            "name": "block_pt",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6683f35358ac0",
+            "label": "Block padding-bottom",
+            "name": "block_pb",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_660bfa58d94cb",
             "label": "Title",
             "name": "title",
@@ -66,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712061075
+    "modified": 1719923555
 }

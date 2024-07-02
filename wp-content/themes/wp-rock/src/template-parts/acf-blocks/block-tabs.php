@@ -9,11 +9,18 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $title = get_field_value($fields, 'title');
 $description = get_field_value($fields, 'description');
 $tabs_repeater = get_field_value($fields, 'tabs_repeater');
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
 ?>
-<div class="tabs">
+
+<div class="tabs <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; ?>">
     <div class="custom-container">
         <?php
         if ($title || $description) { ?>

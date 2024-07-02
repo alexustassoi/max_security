@@ -17,10 +17,9 @@ $reviews    = get_field_value($fields, 'reviews');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
-
 ?>
 
-<div class="journey  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
+<div class="journey  <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
     <div class="custom-container">
         <?php if ($title): ?>
             <h2 class="journey__title"><?php echo $title; ?></h2>

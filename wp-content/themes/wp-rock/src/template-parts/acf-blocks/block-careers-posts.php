@@ -9,8 +9,13 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields      = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $title = get_field_value($fields, 'title');
 $container_title = get_field_value($fields, 'container_title');
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
 $args = array(
     'post_type'      => 'careers',
@@ -22,7 +27,7 @@ $args = array(
 
 $query = new WP_Query($args);
 ?>
-<div class="careers-posts">
+<div class="careers-posts <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';  ?>">
 	<div class="custom-container">
 		<?php
 		if (!empty($title)) {

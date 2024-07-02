@@ -3,6 +3,46 @@
     "title": "Block - FAQ",
     "fields": [
         {
+            "key": "field_6683edab3b1ca",
+            "label": "Block padding-top",
+            "name": "block_pt",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6683edd13b1cb",
+            "label": "Block padding-bottom",
+            "name": "block_pb",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_6663007c5eaa8",
             "label": "Select tag",
             "name": "select_tag",
@@ -130,5 +170,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717765084
+    "modified": 1719922159
 }

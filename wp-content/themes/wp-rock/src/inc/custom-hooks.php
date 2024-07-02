@@ -577,10 +577,10 @@ function wp_rock_block_space_class($is_block_space, $key) : string
     // Set Block space class.
     switch ( $key ) {
         case 'block_pt': // Block padding-top
-            $block_space_class = $is_block_space ? 'block-pt' : '';
+            $block_space_class = $is_block_space ? 'block-pt' : 'block-pt-0';
             break;
         case 'block_pb': // Block padding-bottom
-            $block_space_class = $is_block_space ? 'block-pb' : '';
+            $block_space_class = $is_block_space ? 'block-pb' : 'block-pb-0';
             break;
         default:
             return $block_space_class;

@@ -3,6 +3,46 @@
     "title": "Block - Benefts",
     "fields": [
         {
+            "key": "field_6683df8723251",
+            "label": "Block padding-top",
+            "name": "block_pt",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6683df9b23252",
+            "label": "Block padding-bottom",
+            "name": "block_pb",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_65e6e5f9d4384",
             "label": "Title",
             "name": "title",
@@ -107,5 +147,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709632836
+    "modified": 1719918519
 }

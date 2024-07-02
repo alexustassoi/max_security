@@ -76,27 +76,37 @@ body {
         }
     }
 
-    .block-pt {
-        padding-top: calc(var(--typo-space-block-pt-d) * 1px);
+    //.block-pt-0 {
+    //    padding-top: 0 !important;
+    //}
+    //
+    //.block-pb-0 {
+    //    padding-bottom: 0 !important;
+    //}
 
-        @media screen and (max-width: 1199px) {
-            padding-top: calc(var(--typo-space-block-pt-t) * 1px);
+    .wrapper {
+        .block-pt {
+            padding-top: calc(var(--typo-space-block-pt-d) * 1px);
+
+            @media screen and (max-width: 1199px) {
+                padding-top: calc(var(--typo-space-block-pt-t) * 1px);
+            }
+
+            @media screen and (max-width: 480px) {
+                padding-top: calc(var(--typo-space-block-pt-m) * 1px);
+            }
         }
 
-        @media screen and (max-width: 480px) {
-            padding-top: calc(var(--typo-space-block-pt-m) * 1px);
-        }
-    }
+        .block-pb {
+            padding-bottom: calc(var(--typo-space-block-pb-d) * 1px);
 
-    .block-pb {
-        padding-bottom: calc(var(--typo-space-block-pb-d) * 1px);
+            @media screen and (max-width: 1199px) {
+                padding-bottom: calc(var(--typo-space-block-pb-t) * 1px);
+            }
 
-        @media screen and (max-width: 1199px) {
-            padding-bottom: calc(var(--typo-space-block-pb-t) * 1px);
-        }
-
-        @media screen and (max-width: 480px) {
-            padding-bottom: calc(var(--typo-space-block-pb-m) * 1px);
+            @media screen and (max-width: 480px) {
+                padding-bottom: calc(var(--typo-space-block-pb-m) * 1px);
+            }
         }
     }
 }

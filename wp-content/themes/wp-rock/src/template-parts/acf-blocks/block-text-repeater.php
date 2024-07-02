@@ -9,13 +9,19 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $title = get_field_value($fields, 'title');
 $text_repeater = get_field_value($fields, 'text_repeater');
 $bg_color = get_field_value($fields, 'colors_select');
 $bg_color = !empty($bg_color) ? $bg_color : '#5A7153';
 
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
 ?>
-<div class="text-repeater" style="background-color: <?php echo $bg_color; ?>">
+
+<div class="text-repeater <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';  ?>" style="background-color: <?php echo $bg_color; ?>">
     <div class="custom-container">
         <?php
         if (!empty($title)) {

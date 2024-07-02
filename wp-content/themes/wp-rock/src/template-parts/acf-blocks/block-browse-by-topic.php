@@ -12,6 +12,8 @@ $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $post_id = isset($tax_settings['post_id']) ? $tax_settings['post_id'] : get_the_ID();
 
 $fields = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $title = get_field_value($fields, 'title');
 $text_first_category_filter = get_field_value($fields, 'text_first_category_filter');
 $load_more_btn_text = get_field_value($fields, 'load_more_btn_text');
@@ -20,9 +22,11 @@ $posts_per_page = get_option( 'posts_per_page' );
 
 $target_category = filter_input( INPUT_GET, 'selected_category', FILTER_SANITIZE_STRING );
 
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 ?>
 
-<div class="browse-topic <?php echo $class_name; ?>">
+<div class="browse-topic <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name; ?>">
     <div class="browse-topic__inner">
         <div class="custom-container">
             <div class="browse-topic__content">

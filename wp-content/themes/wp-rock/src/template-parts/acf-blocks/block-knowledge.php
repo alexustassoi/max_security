@@ -8,14 +8,19 @@
  */
 
 $fields = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $title = get_field_value($fields, 'title');
 $slider = get_field_value($fields, 'slider');
-$section_background = get_field_value($fields, 'section_background');
+$section_background = get_field_value($fields, 'colors_select');
 $heading_color = get_field_value($fields, 'heading_color');
 $grid_columns_set = get_field_value($fields, 'grid_columns_set') ?: 4;
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 ?>
 
-<div class="knowledge" style="background-color: <?php echo $section_background ?: '#5a7153'; ?>;">
+<div class="knowledge <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; ?>" style="background-color: <?php echo $section_background ?: '#5a7153'; ?>;">
     <div class="custom-container">
         <?php
         $color_style = $heading_color ? 'color: '.$heading_color :  '';

@@ -8,21 +8,23 @@
  */
 global $global_options;
 
-$fields          = get_fields();
-$colors_select   = get_field_value($fields, 'colors_select');
-$mirror_items    = get_field_value($fields, 'mirror_items');
+$fields        = get_fields();
+$block_pt      = get_field_value($fields, 'block_pt');
+$block_pb      = get_field_value($fields, 'block_pb');
+$colors_select = get_field_value($fields, 'colors_select');
+$mirror_items  = get_field_value($fields, 'mirror_items');
 
 $bg_color    = get_field_value($fields, 'bg_color');
-$popup_title    = get_field_value($fields, 'popup_title');
-$popup_logo     = get_field_value($fields, 'popup_logo');
+$popup_title = get_field_value($fields, 'popup_title');
+$popup_logo  = get_field_value($fields, 'popup_logo');
 
 $popup_title = !empty($popup_title) ? do_shortcode($popup_title) : __('MAX ACADEMY', 'wp-rock');
 
-$tag_term_id       = get_field_value($fields, 'select_tag');
+$tag_term_id = get_field_value($fields, 'select_tag');
 
 $colors_select      = !empty($colors_select) ? $colors_select : '#7E97A6';
 $slider_courses_ids = array();
-$posts_per_page = get_option('posts_per_page');
+$posts_per_page     = get_option('posts_per_page');
 
 $args = array(
     'post_type' => 'courses',
@@ -30,11 +32,14 @@ $args = array(
     'posts_per_page' => $posts_per_page,
 );
 
-$query = new WP_Query($args);
+$query       = new WP_Query($args);
 $total_posts = $query->found_posts;
 
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
 ?>
-<div class="mirror-repeater" style="background-color: <?php echo $bg_color ? do_shortcode($bg_color) : '#FFF'; ?>;">
+<div class="mirror-repeater <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; ?>" style="background-color: <?php echo $bg_color ? do_shortcode($bg_color) : '#FFF'; ?>;">
     <div class="custom-container mirror-repeater__custom-container">
         <?php
         $courses_query = [
@@ -44,7 +49,7 @@ $total_posts = $query->found_posts;
         ?>
         <div class="mirror-repeater__container js-mirror-repeater">
             <?php
-            include( locate_template( '/template-courses-item.php', false, false, $courses_query) );
+            include(locate_template('/template-courses-item.php', false, false, $courses_query));
             ?>
         </div>
     </div>
@@ -158,7 +163,7 @@ $total_posts = $query->found_posts;
                                 }
 
                                 echo $lets_talk_btn
-                                    ? '<a href="' . do_shortcode( $lets_talk_btn["url"] ) . '" class="course-popup__curiculum-items-link">' . do_shortcode( $lets_talk_btn["title"] ) . '</a>'
+                                    ? '<a href="' . do_shortcode($lets_talk_btn["url"]) . '" class="course-popup__curiculum-items-link">' . do_shortcode($lets_talk_btn["title"]) . '</a>'
                                     : '';
                                 ?>
                             </div>

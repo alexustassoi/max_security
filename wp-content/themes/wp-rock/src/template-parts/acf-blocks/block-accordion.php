@@ -9,12 +9,19 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields = get_fields();
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $title = get_field_value($fields, 'title');
 $accordion = get_field_value($fields, 'accordion');
 $form_title = get_field_value($fields, 'form_title');
 $form = get_field_value($fields, 'form');
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
 ?>
-<div class="accordion">
+
+<div class="accordion <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; ?>">
     <div class="custom-container">
         <?php if (!empty($title)) {
             echo '<h3 class="accordion__title">' . do_shortcode($title) . '</h3>';
