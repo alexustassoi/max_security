@@ -1,0 +1,88 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "useRootPaddingAwareAlignments": true,
+        "appearanceTools": true,
+        "color": {
+            "defaultPalette": true,
+            "palette": [
+                {
+                    "name": "White",
+                    "color": "#FFFFFF",
+                    "slug": "white"
+                },
+                {
+                    "name": "Family office services",
+                    "color": "#685b4c",
+                    "slug": "family-office-services"
+                },
+                {
+                    "name": "Intelligence",
+                    "color": "#5a7153",
+                    "slug": "intelligence"
+                },
+                {
+                    "name": "Max academy",
+                    "color": "#7e97a6",
+                    "slug": "max-academy"
+                },
+                {
+                    "name": "Protection",
+                    "color": "#445c5a",
+                    "slug": "protection"
+                }
+            ]
+        },
+        "spacing": {
+            "units": [
+                "%",
+                "px",
+                "em",
+                "rem",
+                "vh",
+                "vw",
+                "dvh"
+            ],
+            "customSpacingSize": true,
+            "spacingScale": {
+                "operator": "*",
+                "increment": 0,
+                "steps": 0,
+                "mediumStep": 0,
+                "unit": "px"
+            },
+            "spacingSizes": [
+                {
+                    "name": "Small",
+                    "slug": "space-block-m",
+                    "size": "var(--typo-space-block-pb-m)"
+                },
+                {
+                    "name": "Medium",
+                    "slug": "space-block-t",
+                    "size": "var(--typo-space-block-pb-t)"
+                },
+                {
+                    "name": "Desktop",
+                    "slug": "space-block-d",
+                    "size": "var(--typo-space-block-pb-d)"
+                }
+            ]
+        },
+        "custom": {
+            "lineHeight": {
+                "initial": 1,
+                "small": 1.2,
+                "medium": 1.4,
+                "large": 1.6
+            },
+            "color": {
+                "family-office-services": "#685b4c",
+                "intelligence": "#5a7153",
+                "max-academy": "#7e97a6",
+                "protection": "#445c5a"
+            }
+        }
+    }
+}

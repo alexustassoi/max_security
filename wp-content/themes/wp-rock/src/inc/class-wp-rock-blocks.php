@@ -123,7 +123,7 @@ class WP_Rock_Blocks {
      *
      * @var string[]
      */
-    protected array $allowed = array( 'core/freeform', 'core/columns' );
+    protected array $allowed = array( 'core/freeform', 'core/columns', 'core/heading' );
 
 
     /**
