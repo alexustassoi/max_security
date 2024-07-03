@@ -1086,3 +1086,12 @@ body #pojo-a11y-toolbar {
 body #hubspot-messages-iframe-container {
     bottom: 80px !important;
 }
+
+
+.wrap-columns-block {
+    .wp-block-column {
+        .text-content {
+            background-color: transparent;
+        }
+    }
+}

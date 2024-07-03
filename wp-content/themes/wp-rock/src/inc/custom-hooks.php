@@ -375,8 +375,14 @@ function get_post_block_video( $is_youtube = false, $video_url = '' ) {
 function wrap_columns_block_in_container( $block_content, $block ) {
     // Check if the block is the 'core/columns' block
     if ( 'core/columns' === $block['blockName'] ) {
+
+
+        $bg_color = $block['attrs']['backgroundColor'];
+
+        //var_dump('wrap_columns_block_in_container block', $block);
+
         // Wrap the block content in a div with the class 'custom-container'
-        return '<div class="custom-container">' . $block_content . '</div>';
+        return '<div class="wrap-columns-block" style="background-color: var(--wp--preset--color--'.$bg_color.');"><div class="custom-container">' . $block_content . '</div></div>';
     }
 
     // Return the block content unchanged for all other blocks
