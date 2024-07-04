@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_668409cf93299",
-            "label": "Block padding-top",
+            "label": "Enable block padding-top?",
             "name": "block_pt",
             "aria-label": "",
             "type": "true_false",
@@ -24,7 +24,7 @@
         },
         {
             "key": "field_668409ea9329a",
-            "label": "Block padding-bottom",
+            "label": "Enable block padding-bottom?",
             "name": "block_pb",
             "aria-label": "",
             "type": "true_false",
@@ -202,5 +202,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719929346
+    "modified": 1719992914
 }
