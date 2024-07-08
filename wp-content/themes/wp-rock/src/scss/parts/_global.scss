@@ -570,6 +570,10 @@ p {
     &:last-child {
         margin-bottom: 0;
     }
+
+    &:empty {
+        display: none;
+    }
 }
 
 iframe {
