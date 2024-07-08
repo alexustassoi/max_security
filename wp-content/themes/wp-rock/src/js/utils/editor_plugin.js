@@ -61,7 +61,7 @@
                     'Please provide a link for the button'
                 );
                 const btnSize = prompt(
-                    'Please specify the button size (large-btn, small-btn)'
+                    'Please specify the button size (large-btn, medium-btn, small-btn)'
                 );
                 const isBtnPopup = prompt(
                     'Please indicate whether the button will cause a popup? ( yes/no )'

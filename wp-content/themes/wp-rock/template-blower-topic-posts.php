@@ -46,7 +46,7 @@ if ( $query->have_posts() ) {
         $thumbnail_image = get_the_post_thumbnail( $post_id );
         $post_title = get_the_title();
         ?>
-        <div class="browse-topic__card <?php echo ($card_tag_slug) ?: ''; echo ' ' .($resource_category->slug ?: ''); echo $is_slider ? ' swiper-slide' : ''; ?>">
+        <div class="browse-topic__card <?php echo ($card_tag_slug) ?: ''; echo ' ' .(isset($resource_category->slug) ?: ''); echo $is_slider ? ' swiper-slide' : ''; ?>">
             <div class="browse-topic__card-top">
                 <?php
                 if ($card_icon_url && $card_tag_name) { ?>

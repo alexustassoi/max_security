@@ -8,6 +8,7 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields     = get_fields();
+$hide_block = get_field_value($fields, 'hide_block');
 $block_pt   = get_field_value($fields, 'block_pt');
 $block_pb   = get_field_value($fields, 'block_pb');
 $title      = get_field_value($fields, 'title');
@@ -17,16 +18,17 @@ $reviews    = get_field_value($fields, 'reviews');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
-?>
+
+if (!$hide_block) : ?>
 
 <div class="journey  <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
     <div class="custom-container">
         <?php if ($title): ?>
-            <h2 class="journey__title"><?php echo $title; ?></h2>
+            <div class="journey__title"><?php echo $title; ?></div>
         <?php endif; ?>
 
         <?php if ($subtitle): ?>
-            <h5 class="journey__subtitle"><?php echo $subtitle; ?></h5>
+            <div class="journey__subtitle"><?php echo $subtitle; ?></div>
         <?php endif; ?>
     </div>
 
@@ -88,15 +90,15 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
                                 <div class="reviews__slide-content">
                                     <?php if ($item_review): ?>
-                                        <p class="reviews__slide-review"><?php echo $item_review; ?></p>
+                                        <div class="reviews__slide-review"><?php echo $item_review; ?></div>
                                     <?php endif; ?>
 
                                     <?php if ($item_name): ?>
-                                        <p class="reviews__slide-name"><?php echo $item_name; ?></p>
+                                        <div class="reviews__slide-name"><?php echo $item_name; ?></div>
                                     <?php endif; ?>
 
                                     <?php if ($item_position): ?>
-                                        <p class="reviews__slide-position"><?php echo $item_position; ?></p>
+                                        <div class="reviews__slide-position"><?php echo $item_position; ?></div>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -129,3 +131,5 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
     </div>
 
 </div>
+
+<?php endif;
