@@ -320,9 +320,9 @@
     &__talk,
     &__subscribe-btn {
         margin: 0;
-        max-width: 130px;
+        max-width: 160px;
         width: 100%;
-        text-wrap: wrap;
+        // text-wrap: wrap;
 
         @media screen and (max-width: 480px) {
             font-size: 18px;
