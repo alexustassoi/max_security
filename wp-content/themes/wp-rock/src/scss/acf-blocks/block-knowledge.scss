@@ -27,6 +27,15 @@
             font-size: 24px;
             margin-bottom: 32px;
         }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            text-align: center;
+        }
     }
 
     &__slide {
@@ -64,6 +73,16 @@
         @media screen and (max-width: 470px) {
             font-size: 12px;
         }
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            text-align: start;
+        }
     }
 
     &__slider {
@@ -74,11 +93,12 @@
 
             &.grid-2 {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 42px calc((100% - (238px * 2))  / 2);
+                gap: 42px calc((100% - (238px * 2)) / 2);
             }
+
             &.grid-3 {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 42px calc((100% - (238px * 3))  / 3);
+                gap: 42px calc((100% - (238px * 3)) / 3);
             }
 
             @media screen and (max-width: 1199px) {

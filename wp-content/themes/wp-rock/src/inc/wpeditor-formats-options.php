@@ -29,6 +29,21 @@ function my_wpeditor_formats_options( $settings ) {
             'classes' => 'body-type-1',
         ),
         array(
+            'title' => 'body 2',
+            'block' => 'p',
+            'classes' => 'body-type-2',
+        ),
+        array(
+            'title' => 'body 3',
+            'block' => 'p',
+            'classes' => 'body-type-3',
+        ),
+        array(
+            'title' => 'body 4',
+            'block' => 'p',
+            'classes' => 'body-type-4',
+        ),
+        array(
             'title' => 'H1 with H3 styling',
             'block' => 'h1',
             'classes' => 'h1-like-h3',

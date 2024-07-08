@@ -8,6 +8,9 @@
 
 $class_name = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields      = get_fields();
+$hide_block = get_field_value($fields, 'hide_block');
+$block_pt = get_field_value($fields, 'block_pt');
+$block_pb = get_field_value($fields, 'block_pb');
 $title = get_field_value( $fields, 'title' );
 $banner_is_small = get_field_value( $fields, 'banner_is_small' );
 $banner_is_video = get_field_value( $fields, 'banner_is_video' );
@@ -15,6 +18,11 @@ $background_image = get_field_value( $fields, 'background_image' );
 $video_link = get_field_value( $fields, 'video_link' );
 $icon = get_field_value( $fields, 'icon' );
 $subtitle = get_field_value( $fields, 'subtitle' );
+
+$pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
+$pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
+if (!$hide_block) :
 ?>
 
 <div class="service-top js-top-block <?php echo $banner_is_small ? 'banner-small ' : ''; echo (!$icon) ? 'icon-is-missing' : ''; echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>" style="background-image: url(<?php echo !$banner_is_video ? $background_image : 'none'; ?>)">
@@ -23,17 +31,17 @@ $subtitle = get_field_value( $fields, 'subtitle' );
             <source src="<?php echo $video_link; ?>" type="video/mp4">
         </video>
     <?php endif; ?>
-    <div class="service-top__custom-container custom-container">
-        <h1 class="service-top__title <?php echo (!$icon) ? 'icon-is-missing' : ''; ?>">
+    <div class="service-top__custom-container custom-container <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; ?>">
+        <div class="service-top__title <?php echo (!$icon) ? 'icon-is-missing' : ''; ?>">
             <?php if($icon): ?>
                 <img src="<?php echo $icon ?>" alt="service icon">
             <?php endif; ?>
 
             <?php echo $title; ?>
-        </h1>
+        </div>
 
         <?php if($subtitle): ?>
-            <h3 class="service-top__subtitle <?php echo (!$icon) ? 'icon-is-missing' : ''; ?>"><?php echo $subtitle; ?></h3>
+            <div class="service-top__subtitle <?php echo (!$icon) ? 'icon-is-missing' : ''; ?>"><?php echo $subtitle; ?></div>
         <?php endif; ?>
     </div>
 
@@ -51,3 +59,5 @@ $subtitle = get_field_value( $fields, 'subtitle' );
         </svg>
     </button>
 </div>
+
+<?php endif;
