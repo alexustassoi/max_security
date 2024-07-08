@@ -7,13 +7,15 @@
  * @since   4.4.0
  */
 
-$class_name = isset($args['className']) ? ' ' . $args['className'] : '';
-$fields     = get_fields();
-$hide_block = get_field_value($fields, 'hide_block');
-$block_pt   = get_field_value($fields, 'block_pt');
-$block_pb   = get_field_value($fields, 'block_pb');
-$title      = get_field_value($fields, 'title');
-$slides     = get_field_value($fields, 'slides');
+$class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
+$fields            = get_fields();
+$hide_block        = get_field_value($fields, 'hide_block');
+$block_pt          = get_field_value($fields, 'block_pt');
+$space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : '';
+$block_pb          = get_field_value($fields, 'block_pb');
+$space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
+$title             = get_field_value($fields, 'title');
+$slides            = get_field_value($fields, 'slides');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
@@ -21,7 +23,7 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 if (!$hide_block) :?>
     <div class="courses  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : '';
     echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';
-    echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
+    echo esc_html($class_name); echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' ';?>" id="<?php echo $args['id']; ?>">
         <div class="custom-container">
             <?php if ($title) : ?>
                 <div class="courses__title"><?php echo $title; ?></div>

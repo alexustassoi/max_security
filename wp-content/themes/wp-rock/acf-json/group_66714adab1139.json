@@ -3,46 +3,6 @@
     "title": "Block - Bullets list",
     "fields": [
         {
-            "key": "field_6683f74fff251",
-            "label": "Enable block padding-top?",
-            "name": "block_pt",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_6683f762ff252",
-            "label": "Enable block padding-bottom?",
-            "name": "block_pb",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_6683f72c68549",
             "label": "Background color",
             "name": "bg_color",
@@ -139,5 +99,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719992209
+    "modified": 1720448000
 }

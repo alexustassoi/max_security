@@ -3,46 +3,6 @@
     "title": "Block - Select tag",
     "fields": [
         {
-            "key": "field_668409290e90c",
-            "label": "Enable block padding-top?",
-            "name": "block_pt",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_668409440e90d",
-            "label": "Enable block padding-bottom?",
-            "name": "block_pb",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_6656ed966acba",
             "label": "Select tag",
             "name": "select_tag",
@@ -84,5 +44,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719993064
+    "modified": 1720447554
 }

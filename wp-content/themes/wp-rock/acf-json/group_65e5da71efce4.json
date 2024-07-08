@@ -3,46 +3,6 @@
     "title": "Block - Services",
     "fields": [
         {
-            "key": "field_6683de8c2943c",
-            "label": "Enable block padding-top?",
-            "name": "block_pt",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_6683dea32943d",
-            "label": "Enable block padding-bottom?",
-            "name": "block_pb",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_667c1095d32c6",
             "label": "Title content",
             "name": "title_content",
@@ -538,5 +498,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719993114
+    "modified": 1720447495
 }
