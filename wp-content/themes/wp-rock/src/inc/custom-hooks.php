@@ -532,12 +532,24 @@ function wp_rock_block_space_panel(): void
 
     // set array of block space variables
     $block_space_vars = array(
-        'block-pt-m',
-        'block-pb-m',
-        'block-pt-t',
-        'block-pb-t',
-        'block-pt-d',
-        'block-pb-d',
+        'block-pt-small-d',
+        'block-pt-small-t',
+        'block-pt-small-m',
+        'block-pb-small-d',
+        'block-pb-small-t',
+        'block-pb-small-m',
+        'block-pt-medium-d',
+        'block-pt-medium-t',
+        'block-pt-medium-m',
+        'block-pb-medium-d',
+        'block-pb-medium-t',
+        'block-pb-medium-m',
+        'block-pt-large-d',
+        'block-pt-large-t',
+        'block-pt-large-m',
+        'block-pb-large-d',
+        'block-pb-large-t',
+        'block-pb-large-m',
     );
 
     // Initialize an empty array to store CSS variable declarations

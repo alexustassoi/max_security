@@ -1168,7 +1168,7 @@
         },
         {
             "key": "field_6683ae3bb6079",
-            "label": "Mobile space",
+            "label": "Small Space",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -1176,7 +1176,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -1186,15 +1186,59 @@
         },
         {
             "key": "field_6683ae8cb607a",
-            "label": "Padding-top",
-            "name": "block-pt-m",
+            "label": "Desktop padding-top",
+            "name": "block-pt-small-d",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c09e1f538f",
+            "label": "Tablet padding-top",
+            "name": "block-pt-small-t",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0a89d0638",
+            "label": "Mobile padding-top",
+            "name": "block-pt-small-m",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1208,15 +1252,59 @@
         },
         {
             "key": "field_6683af6ab607b",
-            "label": "Padding-bottom",
-            "name": "block-pb-m",
+            "label": "Desktop padding-bottom",
+            "name": "block-pb-small-d",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0a01f5390",
+            "label": "Tablet padding-bottom",
+            "name": "block-pb-small-t",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0ac2d0639",
+            "label": "Mobile padding-bottom",
+            "name": "block-pb-small-m",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1230,7 +1318,7 @@
         },
         {
             "key": "field_6683af7eb607c",
-            "label": "Tablet space",
+            "label": "Medium Space",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -1238,7 +1326,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -1248,15 +1336,15 @@
         },
         {
             "key": "field_6683af9bb607d",
-            "label": "Padding-top",
-            "name": "block-pt-t",
+            "label": "Desktop padding-top",
+            "name": "block-pt-medium-d",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1269,16 +1357,104 @@
             "append": "px"
         },
         {
-            "key": "field_6683afb1b607e",
-            "label": "Padding-bottom",
-            "name": "block-pb-t",
+            "key": "field_668c0b68a1c97",
+            "label": "Tablet padding-top",
+            "name": "block-pt-medium-t",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0b7aa1c98",
+            "label": "Mobile padding-top",
+            "name": "block-pt-medium-m",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0b8ba1c99",
+            "label": "Desktop padding-bottom",
+            "name": "block-pb-medium-d",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0baba1c9a",
+            "label": "Tablet padding-bottom",
+            "name": "block-pb-medium-t",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0bbaa1c9b",
+            "label": "Mobile padding-bottom",
+            "name": "block-pb-medium-m",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1292,7 +1468,7 @@
         },
         {
             "key": "field_6683afc4b607f",
-            "label": "Desktop space",
+            "label": "Large space",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -1300,7 +1476,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -1309,16 +1485,16 @@
             "esc_html": 0
         },
         {
-            "key": "field_6683afe4b6080",
-            "label": "Padding-top",
-            "name": "block-pt-d",
+            "key": "field_668c0bcda1c9c",
+            "label": "Desktop padding-top",
+            "name": "block-pt-large-d",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1331,16 +1507,104 @@
             "append": "px"
         },
         {
-            "key": "field_6683aff1b6081",
-            "label": "Padding-bottom",
-            "name": "block-pb-d",
+            "key": "field_668c0c0ba1c9d",
+            "label": "Tablet padding-top",
+            "name": "block-pt-large-t",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0c19a1c9e",
+            "label": "Mobile padding-top",
+            "name": "block-pt-large-m",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0c28a1c9f",
+            "label": "Desktop padding-bottom",
+            "name": "block-pb-large-d",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0c3ba1ca0",
+            "label": "Tablet padding-bottom",
+            "name": "block-pb-large-t",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_668c0c47a1ca1",
+            "label": "Mobile padding-bottom",
+            "name": "block-pb-large-m",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1371,5 +1635,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719930179
+    "modified": 1720454948
 }
