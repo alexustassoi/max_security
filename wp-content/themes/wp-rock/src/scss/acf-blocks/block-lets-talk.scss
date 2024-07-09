@@ -2,64 +2,64 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 315px 0;
+    padding: 315px 0 !important;
     text-align: center;
     position: relative;
     z-index: 1;
     clear: both;
 
     @media screen and (max-width: 1750px) {
-        padding-top: 280px;
-        padding-bottom: 280px;
+        padding-top: 280px !important;
+        padding-bottom: 280px !important;
     }
 
     @media screen and (max-width: 1650px) {
-        padding-top: 255px;
-        padding-bottom: 255px;
+        padding-top: 255px !important;
+        padding-bottom: 255px !important;
     }
 
     @media screen and (max-width: 1470px) {
-        padding-top: 215px;
-        padding-bottom: 215px;
+        padding-top: 215px !important;
+        padding-bottom: 215px !important;
     }
 
     @media screen and (max-width: 1280px) {
-        padding-top: 185px;
-        padding-bottom: 185px;
+        padding-top: 185px !important;
+        padding-bottom: 185px !important;
     }
 
     @media screen and (max-width: 1199px) {
-        padding-bottom: 170px;
-        padding-top: 170px;
+        padding-bottom: 170px !important;
+        padding-top: 170px !important;
     }
 
     @media screen and (max-width: 1030px) {
-        padding-bottom: 140px;
-        padding-top: 140px;
+        padding-bottom: 140px !important;
+        padding-top: 140px !important;
     }
 
     @media screen and (max-width: 992px) {
-        padding: 135px 0;
+        padding: 135px 0 !important;
     }
 
     @media screen and (max-width: 992px) {
-        padding: 110px 0;
+        padding: 110px 0 !important;
     }
 
     @media screen and (max-width: 768px) {
-        padding: 100px 0;
+        padding: 100px 0 !important;
     }
 
     @media screen and (max-width: 670px) {
-        padding: 75px 0;
+        padding: 75px 0 !important;
     }
 
     @media screen and (max-width: 480px) {
-        padding: 70px 0;
+        padding: 70px 0 !important;
     }
 
     @media screen and (max-width: 375px) {
-        padding: 50px 0;
+        padding: 50px 0 !important;
     }
 
     &:before {
