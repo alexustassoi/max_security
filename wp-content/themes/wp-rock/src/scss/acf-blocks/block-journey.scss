@@ -34,10 +34,6 @@
         @media screen and (max-width: 480px) {
             margin-bottom: 40px;
         }
-
-        .swiper-wrapper {
-            align-items: center;
-        }
     }
 
     &__title {
@@ -127,6 +123,7 @@
             gap: 20px;
             position: relative;
             width: 342px;
+            height: auto;
             min-height: 200px;
             flex-shrink: 0;
 
@@ -257,6 +254,16 @@
                     font-size: 14px;
                 }
             }
+        }
+    }
+
+    &__history-item-text {
+        & + p {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
