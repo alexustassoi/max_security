@@ -496,6 +496,19 @@ function wp_rock_typo_size_panel(): void
         'font-body4-w',
     );
 
+    // set array of typography font weight variables.
+    $typo_font_weight_vars = array(
+        'Thin'        => 100,
+        'Light'       => 300,
+        'Extra Light' => 350,
+        'Regular'     => 400,
+        'Medium'      => 500,
+        'SemiBold'    => 600,
+        'Bold'        => 700,
+        'ExtraBold'   => 800,
+        'Black'       => 900
+    );
+
     // Initialize an empty array to store CSS variable declarations
     $heading_variable = array();
 
@@ -504,6 +517,13 @@ function wp_rock_typo_size_panel(): void
         foreach ($typo_vars as $typo_var) {
             $typo_size          = get_field_value( $global_options, $typo_var );
             $heading_name_lower = strtolower($typo_var);
+
+            if (strpos($typo_var, '-w') !== false) {
+                $typo_size = isset($typo_font_weight_vars[$typo_size])
+                    ? $typo_font_weight_vars[$typo_size]
+                    : $typo_size;
+            }
+
             $heading_variable[] = '--typo-size-' . $heading_name_lower . ': ' . $typo_size . ';';
         }
     }
