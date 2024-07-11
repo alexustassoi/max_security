@@ -56,7 +56,7 @@ if (!$hide_block) : ?>
 
                             <div class="journey__history-item-content">
                                 <?php if ($history_year): ?>
-                                    <p class="journey__history-item-year"><?php echo $history_year; ?></p>
+                                    <div class="journey__history-item-year"><?php echo $history_year; ?></div>
                                 <?php endif; ?>
 
                                 <?php if ($history_title): ?>
