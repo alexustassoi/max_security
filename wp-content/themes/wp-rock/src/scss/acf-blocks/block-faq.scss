@@ -63,6 +63,24 @@
         @media screen and (max-width: 480px) {
             line-height: 1.12;
         }
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            text-align: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
     }
 
     &__tag-icon-wrap {
@@ -208,6 +226,15 @@
         @media screen and (max-width: 480px) {
             font-weight: 400;
             line-height: 1.42;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
         }
     }
 

@@ -12,8 +12,10 @@ global $global_options;
 $class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
 $main_tags_colours = get_field_value($global_options, 'main_tags_colours');
 $fields            = get_fields();
-$block_pt = get_field_value($fields, 'block_pt');
-$block_pb = get_field_value($fields, 'block_pb');
+$block_pt          = get_field_value($fields, 'block_pt');
+$space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : '';
+$block_pb          = get_field_value($fields, 'block_pb');
+$space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
 $tag_term_id       = get_field_value($fields, 'select_tag');
 $tag_term_color    = '';
 
@@ -31,7 +33,7 @@ $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 ?>
 
-<div class="select-tag <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name; ?>"
+<div class="select-tag <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name; echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>"
      style="background-color: <?php echo do_shortcode($tag_term_color); ?>">
     <div class="select-tag__inner">
         <div class="custom-container">

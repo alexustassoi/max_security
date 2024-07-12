@@ -72,6 +72,15 @@
         @media screen and (max-width: 1024px) {
             margin-bottom: 16px;
         }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
     }
 
     &__description {
@@ -84,6 +93,26 @@
         font-style: normal;
         font-weight: 400;
         line-height: 1.4;
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-align: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
 
         &.title-is-empty {
             max-width: unset;

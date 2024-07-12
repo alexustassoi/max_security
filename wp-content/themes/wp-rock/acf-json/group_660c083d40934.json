@@ -50,7 +50,7 @@
             "label": "Popup title",
             "name": "popup_title",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -60,10 +60,10 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_660c085abcce9",
@@ -118,7 +118,7 @@
                     "label": "Title",
                     "name": "title",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -128,10 +128,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_660c085abcce9"
                 },
                 {
@@ -139,7 +139,7 @@
                     "label": "Description",
                     "name": "description",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -149,10 +149,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_660c085abcce9"
                 },
                 {
@@ -160,7 +160,7 @@
                     "label": "Button name",
                     "name": "btn_name",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -170,10 +170,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_660c085abcce9"
                 },
                 {
@@ -221,5 +221,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720447637
+    "modified": 1720779050
 }

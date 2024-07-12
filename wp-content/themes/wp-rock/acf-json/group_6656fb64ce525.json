@@ -44,7 +44,7 @@
             "label": "Video caption",
             "name": "video_caption",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -54,10 +54,10 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -78,5 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720447839
+    "modified": 1720796001
 }

@@ -86,14 +86,14 @@ body {
         }
     }
 
-    .wrapper {  
-        //.block-pt-0 {
-        //    padding-top: 0;
-        //}
-        //
-        //.block-pb-0 {
-        //    padding-bottom: 0;
-        //}
+    #wrapper.wrapper {
+        .block-pt-0 {
+            padding-top: 0;
+        }
+
+        .block-pb-0 {
+            padding-bottom: 0;
+        }
 
         .space-top-type-small {
             padding-top: calc(var(--typo-space-block-pt-small-d) * 1px);
@@ -696,7 +696,8 @@ h6, .h1-like-h6, .h2-like-h6, .h3-like-h6, .h4-like-h6, .p-like-h6 {
 
 body {
 
-    .wrapper {
+    #wrapper.wrapper,
+    .popup {
         h1, h2, h3, h4, h5, h6 {
             line-height: 1.26;
         }
@@ -883,6 +884,13 @@ body {
     }
 }
 
+.custom-fade {
+    &.is-visible {
+        animation: 2s forwards linear ease-in-out;
+        animation-name: custom-fade;
+    }
+}
+
 @keyframes from-right {
     from {
         opacity: 0;
@@ -904,6 +912,16 @@ body {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes custom-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 

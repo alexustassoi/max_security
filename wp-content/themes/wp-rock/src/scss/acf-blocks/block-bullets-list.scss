@@ -14,6 +14,24 @@
     &__title {
         color: #000;
         font-weight: 700;
+        margin-bottom: 20px;
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
     }
 
     &__columns {

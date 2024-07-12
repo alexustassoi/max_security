@@ -23,7 +23,7 @@
                     "label": "Title",
                     "name": "title",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -33,17 +33,17 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_661f76584f158",
                     "label": "Description",
                     "name": "description",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -53,17 +53,17 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_661f77514f159",
                     "label": "Target Audience title:",
                     "name": "target_audience_title",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -73,17 +73,17 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_661f77f64f15a",
                     "label": "Target Audience items:",
                     "name": "target_audience_items",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "use {{icon}} in text if you want to add \"checked\" icon",
                     "required": 0,
                     "conditional_logic": 0,
@@ -93,17 +93,17 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "br"
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_661f78404f15b",
                     "label": "Curiculum title:",
                     "name": "curiculum_title",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -113,17 +113,17 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_661f78564f15c",
                     "label": "Curiculum items:",
                     "name": "curiculum_items:",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -133,17 +133,17 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "br"
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_661f78794f15d",
                     "label": "\"Certifcate of Completion\" text",
                     "name": "certifcate_of_completion_text",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -153,10 +153,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_66718aa8ebf17",
@@ -195,5 +195,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718717160
+    "modified": 1720780532
 }

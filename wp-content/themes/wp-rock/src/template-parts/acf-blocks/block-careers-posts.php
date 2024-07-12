@@ -7,12 +7,14 @@
  * @since   4.4.0
  */
 
-$class_name = isset($args['className']) ? ' ' . $args['className'] : '';
-$fields      = get_fields();
-$block_pt = get_field_value($fields, 'block_pt');
-$block_pb = get_field_value($fields, 'block_pb');
-$title = get_field_value($fields, 'title');
-$container_title = get_field_value($fields, 'container_title');
+$class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
+$fields            = get_fields();
+$block_pt          = get_field_value($fields, 'block_pt');
+$space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : '';
+$block_pb          = get_field_value($fields, 'block_pb');
+$space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
+$title             = get_field_value($fields, 'title');
+$container_title   = get_field_value($fields, 'container_title');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
@@ -27,14 +29,14 @@ $args = array(
 
 $query = new WP_Query($args);
 ?>
-<div class="careers-posts <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';  ?>">
+<div class="careers-posts <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' ';  ?>">
 	<div class="custom-container">
 		<?php
 		if (!empty($title)) {
-			echo '<h2 class="careers-posts__title">' . esc_html($title) . '</h2>';
+			echo '<div class="careers-posts__title">' . do_shortcode($title) . '</div>';
 		}
 		if (!empty($container_title)) {
-			echo '<h4 class="careers-posts__container-title">' . esc_html($container_title) . '</h4>';
+			echo '<div class="careers-posts__container-title">' . do_shortcode($container_title) . '</div>';
 		}
 		?>
 		<?php if (!empty($query->have_posts())) : ?>

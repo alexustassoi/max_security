@@ -209,6 +209,15 @@
             }
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
+
         img {
             @media screen and (max-width: 570px) {
                 width: 56px;
@@ -300,6 +309,26 @@
                 line-height: 1.4;
                 max-width: 270px;
             }
+        }
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-align: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
         }
     }
 

@@ -7,32 +7,34 @@
  * @since   4.4.0
  */
 
-$class_name = isset($args['className']) ? ' ' . $args['className'] : '';
-$fields = get_fields();
-$block_pt = get_field_value($fields, 'block_pt');
-$block_pb = get_field_value($fields, 'block_pb');
-$title = get_field_value($fields, 'title');
-$subtitle = get_field_value($fields, 'subtitle');
-$text = get_field_value($fields, 'text');
-$services = get_field_value($fields, 'services');
-$bottom_content = get_field_value($fields, 'bottom_content');
+$class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
+$fields            = get_fields();
+$block_pt          = get_field_value($fields, 'block_pt');
+$space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : '';
+$block_pb          = get_field_value($fields, 'block_pb');
+$space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
+$title             = get_field_value($fields, 'title');
+$subtitle          = get_field_value($fields, 'subtitle');
+$text              = get_field_value($fields, 'text');
+$services          = get_field_value($fields, 'services');
+$bottom_content    = get_field_value($fields, 'bottom_content');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 ?>
 
-<div class="services js-top-block <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
+<div class="services js-top-block <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo esc_html($class_name); echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" id="<?php echo $args['id']; ?>">
     <div class="custom-container">
         <?php if ($title) : ?>
-            <h2 class="services__title"><?php echo $title; ?></h2>
+            <div class="services__title"><?php echo $title; ?></div>
         <?php endif; ?>
 
         <?php if ($subtitle) : ?>
-            <h3 class="services__subtitle"><?php echo $subtitle; ?></h3>
+            <div class="services__subtitle"><?php echo $subtitle; ?></div>
         <?php endif; ?>
 
         <?php if ($text) : ?>
-            <h5 class="services__text"><?php echo $text; ?></h5>
+            <div class="services__text"><?php echo $text; ?></div>
         <?php endif; ?>
     </div>
 
@@ -64,11 +66,11 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
                                 </figure>
 
                                 <?php if ($title) : ?>
-                                    <p class="services__item-title"><?php echo $title; ?></p>
+                                    <div class="services__item-title"><?php echo $title; ?></div>
                                 <?php endif; ?>
 
                                 <?php if ($description) : ?>
-                                    <p class="services__item-desc"><?php echo $description; ?></p>
+                                    <div class="services__item-desc"><?php echo $description; ?></div>
                                 <?php endif; ?>
 
                                 <button class="services__item-button">
@@ -90,10 +92,10 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
             ?>
             <div class="services__bottom">
                 <?php if ($bottom_title) : ?>
-                    <p class="services__bottom-title animated-element from-left"><?php echo $bottom_title; ?></p>
+                    <div class="services__bottom-title animated-element from-left"><?php echo $bottom_title; ?></div>
                 <?php endif; ?>
                 <?php if ($bottom_content) : ?>
-                    <p class="services__bottom-content animated-element from-right"><?php echo $bottom_content; ?></p>
+                    <div class="services__bottom-content animated-element from-right"><?php echo $bottom_content; ?></div>
                 <?php endif; ?>
             </div>
         <?php endif; ?>

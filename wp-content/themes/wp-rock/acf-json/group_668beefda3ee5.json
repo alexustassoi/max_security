@@ -149,6 +149,16 @@
                 "param": "block",
                 "operator": "!=",
                 "value": "acf\/block-lets-talk"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/block-top-page"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/block-about-us"
             }
         ]
     ],
@@ -161,5 +171,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720531100
+    "modified": 1720776711
 }

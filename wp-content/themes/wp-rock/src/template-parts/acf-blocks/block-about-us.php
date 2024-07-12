@@ -34,7 +34,7 @@ $content = get_field_value($fields, 'content');
         <div class="about-us__content">
 
             <?php if ($title) : ?>
-                <h3 class="about-us__title"><?php echo $title; ?></h3>
+                <div class="about-us__title"><?php echo $title; ?></div>
             <?php endif; ?>
 
             <div class="about-us__content-wrap">

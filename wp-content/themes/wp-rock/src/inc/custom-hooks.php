@@ -377,7 +377,7 @@ function wrap_columns_block_in_container( $block_content, $block ) {
     if ( 'core/columns' === $block['blockName'] ) {
 
 
-        $bg_color = $block['attrs']['backgroundColor'];
+        $bg_color = isset($block['attrs']['backgroundColor']) ?: '';
 
         //var_dump('wrap_columns_block_in_container block', $block);
 

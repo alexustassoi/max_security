@@ -6,10 +6,12 @@
  * @since   4.4.0
  */
 
-$class_name = isset($args['className']) ? ' ' . $args['className'] : '';
-$fields     = get_fields();
-$block_pt = get_field_value($fields, 'block_pt');
-$block_pb = get_field_value($fields, 'block_pb');
+$class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
+$fields            = get_fields();
+$block_pt          = get_field_value($fields, 'block_pt');
+$space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : '';
+$block_pb          = get_field_value($fields, 'block_pb');
+$space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
 $title      = get_field_value($fields, 'title');
 $experts    = get_field_value($fields, 'experts');
 $bg_color = get_field_value($fields, 'colors_select');
@@ -22,14 +24,14 @@ $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 ?>
 
-<div class="experts <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>"
+<div class="experts <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo esc_html($class_name); echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" id="<?php echo $args['id']; ?>"
     style="
     --var-color : <?php echo $bg_color; ?>;
     --var-color-mobile : <?php echo $bg_color_mobile; ?>
     ">
     <div class="custom-container">
         <?php if ($title): ?>
-            <h2 class="experts__title"><?php echo $title; ?></h2>
+            <div class="experts__title"><?php echo $title; ?></div>
         <?php endif; ?>
 
         <?php if ($experts): ?>
@@ -54,10 +56,10 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
                                     <?php endif; ?>
                                 </div>
                                 <?php if($name): ?>
-                                    <p class="experts__slide-name"><?php echo $name; ?></p>
+                                    <div class="experts__slide-name"><?php echo $name; ?></div>
                                 <?php endif; ?>
                                 <?php if($position): ?>
-                                    <p class="experts__slide-position"><?php echo $position; ?></p>
+                                    <div class="experts__slide-position"><?php echo $position; ?></div>
                                 <?php endif; ?>
 
                             </div>
@@ -69,20 +71,20 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
                                     <?php endif; ?>
 
                                     <?php if($direction): ?>
-                                        <span class="experts__slide-direction"><?php echo $direction ?></span>
+                                        <div class="experts__slide-direction"><?php echo $direction ?></div>
                                     <?php endif; ?>
                                 </div>
 
                                 <?php if($description): ?>
-                                    <h5 class="experts__slide-description"><?php echo $description; ?></h5>
+                                    <div class="experts__slide-description"><?php echo $description; ?></div>
                                 <?php endif; ?>
 
                                 <?php if($date): ?>
-                                    <p class="experts__slide-date"><?php echo $date; ?></p>
+                                    <div class="experts__slide-date"><?php echo $date; ?></div>
                                 <?php endif; ?>
 
                                 <?php if($work_example): ?>
-                                    <p class="experts__slide-example"><?php echo $work_example; ?></p>
+                                    <div class="experts__slide-example"><?php echo $work_example; ?></div>
                                 <?php endif; ?>
 
 

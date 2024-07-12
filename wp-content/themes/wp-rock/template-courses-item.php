@@ -27,11 +27,11 @@ foreach ($mirror_items as $item) :
         <div class="mirror-repeater__item-inner">
             <?php
             if (!empty($title)) {
-                echo '<h4 class="mirror-repeater__item-title">' . do_shortcode($title) . '</h4>';
+                echo '<div class="mirror-repeater__item-title">' . do_shortcode($title) . '</div>';
             }
 
             if (!empty($description)) {
-                echo '<p class="mirror-repeater__item-description">' . do_shortcode($description) . '</p>';
+                echo '<div class="mirror-repeater__item-description">' . do_shortcode($description) . '</div>';
             }
 
             if ($connected_course) {

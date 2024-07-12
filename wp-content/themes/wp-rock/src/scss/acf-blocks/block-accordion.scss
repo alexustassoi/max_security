@@ -33,6 +33,15 @@
         @media screen and (max-width: 470px) {
             font-size: 24px;
         }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
     }
 
     &__wrapper {
@@ -89,7 +98,8 @@
             pointer-events: none;
         }
 
-        span {
+        span,
+        p {
             color: var(--Black-80, #2F3034);
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
@@ -105,6 +115,15 @@
             @media screen and (max-width: 670px) {
                 font-size: 16px;
             }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
         }
     }
 
@@ -211,6 +230,15 @@
 
         @media screen and (max-width: 470px) {
             font-size: 24px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
         }
     }
 

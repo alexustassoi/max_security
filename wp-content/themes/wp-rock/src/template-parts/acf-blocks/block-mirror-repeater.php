@@ -8,11 +8,13 @@
  */
 global $global_options;
 
-$fields        = get_fields();
-$block_pt      = get_field_value($fields, 'block_pt');
-$block_pb      = get_field_value($fields, 'block_pb');
-$colors_select = get_field_value($fields, 'colors_select');
-$mirror_items  = get_field_value($fields, 'mirror_items');
+$fields            = get_fields();
+$block_pt          = get_field_value($fields, 'block_pt');
+$space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : '';
+$block_pb          = get_field_value($fields, 'block_pb');
+$space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
+$colors_select     = get_field_value($fields, 'colors_select');
+$mirror_items      = get_field_value($fields, 'mirror_items');
 
 $bg_color    = get_field_value($fields, 'bg_color');
 $popup_title = get_field_value($fields, 'popup_title');
@@ -39,7 +41,7 @@ $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
 ?>
-<div class="mirror-repeater <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; ?>" style="background-color: <?php echo $bg_color ? do_shortcode($bg_color) : '#FFF'; ?>;">
+<div class="mirror-repeater <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" style="background-color: <?php echo $bg_color ? do_shortcode($bg_color) : '#FFF'; ?>;">
     <div class="custom-container mirror-repeater__custom-container">
         <?php
         $courses_query = [
@@ -69,9 +71,9 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
                             : '';
                         ?>
                         <span class="line"></span>
-                        <span class="name">
+                        <div class="name">
                             <?php echo $popup_title; ?>
-                        </span>
+                        </div>
                     </div>
 
                     <button class="course-popup__close js-popup-close">
@@ -157,9 +159,9 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
                                 </div>
                                 <?php
                                 if (!empty($certifcate_of_completion_text)) {
-                                    echo '  <p class="course-popup__certifcate-of-completion">
-                                                        ' . esc_html($certifcate_of_completion_text) . '
-                                                    </p>';
+                                    echo '  <div class="course-popup__certifcate-of-completion">
+                                                        ' . do_shortcode($certifcate_of_completion_text) . '
+                                                    </div>';
                                 }
 
                                 echo $lets_talk_btn

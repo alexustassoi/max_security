@@ -14,12 +14,23 @@
 		line-height: 1.32;
 		text-align: center;
 		color: #F3F0EC;
+        margin-bottom: 10px;
+
 		@media screen and (max-width: 991px) {
 			font-size: 40px;
 		}
 		@media screen and (max-width: 767px) {
 			font-size: 26px;
 		}
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
 	}
 
 	&__inner {

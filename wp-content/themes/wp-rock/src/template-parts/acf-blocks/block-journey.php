@@ -60,11 +60,11 @@ if (!$hide_block) : ?>
                                 <?php endif; ?>
 
                                 <?php if ($history_title): ?>
-                                    <p class="journey__history-item-title"><?php echo $history_title; ?></p>
+                                    <div class="journey__history-item-title"><?php echo $history_title; ?></div>
                                 <?php endif; ?>
 
                                 <?php if ($history_content): ?>
-                                    <p class="journey__history-item-text"> <?php echo $history_content; ?></p>
+                                    <div class="journey__history-item-text"> <?php echo $history_content; ?></div>
                                 <?php endif; ?>
                             </div>
                             <div class="journey__history-btn-next"></div>

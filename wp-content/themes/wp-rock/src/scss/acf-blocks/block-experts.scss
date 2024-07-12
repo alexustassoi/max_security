@@ -5,7 +5,6 @@
 
     &__title {
         color: #f3f0ec;
-        text-align: left;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
         font-size: 48px;
@@ -41,6 +40,26 @@
             font-size: 24px;
             line-height: 1.16;
             margin-bottom: 32px;
+        }
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-align: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
         }
     }
 
@@ -174,6 +193,32 @@
             }
         }
 
+        &-name,
+        &-position,
+        &-direction,
+        &-date,
+        &-example {
+            p {
+                color: inherit;
+                font-feature-settings: inherit;
+                font-family: inherit;
+                font-size: inherit;
+                font-style: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+                text-align: inherit;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: 0;
+            }
+        }
+
         &-name {
             color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
@@ -285,6 +330,23 @@
                 font-size: 24px;
                 line-height: 1.16;
                 max-width: 310px;
+            }
+
+            p {
+                color: inherit;
+                font-feature-settings: inherit;
+                font-family: inherit;
+                font-style: inherit;
+                text-align: inherit;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: 0;
             }
         }
 

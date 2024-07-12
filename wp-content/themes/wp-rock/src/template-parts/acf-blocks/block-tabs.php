@@ -7,27 +7,29 @@
  * @since   4.4.0
  */
 
-$class_name = isset($args['className']) ? ' ' . $args['className'] : '';
-$fields = get_fields();
-$block_pt = get_field_value($fields, 'block_pt');
-$block_pb = get_field_value($fields, 'block_pb');
-$title = get_field_value($fields, 'title');
-$description = get_field_value($fields, 'description');
-$tabs_repeater = get_field_value($fields, 'tabs_repeater');
+$class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
+$fields            = get_fields();
+$block_pt          = get_field_value($fields, 'block_pt');
+$space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : '';
+$block_pb          = get_field_value($fields, 'block_pb');
+$space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
+$title             = get_field_value($fields, 'title');
+$description       = get_field_value($fields, 'description');
+$tabs_repeater     = get_field_value($fields, 'tabs_repeater');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
 ?>
 
-<div class="tabs <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; ?>">
+<div class="tabs <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>">
     <div class="custom-container">
         <?php
         if ($title || $description) { ?>
             <div class="tabs__top-wrapper">
                 <?php
                 if (!empty($title)) {
-                    echo '<h2 class="tabs__title animated-element from-left">' . do_shortcode($title) . '</h2>';
+                    echo '<div class="tabs__title animated-element from-left">' . do_shortcode($title) . '</div>';
                 }
                 if (!empty($description)) {
                     echo '<div class="tabs__description animated-element from-right">' . do_shortcode($description) . '</div>';
@@ -57,7 +59,7 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 </svg>
                                     <div class="tabs__tab-inner">
                                         '.$img.'
-                                        <span class="title">' . do_shortcode($tab_link['title']) . '</span>
+                                        <div class="title">' . do_shortcode($tab_link['title']) . '</div>
                                     </div>
                                 </a>';
                             }

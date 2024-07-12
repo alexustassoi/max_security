@@ -118,6 +118,27 @@
         font-family: Turbine, sans-serif;
         font-style: normal;
         font-weight: 700;
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-align: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+            color: inherit;
+        }
     }
 
     &__icon-text {

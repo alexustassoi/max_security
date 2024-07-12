@@ -121,13 +121,23 @@
             margin-bottom: 4px;
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+            pointer-events: none;
+        }
+
         svg {
             position: relative;
-            top: 8px;
+            top: 5px;
             flex-shrink: 0;
 
-            @media screen and (max-width: 992px) {
-                top: 5px;
+            @media screen and (max-width: 1199px) {
+                top: 3px;
             }
 
             @media screen and (max-width: 768px) {
@@ -135,7 +145,6 @@
             }
 
             @media screen and (max-width: 480px) {
-                top: 0;
                 width: 19px;
                 height: 19px;
             }
@@ -201,6 +210,14 @@
         overflow: hidden;
         transition: 0.3s;
 
+        @media screen and (max-width: 1370px) {
+            padding-right: 100px;
+        }
+
+        @media screen and (max-width: 991px) {
+            padding-right: 50px;
+        }
+
         @media screen and (max-width: 768px) {
             font-size: 14px;
             padding-right: 0;
@@ -214,6 +231,17 @@
         @media screen and (max-width: 480px) {
             font-size: 14px;
             line-height: 1.2;
+        }
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-align: inherit;
         }
     }
 }

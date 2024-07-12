@@ -6,10 +6,12 @@
  * @since   4.4.0
  */
 
-$class_name = isset($args['className']) ? ' ' . $args['className'] : '';
-$fields     = get_fields();
-$block_pt = get_field_value($fields, 'block_pt');
-$block_pb = get_field_value($fields, 'block_pb');
+$class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
+$fields            = get_fields();
+$block_pt          = get_field_value($fields, 'block_pt');
+$space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : '';
+$block_pb          = get_field_value($fields, 'block_pb');
+$space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
 $title      = get_field_value($fields, 'title');
 $subtitle   = get_field_value($fields, 'subtitle');
 $clients    = get_field_value($fields, 'clients');
@@ -18,14 +20,14 @@ $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 ?>
 
-<div class="clients  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';  echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
+<div class="clients  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';  echo esc_html($class_name); echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" id="<?php echo $args['id']; ?>">
     <div class="custom-container">
         <?php if ($title): ?>
-            <h2 class="clients__title"><?php echo $title; ?></h2>
+            <div class="clients__title"><?php echo $title; ?></div>
         <?php endif; ?>
 
         <?php if ($subtitle): ?>
-            <h5 class="clients__subtitle"><?php echo $subtitle; ?></h5>
+            <div class="clients__subtitle"><?php echo $subtitle; ?></div>
         <?php endif; ?>
     </div>
 

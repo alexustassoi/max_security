@@ -30,7 +30,7 @@
             "label": "Faq title",
             "name": "faq_title",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -40,10 +40,10 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_666300b75d70d",
@@ -72,7 +72,7 @@
                     "label": "Title",
                     "name": "title",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -82,10 +82,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_666300b75d70d"
                 },
                 {
@@ -130,5 +130,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720447785
+    "modified": 1720777845
 }

@@ -16,6 +16,18 @@
         padding: 24px 0;
     }
 
+    &__title,
+    &__subtitle {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
+    }
+
     &__title {
         color:#17181A;
         font-feature-settings: 'clig' off, 'liga' off;

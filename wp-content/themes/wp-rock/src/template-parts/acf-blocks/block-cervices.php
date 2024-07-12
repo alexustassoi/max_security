@@ -19,15 +19,15 @@ $bottom_content = get_field_value( $fields, 'bottom_content' );
 <div class="services js-top-block <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">
     <div class="custom-container">
         <?php if($title): ?>
-            <h2 class="services__title"><?php echo $title; ?></h2>
+            <div class="services__title"><?php echo $title; ?></div>
         <?php endif; ?>
 
         <?php if($subtitle): ?>
-            <h3 class="services__subtitle"><?php echo $subtitle; ?></h3>
+            <div class="services__subtitle"><?php echo $subtitle; ?></div>
         <?php endif; ?>
 
         <?php if($text): ?>
-            <h5 class="services__text"><?php echo $text; ?></h5>
+            <div class="services__text"><?php echo $text; ?></div>
         <?php endif; ?>
 
         <?php if($services): ?>
