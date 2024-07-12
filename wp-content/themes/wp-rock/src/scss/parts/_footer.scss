@@ -319,13 +319,12 @@
     &__talk,
     &__subscribe-btn {
         margin: 0;
-        max-width: 160px;
+        max-width: 185px;
         width: 100%;
-        // text-wrap: wrap;
 
         @media screen and (max-width: 480px) {
             font-size: 18px;
-            max-width: 140px;
+            max-width: 170px;
         }
     }
 

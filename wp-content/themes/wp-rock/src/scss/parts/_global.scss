@@ -382,7 +382,7 @@ svg {
         &__login,
         &__subscribe-btn {
             @media screen and (max-width: 480px) {
-                font-size: 18px;
+                font-size: 16px;
             }
         }
     }
@@ -414,10 +414,12 @@ button {
     padding: 0 8px;
     border: 2px solid #CC7510;
     transition: all 0.3s ease-out;
+    text-transform: uppercase;
 
-    @media screen and (min-width: 480px) {
-        padding: 7px 26px;
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
         border-radius: 4px;
+        padding: 7px 26px;
     }
 
     &:hover {
