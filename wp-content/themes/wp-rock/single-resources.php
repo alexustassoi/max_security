@@ -50,7 +50,7 @@ do_action( 'wp_rock_before_page_content' );
                         </h1>
                         <?php
                         echo ($custom_date)
-                            ? '<h3 class="single-blog__custom-date">' . do_shortcode($custom_date) . '</h3>'
+                            ? '<div class="single-blog__custom-date">' . do_shortcode($custom_date) . '</div>'
                             : '';
                         ?>
                     </div>
@@ -125,7 +125,7 @@ do_action( 'wp_rock_before_page_content' );
         <div class="single-blog__read-more-wrap">
             <?php
             echo ( $read_more_text )
-                ? '<h5 class="single-blog__read-more-title">' . esc_html($read_more_text) . '</h5>'
+                ? '<div class="single-blog__read-more-title">' . do_shortcode($read_more_text) . '</div>'
                 : '';
             ?>
             <div class="single-blog__read-more-slider-wrapper">

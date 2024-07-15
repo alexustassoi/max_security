@@ -52,6 +52,26 @@
             "delay": 0
         },
         {
+            "key": "field_6694dc3301099",
+            "label": "Make title and description vertical?",
+            "name": "content_vertical",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_65facf969c317",
             "label": "Title",
             "name": "title",
@@ -269,5 +289,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720447415
+    "modified": 1721031877
 }

@@ -15,6 +15,7 @@ $space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : ''
 $block_pb          = get_field_value($fields, 'block_pb');
 $space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
 $upper_description = get_field_value($fields, 'upper_description');
+$content_vertical  = get_field_value($fields, 'content_vertical');
 $title             = get_field_value($fields, 'title');
 $description       = get_field_value($fields, 'description');
 $slides            = get_field_value($fields, 'slides');
@@ -39,7 +40,8 @@ if (!$hide_block) : ?>
     echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';
     echo $class_name . ' ' . $white_text;
     echo ' space-top-type-' . do_shortcode($space_top_type) . ' ';
-    echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>"
+    echo ' space-bottom-type-' . $space_bottom_type . ' ';
+    echo $content_vertical ? ' content-vertical' : ''; ?>"
          style="background-color: <?php echo $background_color; ?>;">
 
         <div class="custom-container">
@@ -50,12 +52,12 @@ if (!$hide_block) : ?>
                     </div>';
             }
             ?>
-            <div class="slider-popup__top-wrapper <?php echo $no_margin; ?>">
+            <div class="slider-popup__top-wrapper <?php echo $no_margin; echo $content_vertical ? ' vertical-content' : ''; ?>">
                 <?php
                 $title_is_empty = empty($title) ? 'title-is-empty' : '';
 
                 if (!empty($title)) {
-                    echo '<div class="slider-popup__title animated-element from-left">' . do_shortcode($title) . '</div>';
+                    echo '<div class="slider-popup__title animated-element from-left ">' . do_shortcode($title) . '</div>';
                 }
                 if (!empty($description)) {
                     echo '<div class="slider-popup__description animated-element from-right ' . do_shortcode($title_is_empty) . '">' . do_shortcode($description) . '</div>';

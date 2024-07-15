@@ -22,6 +22,7 @@ body {
             filter: blur(10px);
         }
     }
+
     &.popup-opened-max {
         overflow: hidden;
 
@@ -197,7 +198,7 @@ body {
     box-sizing: border-box;
 }
 
-.custom-container {
+%custom-container {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
@@ -223,6 +224,10 @@ body {
         width: 100%;
         padding: 0 20px;
     }
+}
+
+.custom-container {
+    @extend %custom-container;
 
     .custom-container {
         width: 100%;
@@ -239,6 +244,17 @@ body {
 
     .slider-popup & {
         max-width: 1250px;
+
+        @media screen and (max-width: 991px) {
+            @media screen and (max-width: 992px) {
+                max-width: 700px;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                padding: 0 20px;
+            }
+        }
     }
 
     .browse-topic__filters-wrap .custom-container {
@@ -323,6 +339,10 @@ body {
     }
 }
 
+.slider-popup.content-vertical .custom-container {
+    @extend %custom-container;
+}
+
 svg {
     pointer-events: none;
 }
@@ -374,6 +394,32 @@ svg {
                 font-size: 18px;
             }
         }
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: inherit;
+        font-feature-settings: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        text-align: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0;
     }
 }
 
@@ -781,6 +827,24 @@ body {
 
             @media screen and (max-width: 480px) {
                 font-size: calc(var(--typo-size-font-h6-m) * 1px);
+            }
+        }
+
+        .browse-topic__card-custom-date {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: inherit;
+                font-feature-settings: inherit;
+                font-family: inherit;
+                font-size: inherit;
+                font-style: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+                text-align: inherit;
             }
         }
 
@@ -1275,7 +1339,6 @@ body #pojo-a11y-toolbar {
 #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay {
     transform: translateY(-87%);
 }
-
 
 
 body #hubspot-messages-iframe-container {
