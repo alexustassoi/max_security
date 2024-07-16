@@ -626,117 +626,85 @@ li {
     margin-bottom: 0;
 }
 
-h1, h1.p-like-h1, h1.h2-like-h1, .p-like-h1, .h2-like-h1 {
-    color: #2f3034;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Turbine, sans-serif;
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 300;
-    margin-top: 0;
-    line-height: 1.15;
+h1, .p-like-h1, .h2-like-h1 {
+    font-size: calc(var(--typo-size-font-h1-d) * 1px);
+    font-weight: var(--typo-size-font-h1-w);
 
-    @media screen and (max-width: 1024px) {
-        font-size: 65px;
+    @media screen and (max-width: 1199px) {
+        font-size: calc(var(--typo-size-font-h1-t) * 1px);
     }
 
-    @media screen and (max-width: 768px) {
-        font-size: 60px;
-    }
-
-    @media screen and (max-width: 670px) {
-        font-size: 45px;
+    @media screen and (max-width: 480px) {
+        font-size: calc(var(--typo-size-font-h1-m) * 1px);
+        line-height: 1.12;
     }
 }
 
-h2, h2.h1-like-h2, h2.p-like-h2, .h1-like-h2, .p-like-h2 {
-    color: #17181a;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Turbine, sans-serif;
-    font-size: 66px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.51;
-    margin-top: 0;
-}
+h2, .h1-like-h2, .p-like-h2  {
+    font-size: calc(var(--typo-size-font-h2-d) * 1px);
+    font-weight: var(--typo-size-font-h2-w);
 
-h3, h3.h2-like-h3, h3.h1-like-h3, h3.p-like-h3, .h2-like-h3, .h1-like-h3, .p-like-h3 {
-    color: #2f3034;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Turbine, sans-serif;
-    font-size: 52px;
-    font-style: normal;
-    font-weight: 300;
-    margin-top: 0;
-    line-height: 1.15;
-
-    @media screen and (max-width: 1024px) {
-        font-size: 48px;
+    @media screen and (max-width: 1199px) {
+        font-size: calc(var(--typo-size-font-h2-t) * 1px);
     }
 
-    @media screen and (max-width: 768px) {
-        font-size: 46px;
-    }
-
-    @media screen and (max-width: 670px) {
-        font-size: 30px;
+    @media screen and (max-width: 480px) {
+        font-size: calc(var(--typo-size-font-h2-m) * 1px);
+        line-height: 1.16;
     }
 }
 
-h4, h4.h1-like-h4, h4.h2-like-h4, h4.h3-like-h4, h4.p-like-h4, .h1-like-h4, .h2-like-h4, .h3-like-h4, .p-like-h4 {
-    color: #2f3034;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Turbine, sans-serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.46;
-    margin-top: 0;
-}
+h3, .h2-like-h3, .h1-like-h3, .p-like-h3 {
+    font-size: calc(var(--typo-size-font-h3-d) * 1px);
+    font-weight: var(--typo-size-font-h3-w);
 
-h5, h5.h1-like-h5, h5.h2-like-h5, h5.h3-like-h5, h5.h4-like-h5, h5.p-like-h5, .h1-like-h5, .h2-like-h5, .h3-like-h5, .h4-like-h5, .p-like-h5 {
-    color: #46494d;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Turbine, sans-serif;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.26;
-    margin-top: 0;
-
-    @media screen and (max-width: 1024px) {
-        font-size: 26px;
+    @media screen and (max-width: 1199px) {
+        font-size: calc(var(--typo-size-font-h3-t) * 1px);
     }
 
-    @media screen and (max-width: 768px) {
-        font-size: 18px;
-    }
-
-    @media screen and (max-width: 670px) {
-        font-size: 16px;
+    @media screen and (max-width: 480px) {
+        font-size: calc(var(--typo-size-font-h3-m) * 1px);
+        line-height: 1.2;
     }
 }
 
-h6, h6.h1-like-h6, h6.h2-like-h6, h6.h3-like-h6, h6.h4-like-h6, h6.p-like-h6, .h1-like-h6, .h2-like-h6, .h3-like-h6, .h4-like-h6, .p-like-h6 {
-    color: #46494d;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Turbine, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.26;
-    margin-top: 0;
+h4, .h1-like-h4, .h2-like-h4, .h3-like-h4, .p-like-h4 {
+    font-size: calc(var(--typo-size-font-h4-d) * 1px);
+    font-weight: var(--typo-size-font-h4-w);
 
-    @media screen and (max-width: 1024px) {
-        font-size: 18px;
+    @media screen and (max-width: 1199px) {
+        font-size: calc(var(--typo-size-font-h4-t) * 1px);
     }
 
-    @media screen and (max-width: 768px) {
-        font-size: 16px;
+    @media screen and (max-width: 480px) {
+        font-size: calc(var(--typo-size-font-h4-m) * 1px);
+        line-height: 1.11;
+    }
+}
+
+h5, .h1-like-h5, .h2-like-h5, .h3-like-h5, .h4-like-h5, .p-like-h5 {
+    font-size: calc(var(--typo-size-font-h5-d) * 1px);
+    font-weight: var(--typo-size-font-h5-w);
+
+    @media screen and (max-width: 1199px) {
+        font-size: calc(var(--typo-size-font-h5-t) * 1px);
     }
 
-    @media screen and (max-width: 670px) {
-        font-size: 14px;
+    @media screen and (max-width: 480px) {
+        font-size: calc(var(--typo-size-font-h5-m) * 1px);
+    }
+}
+
+h6, .h1-like-h6, .h2-like-h6, .h3-like-h6, .h4-like-h6, .p-like-h6 {
+    font-size: calc(var(--typo-size-font-h6-d) * 1px);
+    font-weight: var(--typo-size-font-h6-w);
+
+    @media screen and (max-width: 1199px) {
+        font-size: calc(var(--typo-size-font-h6-t) * 1px);
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: calc(var(--typo-size-font-h6-m) * 1px);
     }
 }
 
