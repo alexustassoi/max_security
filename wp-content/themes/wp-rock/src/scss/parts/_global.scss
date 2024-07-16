@@ -65,25 +65,32 @@ body {
         }
     }
 
+    %ul_style {
+        ul,
+        ol {
+            padding-left: 16px;
+        }
+
+        ul {
+            li {
+                list-style: disc;
+            }
+        }
+
+        ol {
+            li {
+                list-style: decimal;
+            }
+        }
+    }
+
+    .wp-block-columns {
+       @extend %ul_style;
+    }
+
     .slider-popup {
         &__description {
-
-            ul,
-            ol {
-                padding-left: 16px;
-            }
-
-            ul {
-                li {
-                    list-style: disc;
-                }
-            }
-
-            ol {
-                li {
-                    list-style: decimal;
-                }
-            }
+            @extend %ul_style;
         }
     }
 
