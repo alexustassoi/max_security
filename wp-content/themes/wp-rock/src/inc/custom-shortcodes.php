@@ -119,11 +119,15 @@ if ( ! function_exists( 'shortcode__boxpopup' ) ) {
      * @return string
      */
     function shortcode_popup_box( $atts, $content = null ) {
+        $popup_content = $content;
+
         extract(
             shortcode_atts(
                 array(
                     'box_id'      => '',
                     'box_caption' => '',
+                    'box_class'   => '',
+                    'post_id'     => '',
                     'put_svg'     => 'false',
                     'svg_src'     => '',
                 ),
@@ -131,7 +135,15 @@ if ( ! function_exists( 'shortcode__boxpopup' ) ) {
             )
         );
 
-        $output  = '<div id="' . $box_id . '" class="popup">';
+        if ( isset( $post_id ) && $post_id !== '' ) {
+            $post_id_l = (int)$post_id;
+            $post_data = get_fields($post_id_l);
+            $popup_content = '<div class="default-popup__top"></div><div class="default-popup__form-content-wrap">';
+            $popup_content .= get_field_value($post_data, 'popup_content');
+            $popup_content .= '</div>';
+        }
+
+        $output  = '<div id="' . $box_id . '" class="popup ' . $box_class . '">';
         $output .= '<div class="my_overlay js-popup-close"></div>';
 
         $output .= '<div class="popup-wrapper-inner">';
@@ -142,7 +154,7 @@ if ( ! function_exists( 'shortcode__boxpopup' ) ) {
             $output .= '<p class="box-caption">' . $box_caption . '</p>';
         }
 
-        $output .= do_shortcode( $content );
+        $output .= do_shortcode( $popup_content );
         $output .= '</div>';
         $output .= '<button
                         data-role="login-close"

@@ -653,3 +653,37 @@ function my_mce_buttons_2($buttons) {
     return $buttons;
 }
 add_filter('mce_buttons_2', 'my_mce_buttons_2');
+
+
+
+/**
+ * Generates and saves a popup shortcode for 'popups' post type.
+ *
+ * This function is hooked to the 'save_post' action and is executed
+ * whenever a post is saved. It checks if the post type is 'popups',
+ * and if so, generates a shortcode using the post title and post ID,
+ * and saves this shortcode to a custom field 'popup_shortcode'.
+ *
+ * @param int      $post_id The ID of the post being saved.
+ * @param WP_Post  $post    The post object being saved.
+ * @param bool     $update  Whether this is an existing post being updated or not.
+ */
+function save_custom_popup_shortcode($post_id, $post, $update) {
+    // Ensure the function runs only for 'popups' post type
+    if ($post->post_type !== 'popups') {
+        return;
+    }
+
+    // Get the post title and convert it to lowercase with a dash
+    $post_title = strtolower(str_replace(' ', '-', $post->post_title));
+
+    // Create a shortcode string
+    $popup_shortcode = '[popup_box box_id="' . $post_title . '" post_id="' . $post_id . '" box_class="default-popup"]';
+
+    // Save the value in the 'popup_shortcode' field
+    update_post_meta($post_id, 'popup_shortcode', $popup_shortcode);
+}
+
+// Hook the function to the 'save_post' action
+add_action('save_post', 'save_custom_popup_shortcode', 10, 3);
+

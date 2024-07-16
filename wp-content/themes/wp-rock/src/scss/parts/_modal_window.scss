@@ -318,7 +318,8 @@ html {
 
 #popup-subscribe,
 #popup-portal-demo,
-#popup-request-demo {
+#popup-request-demo,
+.default-popup {
     background: none;
     padding-bottom: 100px;
 
@@ -798,7 +799,8 @@ html {
 }
 
 #popup-portal-demo,
-#popup-request-demo {
+#popup-request-demo,
+.default-popup {
 
     .popup-close {
         &:after {
@@ -925,6 +927,64 @@ html {
                 height: 12px;
                 top: 3px;
             }
+        }
+    }
+}
+
+.default-popup {
+
+    &__top {
+        height: 90px;
+        position: relative;
+        z-index: 1;
+        background-color: #F3F0EC;
+
+        @media screen and (max-width: 1030px) {
+            height: 70px;
+        }
+
+        @media screen and (max-width: 670px) {
+            height: 60px;
+        }
+
+        @media screen and (max-width: 570px) {
+            height: 52px;
+        }
+
+        @media screen and (max-width: 480px) {
+            height: 42px;
+        }
+    }
+
+    &__form-content-wrap {
+        background: rgba(255, 255, 255, .8);
+        padding: 40px 80px;
+
+        @media screen and (max-width: 1280px) {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        @media screen and (max-width: 1030px) {
+            padding-top: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @media screen and (max-width: 991px) {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        @media screen and (max-width: 850px) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        @media screen and (max-width: 480px) {
+            padding-bottom: 16px;
+            padding-left: 8px;
+            padding-right: 8px;
         }
     }
 }
