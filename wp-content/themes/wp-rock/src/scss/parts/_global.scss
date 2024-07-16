@@ -626,7 +626,7 @@ li {
     margin-bottom: 0;
 }
 
-h1, .p-like-h1, .h2-like-h1 {
+h1, h1.p-like-h1, h1.h2-like-h1, .p-like-h1, .h2-like-h1 {
     color: #2f3034;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
@@ -649,7 +649,7 @@ h1, .p-like-h1, .h2-like-h1 {
     }
 }
 
-h2, .h1-like-h2, .p-like-h2 {
+h2, h2.h1-like-h2, h2.p-like-h2, .h1-like-h2, .p-like-h2 {
     color: #17181a;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
@@ -660,7 +660,7 @@ h2, .h1-like-h2, .p-like-h2 {
     margin-top: 0;
 }
 
-h3, .h2-like-h3, .h1-like-h3, .p-like-h3 {
+h3, h3.h2-like-h3, h3.h1-like-h3, h3.p-like-h3, .h2-like-h3, .h1-like-h3, .p-like-h3 {
     color: #2f3034;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
@@ -683,7 +683,7 @@ h3, .h2-like-h3, .h1-like-h3, .p-like-h3 {
     }
 }
 
-h4, .h1-like-h4, .h2-like-h4, .h3-like-h4, .p-like-h4 {
+h4, h4.h1-like-h4, h4.h2-like-h4, h4.h3-like-h4, h4.p-like-h4, .h1-like-h4, .h2-like-h4, .h3-like-h4, .p-like-h4 {
     color: #2f3034;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
@@ -694,7 +694,7 @@ h4, .h1-like-h4, .h2-like-h4, .h3-like-h4, .p-like-h4 {
     margin-top: 0;
 }
 
-h5, .h1-like-h5, .h2-like-h5, .h3-like-h5, .h4-like-h5, .p-like-h5 {
+h5, h5.h1-like-h5, h5.h2-like-h5, h5.h3-like-h5, h5.h4-like-h5, h5.p-like-h5, .h1-like-h5, .h2-like-h5, .h3-like-h5, .h4-like-h5, .p-like-h5 {
     color: #46494d;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
@@ -717,7 +717,7 @@ h5, .h1-like-h5, .h2-like-h5, .h3-like-h5, .h4-like-h5, .p-like-h5 {
     }
 }
 
-h6, .h1-like-h6, .h2-like-h6, .h3-like-h6, .h4-like-h6, .p-like-h6 {
+h6, h6.h1-like-h6, h6.h2-like-h6, h6.h3-like-h6, h6.h4-like-h6, h6.p-like-h6, .h1-like-h6, .h2-like-h6, .h3-like-h6, .h4-like-h6, .p-like-h6 {
     color: #46494d;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Turbine, sans-serif;
