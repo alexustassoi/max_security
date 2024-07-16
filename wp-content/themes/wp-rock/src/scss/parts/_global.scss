@@ -748,7 +748,7 @@ body {
             line-height: 1.26;
         }
 
-        h1 {
+        h1, .p-like-h1, .h2-like-h1 {
             font-size: calc(var(--typo-size-font-h1-d) * 1px);
             font-weight: var(--typo-size-font-h1-w);
 
@@ -762,7 +762,7 @@ body {
             }
         }
 
-        h2 {
+        h2, .h1-like-h2, .p-like-h2  {
             font-size: calc(var(--typo-size-font-h2-d) * 1px);
             font-weight: var(--typo-size-font-h2-w);
 
@@ -776,7 +776,7 @@ body {
             }
         }
 
-        h3 {
+        h3, .h2-like-h3, .h1-like-h3, .p-like-h3 {
             font-size: calc(var(--typo-size-font-h3-d) * 1px);
             font-weight: var(--typo-size-font-h3-w);
 
@@ -790,7 +790,7 @@ body {
             }
         }
 
-        h4 {
+        h4, .h1-like-h4, .h2-like-h4, .h3-like-h4, .p-like-h4 {
             font-size: calc(var(--typo-size-font-h4-d) * 1px);
             font-weight: var(--typo-size-font-h4-w);
 
@@ -804,7 +804,7 @@ body {
             }
         }
 
-        h5 {
+        h5, .h1-like-h5, .h2-like-h5, .h3-like-h5, .h4-like-h5, .p-like-h5 {
             font-size: calc(var(--typo-size-font-h5-d) * 1px);
             font-weight: var(--typo-size-font-h5-w);
 
@@ -817,7 +817,7 @@ body {
             }
         }
 
-        h6 {
+        h6, .h1-like-h6, .h2-like-h6, .h3-like-h6, .h4-like-h6, .p-like-h6 {
             font-size: calc(var(--typo-size-font-h6-d) * 1px);
             font-weight: var(--typo-size-font-h6-w);
 
