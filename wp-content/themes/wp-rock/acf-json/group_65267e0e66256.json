@@ -6,7 +6,7 @@
             "key": "field_65267e6f83ba8",
             "label": "Title",
             "name": "title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -94,7 +94,7 @@
             "key": "field_65267ef61b4ce",
             "label": "Banner title",
             "name": "banner_title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -152,5 +152,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697021854
+    "modified": 1721129820
 }

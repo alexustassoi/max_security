@@ -74,6 +74,29 @@
             border-bottom: 1px solid #fff;
         }
 
+        &-country,
+        &-city {
+            p {
+                color: inherit;
+                font-feature-settings: inherit;
+                font-family: inherit;
+                font-size: inherit;
+                font-style: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+                text-align: inherit;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: 0;
+            }
+        }
+
         &-country {
             color: #cc7510;
             font-feature-settings: 'clig' off, 'liga' off;

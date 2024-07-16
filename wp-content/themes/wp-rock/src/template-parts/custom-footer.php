@@ -44,8 +44,8 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
 				<?php if ( $locations ) : ?>
 					<?php foreach ( $locations as $location ) : ?>
                         <div class="site-footer__locations-item">
-                            <p class="site-footer__locations-country"><?php echo $location[ 'country' ]; ?></p>
-                            <p class="site-footer__locations-city"><?php echo $location[ 'city' ]; ?></p>
+                            <div class="site-footer__locations-country"><?php echo $location[ 'country' ]; ?></div>
+                            <div class="site-footer__locations-city"><?php echo $location[ 'city' ]; ?></div>
                         </div>
 					<?php endforeach; ?>
 				<?php endif; ?>
@@ -122,11 +122,11 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
 
         <div class="site-footer__bottom">
 			<?php if ( $copyright ) : ?>
-                <p class="site-footer__copyright"><?php echo $copyright ?></p>
+                <div class="site-footer__copyright"><?php echo $copyright ?></div>
 			<?php endif; ?>
 
 			<?php if ( $bottom_text ) : ?>
-                <p class="site-footer__bottom-text"><?php echo $bottom_text; ?></p>
+                <div class="site-footer__bottom-text"><?php echo $bottom_text; ?></div>
 			<?php endif; ?>
         </div>
 

@@ -6,7 +6,7 @@
             "key": "field_653a2285e186a",
             "label": "Title",
             "name": "title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -44,7 +44,7 @@
                     "key": "field_653a22b1e186c",
                     "label": "Item title",
                     "name": "item_title",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -99,5 +99,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698309131
+    "modified": 1721129820
 }

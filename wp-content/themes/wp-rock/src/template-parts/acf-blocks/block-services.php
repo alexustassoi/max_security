@@ -89,8 +89,13 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
         <?php if ($bottom_content) :
             $bottom_title = $bottom_content['title'];
             $bottom_content = $bottom_content['content'];
+            $bottom_class = '';
+
+            if ( !$bottom_title || !$bottom_content ) {
+                $bottom_class = 'single-column';
+            }
             ?>
-            <div class="services__bottom">
+            <div class="services__bottom <?php echo $bottom_class; ?>">
                 <?php if ($bottom_title) : ?>
                     <div class="services__bottom-title animated-element from-left"><?php echo $bottom_title; ?></div>
                 <?php endif; ?>

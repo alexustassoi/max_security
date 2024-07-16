@@ -25,7 +25,7 @@
                     "key": "field_65560a347b773",
                     "label": "Item title",
                     "name": "item_title",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -174,7 +174,7 @@
                     "key": "field_65560b127b779",
                     "label": "Item icon title",
                     "name": "item_icon_title",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -210,5 +210,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700579817
+    "modified": 1721129820
 }

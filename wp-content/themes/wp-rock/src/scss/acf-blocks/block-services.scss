@@ -120,6 +120,10 @@
         @media screen and (max-width: 768px) {
             font-size: 18px;
             margin-bottom: 40px;
+
+            br {
+                display: none;
+            }
         }
 
         @media screen and (max-width: 560px) {
@@ -370,6 +374,10 @@
 
         @media screen and (max-width: 560px) {
             display: block;
+        }
+
+        &.single-column {
+            grid-template-columns: 1fr;
         }
 
         &-title,

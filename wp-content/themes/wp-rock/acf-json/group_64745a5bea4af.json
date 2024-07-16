@@ -7,7 +7,7 @@
             "label": "Body class",
             "name": "body_class",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "Use this field for specify some \"body tag\" class for future styling",
             "required": 0,
             "conditional_logic": 0,
@@ -69,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715714445
+    "modified": 1721129820
 }

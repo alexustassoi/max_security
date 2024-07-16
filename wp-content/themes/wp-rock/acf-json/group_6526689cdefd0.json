@@ -25,7 +25,7 @@
                     "key": "field_652669b79e218",
                     "label": "Number",
                     "name": "number",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -80,5 +80,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697016648
+    "modified": 1721129820
 }
