@@ -7,7 +7,7 @@
             "label": "Colors select",
             "name": "colors_select",
             "aria-label": "",
-            "type": "select",
+            "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,20 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "#5A7153": "Green",
-                "#445C5A": "Dark-green",
-                "#685B4C": "Brown",
-                "#7E97A6": "Blue",
-                "#ffffff": "White"
-            },
-            "default_value": "#5A7153",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         }
     ],
     "location": [
@@ -106,5 +95,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721129820
+    "modified": 1721145657
 }

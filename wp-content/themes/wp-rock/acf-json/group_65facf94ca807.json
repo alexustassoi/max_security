@@ -7,7 +7,7 @@
             "label": "Background color",
             "name": "background_color",
             "aria-label": "",
-            "type": "select",
+            "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,20 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "#ffffff": "White",
-                "#5A7153": "Green",
-                "#445C5A": "Dark-green",
-                "#685B4C": "Brown",
-                "#7E97A6": "Blue"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_65fda19ce127a",
@@ -138,7 +127,7 @@
             "label": "Blocks color",
             "name": "blocks_color",
             "aria-label": "",
-            "type": "select",
+            "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -147,19 +136,9 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "#5A7153": "Green",
-                "#445C5A": "Dark-green",
-                "#685B4C": "Brown",
-                "#7E97A6": "Blue"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_65facfc09c319",
@@ -289,5 +268,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721129820
+    "modified": 1721145582
 }

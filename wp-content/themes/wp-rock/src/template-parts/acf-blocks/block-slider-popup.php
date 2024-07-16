@@ -29,7 +29,9 @@ $bg_color         = !empty($bg_color) ? $bg_color : '#5A7153';
 $blocks_color     = !empty($blocks_color) ? $blocks_color : '#5A7153';
 $background_color = !empty($background_color) ? $background_color : '#ffffff';
 
-$white_text = $background_color !== '#ffffff' ? 'white-text' : '';
+$white_text = $background_color !== '#ffffff' || $background_color !== '#FFFFFF'
+    ? 'white-text'
+    : '';
 $no_margin  = empty($slides) ? 'mb0' : '';
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
