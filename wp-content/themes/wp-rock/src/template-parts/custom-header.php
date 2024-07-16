@@ -68,11 +68,11 @@ $page_link = !empty($page_to_redirect) ? get_permalink($page_to_redirect) : '';
                             </figure>
 
                             <?php if ($title) : ?>
-                                <p class="services__item-title"><?php echo $title; ?></p>
+                                <div class="services__item-title"><?php echo $title; ?></div>
                             <?php endif; ?>
 
                             <?php if ($description) : ?>
-                                <p class="services__item-desc"><?php echo $description; ?></p>
+                                <div class="services__item-desc"><?php echo $description; ?></div>
                             <?php endif; ?>
 
                             <button class="services__item-button">
