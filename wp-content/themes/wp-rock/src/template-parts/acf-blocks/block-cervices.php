@@ -50,11 +50,11 @@ $bottom_content = get_field_value( $fields, 'bottom_content' );
                         </figure>
 
                         <?php if($title): ?>
-                            <p class="services__item-title"><?php echo $title; ?></p>
+                            <div class="services__item-title"><?php echo $title; ?></div>
                         <?php endif; ?>
 
                         <?php if($description): ?>
-                            <p class="services__item-desc"><?php echo $description; ?></p>
+                            <div class="services__item-desc"><?php echo $description; ?></div>
                         <?php endif; ?>
 
                         <button class="services__item-button">
