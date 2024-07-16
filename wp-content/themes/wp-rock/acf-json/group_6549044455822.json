@@ -6,7 +6,7 @@
             "key": "field_65491282e93a9",
             "label": "Popup ID",
             "name": "popup_id",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -68,7 +68,7 @@
                     "key": "field_654905508255d",
                     "label": "Text",
                     "name": "text",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -120,5 +120,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699287746
+    "modified": 1721129820
 }

@@ -6,7 +6,7 @@
             "key": "field_654ca89cc0334",
             "label": "Title",
             "name": "title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -102,7 +102,7 @@
                     "key": "field_654ca89cc1de6",
                     "label": "Author's name",
                     "name": "authors_name",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -121,7 +121,7 @@
                     "key": "field_654ca89cc1dec",
                     "label": "Author status",
                     "name": "author_status",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -181,7 +181,7 @@
             "key": "field_654caa39c4a57",
             "label": "Matter title",
             "name": "matter_title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -278,5 +278,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699620604
+    "modified": 1721129820
 }

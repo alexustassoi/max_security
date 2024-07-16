@@ -6,7 +6,7 @@
             "key": "field_651ff20a0fd2c",
             "label": "Title",
             "name": "title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -44,7 +44,7 @@
                     "key": "field_651ff22d0fd2e",
                     "label": "Year",
                     "name": "year",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -114,7 +114,7 @@
                     "key": "field_651ff30c0fd31",
                     "label": "Card title",
                     "name": "card_title",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -169,5 +169,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1696592701
+    "modified": 1721129820
 }

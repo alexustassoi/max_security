@@ -6,7 +6,7 @@
             "key": "field_653a4892269fb",
             "label": "Title",
             "name": "title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -78,7 +78,7 @@
                     "key": "field_653a489228408",
                     "label": "Author's name",
                     "name": "authors_name",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -97,7 +97,7 @@
                     "key": "field_653a48922840e",
                     "label": "Author status",
                     "name": "author_status",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -172,5 +172,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1698318775
+    "modified": 1721129820
 }

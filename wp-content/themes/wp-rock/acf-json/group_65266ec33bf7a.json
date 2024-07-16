@@ -6,7 +6,7 @@
             "key": "field_65266f0c4ee2e",
             "label": "Title",
             "name": "title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -68,7 +68,7 @@
                     "key": "field_65266f3a4ee31",
                     "label": "Person's name",
                     "name": "name",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -87,7 +87,7 @@
                     "key": "field_65266f694ee32",
                     "label": "Person's status",
                     "name": "status",
-                    "type": "text",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -142,5 +142,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697018226
+    "modified": 1721129820
 }
