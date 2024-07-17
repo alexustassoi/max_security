@@ -451,7 +451,8 @@ button {
 
 
 .transparent-orange-btn,
-.orange-transparent-btn {
+.orange-transparent-btn,
+.transparent-orange-dark-text-btn {
     @extend %button;
     display: inline-block;
     color: #F3F0EC;
@@ -479,6 +480,14 @@ button {
         @media screen and (min-width: 768px) {
             background-color: #CC7510;
         }
+    }
+}
+
+.transparent-orange-dark-text-btn {
+    color: #000;
+
+    &:hover {
+        color: #F3F0EC;
     }
 }
 

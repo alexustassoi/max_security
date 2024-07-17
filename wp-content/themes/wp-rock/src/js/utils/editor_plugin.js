@@ -21,7 +21,7 @@
                 title: 'Add Styled Custom Button',
                 cmd: 'styled_custom_button',
                 // image : url + '/moon.png'
-                text: 'Styled Custom Button'
+                text: 'Styled Custom Button',
             });
 
             /* ed.addCommand('styled_heading_tag', function () {
@@ -54,7 +54,7 @@
 
             ed.addCommand('styled_custom_button', function () {
                 const btnType = prompt(
-                    'Please specify what button you want to use(transparent-orange-btn, blue-btn, orange-btn, orange-transparent-btn)'
+                    'Please specify what button you want to use(transparent-orange-btn, transparent-orange-dark-text-btn, blue-btn, orange-btn, orange-transparent-btn)'
                 );
                 const btnText = prompt('Please add text to button');
                 const btnLink = prompt(
