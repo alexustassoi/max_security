@@ -285,6 +285,7 @@ body {
     .wp-block-columns {
         @media screen and (max-width: 768px) {
             flex-direction: column-reverse;
+            gap: 0;
         }
 
         .wp-block-column {

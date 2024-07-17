@@ -124,6 +124,10 @@ add_action(
             color: #fff;
             background-color: #CC7510;
         }
+        .btn-accept > *,
+        .btn-reject > * {
+            pointer-events: none;
+        }
 
         @media screen and (max-width: 768px) {
             .accept-cookie-box__text {
@@ -140,6 +144,10 @@ add_action(
             .btn-reject {
                 font-size: 16px;
                 height: 24px;
+            }
+            .btn-accept > *,
+            .btn-reject > * {
+                pointer-events: none;
             }
         }
 

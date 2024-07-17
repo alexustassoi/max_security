@@ -134,29 +134,30 @@
 
 
     &__wrap {
-        padding: 32px 0;
-        margin-bottom: 86px;
+        padding: 32px 0 0;
+        margin-bottom: 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap:32px;
         flex-wrap: wrap;
         align-items: center;
 
         @media screen and (max-width: 1200px) {
-            margin-bottom: 70px;
+            margin-bottom: 0;
         }
 
         @media screen and (max-width: 992px) {
-            margin-bottom: 60px;
+            margin-bottom: 0;
             gap: 16px;
             justify-content: center;
         }
 
         @media screen and (max-width: 768px) {
-            margin-bottom: 40px;
+            //margin-bottom: 40px;
         }
 
         @media screen and (max-width: 560px) {
-            margin-bottom: 30px;
+            //margin-bottom: 30px;
         }
 
         @media screen and (max-width: 380px) {

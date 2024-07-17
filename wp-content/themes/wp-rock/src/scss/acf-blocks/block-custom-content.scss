@@ -41,21 +41,30 @@
     h5,
     h6 {
         margin-bottom: 16px;
-        font-weight: 700;
-        line-height: 1.26;
+        //font-weight: 700;
+        //line-height: 1.26;
 
         @media screen and (max-width: 1370px) {
             margin-bottom: 10px;
         }
 
         @media screen and (max-width: 768px) {
-            font-size: 24px;
+            /*font-size: 24px;
             font-weight: 700;
-            line-height: 1.16;
+            line-height: 1.16;*/
         }
     }
 
     p {
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 16px;
+        }
+    }
+
+
+   /* p {
         color: #17181A;
         font-size: 20px;
         font-style: normal;
@@ -72,11 +81,7 @@
             line-height: 1;
             margin-bottom: 16px;
         }
-
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
+    }*/
 
     &__title {
         h1,
