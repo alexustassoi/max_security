@@ -115,6 +115,9 @@ class WP_Rock_Blocks {
         'block-bullets-list' => array(
             'title'     => 'Block - Bullets list',
         ),
+        'block-spaces' => array(
+            'title'     => 'Block - Spaces',
+        ),
     );
 
     /**
