@@ -54,12 +54,10 @@
 
             ed.addCommand('styled_custom_button', function () {
                 const btnType = prompt(
-                    'Please specify what button you want to use(transparent-orange-btn, transparent-orange-dark-text-btn, blue-btn, orange-btn, orange-transparent-btn)'
+                    'Please specify what button you want to use(transparent-orange-btn, transparent-orange-dark-text-btn, blue-btn, orange-btn)'
                 );
                 const btnText = prompt('Please add text to button');
-                const btnLink = prompt(
-                    'Please provide a link for the button'
-                );
+                const btnLink = prompt('Please provide a link for the button');
                 const btnSize = prompt(
                     'Please specify the button size (large-btn, medium-btn, small-btn)'
                 );
@@ -67,7 +65,13 @@
                     'Please indicate whether the button will cause a popup? ( yes/no )'
                 );
 
-                if (btnType !== null && btnText !== null && btnLink !== null && isBtnPopup !== null && btnSize !== null) {
+                if (
+                    btnType !== null &&
+                    btnText !== null &&
+                    btnLink !== null &&
+                    isBtnPopup !== null &&
+                    btnSize !== null
+                ) {
                     const return_text = `[styled_custom_button btn_type=${btnType} btn_link=${btnLink} btn_size=${btnSize} is_btn_popup=${isBtnPopup}]${btnText}[/styled_custom_button]`;
                     ed.execCommand('mceInsertContent', 0, return_text);
                 }
