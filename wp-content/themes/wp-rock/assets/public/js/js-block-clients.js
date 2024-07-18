@@ -1,6 +1,5 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
-var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./node_modules/ssr-window/ssr-window.esm.js
 /**
@@ -10843,15 +10842,27 @@ var initBlockClients = function initBlockClients() {
     var clientSlider = new core(clientSwiper, {
       spaceBetween: 40,
       grabCursor: true,
-      freeMode: true,
+      freeMode: {
+        enabled: true,
+        momentum: false,
+        momentumBounce: false,
+        momentumRatio: 0
+      },
       speed: 11000,
       loop: true,
+      loopAdditionalSlides: 5,
       slidesPerView: 'auto',
+      centeredSlides: false,
+      allowTouchMove: false,
       modules: [Autoplay],
       autoplay: {
         delay: 0,
-        disableOnInteraction: false
-      }
+        disableOnInteraction: false,
+        stopOnLastSlide: false,
+        reverseDirection: false,
+        waitForTransition: false
+      },
+      preventInteractionOnTransition: true
     });
   }
 };

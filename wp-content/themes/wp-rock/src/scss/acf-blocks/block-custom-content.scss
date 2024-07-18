@@ -16,8 +16,7 @@
     }
 
     &.content-w-images {
-        .custom-container
-        {
+        .custom-container {
             @media screen and (max-width: 480px) {
                 padding-left: 20px;
                 padding-right: 20px;
@@ -64,24 +63,24 @@
     }
 
 
-   /* p {
-        color: #17181A;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.4;
-        margin-bottom: 24px;
+    /* p {
+         color: #17181A;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 1.4;
+         margin-bottom: 24px;
 
-        @media screen and (max-width: 1199px) {
-            font-size: 16px;
-        }
+         @media screen and (max-width: 1199px) {
+             font-size: 16px;
+         }
 
-        @media screen and (max-width: 480px) {
-            font-weight: 300;
-            line-height: 1;
-            margin-bottom: 16px;
-        }
-    }*/
+         @media screen and (max-width: 480px) {
+             font-weight: 300;
+             line-height: 1;
+             margin-bottom: 16px;
+         }
+     }*/
 
     &__title {
         h1,

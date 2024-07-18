@@ -6,15 +6,27 @@ const initBlockClients = () => {
         const clientSlider = new Swiper(clientSwiper, {
             spaceBetween: 40,
             grabCursor: true,
-            freeMode: true,
+            freeMode: {
+                enabled: true,
+                momentum: false,
+                momentumBounce: false,
+                momentumRatio: 0,
+            },
             speed: 11000,
             loop: true,
+            loopAdditionalSlides: 5,
             slidesPerView: 'auto',
+            centeredSlides: false,
+            allowTouchMove: false,
             modules: [Autoplay],
             autoplay: {
                 delay: 0,
                 disableOnInteraction: false,
+                stopOnLastSlide: false,
+                reverseDirection: false,
+                waitForTransition: false,
             },
+            preventInteractionOnTransition: true,
         });
     }
 };

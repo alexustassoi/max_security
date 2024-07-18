@@ -85,7 +85,7 @@ body {
     }
 
     .wp-block-columns {
-       @extend %ul_style;
+        @extend %ul_style;
     }
 
     .slider-popup {
@@ -657,7 +657,7 @@ h1, .p-like-h1, .h2-like-h1 {
     }
 }
 
-h2, .h1-like-h2, .p-like-h2  {
+h2, .h1-like-h2, .p-like-h2 {
     font-size: calc(var(--typo-size-font-h2-d) * 1px);
     font-weight: var(--typo-size-font-h2-w);
 

@@ -135,29 +135,16 @@
 
     &__wrap {
         padding: 32px 0 0;
-        margin-bottom: 0;
         display: flex;
         justify-content: center;
         gap:32px;
         flex-wrap: wrap;
         align-items: center;
-
-        @media screen and (max-width: 1200px) {
-            margin-bottom: 0;
-        }
+        margin-bottom: 30px;
 
         @media screen and (max-width: 992px) {
-            margin-bottom: 0;
             gap: 16px;
             justify-content: center;
-        }
-
-        @media screen and (max-width: 768px) {
-            //margin-bottom: 40px;
-        }
-
-        @media screen and (max-width: 560px) {
-            //margin-bottom: 30px;
         }
 
         @media screen and (max-width: 380px) {
@@ -296,6 +283,10 @@
                 font-size: 16px;
                 line-height: 1.12;
             }
+
+            p {
+                margin-bottom: 0;
+            }
         }
 
         &-desc {
@@ -324,7 +315,6 @@
         }
 
         &-button {
-            margin-top: auto;
             color: var(--Orange, #cc7510);
             font-family: Turbine, sans-serif;
             font-size: 12px;
@@ -335,7 +325,10 @@
             width: 100%;
             height: 32px;
             border: none;
-            position: relative;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            margin-top: 30px;
 
             @media screen and (max-width: 560px) {
                 font-size: 14px;
@@ -392,7 +385,6 @@
                 font-weight: inherit;
                 line-height: inherit;
                 text-align: inherit;
-                margin: inherit;
             }
 
             h1,
