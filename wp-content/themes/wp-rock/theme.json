@@ -5,8 +5,8 @@
         "useRootPaddingAwareAlignments": true,
         "appearanceTools": true,
         "color": {
-            "defaultPalette": true,
-            "palette": [
+            "defaultPalette": false,
+            /*"palette": [
                 {
                     "name": "White",
                     "color": "#FFFFFF",
@@ -32,7 +32,7 @@
                     "color": "#445c5a",
                     "slug": "protection"
                 }
-            ]
+            ]*/
         },
         "spacing": {
             "units": [

@@ -376,13 +376,13 @@ function wrap_columns_block_in_container( $block_content, $block ) {
     // Check if the block is the 'core/columns' block
     if ( 'core/columns' === $block['blockName'] ) {
 
-
         $bg_color = isset($block['attrs']['backgroundColor']) ?: '';
-
-        //var_dump('wrap_columns_block_in_container block', $block);
+        if ( !$bg_color && isset($block['attrs']['style']['color']['background']) ) {
+            $bg_color = $block['attrs']['style']['color']['background'];
+        }
 
         // Wrap the block content in a div with the class 'custom-container'
-        return '<div class="wrap-columns-block" style="background-color: var(--wp--preset--color--'.$bg_color.');"><div class="custom-container">' . $block_content . '</div></div>';
+        return '<div class="wrap-columns-block" style="background-color: '.$bg_color.';"><div class="custom-container">' . $block_content . '</div></div>';
     }
 
     // Return the block content unchanged for all other blocks
