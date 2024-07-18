@@ -53,6 +53,26 @@
             "placeholder": ""
         },
         {
+            "key": "field_66992dc40cb10",
+            "label": "Resources title",
+            "name": "resources_title",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_664455a12f169",
             "label": "Type of Banner image",
             "name": "type_of_banner_image",
@@ -456,5 +476,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721026014
+    "modified": 1721314780
 }

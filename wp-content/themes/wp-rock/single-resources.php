@@ -16,13 +16,14 @@ do_action( 'wp_rock_before_page_content' );
             if ( have_posts() ) {
                 while ( have_posts() ) {
                     the_post();
-                    $post_id        = get_the_ID();
-                    $post_fields    = get_fields($post_id);
-                    $hero_text      = get_field_value($post_fields, 'hero_text');
-                    $post_content   = get_field_value($post_fields, 'post_content');
-                    $custom_date    = get_field_value($post_fields, 'custom_date');
-                    $read_more_text = get_field_value($post_fields, 'read_more_text');
-                    $type_of_banner = get_field_value($post_fields, 'type_of_banner_image');
+                    $post_id         = get_the_ID();
+                    $post_fields     = get_fields($post_id);
+                    $hero_text       = get_field_value($post_fields, 'hero_text');
+                    $post_content    = get_field_value($post_fields, 'post_content');
+                    $custom_date     = get_field_value($post_fields, 'custom_date');
+                    $read_more_text  = get_field_value($post_fields, 'read_more_text');
+                    $type_of_banner  = get_field_value($post_fields, 'type_of_banner_image');
+                    $resources_title = get_field_value($post_fields, 'resources_title');
 
                     $resource_category      = @wp_get_post_terms( $post_id, 'resources-category')[0];
                     $category_name_for_post = @get_term_meta( $resource_category->term_id, 'category_name_for_post', true );
@@ -41,13 +42,13 @@ do_action( 'wp_rock_before_page_content' );
 
                     ?>
                     <div class="single-blog__header">
-                        <h1 class="single-blog__post-category">
+                        <div class="single-blog__post-category">
                             <?php
-                            echo ($category_name_for_post)
-                                ? do_shortcode($category_name_for_post)
+                            echo ($resources_title)
+                                ? do_shortcode($resources_title)
                                 : '';
                             ?>
-                        </h1>
+                        </div>
                         <?php
                         echo ($custom_date)
                             ? '<div class="single-blog__custom-date">' . do_shortcode($custom_date) . '</div>'
