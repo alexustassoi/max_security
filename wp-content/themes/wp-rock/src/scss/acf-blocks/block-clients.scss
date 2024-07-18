@@ -84,6 +84,12 @@
         }
     }
 
+    &__wrap {
+        .swiper-container-free-mode > .swiper-wrapper{
+            transition-timing-function : linear;
+        }
+    }
+
     .swiper-wrapper {
         align-items: center;
     }

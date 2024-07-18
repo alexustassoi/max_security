@@ -33,7 +33,7 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
     <?php if ($clients): ?>
         <div class="clients__wrap">
-            <div class="swiper js-clients-swiper">
+            <div class="swiper js-clients-swiper swiper-container-free-mode">
                 <div class="swiper-wrapper">
                     <?php foreach ($clients as $icon): ?>
                         <div class="swiper-slide clients__slide">

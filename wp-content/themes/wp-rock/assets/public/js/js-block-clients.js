@@ -10840,29 +10840,22 @@ var initBlockClients = function initBlockClients() {
   var clientSwiper = document.querySelector('.js-clients-swiper');
   if (clientSwiper) {
     var clientSlider = new core(clientSwiper, {
+      slidesPerView: 'auto',
       spaceBetween: 40,
+      loop: true,
+      modules: [Autoplay],
+      speed: 5000,
       grabCursor: true,
+      loopedSlides: 8,
       freeMode: {
         enabled: true,
-        momentum: false,
-        momentumBounce: false,
-        momentumRatio: 0
+        momentum: false
       },
-      speed: 11000,
-      loop: true,
-      loopAdditionalSlides: 5,
-      slidesPerView: 'auto',
-      centeredSlides: false,
-      allowTouchMove: false,
-      modules: [Autoplay],
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
-        stopOnLastSlide: false,
-        reverseDirection: false,
         waitForTransition: false
-      },
-      preventInteractionOnTransition: true
+      }
     });
   }
 };
