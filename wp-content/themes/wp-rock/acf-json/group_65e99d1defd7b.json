@@ -8,7 +8,7 @@
             "name": "image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Recommended size 1920 x 770 px",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -89,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721129820
+    "modified": 1721399266
 }
