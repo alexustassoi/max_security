@@ -13,6 +13,10 @@ do_action( 'wp_rock_before_page_content' );
     <div class="custom-container single-blog">
         <div class="single-blog__content-wrap">
             <?php
+            global $global_options;
+            // Get main tag colors from theme options
+            $main_tags_colours = get_field_value($global_options, 'main_tags_colours');
+
             if ( have_posts() ) {
                 while ( have_posts() ) {
                     the_post();
@@ -28,11 +32,21 @@ do_action( 'wp_rock_before_page_content' );
                     $resource_category      = @wp_get_post_terms( $post_id, 'resources-category')[0];
                     $category_name_for_post = @get_term_meta( $resource_category->term_id, 'category_name_for_post', true );
 
+
+
                     $card_tag        = @wp_get_post_terms( $post_id, 'resource_tag' )[0];
                     $card_icon_url   = @get_field('card_icon', 'resource_tag_' . $card_tag->term_id);
                     $card_tag_name   = @$card_tag->name;
                     $thumbnail_image = get_the_post_thumbnail( $post_id );
                     $post_title      = get_the_title();
+                    $tag_color       = '';
+
+                    foreach ($main_tags_colours as $main_tags_colour_data) {
+                        if ( $main_tags_colour_data['title'] === $card_tag->term_id) {
+                                $tag_color = $main_tags_colour_data['tag_term_color'];
+                        }
+
+                    }
 
                     $webinar_video_settings = get_field_value($post_fields, 'webinar_video_settings');
                     $is_embed_code          = get_field_value($webinar_video_settings, 'is_embed_code');
@@ -56,7 +70,7 @@ do_action( 'wp_rock_before_page_content' );
                         ?>
                     </div>
                     <div class="single-blog__hero">
-                        <div class="single-blog__hero-top">
+                        <div class="single-blog__hero-top" style="background: <?php echo $tag_color; ?> ">
                             <?php
                             echo ( $card_icon_url )
                                 ? '<figure class="single-blog__tag-icon-wrap"><img width="40" height="40" src="' . esc_html($card_icon_url) . '" alt="Icon" /></figure>'
