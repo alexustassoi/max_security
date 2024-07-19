@@ -43,8 +43,12 @@
             gap: 35px;
         }
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 767px) {
             grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media screen and (max-width: 480px) {
             gap: 8px;
         }
     }
