@@ -79,6 +79,32 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_669a8763ba502",
+            "label": "Procedure for placing a Bullet list on the mobile version",
+            "name": "bullet_list_order_mob",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Bullet list 1  + Bullet list 2 on mobile => means that on the mobile version, Bullet list 1 will go first, and then Bullet list 2 will be located. The second option will place Bullet list in reverse",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "list-1-list-2": "Bullet list 1 + Bullet list 2 on mobile",
+                "list-2-list-1": "Bullet list 2 + Bullet list 1 on mobile"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -99,5 +125,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720777425
+    "modified": 1721404020
 }

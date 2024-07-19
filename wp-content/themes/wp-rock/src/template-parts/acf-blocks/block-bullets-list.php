@@ -17,6 +17,7 @@ $bg_color      = get_field_value($fields, 'bg_color');
 $title         = get_field_value($fields, 'title');
 $bullet_list_1 = get_field_value($fields, 'bullet_list_1');
 $bullet_list_2 = get_field_value($fields, 'bullet_list_2');
+$bullet_list_order_mob = get_field_value($fields, 'bullet_list_order_mob');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
@@ -33,7 +34,7 @@ echo $class_name; echo ' space-top-type-' . do_shortcode($space_top_type) . ' ';
                     ? '<div class="bullets-list__title">' . do_shortcode($title) . '</div>'
                     : '';
                 ?>
-                <div class="bullets-list__columns">
+                <div class="bullets-list__columns <?php echo $bullet_list_order_mob === 'list-2-list-1' ? 'reverse-mob' : 'no-reverse-mob'; ?>">
                     <?php
                     echo $bullet_list_1
                         ? '<div class="bullets-list__col-1">' . do_shortcode($bullet_list_1) . '</div>'

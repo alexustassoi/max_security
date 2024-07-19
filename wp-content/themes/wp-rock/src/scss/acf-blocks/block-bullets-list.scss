@@ -50,6 +50,28 @@
         @media screen and (max-width: 480px) {
             gap: 8px;
         }
+
+        &.reverse-mob {
+            .bullets-list {
+                &__col-1 {
+                    @media screen and (max-width: 767px) {
+                        order: 2;
+                    }
+                }
+
+                &__col-2 {
+                    @media screen and (max-width: 767px) {
+                        order: 1;
+                    }
+                }
+            }
+        }
+
+        img {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__columns {
