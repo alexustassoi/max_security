@@ -3,6 +3,26 @@
     "title": "Resources post settings",
     "fields": [
         {
+            "key": "field_669a1d298e2a9",
+            "label": "Hero title",
+            "name": "hero_title",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "This text will be displayed at the very beginning of the single page in the hero block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_663de8e207e47",
             "label": "Hero text",
             "name": "hero_text",
@@ -476,5 +496,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721314780
+    "modified": 1721376073
 }

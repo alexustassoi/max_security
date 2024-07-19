@@ -201,6 +201,27 @@
     &__post-title {
         color: #17181A;
         margin-bottom: 24px;
+
+        p {
+            color: inherit;
+            font-feature-settings: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-align: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: inherit;
+            margin-bottom: 0;
+        }
     }
 
     &__post-hero-text {

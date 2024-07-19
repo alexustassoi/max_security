@@ -18,6 +18,7 @@ do_action( 'wp_rock_before_page_content' );
                     the_post();
                     $post_id         = get_the_ID();
                     $post_fields     = get_fields($post_id);
+                    $hero_title      = get_field_value($post_fields, 'hero_title');
                     $hero_text       = get_field_value($post_fields, 'hero_text');
                     $post_content    = get_field_value($post_fields, 'post_content');
                     $custom_date     = get_field_value($post_fields, 'custom_date');
@@ -32,7 +33,7 @@ do_action( 'wp_rock_before_page_content' );
                     $card_icon_url   = @get_field('card_icon', 'resource_tag_' . $card_tag->term_id);
                     $card_tag_name   = @$card_tag->name;
                     $thumbnail_image = get_the_post_thumbnail( $post_id );
-                    $post_title      = get_the_title();
+//                    $post_title      = get_the_title();
 
                     $webinar_video_settings = get_field_value($post_fields, 'webinar_video_settings');
                     $is_embed_code          = get_field_value($webinar_video_settings, 'is_embed_code');
@@ -75,8 +76,8 @@ do_action( 'wp_rock_before_page_content' );
                             ?>
                             <div class="single-blog__hero-content hero-content-part">
                                 <?php
-                                echo ($post_title && 'webinar' !== mb_strtolower($category_name_for_post))
-                                    ? '<h5 class="single-blog__post-title">' . do_shortcode($post_title) . '</h5>'
+                                echo ($hero_title && 'webinar' !== mb_strtolower($category_name_for_post))
+                                    ? '<div class="single-blog__post-title">' . do_shortcode($hero_title) . '</div>'
                                     : '';
 
                                 echo ($hero_text)

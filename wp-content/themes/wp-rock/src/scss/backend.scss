@@ -31,9 +31,9 @@ html :where(.wp-block) {
     color: $--greys-dark;
     font-size: 16px;
     line-height: 117.5%;
+    min-width: 1200px;
     font-weight: normal;
     font-style: normal;
-    min-width: 1200px;
     
     * {
         box-sizing: border-box;
