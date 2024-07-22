@@ -121,7 +121,7 @@ do_action( 'wp_rock_before_page_content' );
                             <div class="single-blog__webinar-box-video-wrapper">
                                 <?php
                                 if ( $is_embed_code && $embed_code ) {
-                                    echo $embed_code;
+                                    echo '<div class="single-blog__iframe-container">' . do_shortcode($embed_code) . '</div>';
                                 }
                                 if ( !$is_embed_code && $webinar_video_file ) {
                                     echo '<video src="'.$webinar_video_file.'" controls></video>';
