@@ -11,6 +11,12 @@ $class_name     = isset($args['className']) ? ' ' . $args['className'] : '';
 $fields         = get_fields();
 $content_w_images = get_field_value($fields, 'content_w_images');
 
+
+$hide_block        = get_field_value($fields, 'hide_block');
+
+if ($hide_block) {
+    return '';
+}
 ?>
 
 <div class="content-w-images <?php echo $class_name; ?>">

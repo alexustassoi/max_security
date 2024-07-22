@@ -13,6 +13,11 @@ $video = get_field_value( $fields, 'video' );
 
 $warning_class = new Get_Warnings();
 $warnings = $warning_class->get_custom_warning(null, true);
+$hide_block        = get_field_value($fields, 'hide_block');
+
+if ($hide_block) {
+    return '';
+}
 ?>
 
 <div class="top-page js-top-block <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">

@@ -14,6 +14,12 @@ $text = get_field_value( $fields, 'text' );
 $services = get_field_value( $fields, 'services' );
 $bottom_content = get_field_value( $fields, 'bottom_content' );
 
+
+$hide_block        = get_field_value($fields, 'hide_block');
+
+if ($hide_block) {
+    return '';
+}
 ?>
 
 <div class="services js-top-block <?php echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>">

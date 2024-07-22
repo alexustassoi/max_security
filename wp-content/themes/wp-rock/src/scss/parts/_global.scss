@@ -343,6 +343,8 @@ body {
 
         li {
             color: #46494d;
+            list-style-type: disc;
+            left: 20px;
         }
     }
 }
@@ -595,22 +597,19 @@ button {
     }
 }
 
-p {
+p, li {
     margin-top: 0;
-    font-size: 20px;
-    font-weight: 400;
     line-height: 1.4;
+    font-size: calc(var(--typo-size-font-default-paragraph-d) * 1px);
+    font-weight: var(--typo-size-font-default-paragraph-w);
 
-    @media screen and (max-width: 1024px) {
-        font-size: 18px;
+    @media screen and (max-width: 1199px) {
+        font-size: calc(var(--typo-size-font-default-paragraph-t) * 1px);
     }
 
-    @media screen and (max-width: 768px) {
-        font-size: 16px;
-    }
-
-    @media screen and (max-width: 670px) {
-        font-size: 12px;
+    @media screen and (max-width: 480px) {
+        font-size: calc(var(--typo-size-font-default-paragraph-m) * 1px);
+        line-height: 1.3;
     }
 
     &:last-child {
@@ -631,16 +630,14 @@ h1 {
 }
 
 li {
-    color: #f3f0ec;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Turbine, sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20px;
     position: relative;
     list-style: none;
-    margin-bottom: 0;
+}
+
+
+ol li {
+    list-style-type: decimal;
+    left: 30px;
 }
 
 h1, .p-like-h1, .h2-like-h1 {
@@ -739,6 +736,8 @@ h6, .h1-like-h6, .h2-like-h6, .h3-like-h6, .h4-like-h6, .p-like-h6 {
         line-height: 1.3;
     }
 }
+
+
 
 .body-type-2 {
     font-size: calc(var(--typo-size-font-body2-d) * 1px);
@@ -895,14 +894,14 @@ body {
 
 .from-left {
     &.is-visible {
-        animation: 1s forwards linear ease-in-out;
+        animation: 2s forwards linear ease-in-out;
         animation-name: from-left;
     }
 }
 
 .from-right {
     &.is-visible {
-        animation: 1s forwards linear ease-in-out;
+        animation: 2s forwards linear ease-in-out;
         animation-name: from-right;
     }
 }
@@ -1311,4 +1310,7 @@ body #hubspot-messages-iframe-container {
             background-color: transparent !important;
         }
     }
+}
+em {
+    font-style: italic;
 }

@@ -391,6 +391,8 @@
 
     &__card-top {
         display: flex;
+        background: #8a8b9a;
+        height: 32px;
     }
 
     &__card-tags {
@@ -458,13 +460,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 126px;
+        width: 140px;
         padding: 8px 16px;
         background: #151836;
         flex-shrink: 0;
 
         @media screen and (max-width: 374px) {
-            width: 110px;
+            //width: 110px;
         }
 
         &.is-newsletter {
@@ -624,6 +626,7 @@
         top: -8px;
         left: -16px;
         margin-bottom: 0;
+        overflow: hidden;
 
         @media screen and (max-width: 570px) {
             height: 210px;

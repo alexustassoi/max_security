@@ -18,6 +18,12 @@ $clients    = get_field_value($fields, 'clients');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
+$hide_block        = get_field_value($fields, 'hide_block');
+
+if ($hide_block) {
+    return '';
+}
 ?>
 
 <div class="clients  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';  echo esc_html($class_name); echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" id="<?php echo $args['id']; ?>">

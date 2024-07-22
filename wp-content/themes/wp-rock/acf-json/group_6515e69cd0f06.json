@@ -721,6 +721,127 @@
             "ajax": 0,
             "placeholder": ""
         },
+
+        {
+            "key": "field_6683bc3122wsc",
+            "label": "Default Paragraph",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6683bc752dfer",
+            "label": "Mobile",
+            "name": "font-default-paragraph-m",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 18,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_6683bc842defc",
+            "label": "Tablet",
+            "name": "font-default-paragraph-t",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 20,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_6683bc9b2sxdc",
+            "label": "Desktop",
+            "name": "font-default-paragraph-d",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 20,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_6683bca32efrd",
+            "label": "Font Weight",
+            "name": "font-default-paragraph-w",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Thin": "Thin",
+                "Light": "Light",
+                "Extra Light": "Extra Light",
+                "Regular": "Regular",
+                "Medium": "Medium",
+                "SemiBold": "SemiBold",
+                "Bold": "Bold",
+                "ExtraBold": "ExtraBold",
+                "Black": "Black"
+            },
+            "default_value": "Bold",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+
+
+
         {
             "key": "field_6683bc312240f",
             "label": "Body1",
@@ -1675,5 +1796,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720620572
+    "modified": 1721637877
 }

@@ -42,9 +42,17 @@ const initBlockExample = () => {
             loop: true,
             slidesPerView: 'auto',
             modules: [Autoplay],
+
+            grabCursor: true,
+            loopedSlides: 8,
+            freeMode: {
+                enabled: true,
+                momentum: false,
+            },
             autoplay: {
                 delay: 0,
                 disableOnInteraction: false,
+                waitForTransition: false,
             },
         });
 

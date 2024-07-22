@@ -21,6 +21,12 @@ $bullet_list_order_mob = get_field_value($fields, 'bullet_list_order_mob');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
+
+$hide_block        = get_field_value($fields, 'hide_block');
+
+if ($hide_block) {
+    return '';
+}
 ?>
 
 <div class="bullets-list <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : '';

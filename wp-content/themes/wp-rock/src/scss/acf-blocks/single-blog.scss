@@ -76,9 +76,9 @@
             color: inherit;
             font-feature-settings: inherit;
             font-family: inherit;
-            font-size: inherit;
+            //font-size: inherit;
             font-style: inherit;
-            font-weight: inherit;
+            //font-weight: inherit;
             line-height: inherit;
             text-align: inherit;
             margin: inherit;
@@ -100,11 +100,11 @@
 
         p {
             color: inherit;
-            font-feature-settings: inherit;
+            //font-feature-settings: inherit;
             font-family: inherit;
-            font-size: inherit;
+            //font-size: inherit;
             font-style: inherit;
-            font-weight: inherit;
+            //font-weight: inherit;
             line-height: inherit;
             text-align: inherit;
         }
@@ -226,21 +226,21 @@
 
     &__post-hero-text {
         color: #17181A;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
+        //font-size: 20px;
+        //font-style: normal;
+        //font-weight: 400;
         line-height: 1.4;
 
         p, span, a:not(.custom-content__button) {
             color: inherit;
-            font-size: inherit;
+            //font-size: inherit;
             font-style: inherit;
-            font-weight: inherit;
+            //font-weight: inherit;
             line-height: inherit;
         }
 
         @media screen and (max-width: 768px) {
-            font-size: 18px;
+            //font-size: 18px;
         }
     }
 
@@ -266,7 +266,7 @@
         }
 
         img {
-            width: calc(50% - 1rem);
+            //width: calc(50% - 1rem);
 
             @media screen and (max-width: 768px) {
                 width: 100%;

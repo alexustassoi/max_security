@@ -494,6 +494,10 @@ function wp_rock_typo_size_panel(): void
         'font-body4-t',
         'font-body4-d',
         'font-body4-w',
+        'font-default-paragraph-m',
+        'font-default-paragraph-t',
+        'font-default-paragraph-d',
+        'font-default-paragraph-w',
     );
 
     // set array of typography font weight variables.

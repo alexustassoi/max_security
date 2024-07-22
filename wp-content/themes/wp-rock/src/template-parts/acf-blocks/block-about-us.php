@@ -13,7 +13,11 @@ $title = get_field_value($fields, 'title');
 $image = get_field_value($fields, 'image');
 $image_mobile = get_field_value($fields, 'image_mobile');
 $content = get_field_value($fields, 'content');
+$hide_block        = get_field_value($fields, 'hide_block');
 
+if ($hide_block) {
+    return '';
+}
 ?>
 
 <div class="about-us<?php echo $class_name; ?>">
