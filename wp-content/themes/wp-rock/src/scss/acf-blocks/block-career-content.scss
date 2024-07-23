@@ -672,6 +672,8 @@
 
         .hs-form-booleancheckbox {
             position: relative;
+            list-style: none;
+            left: 0;
 
             input[type="checkbox"] {
                 opacity: 0;

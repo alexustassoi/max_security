@@ -106,6 +106,7 @@ do_action( 'wp_rock_before_page_content' );
                         ? '<div class="single-blog__post-text">' . do_shortcode($post_content) . '</div>'
                         : '';
 
+                    echo '<h1>TESTTTTTTT 1</h1>';
                     if (
                         $webinar_video_settings &&
                         ( $is_embed_code && $embed_code ) ||
@@ -132,6 +133,7 @@ do_action( 'wp_rock_before_page_content' );
                         <?php
                     }
 
+                    echo '<h1>TESTTTTTTT 2</h1>';
                 }
                 wp_reset_postdata();
             }

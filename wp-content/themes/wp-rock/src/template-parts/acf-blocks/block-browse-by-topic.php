@@ -69,6 +69,7 @@ if ($hide_block) {
                     $args = array(
                         'post_type'      => 'resources',
                         'post_status'    => 'publish',
+                        'orderby'       => 'date',
                     );
 
                     if ( $target_category ) {

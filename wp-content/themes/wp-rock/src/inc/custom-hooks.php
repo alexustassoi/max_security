@@ -214,7 +214,7 @@ function add_custom_template_metabox() {
         'render_custom_template_metabox',    // Callback function for rendering the metabox
         'resources',                         // Post type for which the metabox is added
         'side',                              // Context (position) where the metabox should appear
-        'default'                            // Priority of the metabox
+        'high'                            // Priority of the metabox
     );
 }
 add_action('add_meta_boxes', 'add_custom_template_metabox');

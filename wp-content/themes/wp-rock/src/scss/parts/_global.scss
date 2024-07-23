@@ -344,7 +344,8 @@ body {
         li {
             color: #46494d;
             list-style-type: disc;
-            left: 20px;
+            list-style-position: inside;
+
         }
     }
 }
@@ -637,7 +638,8 @@ li {
 
 ol li {
     list-style-type: decimal;
-    left: 30px;
+    list-style-position: inside;
+    //left: 30px;
 }
 
 h1, .p-like-h1, .h2-like-h1 {
@@ -1081,10 +1083,13 @@ body.single-resources {
 
 body #pojo-a11y-toolbar {
     top: auto !important;
-    bottom: -250px !important;
+    bottom: -347px !important;
 
+    @media screen and (max-width: 1200px) {
+        bottom: -226px !important;
+    }
     @media screen and (max-width: 768px) {
-        bottom: -200px !important;
+        bottom: -163px !important;
     }
 
     @media screen and (max-width: 670px) {
