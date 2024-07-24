@@ -255,11 +255,11 @@ body {
     }
 
     .slider-popup & {
-        max-width: 1250px;
+        //max-width: 1250px;
 
         @media screen and (max-width: 991px) {
             @media screen and (max-width: 992px) {
-                max-width: 700px;
+                //max-width: 700px;
             }
 
             @media screen and (max-width: 768px) {
@@ -1328,4 +1328,121 @@ em {
 
 ul ul li {
     list-style-type: circle !important;
+}
+
+
+
+
+.custom-content,
+.custom-container {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    clear: both;
+
+    @media screen and (max-width: 1199px) {
+        padding-top: 35px;
+    }
+
+    @media screen and (max-width: 850px) {
+        padding-top: 24px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding-bottom: 32px;
+    }
+
+    &.content-w-images {
+        .custom-container {
+            @media screen and (max-width: 480px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    &__inner {
+        .custom-container {
+            @media screen and (max-width: 480px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 16px;
+        //font-weight: 700;
+        //line-height: 1.26;
+
+        @media screen and (max-width: 1370px) {
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            /*font-size: 24px;
+            font-weight: 700;
+            line-height: 1.16;*/
+        }
+    }
+
+    p {
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 16px;
+        }
+    }
+
+
+    /* p {
+         color: #17181A;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 1.4;
+         margin-bottom: 24px;
+
+         @media screen and (max-width: 1199px) {
+             font-size: 16px;
+         }
+
+         @media screen and (max-width: 480px) {
+             font-weight: 300;
+             line-height: 1;
+             margin-bottom: 16px;
+         }
+     }*/
+
+    &__title {
+        h1,
+        h2,
+        h3 {
+
+        }
+
+        // font-weight: 900;
+    }
+
+    ul, ol {
+        padding: 0 0 0 15px;
+
+        li {
+            list-style-type: disc;
+            margin-bottom: 0.875rem;
+        }
+    }
+
+    ol li {
+        list-style-type: decimal;
+    }
+}
+
+
+.custom-container ul li p, .custom-content ul li p {
+    display: inline;
 }
