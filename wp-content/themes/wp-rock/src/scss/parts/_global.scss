@@ -1474,8 +1474,13 @@ ul ul li {
 
 
 li.hs-form-checkbox {
-    list-style-type: none;
+    list-style-type: none !important;
 }
+
+ul[role="checkbox"] {
+    padding: 0 !important;
+}
+
 
 .text-content {
     .hbspt-form {
@@ -1704,14 +1709,17 @@ li.hs-form-checkbox {
             }
         }
 
-        .hs-fieldtype-booleancheckbox {
+        .hs-fieldtype-booleancheckbox,
+        .hs-fieldtype-checkbox {
 
             .inputs-list {
                 margin: 0;
                 padding: 0;
             }
 
-            .hs-form-booleancheckbox-display {
+            .hs-form-booleancheckbox-display,
+            .hs-form-checkbox-display,
+            label.hs-input {
                 color: #1d1d1b;
                 font-family: Turbine, sans-serif;
                 font-size: 16px;
@@ -1721,10 +1729,13 @@ li.hs-form-checkbox {
                 position: relative;
             }
 
-            .hs-form-booleancheckbox {
+            .hs-form-booleancheckbox,
+            .hs-form-checkbox-display,
+            .hs-form-checkbox {
                 position: relative;
                 list-style: none;
                 left: 0;
+                text-indent: 0;
 
                 input[type="checkbox"] {
                     opacity: 0;
@@ -1806,4 +1817,9 @@ li.hs-form-checkbox {
             padding: 0;
         }
     }
+}
+
+.hs-error-msgs li {
+    list-style-type: none !important;
+    text-indent: 0 !important;
 }
