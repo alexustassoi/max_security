@@ -120,6 +120,12 @@ add_action(
             cursor: pointer;
         }
 
+        .btn-accept p,
+        .btn-reject p {
+            margin: 0;
+            padding: 0;
+        }
+
         .btn-accept {
             color: #fff;
             background-color: #CC7510;
