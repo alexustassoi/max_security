@@ -138,7 +138,6 @@
         }
     }
 
-
     &__wrap {
         padding: 18px 0 0;
         display: flex;
@@ -390,17 +389,6 @@
 
         &-title,
         &-content {
-            p {
-                color: inherit;
-                font-feature-settings: inherit;
-                font-family: inherit;
-                font-size: inherit;
-                font-style: inherit;
-                font-weight: inherit;
-                line-height: inherit;
-                text-align: inherit;
-            }
-
             h1,
             h2,
             h3,
@@ -412,33 +400,32 @@
         }
 
         &-title {
-            color: #17181a;
-            font-feature-settings: 'clig' off, 'liga' off;
+            //color: #17181a;
             font-family: Turbine, sans-serif;
-            font-size: 86px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 1.153;
+            //font-size: 86px;
+            //font-style: normal;
+            //font-weight: 500;
+            //line-height: 1.153;
             margin: 0;
 
             @media screen and (max-width: 1530px) {
-                font-size: 52px;
+               // font-size: 52px;
             }
             @media screen and (max-width: 1200px) {
-                font-size: 45px;
+                //font-size: 45px;
             }
 
             @media screen and (max-width: 992px) {
-                font-size: 40px;
+                //font-size: 40px;
             }
 
             @media screen and (max-width: 768px) {
-                font-size: 35px;
+                //font-size: 35px;
             }
 
             @media screen and (max-width: 560px) {
-                font-size: 30px;
-                line-height: 1.2;
+                //font-size: 30px;
+                //line-height: 1.2;
                 margin-bottom: 16px;
             }
         }

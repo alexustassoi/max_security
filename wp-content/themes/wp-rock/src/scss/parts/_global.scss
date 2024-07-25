@@ -901,22 +901,37 @@ body {
 
 .from-left {
     &.is-visible {
-        animation: 2s forwards linear ease-in-out;
+        animation: 3s forwards linear ease-in-out;
         animation-name: from-left;
+
+        @media screen and (max-width: 768px) {
+            animation: 2s forwards linear ease-in-out;
+            animation-name: from-left;
+        }
     }
 }
 
 .from-right {
     &.is-visible {
-        animation: 2s forwards linear ease-in-out;
+        animation: 3s forwards linear ease-in-out;
         animation-name: from-right;
+
+        @media screen and (max-width: 768px) {
+            animation: 3s forwards linear ease-in-out;
+            animation-name: from-left;
+        }
     }
 }
 
 .custom-fade {
     &.is-visible {
-        animation: 2s forwards linear ease-in-out;
+        animation: 3s forwards linear ease-in-out;
         animation-name: custom-fade;
+
+        @media screen and (max-width: 768px) {
+            animation: 2s forwards linear ease-in-out;
+            animation-name: custom-fade;
+        }
     }
 }
 

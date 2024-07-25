@@ -141,26 +141,14 @@
         align-items: center;
 
         &-title {
-            color: #17181A;
-            font-feature-settings: 'clig' off, 'liga' off;
+            //color: #17181A;
+            //font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
-            font-size: 52px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 1.46;
+            //font-size: 52px;
+            //font-style: normal;
+            //font-weight: 500;
+            //line-height: 1.46;
             margin: 0;
-
-            p {
-                color: inherit;
-                font-feature-settings: inherit;
-                font-family: inherit;
-                font-size: inherit;
-                font-style: inherit;
-                font-weight: inherit;
-                line-height: inherit;
-                text-align: inherit;
-                margin: inherit;
-            }
 
             h1,
             h2,

@@ -51,7 +51,8 @@ if ($hide_block) {
 
                             $terms = get_terms( array(
                                 'taxonomy' => 'resources-category',
-                                'hide_empty' => false,
+                                'hide_empty' => true,
+                                'orderby' => 'menu_order',
                             ) );
 
                             if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
