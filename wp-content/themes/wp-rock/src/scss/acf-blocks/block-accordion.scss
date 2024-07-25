@@ -187,6 +187,7 @@
                 line-height: 1.1;
                 left: 0;
                 list-style-type: none;
+                text-indent: 0;
 
                 @media screen and (max-width: 768px) {
                     font-size: 16px;
@@ -353,6 +354,7 @@
             li {
                 left: 0;
                 color: #dc5d5d;
+                text-indent: 0;
             }
         }
     }
