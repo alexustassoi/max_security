@@ -921,7 +921,7 @@ body {
         animation-name: from-right;
 
         @media screen and (max-width: 768px) {
-            animation: 3s forwards linear ease-in-out;
+            animation: 2s forwards linear ease-in-out;
             animation-name: from-left;
         }
     }
@@ -1822,4 +1822,17 @@ ul[role="checkbox"] {
 .hs-error-msgs li {
     list-style-type: none !important;
     text-indent: 0 !important;
+}
+
+
+.services {
+    .custom-container {
+        @media screen and (max-width: 520px) {
+            padding-bottom: 0;
+
+            .services__bottom-content p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
