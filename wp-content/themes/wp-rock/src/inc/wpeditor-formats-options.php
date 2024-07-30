@@ -69,14 +69,14 @@ function my_wpeditor_formats_options( $settings ) {
             'classes' => 'h1-like-h6',
         ),
         array(
-            'title' => 'H2 with H3 styling',
-            'block' => 'h2',
-            'classes' => 'h2-like-h3',
-        ),
-        array(
             'title' => 'H2 with H1 styling',
             'block' => 'h2',
             'classes' => 'h2-like-h1',
+        ),
+        array(
+            'title' => 'H2 with H3 styling',
+            'block' => 'h2',
+            'classes' => 'h2-like-h3',
         ),
         array(
             'title' => 'H2 with H4 styling',
@@ -94,6 +94,16 @@ function my_wpeditor_formats_options( $settings ) {
             'classes' => 'h2-like-h6',
         ),
         array(
+            'title' => 'H3 with H1 styling',
+            'block' => 'h3',
+            'classes' => 'h3-like-h1',
+        ),
+        array(
+            'title' => 'H3 with H2 styling',
+            'block' => 'h3',
+            'classes' => 'h3-like-h2',
+        ),
+        array(
             'title' => 'H3 with H4 styling',
             'block' => 'h3',
             'classes' => 'h3-like-h4',
@@ -107,6 +117,21 @@ function my_wpeditor_formats_options( $settings ) {
             'title' => 'H3 with H6 styling',
             'block' => 'h3',
             'classes' => 'h3-like-h6',
+        ),
+        array(
+            'title' => 'H4 with H1 styling',
+            'block' => 'h4',
+            'classes' => 'h4-like-h1',
+        ),
+        array(
+            'title' => 'H4 with H2 styling',
+            'block' => 'h4',
+            'classes' => 'h4-like-h2',
+        ),
+        array(
+            'title' => 'H4 with H3 styling',
+            'block' => 'h4',
+            'classes' => 'h4-like-h3',
         ),
         array(
             'title' => 'H4 with H5 styling',

@@ -148,6 +148,8 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 1.4;
+                list-style-type: none;
+                text-indent: 0;
 
                 &::after {
                     content: '';

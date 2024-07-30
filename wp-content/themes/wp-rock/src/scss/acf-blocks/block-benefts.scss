@@ -133,6 +133,10 @@
             margin-bottom: 8px;
             margin-top: 0 !important;
 
+            > * {
+                pointer-events: none;
+            }
+
             @media screen and (max-width: 992px) {
                 font-size: 25px;
             }

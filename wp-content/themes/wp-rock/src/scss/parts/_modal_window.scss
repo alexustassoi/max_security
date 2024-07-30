@@ -215,6 +215,7 @@ html {
                     list-style: none;
                     margin-bottom: 0;
                     padding-left: 15px;
+                    text-indent: 0;
 
                     @media screen and (max-width: 768px) {
 
@@ -647,6 +648,7 @@ html {
         color: red !important;
         font-size: 14px !important;
         margin: 0 !important;
+        display: block !important;
     }
 
     .hbspt-form .hs-error-msgs {
@@ -1718,6 +1720,7 @@ html {
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
+                    text-indent: 0;
                     line-height: 1.4;
 
                     @media screen and (max-width: 480px) {

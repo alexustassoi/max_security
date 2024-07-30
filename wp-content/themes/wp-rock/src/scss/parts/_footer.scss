@@ -192,6 +192,7 @@
                 margin-bottom: 16px;
                 list-style: none;
                 line-height: 1;
+                text-indent: 0;
 
                 @media screen and (max-width: 480px) {
                     margin-bottom: 8px;
@@ -406,14 +407,10 @@
         }
 
         p {
-            color: inherit;
-            font-feature-settings: inherit;
-            font-family: inherit;
-            font-size: inherit;
-            font-style: inherit;
-            font-weight: inherit;
-            line-height: inherit;
-            text-align: inherit;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         h1,
@@ -435,17 +432,6 @@
         line-height: 1.4;
         margin: 0;
 
-        p {
-            color: inherit;
-            font-feature-settings: inherit;
-            font-family: inherit;
-            font-size: inherit;
-            font-style: inherit;
-            font-weight: inherit;
-            line-height: inherit;
-            text-align: inherit;
-        }
-
         h1,
         h2,
         h3,
@@ -466,6 +452,12 @@
 
             &:hover {
                 text-decoration: none;
+            }
+        }
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
             }
         }
 

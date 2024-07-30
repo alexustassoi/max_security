@@ -10,6 +10,8 @@
 @import 'parts/modal_window';
 @import 'parts/cookies';
 
+// Dirty hack
+@import 'acf-blocks/block-service-top.scss';
 @import 'acf-blocks/block-services.scss';
 @import 'acf-blocks/block-browse-topic.scss';
 @import 'acf-blocks/block-sign-up-offer.scss';

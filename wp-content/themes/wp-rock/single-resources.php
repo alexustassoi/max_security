@@ -131,7 +131,6 @@ do_action( 'wp_rock_before_page_content' );
                         </div>
                         <?php
                     }
-
                 }
                 wp_reset_postdata();
             }
