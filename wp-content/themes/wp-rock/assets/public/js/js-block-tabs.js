@@ -1,6 +1,5 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
-var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./node_modules/ssr-window/ssr-window.esm.js
 /**
@@ -10848,8 +10847,12 @@ var initBlockClients = function initBlockClients() {
           spaceBetween: 25,
           slidesPerView: 4
         },
-        481: {
+        670: {
           slidesPerView: 4,
+          spaceBetween: 15
+        },
+        481: {
+          slidesPerView: 3,
           spaceBetween: 15
         },
         415: {

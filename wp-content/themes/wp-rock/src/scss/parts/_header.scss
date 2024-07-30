@@ -28,6 +28,11 @@
         pointer-events: none;
         transition: all 0.4s;
 
+        @media screen and (max-width: 1030px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         &.open {
             opacity: 1;
             pointer-events: auto;
@@ -178,6 +183,28 @@
                     &.special-submenu-opener {
                         > * {
                             pointer-events: none;
+                        }
+                    }
+                }
+
+                &.special-submenu-opener {
+                    position: relative;
+                    z-index: 1;
+
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        display: none;
+                        left: 0;
+                        bottom: -40px;
+                        width: 100%;
+                        height: 40px;
+                        z-index: 1;
+                    }
+
+                    &:hover {
+                        &:after {
+                            display: block;
                         }
                     }
                 }

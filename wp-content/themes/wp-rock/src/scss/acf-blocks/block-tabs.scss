@@ -164,12 +164,11 @@
 
             @media screen and (max-width: 991px) {
                 //font-size: 14px;
-                padding-top: 12px;
+                padding-top: 10px;
             }
 
             @media screen and (max-width: 570px) {
                 //font-size: 12px;
-                padding-top: 10px;
             }
 
             @media screen and (max-width: 330px) {
@@ -202,9 +201,12 @@
             transform: scale(1.1, 1.1);
             opacity: 1;
 
+            @media screen and (max-width: 1030px) {
+                transform: scale(1.05, 1.05);
+            }
+
             .tabs__tab-inner {
                 svg {
-
                     path {
                         stroke-width: 1.5px;
                         stroke: #f2f0ec;
@@ -228,6 +230,14 @@
         svg {
             width: 100%;
             height: auto;
+
+            @media screen and (max-width: 991px) {
+                width: 95px;
+            }
+
+            @media screen and (max-width: 670px) {
+                width: 80px;
+            }
         }
 
         @media screen and (max-width: 1199px) {
