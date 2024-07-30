@@ -198,10 +198,10 @@
         color:  #F3F0EC;
         font-feature-settings: 'clig' off, 'liga' off;
         font-family: Turbine, sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.42;
+        //font-size: 14px;
+        //font-style: normal;
+        //font-weight: 400;
+        //line-height: 1.42;
         padding-left: 30px;
         padding-right: 150px;
         margin: 0;
@@ -219,7 +219,7 @@
         }
 
         @media screen and (max-width: 768px) {
-            font-size: 14px;
+            //font-size: 14px;
             padding-right: 0;
 
             &.open {
@@ -229,11 +229,11 @@
         }
 
         @media screen and (max-width: 480px) {
-            font-size: 14px;
+            //font-size: 14px;
             line-height: 1.2;
         }
 
-        p {
+        /*p {
             color: inherit;
             font-feature-settings: inherit;
             font-family: inherit;
@@ -242,6 +242,6 @@
             font-weight: inherit;
             line-height: inherit;
             text-align: inherit;
-        }
+        }*/
     }
 }

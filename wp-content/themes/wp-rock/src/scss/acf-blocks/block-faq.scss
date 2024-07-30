@@ -240,9 +240,9 @@
 
     &__item-text {
         color: #2F3034;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.42;
+        //font-size: 16px;
+        //font-weight: 400;
+        //line-height: 1.42;
         padding: 0 80px;
         max-height: 0;
         overflow: hidden;
@@ -266,21 +266,15 @@
         @media screen and (max-width: 480px) {
             padding-left: 64px;
             padding-right: 15px;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 1.16;
+            //font-size: 12px;
+            //font-weight: 400;
+            //line-height: 1.16;
         }
 
         @media screen and (max-width: 320px) {
             padding-left: 55px;
         }
 
-        * {
-            color: inherit;
-            font-size: inherit;
-            font-weight: inherit;
-            line-height: inherit;
-        }
 
         b,
         strong {

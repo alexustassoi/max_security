@@ -49,7 +49,7 @@
         line-height: 1.4;
 
         @media screen and (max-width: 768px) {
-            font-size: 18px;
+            //font-size: 18px;
         }
 
         @media screen and (max-width: 480px) {
@@ -60,7 +60,7 @@
             margin-right: auto;
         }
 
-        p {
+       /* p {
             color: inherit;
             font-feature-settings: inherit;
             font-family: inherit;
@@ -69,7 +69,7 @@
             font-weight: inherit;
             line-height: inherit;
             text-align: inherit;
-        }
+        }*/
 
         h1,
         h2,

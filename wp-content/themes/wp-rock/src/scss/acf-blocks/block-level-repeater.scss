@@ -119,16 +119,18 @@
         font-family: Turbine, sans-serif;
         font-style: normal;
         font-weight: 700;
+        margin-bottom: 0 !important;
 
         p {
-            color: inherit;
+            /*color: inherit;
             font-feature-settings: inherit;
             font-family: inherit;
-            font-size: inherit;
-            font-style: inherit;
-            font-weight: inherit;
+            //font-size: inherit;
+            //font-style: inherit;
+            //font-weight: inherit;
             line-height: inherit;
-            text-align: inherit;
+            text-align: inherit;*/
+            margin-bottom: 0 !important;
 
             @media screen and (max-width: 670px) {
                 margin: 0 !important;

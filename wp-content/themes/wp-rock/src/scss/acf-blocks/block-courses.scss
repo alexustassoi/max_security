@@ -230,33 +230,22 @@
             color: #f3f0ec;
             font-feature-settings: 'clig' off, 'liga' off;
             font-family: Turbine, sans-serif;
-            font-size: 30px;
+            //font-size: 30px;
             font-style: normal;
-            font-weight: 700;
+            //font-weight: 700;
             line-height: 1.2;
             margin-bottom: 8px;
 
             @media screen and (max-width: 768px) {
-                font-size: 26px;
+               // font-size: 26px;
             }
 
             @media screen and (max-width: 670px) {
-                font-size: 20px;
+                //font-size: 20px;
             }
 
             @media screen and (max-width: 470px) {
-                font-size: 16px;
-            }
-
-            p {
-                color: inherit;
-                font-feature-settings: inherit;
-                font-family: inherit;
-                font-size: inherit;
-                font-style: inherit;
-                font-weight: inherit;
-                line-height: inherit;
-                margin-bottom: inherit;
+                //font-size: 16px;
             }
         }
 
