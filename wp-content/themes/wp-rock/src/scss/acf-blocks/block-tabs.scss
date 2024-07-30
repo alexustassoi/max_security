@@ -156,6 +156,7 @@
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
+            padding-top: 15px;
 
             @media screen and (max-width: 1199px) {
                 font-size: 16px;
@@ -163,6 +164,7 @@
 
             @media screen and (max-width: 991px) {
                 font-size: 14px;
+                padding-top: 12px;
             }
 
             @media screen and (max-width: 570px) {
