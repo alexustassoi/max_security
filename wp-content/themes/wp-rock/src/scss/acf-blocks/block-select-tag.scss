@@ -14,11 +14,17 @@
     }
 
     @media screen and (max-width: 670px) {
-        padding-bottom: 15px;
-        padding-top: 15px;
+        padding-bottom: 15px !important;
+        padding-top: 15px !important;
     }
 
     &__inner {
+        .custom-container {
+            @media screen and (max-width: 670px) {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+        }
     }
 
     &__tag-info {
@@ -51,6 +57,7 @@
         font-style: normal;
         font-weight: 500;
         line-height: 1.33;
+        margin: 0 !important;
 
         @media screen and (max-width: 991px) {
             font-size: 18px;

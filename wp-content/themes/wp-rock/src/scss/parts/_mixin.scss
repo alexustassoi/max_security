@@ -169,6 +169,10 @@
     color: #fff;
     padding: 0 8px;
 
+    p {
+        margin: 0 !important;
+    }
+
     @media screen and (max-width: 480px) {
         font-size: 13px;
         border: 2px solid #cc7510;

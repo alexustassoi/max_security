@@ -48,7 +48,7 @@ body {
         }
 
         @media screen and (max-width: 480px) {
-            margin-top: 45px;
+            margin-top: 60px;
         }
     }
 
@@ -1330,6 +1330,13 @@ body #pojo-a11y-toolbar {
 
 body #hubspot-messages-iframe-container {
     bottom: 80px !important;
+
+    .hs-shadow-container.active {
+
+        & + iframe {
+            bottom: -80px !important;
+        }
+    }
 }
 
 
