@@ -1,6 +1,5 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
-var __webpack_exports__ = {};
 var _a;
 var handleFaqItem = function handleFaqItem() {
   document.body.addEventListener('click', function (e) {
