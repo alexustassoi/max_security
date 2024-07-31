@@ -339,6 +339,14 @@
             position: relative;
         }
 
+        &__swiper-one-slide {
+            .reviews {
+                &__button {
+                    display: none;
+                }
+            }
+        }
+
         &__button {
             position: absolute;
             z-index: 3;

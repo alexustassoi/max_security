@@ -283,6 +283,10 @@
                 line-height: 1.2;
             }
 
+            p {
+                margin-bottom: 0;
+            }
+
             &-wrap {
                 display: flex;
                 gap: 11px;

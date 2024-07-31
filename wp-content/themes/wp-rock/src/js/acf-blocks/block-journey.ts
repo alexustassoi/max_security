@@ -4,6 +4,7 @@ Swiper.use([Navigation]);
 
 const initBlockJourney = () => {
     const expertsSwiper = document.querySelector('.js-reviews-slider') as HTMLElement;
+    const expertsSwiperSlides = document.querySelectorAll('.js-reviews-slider .swiper-slide') as NodeList;
     const historySwiper = document.querySelector('.js-history-slider') as HTMLElement;
 
     if (historySwiper) {
@@ -33,14 +34,18 @@ const initBlockJourney = () => {
         });
     }
 
-    if (expertsSwiper) {
+    if (expertsSwiper && [...expertsSwiperSlides].length > 1) {
         const expertsSlider = new Swiper(expertsSwiper, {
             loop: true,
             navigation: {
                 nextEl: '.js-next-reviews',
                 prevEl: '.js-prev-reviews',
             },
-        });
+        });  
+    }
+
+    if (expertsSwiper && [...expertsSwiperSlides].length <= 1) {
+        expertsSwiper.classList.add('reviews__swiper-one-slide');
     }
 };
 

@@ -78,6 +78,18 @@
             font-size: 24px;
             margin-bottom: 8px;
         }
+
+        & + .our-team__description {
+            margin-top: 24px;
+
+            @media screen and (max-width: 768px) {
+                margin-top: 16px;
+            }
+
+            @media screen and (max-width: 480px) {
+                margin-top: 8px;
+            }
+        }
     }
 
     &__subtitle {

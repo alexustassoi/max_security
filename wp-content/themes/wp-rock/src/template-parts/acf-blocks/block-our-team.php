@@ -17,7 +17,7 @@ $title             = get_field_value($fields, 'title');
 $subtitle          = get_field_value($fields, 'subtitle');
 $description       = get_field_value($fields, 'description');
 $team_repeater     = get_field_value($fields, 'team_repeater');
-$no_photo_url      = get_template_directory_uri() . '/assets/public/images/no-photo.png';
+$no_photo_url      = get_template_directory_uri() . '/assets/public/images/no-avatar.png';
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
