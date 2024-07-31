@@ -208,6 +208,8 @@
                 height: auto;
                 z-index: 9999;
                 border-radius: 0;
+                overflow: scroll;
+                max-height: calc(100vh - 20px);
 
                 .our-team__member-btn {
                     display: block;
