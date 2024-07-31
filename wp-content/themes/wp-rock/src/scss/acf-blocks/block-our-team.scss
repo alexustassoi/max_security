@@ -145,14 +145,15 @@
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 42px;
+        gap: 38px;
 
         @media screen and (max-width: 991px) {
             grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
 
         @media screen and (max-width: 768px) {
-            gap: 26px;
+            gap: 22px;
         }
 
         @media screen and (max-width: 670px) {
@@ -213,8 +214,8 @@
                 }
 
                 figure {
-                    width: 150px;
-                    height: 150px;
+                    width: 157px;
+                    height: 157px;
                     margin: 50px auto 20px;
                 }
 
@@ -321,21 +322,33 @@
 
     .element-to-be-clipped {
         clip-path: url(#svg-clip-desktop);
+        overflow: hidden;
+        height: 335px;
 
         @media screen and (max-width: 1200px) {
             clip-path: url(#svg-clip-tablet);
+        }
+
+        @media screen and (max-width: 1199px) {
+            height: 300px;
         }
 
         @media screen and (max-width: 1024px) {
             clip-path: url(#svg-clip-desktop);
         }
 
+        @media screen and (max-width: 991px) {
+            height: 334px;
+        }
+
         @media screen and (max-width: 768px) {
             clip-path: url(#svg-clip-tablet);
+            height: 300px;
         }
 
         @media screen and (max-width: 670px) {
             clip-path: url(#svg-clip-mob);
+            height: 157px;
         }
     }
 }
