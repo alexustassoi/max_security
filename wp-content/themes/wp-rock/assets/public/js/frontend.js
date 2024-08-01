@@ -12091,16 +12091,12 @@ function ready() {
   });
   popupInstance.init();
   window.document.addEventListener('scroll', function () {
-    var operationType = header && Math.floor(window.scrollY) > 100 ? 'add' : 'remove';
+    var operationType = header && Math.floor(window.scrollY) > 40 ? 'add' : 'remove';
     header.classList[operationType]('scroll-header');
   });
   {
-    var operationType = header && Math.floor(window.scrollY) > 100 ? 'add' : 'remove';
+    var operationType = header && Math.floor(window.scrollY) > 40 ? 'add' : 'remove';
     header.classList[operationType]('scroll-header');
-    if (document.body.classList.contains('single-resources') || document.body.querySelector('.browse-topic')) {
-      var siteHeader = document.querySelector('.js-site-header');
-      siteHeader && siteHeader.classList.add('added-scroll-header');
-    }
   }
   document.body.addEventListener('click', function (e) {
     var target = e.target;

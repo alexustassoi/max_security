@@ -56,7 +56,8 @@ if ( !empty($single_posts_pages_additional_class) ) {
 
 if ( function_exists( 'get_field' ) ) {
     $page_body_class = get_field( 'body_class', $page_id ) ?: '';
-    $page_class.= ' '.$page_body_class.' ';
+    $header_type = get_field( 'header_type', $page_id ) ?: '';
+    $page_class.= ' ' . $page_body_class . ' ' . $header_type . ' ';
 }
 ?>
 

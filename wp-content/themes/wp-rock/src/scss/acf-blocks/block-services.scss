@@ -35,6 +35,25 @@
         }
     }
 
+    &__item-content {
+
+        &.services__item-single-title {
+            padding-bottom: 45px;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+
+            @media screen and (max-width: 560px) {
+                padding-bottom: 28px;
+            }
+
+            .services__item-title {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &__title {
         color: #17181a;
         font-feature-settings: 'clig' off, 'liga' off;
