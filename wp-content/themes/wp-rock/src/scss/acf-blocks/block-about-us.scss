@@ -5,7 +5,7 @@
     &__inner {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 136px;
+        gap: 100px;
 
         @media screen and (max-width: 992px) {
             gap: 20px;
@@ -139,8 +139,15 @@
     }
 
     &__text {
-        max-width: 425px;
+        max-width: 625px;
         color: #f3f0ec;
+
+        @media screen and (max-width: 1200px) {
+            max-width: 425px;
+        }
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
 
         p {
             margin-bottom: 30px;
