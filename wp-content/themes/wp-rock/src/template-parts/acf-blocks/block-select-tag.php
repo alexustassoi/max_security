@@ -61,15 +61,3 @@ if ($hide_block) {
     </div>
 </div>
 
-
-<script>
-    (function(){
-        const selectTag = document.querySelector('#main-wrapper .select-tag');
-        const siteHeader = document.querySelector('.js-site-header');
-
-        if (selectTag.parentElement.firstElementChild === selectTag) {
-            document.body.classList.add('single-resources');
-            siteHeader && siteHeader.classList.add('added-scroll-header');
-        }
-    })()
-</script>
