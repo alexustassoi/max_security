@@ -95,10 +95,10 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding-top: 20px;
+        padding-top: 20px !important;
 
         @media screen and (max-width: 500px) {
-            padding-top: 30px;
+            padding-top: 30px !important;
         }
     }
 
