@@ -121,13 +121,13 @@ function ready() {
     popupInstance.init();
 
     window.document.addEventListener('scroll', () => {
-        const operationType = header && Math.floor(window.scrollY) > 100 ? 'add' : 'remove';
+        const operationType = header && Math.floor(window.scrollY) > 40 ? 'add' : 'remove';
         header.classList[operationType]('scroll-header');
     });
 
     {
         // Detect Initial scroll of page
-        const operationType = header && Math.floor(window.scrollY) > 100 ? 'add' : 'remove';
+        const operationType = header && Math.floor(window.scrollY) > 40 ? 'add' : 'remove';
         header.classList[operationType]('scroll-header');
 
         if (document.body.classList.contains('single-resources') || document.body.querySelector('.browse-topic')) {
