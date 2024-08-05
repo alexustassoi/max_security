@@ -16,11 +16,8 @@
         margin-bottom: 20px;
 
         p {
-            color: inherit;
-            font-feature-settings: inherit;
-            font-family: inherit;
-            font-style: inherit;
-            font-weight: inherit;
+
+
         }
 
         h1,
@@ -89,7 +86,7 @@
             }
 
             li {
-                padding-left: 15px;
+                padding-left: 0;
                 position: relative;
                 color: #000;
                 font-size: 18px;
@@ -106,7 +103,7 @@
                     font-size: 12px;
                 }
 
-                &::after {
+                /*&::after {
                     content: '';
                     display: block;
                     position: absolute;
@@ -126,7 +123,7 @@
                         height: 4px;
                         width: 4px;
                     }
-                }
+                }*/
             }
         }
     }
