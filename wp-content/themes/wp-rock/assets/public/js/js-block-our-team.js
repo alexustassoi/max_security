@@ -1,5 +1,6 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
+var __webpack_exports__ = {};
 var _a;
 var initBlockOurTeam = function initBlockOurTeam() {
   var memberItem = document.querySelectorAll('.js-member-item');

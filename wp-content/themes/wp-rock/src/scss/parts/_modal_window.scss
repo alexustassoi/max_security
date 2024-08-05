@@ -2108,6 +2108,10 @@ html {
         top: calc(50% - 25px);
         padding: 0;
 
+        @media screen and (max-width: 520px) {
+            top: 300px;
+        }
+
         svg {
             pointer-events: none;
 
