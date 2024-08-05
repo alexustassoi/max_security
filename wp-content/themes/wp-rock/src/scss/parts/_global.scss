@@ -1520,9 +1520,13 @@ ul ul li {
         padding: 0 0 0 30px;
         list-style-position: inside;
 
+        @media screen and (max-width: 480px) {
+            padding-left: 22px;
+        }
+
         li {
             list-style-type: disc;
-            text-indent: -28px;
+            text-indent: -21px;
             margin-bottom: 0.875rem;
         }
     }
@@ -1534,7 +1538,7 @@ ul ul li {
 
 
 .custom-container ul li p, .custom-content ul li p {
-    display: inline;
+    display: inline-flex;  
 }
 
 .custom-container ol li ul, .custom-container ul li ul, .custom-content ol li ul, .custom-content ul li ul {
