@@ -1518,16 +1518,81 @@ ul ul li {
 
     ul, ol {
         padding: 0 0 0 30px;
-        list-style-position: inside;
 
         @media screen and (max-width: 480px) {
             padding-left: 22px;
         }
 
         li {
-            list-style-type: disc;
             text-indent: -21px;
             margin-bottom: 0.875rem;
+
+            p.body-type-1-regular,
+            p.body-type-2,
+            p.body-type-3,
+            p.body-type-4 {
+                position: relative;
+            }
+
+            p.body-type-1-regular {
+                top: -33px;
+                margin-bottom: -33px;
+
+                @media screen and (max-width: 1199px) {
+                    top: -25px;
+                    margin-bottom: -25px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    top: -23px;
+                    margin-bottom: -23px;
+                }
+            }
+
+            p.body-type-2 {
+                top: -30px;
+                margin-bottom: -30px;
+
+                @media screen and (max-width: 1199px) {
+                    top: -25px;
+                    margin-bottom: -25px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    top: -22px;
+                    margin-bottom: -22px;
+                }
+            }
+
+            p.body-type-3 {
+                top: -26px;
+                margin-bottom: -26px;
+
+                @media screen and (max-width: 1199px) {
+                    top: -25px;
+                    margin-bottom: -25px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    top: -21px;
+                    margin-bottom: -21px;
+                }
+            }
+
+            p.body-type-4 {
+                top: -25px;
+                margin-bottom: -25px;
+
+                @media screen and (max-width: 1199px) {
+                    top: -25px;
+                    margin-bottom: -25px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    top: -21px;
+                    margin-bottom: -21px;
+                }
+            }
         }
     }
 
