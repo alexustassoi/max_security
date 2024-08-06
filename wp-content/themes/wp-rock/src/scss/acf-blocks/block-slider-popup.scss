@@ -9,6 +9,13 @@
         padding-bottom: 32px;
     }
 
+    .custom-container,
+    .slider-popup__slider {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
     &.white-text {
         .slider-popup__description,
         .slider-popup__title {
@@ -433,12 +440,17 @@
             padding-left: 0;
 
             li {
-                padding-left: 12px;
+                padding-left: 20px;
                 position: relative;
                 margin-bottom: 8px;
                 color: #F3F0EC;
                 list-style-type: none;
-                text-indent: 0;
+                text-indent: 0 !important;
+
+                p {
+                    display: inline-block;
+                    margin-bottom: 0;
+                }
 
                 &:last-child {
                     margin-bottom: 0;
@@ -456,7 +468,7 @@
                     background-color: #cc7510;
 
                     @media screen and (max-width: 1199px) {
-                        top: 6px;
+                        top: 9px;
                     }
 
                     @media screen and (max-width: 480px) {

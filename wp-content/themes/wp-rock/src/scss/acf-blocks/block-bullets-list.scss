@@ -74,7 +74,7 @@
     &__col-1,
     &__col-2 {
         ul {
-            padding-left: 0;
+            // padding-left: 0;
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -93,7 +93,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 1.4;
-                text-indent: 0;
+                // text-indent: 0;
 
                 @media screen and (max-width: 991px) {
                     font-size: 16px;
@@ -152,3 +152,15 @@
 }
 
 
+
+.bullets-list__columns {
+    .bullets-list__col-1,
+    .bullets-list__col-2 {
+        ul li {
+            p {
+                margin-bottom: 0;
+                display: inline-block;
+            }
+        }
+    }
+}

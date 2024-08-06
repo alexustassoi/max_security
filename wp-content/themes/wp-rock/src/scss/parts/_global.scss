@@ -1578,7 +1578,7 @@ ul ul li {
                 display: flex;
             }
 
-            p.body-type-1-regular {
+            /*p.body-type-1-regular {
                 top: -33px;
                 margin-bottom: -33px;
 
@@ -1606,9 +1606,9 @@ ul ul li {
                     top: -22px;
                     margin-bottom: -22px;
                 }
-            }
+            }*/
 
-            p.body-type-3 {
+            /*p.body-type-3 {
                 top: -26px;
                 margin-bottom: -26px;
 
@@ -1621,9 +1621,9 @@ ul ul li {
                     top: -21px;
                     margin-bottom: -21px;
                 }
-            }
+            }*/
 
-            p.body-type-4 {
+            /*p.body-type-4 {
                 top: -25px;
                 margin-bottom: -25px;
 
@@ -1636,7 +1636,7 @@ ul ul li {
                     top: -21px;
                     margin-bottom: -21px;
                 }
-            }
+            }*/
         }
     }
 
@@ -2017,4 +2017,9 @@ ul[role="checkbox"] {
             }
         }
     }
+}
+
+
+strong {
+    font-weight: bold;
 }

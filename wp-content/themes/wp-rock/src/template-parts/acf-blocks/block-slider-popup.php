@@ -53,19 +53,25 @@ if (!$hide_block) : ?>
                         ' . do_shortcode($upper_description) . '
                     </div>';
             }
-            ?>
-            <div class="slider-popup__top-wrapper <?php echo $no_margin; echo $content_vertical ? ' vertical-content' : ''; ?>">
-                <?php
-                $title_is_empty = empty($title) ? 'title-is-empty' : '';
 
-                if (!empty($title)) {
-                    echo '<div class="slider-popup__title animated-element from-left ">' . do_shortcode($title) . '</div>';
-                }
-                if (!empty($description)) {
-                    echo '<div class="slider-popup__description animated-element from-right ' . do_shortcode($title_is_empty) . '">' . do_shortcode($description) . '</div>';
-                }
+            if (!empty($description) || !empty($title) ) {
                 ?>
-            </div>
+                <div class="slider-popup__top-wrapper <?php echo $no_margin; echo $content_vertical ? ' vertical-content' : ''; ?>">
+                    <?php
+                    $title_is_empty = empty($title) ? 'title-is-empty' : '';
+
+                    if (!empty($title)) {
+                        echo '<div class="slider-popup__title animated-element from-left ">' . do_shortcode($title) . '</div>';
+                    }
+                    if (!empty($description)) {
+                        echo '<div class="slider-popup__description animated-element from-right ' . do_shortcode($title_is_empty) . '">' . do_shortcode($description) . '</div>';
+                    }
+                    ?>
+                </div>
+                <?php
+            }
+            ?>
+
             <?php if ($slides) : ?>
                 <div data-slides_count="<?php echo $show_slides_count; ?>"
                      class="slider-popup__slider js-slider-popup-1">

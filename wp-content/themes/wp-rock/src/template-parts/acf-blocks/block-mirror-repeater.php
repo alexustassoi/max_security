@@ -77,9 +77,12 @@ if ($hide_block) {
                             : '';
                         ?>
                         <span class="line"></span>
-                        <div class="name">
-                            <?php echo $popup_title; ?>
-                        </div>
+
+                        <?php if ( $popup_title ) { ?>
+                            <div class="name">
+                                <?php echo $popup_title; ?>
+                            </div>
+                        <?php } ?>
                     </div>
 
                     <button class="course-popup__close js-popup-close">
