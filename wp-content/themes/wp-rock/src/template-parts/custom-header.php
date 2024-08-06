@@ -69,11 +69,11 @@ $page_link = !empty($page_to_redirect) ? get_permalink($page_to_redirect) : '';
 
                             <div class="services__item-content <?php echo !$description ? 'services__item-single-title' : ''; ?>">
                                 <?php if ($title) : ?>
-                                    <div class="services__item-title"><?php echo $title; ?></div>
+                                    <div class="services__item-title"><?php echo do_shortcode($title); ?></div>
                                 <?php endif; ?>
 
                                 <?php if ($description) : ?>
-                                    <div class="services__item-desc"><?php echo $description; ?></div>
+                                    <div class="services__item-desc"><?php echo do_shortcode($description); ?></div>
                                 <?php endif; ?>
                             </div>
 
