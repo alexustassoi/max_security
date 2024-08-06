@@ -861,6 +861,16 @@ body {
             line-height: 1.26;
         }
 
+        &__slider-popup {
+            ul {
+                padding-left: 0;
+
+                li::marker {
+                    font-size: 0;
+                }
+            }
+        }
+
         .browse-topic__card-custom-date {
             h1,
             h2,
@@ -940,6 +950,40 @@ body {
                 font-size: calc(var(--typo-size-font-body4-m) * 1px);
                 line-height: 1.28;
             }
+        }
+    }
+
+    .browse-topic__filter[data-category="newsletter"] {
+        display: none;
+    }
+
+    .swiper.top-page__titles {
+        pointer-events: none;
+    }
+
+    .services {
+        &__item-desc,
+        &__item-title {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: 0;
+            }
+        }
+
+        &__item-title {
+            p {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+
+    .careers-posts {
+        &__post-excerpt ul li {
+            margin-bottom: 0;
         }
     }
 }
@@ -1417,7 +1461,6 @@ em {
 ul ul li {
     list-style-type: circle !important;
 }
-
 
 
 

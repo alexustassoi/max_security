@@ -1794,6 +1794,26 @@ html {
     }
 }
 
+#popup-portal-demo {
+    .hs-form-checkbox {
+        span:before {
+            top: 10px;
+
+            @media screen and (max-width: 670px) {
+                top: 6px;
+            }
+
+            @media screen and (max-width: 570px) {
+                top: 5px;
+            }
+
+            @media screen and (max-width: 480px) {
+                top: 3px;
+            }
+        }
+    }
+}
+
 //#popup-subscribe {
 //
 //    .popup-wrapper-inner {
