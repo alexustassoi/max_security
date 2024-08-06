@@ -293,6 +293,11 @@
             }
 
         }
+
+        ul li p {
+            margin: 0;
+            display: inline-block !important;
+        }
     }
 
     &__read-more-title {
