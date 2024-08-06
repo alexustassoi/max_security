@@ -455,8 +455,12 @@
                     border-radius: 10px;
                     background-color: #cc7510;
 
+                    @media screen and (max-width: 1199px) {
+                        top: 6px;
+                    }
+
                     @media screen and (max-width: 480px) {
-                        top: 8px;
+                        top: 5px;
                     }
                 }
             }
