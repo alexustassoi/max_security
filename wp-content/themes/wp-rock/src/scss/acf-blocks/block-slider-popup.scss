@@ -179,6 +179,18 @@
         }
     }
 
+    &__slider-popup {
+        ul {
+            padding-left: 0;
+
+            li {
+                ::marker {
+                    font-size: 0;
+                }
+            }
+        }
+    }
+
     &__slide {
         position: relative;
         height: 282px;
@@ -436,12 +448,16 @@
                     content: '';
                     display: block;
                     position: absolute;
-                    top: 8px;
+                    top: 11px;
                     left: 0;
                     width: 6px;
                     height: 6px;
                     border-radius: 10px;
                     background-color: #cc7510;
+
+                    @media screen and (max-width: 480px) {
+                        top: 8px;
+                    }
                 }
             }
         }
