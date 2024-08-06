@@ -1,5 +1,6 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
+var __webpack_exports__ = {};
 var _a;
 var initBlockCareerContent = function initBlockCareerContent() {
   var file = document.querySelector('.js-file-button input[type="file"]');

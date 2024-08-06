@@ -1,5 +1,6 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
+var __webpack_exports__ = {};
 var _a;
 var initBlockBenefts = function initBlockBenefts() {
   var beneftsTitle = document.querySelectorAll('.js-benefts-title');
