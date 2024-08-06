@@ -40,7 +40,13 @@
 
         &-wrap {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 26px;
+
+            @media screen and (max-width: 1199px) {
+                gap: unset;
+                justify-content: space-between;
+            }
 
             .services__item {
                 transition: all 0.3s;

@@ -11,6 +11,8 @@ global $global_options;
 
 $class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
 $block_bg_color    = isset($args['backgroundColor']) ? $args['backgroundColor'] : '';
+$block_custom_bg_color = isset($args['style']['color']['background']) ? $args['style']['color']['background'] : '';
+
 // $main_tags_colours = get_field_value($global_options, 'main_tags_colours');
 $fields            = get_fields();
 $block_pt          = get_field_value($fields, 'block_pt');
@@ -43,7 +45,7 @@ if ($hide_block) {
 }
 ?>
 
-<div class="custom-content <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name; echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" style="background-color: <?php  echo $block_bg_color ? 'var(--wp--preset--color--' . do_shortcode($block_bg_color) . ');' : 'transparent;'; ?>">
+<div class="custom-content <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo $class_name; echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" style="background-color: <?php  echo $block_bg_color ? 'var(--wp--preset--color--' . do_shortcode($block_bg_color) . ');' : ($block_custom_bg_color ? do_shortcode($block_custom_bg_color) . ';' : 'transparent;'); ?>">
     <div class="custom-content__inner">
         <div class="custom-container">
             <div class="custom-content__content">

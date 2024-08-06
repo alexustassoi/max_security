@@ -67,13 +67,15 @@ $page_link = !empty($page_to_redirect) ? get_permalink($page_to_redirect) : '';
                                 <?php endif; ?>
                             </figure>
 
-                            <?php if ($title) : ?>
-                                <div class="services__item-title"><?php echo $title; ?></div>
-                            <?php endif; ?>
+                            <div class="services__item-content <?php echo !$description ? 'services__item-single-title' : ''; ?>">
+                                <?php if ($title) : ?>
+                                    <div class="services__item-title"><?php echo $title; ?></div>
+                                <?php endif; ?>
 
-                            <?php if ($description) : ?>
-                                <div class="services__item-desc"><?php echo $description; ?></div>
-                            <?php endif; ?>
+                                <?php if ($description) : ?>
+                                    <div class="services__item-desc"><?php echo $description; ?></div>
+                                <?php endif; ?>
+                            </div>
 
                             <button class="services__item-button">
                                 <span> <?php echo __('EXPLORE', 'wp-rock'); ?></span>

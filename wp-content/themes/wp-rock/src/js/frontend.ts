@@ -21,6 +21,7 @@ function ready() {
     const mobileMenu = document.querySelector('.js-mobile-menu') as HTMLElement;
     const openMobileMenu = document.querySelector('.js-open-mobile-menu') as HTMLElement;
     const openSubmenu = document.querySelectorAll('.js-open-submenu > a') as NodeListOf<Element>;
+    const submenuItems = document.querySelectorAll('.js-open-submenu .sub-menu .menu-item') as NodeListOf<Element>;
 
     const handleBrowseTopicActivefilter = () => {
         const bTopicLoadMoreBtn = window.document.querySelector('.js-b-topic-load-more') as HTMLElement;
@@ -89,6 +90,16 @@ function ready() {
                 clickElem.classList.toggle('open');
             });
         });
+
+    submenuItems &&
+    submenuItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+            }
+        });
+    });
 
     maxWords &&
         maxWords.forEach((item) => {

@@ -12017,6 +12017,7 @@ function ready() {
   var mobileMenu = document.querySelector('.js-mobile-menu');
   var openMobileMenu = document.querySelector('.js-open-mobile-menu');
   var openSubmenu = document.querySelectorAll('.js-open-submenu > a');
+  var submenuItems = document.querySelectorAll('.js-open-submenu .sub-menu .menu-item');
   var handleBrowseTopicActivefilter = function handleBrowseTopicActivefilter() {
     var bTopicLoadMoreBtn = window.document.querySelector('.js-b-topic-load-more');
     var browseTopicFilters = window.document.querySelectorAll('.js-browse-topic-filter');
@@ -12065,6 +12066,14 @@ function ready() {
       var parent = clickElem.closest('.js-open-submenu');
       (_a = parent.querySelector('.sub-menu')) === null || _a === void 0 ? void 0 : _a.classList.toggle('open');
       clickElem.classList.toggle('open');
+    });
+  });
+  submenuItems && submenuItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      if (mobileMenu) {
+        mobileMenu.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+      }
     });
   });
   maxWords && maxWords.forEach(function (item) {

@@ -28,17 +28,19 @@ if (!$hide_block) : ?>
     echo esc_html($class_name);
     echo 'space-top-type-' . do_shortcode($space_top_type) . ' ';
     echo 'space-bottom-type-' . $space_bottom_type . ' '; ?>" id="<?php echo $args['id']; ?>">
-        <div class="custom-container">
-            <?php if ($title): ?>
-                <div class="journey__title"><?php echo $title; ?></div>
-            <?php endif; ?>
+        <?php if ($title || $subtitle) { ?>
+            <div class="custom-container">
+                <?php if ($title): ?>
+                    <div class="journey__title"><?php echo $title; ?></div>
+                <?php endif; ?>
 
-            <?php if ($subtitle): ?>
-                <div class="journey__subtitle"><?php echo $subtitle; ?></div>
-            <?php endif; ?>
-        </div>
+                <?php if ($subtitle): ?>
+                    <div class="journey__subtitle"><?php echo $subtitle; ?></div>
+                <?php endif; ?>
+            </div>
+        <?php }
 
-        <?php if ($history): ?>
+        if ($history): ?>
             <div class="swiper journey__history-swiper js-history-slider">
                 <div class="swiper-wrapper">
                     <?php foreach ($history as $item):
