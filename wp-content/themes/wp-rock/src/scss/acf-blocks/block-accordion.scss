@@ -71,16 +71,6 @@
                 }
             }
         }
-
-        &:hover {
-            .accordion__item-icon {
-                display: none;
-
-                &.hover {
-                    display: block;
-                }
-            }
-        }
     }
 
     &__btn {
@@ -92,6 +82,16 @@
 
         @media screen and (max-width: 768px) {
             gap: 16px;
+        }
+
+        &:hover {
+            .accordion__item-icon {
+                display: none;
+
+                &.hover {
+                    display: block;
+                }
+            }
         }
 
         >* {
