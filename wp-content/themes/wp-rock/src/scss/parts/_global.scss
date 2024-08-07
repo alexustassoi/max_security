@@ -1560,15 +1560,17 @@ ul ul li {
     }
 
     ul, ol {
-        padding: 0 0 0 30px;
+        padding: 0 0 0 20px;
 
         @media screen and (max-width: 480px) {
-            padding-left: 22px;
+            padding-left: 20px;
         }
 
         li {
             text-indent: -21px;
             margin-bottom: 0.875rem;
+            list-style-position: outside;
+            list-style-type: disc;
 
             p.body-type-1-regular,
             p.body-type-2,
