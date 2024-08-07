@@ -370,6 +370,17 @@ body {
             text-indent: 0;
         }
     }
+
+    .single-blog__post-category,
+    .site-footer__locations-country {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .site-footer__locations-city p {
+        margin-bottom: inherit;
+    }
 }
 
 .slider-popup.content-vertical .custom-container {
