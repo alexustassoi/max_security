@@ -34,7 +34,7 @@ foreach ($mirror_items as $item) :
                 echo '<div class="mirror-repeater__item-description">' . do_shortcode($description) . '</div>';
             }
 
-            if ($connected_course) {
+            if ($connected_course && $btn_name) {
                 echo ' <a href="#connected-course-popup" data-slide_index="' . $key . '" class="mirror-repeater__item-link primary-btn js-open-slide-course-popup-link js-open-popup-activator">' . __($btn_name, "wp-rock") . '</a>';
             }
             ?>
