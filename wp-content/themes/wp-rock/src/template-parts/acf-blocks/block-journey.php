@@ -23,9 +23,9 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
 if (!$hide_block) : ?>
 
-    <div class="journey  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : '';
-    echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';
-    echo esc_html($class_name);
+    <div class="journey  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ' ';
+    echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ' ';
+    echo esc_html($class_name) . ' ';
     echo 'space-top-type-' . do_shortcode($space_top_type) . ' ';
     echo 'space-bottom-type-' . $space_bottom_type . ' '; ?>" id="<?php echo $args['id']; ?>">
         <?php if ($title || $subtitle) { ?>
