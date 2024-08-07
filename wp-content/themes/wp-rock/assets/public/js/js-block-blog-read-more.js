@@ -1,6 +1,5 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
-var __webpack_exports__ = {};
 
 // UNUSED EXPORTS: default
 
@@ -10863,7 +10862,7 @@ var initBlockBlogReadMore = function initBlockBlogReadMore() {
         },
         992: {
           slidesPerView: 3,
-          spaceBetween: 42
+          spaceBetween: 30
         }
       }
     });

@@ -31,7 +31,7 @@ const initBlockBlogReadMore = () => {
                 },
                 992: {
                     slidesPerView: 3,
-                    spaceBetween: 42,
+                    spaceBetween: 30,
                     // centeredSlides: false,
                 },
             },

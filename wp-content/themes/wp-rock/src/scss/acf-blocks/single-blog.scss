@@ -329,7 +329,7 @@
     &__read-more-slider-wrapper {
         position: relative;
 
-        @media screen and (max-width: 1030px) {
+        @media screen and (max-width: 1199px) {
             padding-bottom: 80px;
             margin-bottom: 60px;
         }
@@ -358,6 +358,16 @@
             transform: translateY(-50%) translateX(100%);
         }
 
+        @media screen and (max-width: 1400px) {
+            &.prev {
+                left: -30px;
+            }
+
+            &.next {
+                right: -30px;
+            }
+        }
+
         @media screen and (max-width: 1280px) {
             &.prev {
                 left: -20px;
@@ -368,7 +378,7 @@
             }
         }
 
-        @media screen and (max-width: 1030px) {
+        @media screen and (max-width: 1199px) {
             &.prev {
                 top: 100%;
                 left: 50%;
