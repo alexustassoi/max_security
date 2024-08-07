@@ -94,13 +94,25 @@
     }
 
     ul, ol {
-        padding: 0 0 0 20px;
+
+        &:not(#menu-footer-menu-1):not(#menu-footer-menu-2) {
+            padding: 0 0 0 20px;
+        }
 
         li {
             list-style-type: disc;
             list-style-position: outside;
             margin-bottom: 0.875rem;
             text-indent: 0;
+        }
+    }
+
+    #menu-footer-menu-1,
+    #menu-footer-menu-2 {
+        li {
+            ::marker {
+                font-size: 0;
+            }
         }
     }
 }

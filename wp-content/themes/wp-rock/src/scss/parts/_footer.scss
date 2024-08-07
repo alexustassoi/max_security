@@ -199,6 +199,10 @@
                     }
                 }
 
+                ::marker {
+                    font-size: 0;
+                }
+
                 &.current-menu-item {
                     > a,
                     > .like-link {
