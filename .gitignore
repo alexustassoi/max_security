@@ -36,3 +36,5 @@ vendor/
 /wp-content/backups-dup-pro
 .DS_Store
 /wp-content/deployment-folder/
+/wp-content/themes/wp-rock/assets/public/css/*.css.map
+/wp-content/themes/wp-rock/assets/public/js/*.js.map
