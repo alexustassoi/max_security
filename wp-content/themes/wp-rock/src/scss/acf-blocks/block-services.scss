@@ -252,8 +252,8 @@
         }
 
         &-icon {
-            height: 63px;
-            width: 63px;
+            height: 91px;
+            width: 91px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -262,6 +262,7 @@
             img {
                 max-width: 100%;
                 height: auto;
+                width: 91px;
             }
 
             @media screen and (max-width: 560px) {
@@ -293,6 +294,7 @@
             h5,
             h6 {
                 margin-bottom: 0;
+                line-height: 1.1;
             }
         }
 

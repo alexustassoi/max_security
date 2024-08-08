@@ -41,11 +41,8 @@ if (!$hide_block) : ?>
                         <?php foreach ($slider as $slide) : ?>
                             <div class="swiper-slide knowledge__slide">
                                 <?php if (!empty($slide['description'])) : ?>
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M0.28 14V-9.53674e-07H14.28V14H0.28ZM1.84 12.54H12.72V1.46H1.84V12.54ZM3.5 8.12L4.18 7.06L6.28 8.98L9.82 3.28L10.92 3.94L6.7 10.8L3.5 8.12Z"
-                                            fill="#CC7510"/>
+                                    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.839844 0H23.2398V22.4H0.839844V0ZM20.0998 19.49V2.91H3.93985V19.49H20.0998ZM7.39985 10.94L10.5998 13.6L15.5298 5.47L17.7098 6.72L11.4998 17.12L6.11985 13.06L7.39985 10.95V10.94Z" fill="#CC7510"/>
                                     </svg>
                                     <div class="knowledge__slide-description">
                                         <?php echo do_shortcode($slide['description']); ?>
