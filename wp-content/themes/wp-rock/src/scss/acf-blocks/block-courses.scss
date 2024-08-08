@@ -316,3 +316,13 @@
         }
     }
 }
+
+
+.courses .custom-container, .courses .courses__title > * {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.courses > .custom-container {
+    padding-top: 0 !important;
+}
