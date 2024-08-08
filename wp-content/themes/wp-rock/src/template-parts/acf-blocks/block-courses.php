@@ -7,7 +7,10 @@
  * @since   4.4.0
  */
 
-$class_name        = isset($args['className']) ? ' ' . $args['className'] : '';
+$class_name            = isset($args['className']) ? ' ' . $args['className'] : '';
+$block_bg_color        = isset($args['backgroundColor']) ? $args['backgroundColor'] : '';
+$block_custom_bg_color = isset($args['style']['color']['background']) ? $args['style']['color']['background'] : '';
+
 $fields            = get_fields();
 $hide_block        = get_field_value($fields, 'hide_block');
 $block_pt          = get_field_value($fields, 'block_pt');
@@ -23,7 +26,9 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 if (!$hide_block) :?>
     <div class="courses  <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : '';
     echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';
-    echo esc_html($class_name); echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' ';?>" id="<?php echo $args['id']; ?>">
+    echo esc_html($class_name);
+    echo ' space-top-type-' . do_shortcode($space_top_type) . ' ';
+    echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" id="<?php echo $args['id']; ?>" style="background-color: <?php  echo $block_bg_color ? 'var(--wp--preset--color--' . do_shortcode($block_bg_color) . ');' : ($block_custom_bg_color ? do_shortcode($block_custom_bg_color) . ';' : 'transparent;'); ?>">
         <div class="custom-container">
             <?php if ($title) : ?>
                 <div class="courses__title"><?php echo $title; ?></div>

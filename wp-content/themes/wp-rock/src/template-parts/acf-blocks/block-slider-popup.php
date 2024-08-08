@@ -87,12 +87,9 @@ if (!$hide_block) : ?>
                                     ' . do_shortcode($slide['title']) .
                                 '</div>';
 
-                            if (isset($slide['image'])) {
-                                echo '<figure class="slider-popup__slide-image">
-                                        <img src="' . $slide['image'] . '" alt="image">
-                                        <span>' . __('EXPLORE', 'wp-rock') . '</span>
-                                    </figure>';
-                            }
+                            echo '<figure class="slider-popup__slide-image">' . ($slide['image'] ? '<img src="' . $slide['image'] . '" alt="image" />' : '') .
+                                    '<span>' . __('EXPLORE', 'wp-rock') . '</span>
+                                </figure>';
 
                             echo '</div>';
                         }

@@ -1,6 +1,5 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
-var __webpack_exports__ = {};
 var initBlockExample = function initBlockExample() {
   var scrollBottom = document.querySelector('.js-scroll-bottom');
   scrollBottom === null || scrollBottom === void 0 ? void 0 : scrollBottom.addEventListener('click', function (event) {
