@@ -104,7 +104,7 @@
 
     ul, ol {
 
-        &:not(#menu-footer-menu-1):not(#menu-footer-menu-2) {
+        &:not(#menu-footer-menu-1):not(#menu-footer-menu-2):not(.site-header__menu ul) {
             padding: 0 0 0 20px;
         }
 
