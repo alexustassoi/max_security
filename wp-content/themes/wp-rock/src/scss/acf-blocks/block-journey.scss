@@ -337,7 +337,7 @@
     .reviews {
         @media screen and (max-width: 768px) {
             padding: 0;
-            background-color: #fff;
+            //background-color: #fff;
         }
 
         &__swiper {
@@ -411,7 +411,7 @@
 
             @media screen and (max-width: 992px) {
                 padding: 40px 70px;
-                background-color: #fff;
+                //background-color: #fff;
             }
 
             @media screen and (max-width: 768px) {
@@ -522,6 +522,10 @@
                 @media screen and (max-width: 992px) {
                     padding: 0 25px 0;
                     max-width: 100%;
+                }
+
+                @media screen and (max-width: 768px) {
+                    background: none;
                 }
 
                 @media screen and (max-width: 480px) {

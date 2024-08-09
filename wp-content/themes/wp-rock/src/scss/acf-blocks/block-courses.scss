@@ -55,7 +55,7 @@
 
     &__slide-wrap {
         display: flex;
-        border-radius: 180px 0px 0px 180px;
+        border-radius: 180px 0 0 180px;
         background-color: #7e97a6;
 
         @media screen and (max-width: 991px) {
@@ -125,7 +125,7 @@
 
         @media screen and (max-width: 992px) {
             padding: 20px 70px;
-            background-color: #fff;
+            //background-color: #fff;
         }
 
         @media screen and (max-width: 768px) {

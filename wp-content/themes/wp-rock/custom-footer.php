@@ -90,29 +90,42 @@ $subscribe_btn      = get_field_value( $global_options, 'subscribe_btn' );
 
                 <div class="site-footer__right-wrap">
 					<?php
-					if ( $subscribe_btn ) : ?>
+					if ( $subscribe_btn ) :
+                        $subscribe_btn_url = preg_replace('#<p>(https?://[^\s]+)</p>#i', '$1', $subscribe_btn[ 'url' ]);
+                        ?>
                         <div class="site-footer__subscribe-btn-wrap">
                             <a class="site-footer__subscribe-btn white-text-hover transparent-orange-btn js-open-popup-activator"
-                               href="<?php echo $subscribe_btn[ 'url' ] ?>"><?php echo $subscribe_btn[ 'title' ]; ?></a>
+                               href="<?php echo $subscribe_btn_url; ?>">
+                                <?php echo $subscribe_btn[ 'title' ]; ?>
+                            </a>
                         </div>
 					<?php endif; ?>
 					<?php if ( $social_link ) : ?>
                         <div class="site-footer__social-links">
-							<?php foreach ( $social_link as $link ) : ?>
-                                <a href="<?php echo $link[ 'link' ]; ?>"><img src="<?php echo $link[ 'icon' ]; ?>"
-                                                                              alt="social icon"></a>
+							<?php foreach ( $social_link as $link ) :
+
+                                $link_url = preg_replace('#<p>(https?://[^\s]+)</p>#i', '$1', $link[ 'link' ]);
+                                ?>
+                                <a href="<?php echo $link_url; ?>">
+                                    <img src="<?php echo $link[ 'icon' ]; ?>"
+                                         alt="social icon" />
+                                </a>
 							<?php endforeach; ?>
                         </div>
 					<?php endif;
 
-					if ( $phone && $phone_link ) : ?>
+					if ( $phone && $phone_link ) :
+                        $phone_link = preg_replace('#<(?!/?(em|strong|b)\b)[^>]*>#i', '', $phone_link);
+                        ?>
                         <div class="site-footer__phone-mobile">
                             <a class="site-footer__phone" href="tel:<?php echo $phone_link; ?>"><?php echo $phone; ?></a>
                         </div>
                     <?php endif; ?>
                 </div>
 
-                <?php if ( $phone && $phone_link ) : ?>
+                <?php if ( $phone && $phone_link ) :
+                    $phone_link = preg_replace('#<(?!/?(em|strong|b)\b)[^>]*>#i', '', $phone_link);
+                    ?>
                     <a class="site-footer__phone" href="tel:<?php echo $phone_link; ?>">
                         <?php echo $phone; ?>
                     </a>

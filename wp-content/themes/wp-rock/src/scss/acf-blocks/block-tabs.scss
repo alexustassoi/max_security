@@ -299,3 +299,11 @@
         }
     }
 }
+
+
+.tabs .custom-container {
+    @media screen and (max-width: 768px) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
