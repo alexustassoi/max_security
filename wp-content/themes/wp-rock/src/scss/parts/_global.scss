@@ -1548,6 +1548,20 @@ ul ul li {
         }
     }
 
+    .site-footer {
+        &__phone {
+
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-bottom: 0;
+            }
+        }
+    }
 
     /* p {
          color: #17181A;

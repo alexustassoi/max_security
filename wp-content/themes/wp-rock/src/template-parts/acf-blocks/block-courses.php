@@ -18,6 +18,7 @@ $space_top_type    = $block_pt ? get_field_value($fields, 'space_top_type') : ''
 $block_pb          = get_field_value($fields, 'block_pb');
 $space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') : '';
 $title             = get_field_value($fields, 'title');
+$slide_bg_color    = get_field_value($fields, 'slide_bg_color');
 $slides            = get_field_value($fields, 'slides');
 
 $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
@@ -45,7 +46,7 @@ if (!$hide_block) :?>
                             $link_title = isset($item['link']['title']) ? $item['link']['title'] : null;
                             ?>
                             <div class="swiper-slide courses__slide">
-                                <div class="courses__slide-wrap">
+                                <div class="courses__slide-wrap" style="background-color: <?php echo $slide_bg_color ?: '#FFF'?>;">
                                     <div class="courses__slide-image">
                                         <?php if (!empty($item['image'])) : ?>
                                             <img src="<?php echo $item['image']; ?>" alt="review image">
@@ -71,7 +72,7 @@ if (!$hide_block) :?>
 
                                         <?php if (!empty($item['content'])) : ?>
                                             <div class="courses__slide-content">
-                                                <?php echo do_shortcode($item['content']); ?></p>
+                                                <?php echo do_shortcode(preg_replace('/<br\s+[^>]*>/i', '', $item['content'])); ?></p>
                                             </div>
                                         <?php endif; ?>
 

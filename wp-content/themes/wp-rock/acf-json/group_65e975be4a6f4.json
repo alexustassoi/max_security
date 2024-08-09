@@ -156,6 +156,24 @@
             ]
         },
         {
+            "key": "field_66b5fa7822060",
+            "label": "Background color of reviews slides",
+            "name": "bg_color_reviews_slides",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
             "key": "field_65e976f6473ed",
             "label": "Reviews",
             "name": "reviews",
@@ -287,5 +305,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721129820
+    "modified": 1723203046
 }

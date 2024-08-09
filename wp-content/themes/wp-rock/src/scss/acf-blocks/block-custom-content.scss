@@ -63,6 +63,15 @@
         }
     }
 
+    .courses {
+        &__slide-subtitle {
+            p {
+                @media screen and (max-width: 1470px) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
 
     /* p {
          color: #17181A;
