@@ -1161,7 +1161,7 @@
             "label": "Company",
             "name": "company",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1174,18 +1174,14 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "append": ""
         },
         {
             "key": "field_666b163c781b0",
             "label": "Token",
             "name": "token",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1198,18 +1194,14 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "append": ""
         },
         {
             "key": "field_666fece6f50da",
             "label": "Endpoint api",
             "name": "endpoint_api",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1222,11 +1214,7 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "append": ""
         }
     ],
     "location": [
@@ -1247,5 +1235,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723206682
+    "modified": 1723218937
 }
