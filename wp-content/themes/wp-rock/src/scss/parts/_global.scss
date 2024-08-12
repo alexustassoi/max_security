@@ -1208,21 +1208,23 @@ input[type="email"] {
     float: left;
     margin-right: 2rem;
     margin-bottom: 2rem;
-
-    @media screen and (max-width: 768px) {
-        float: none;
-        margin: 0 0 1rem;
-    }
 }
 
 .alignright {
     float: right;
     margin-left: 2rem;
     margin-bottom: 2rem;
+}
 
+.alignleft,
+.alignright {
     @media screen and (max-width: 768px) {
         float: none;
         margin: 0 0 1rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin: 0;
     }
 }
 
