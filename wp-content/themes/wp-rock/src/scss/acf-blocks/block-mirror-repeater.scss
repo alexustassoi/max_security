@@ -408,6 +408,7 @@
             display: flex;
             align-items: center;
 
+            p,
             h1,
             h2,
             h3,
@@ -664,27 +665,50 @@
     }
 
     &__curiculum-items-link {
-        color: #F3F0EC;
-        font-family: Turbine, sans-serif;
-        font-size: 0.875rem;
-        font-style: normal;
-        font-weight: 700;
-        background-color: #CC7510;
-        padding: 0.25rem 0.5rem;
-        text-decoration: none;
-        margin: 3.5rem auto 0;
-        text-transform: uppercase;
 
-        @media screen and (max-width: 1200px) {
-            margin: 2rem auto 0;
+        &.default-btn,
+        &.large-btn,
+        &.medium-btn,
+        &.small-btn {
+            text-decoration: none;
+            width: max-content;
+            color: #F3F0EC;
+            font-family: Turbine, sans-serif;
+            background-color: #CC7510;
+            margin: 3.5rem auto 0;
+
+            @media screen and (max-width: 1200px) {
+                margin: 2rem auto 0;
+            }
+
+            @media screen and (max-width: 768px) {
+                margin: 1.5rem auto 0;
+            }
         }
 
-        @media screen and (max-width: 768px) {
-            margin: 1.5rem auto 0;
+        &.default-btn {
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 700;
+            padding: 0.25rem 0.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            @media screen and (max-width: 470px) {
+                font-size: 14px;
+            }
         }
 
-        @media screen and (max-width: 470px) {
-            font-size: 14px;
+        &.large-btn,
+        &.medium-btn,
+        &.small-btn {
+            border-radius: 4px;
+            padding: 7px 18px;
+
+            @media screen and (max-width: 480px) {
+                border: 2px solid #cc7510;
+            }
+
         }
     }
 }

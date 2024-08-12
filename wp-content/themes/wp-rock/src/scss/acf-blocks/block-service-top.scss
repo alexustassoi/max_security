@@ -80,22 +80,26 @@
 
         & + .service-top {
             &__custom-container {
-                padding-bottom: 388px !important;
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+                height: 702px;
+                display: flex;
+                justify-content: center;
 
                 @media screen and (max-width: 1600px) {
-                    padding-bottom: 255px !important;
+                    height: 570px;
                 }
 
                 @media screen and (max-width: 1470px) {
-                    padding-bottom: 185px !important;
+                    height: 500px;
                 }
 
                 @media screen and (max-width: 768px) {
-                    padding-bottom: 175px !important;
+                    height: 360px;
                 }
 
                 @media screen and (max-width: 570px) {
-                    padding-bottom: 70px !important;
+                    height: 226px;
                 }
             }
         }
@@ -210,13 +214,14 @@
             }
         }
 
+        p,
         h1,
         h2,
         h3,
         h4,
         h5,
         h6 {
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
         }
 
         img {

@@ -122,11 +122,11 @@ $page_link = !empty($page_to_redirect) ? get_permalink($page_to_redirect) : '';
     </p>
 
     <p>
-        <?php // if (is_user_logged_in()) : ?>
-<!--            <button class="mobile-menu__login">--><?php //echo __('LOG OUT', 'wp-rock'); ?><!--</button>-->
-        <?php //else : ?>
-            <button class="mobile-menu__login"><?php echo __('LOG IN', 'wp-rock'); ?></button>
-        <?php //endif; ?>
+        <?php if (isset($login_link['url']) && isset($login_link['title'])) : ?>
+            <a href="<?php echo $login_link['url']; ?>" class="mobile-menu__login">
+                <?php echo $login_link['title']; ?>
+            </a>
+        <?php endif; ?>
     </p>
 
 </div>

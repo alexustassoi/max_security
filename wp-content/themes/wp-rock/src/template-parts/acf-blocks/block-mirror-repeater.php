@@ -16,9 +16,10 @@ $space_bottom_type = $block_pb ? get_field_value($fields, 'space_bottom_type') :
 $colors_select     = get_field_value($fields, 'colors_select');
 $mirror_items      = get_field_value($fields, 'mirror_items');
 
-$bg_color    = get_field_value($fields, 'bg_color');
-$popup_title = get_field_value($fields, 'popup_title');
-$popup_logo  = get_field_value($fields, 'popup_logo');
+$bg_color       = get_field_value($fields, 'bg_color');
+$popup_title    = get_field_value($fields, 'popup_title');
+$popup_logo     = get_field_value($fields, 'popup_logo');
+$popup_btn_size = get_field_value($fields, 'popup_btn_size');
 
 $popup_title = !empty($popup_title) ? do_shortcode($popup_title) : __('MAX ACADEMY', 'wp-rock');
 
@@ -174,7 +175,7 @@ if ($hide_block) {
                                 }
 
                                 echo $lets_talk_btn
-                                    ? '<a href="' . do_shortcode($lets_talk_btn["url"]) . '" class="course-popup__curiculum-items-link">' . do_shortcode($lets_talk_btn["title"]) . '</a>'
+                                    ? '<a href="' . do_shortcode($lets_talk_btn["url"]) . '" class="course-popup__curiculum-items-link ' . do_shortcode($popup_btn_size) . '">' . do_shortcode($lets_talk_btn["title"]) . '</a>'
                                     : '';
                                 ?>
                             </div>

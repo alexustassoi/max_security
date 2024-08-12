@@ -28,7 +28,7 @@ const initBlockJourney = () => {
         // @ts-ignore
         courseSwiper = new Swiper(coursePopupSwiper, {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 10,
             autoHeight: true,
             navigation: {
                 nextEl: '.js-next-course-slider-popup',

@@ -66,6 +66,34 @@
             "delay": 0
         },
         {
+            "key": "field_66b9bfdce5a37",
+            "label": "Popup button size",
+            "name": "popup_btn_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default-btn": "Default button",
+                "large-btn": "Large button",
+                "medium-btn": "Medium  button",
+                "small-btn": "Small button"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_660c085abcce9",
             "label": "Mirror items",
             "name": "mirror_items",
@@ -221,5 +249,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720779050
+    "modified": 1723449922
 }
