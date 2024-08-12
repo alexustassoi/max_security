@@ -915,6 +915,21 @@ body {
             line-height: 1.2;
         }
 
+        .course-popup__header {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            .body-type-1-regular,
+            .body-type-2,
+            .body-type-3,
+            .body-type-4 {
+                font-weight: 700;
+            }
+        }
+
         .body-type-1-regular {
             font-size: calc(var(--typo-size-font-body1-d) * 1px);
             font-weight: var(--typo-size-font-body1-w);
@@ -1547,6 +1562,10 @@ ul ul li {
 
         @media screen and (max-width: 480px) {
             margin-bottom: 16px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
 
