@@ -112,4 +112,16 @@ if (!$hide_block) :?>
         </div>
 
     </div>
-<?php endif;
+<?php endif; ?>
+
+<style>
+    @media screen and (max-width: 991px) {
+        .courses__slide-wrap {
+            background-color: unset !important;
+        }
+
+        .courses__slide-inner {
+            background-color: <?php echo $slide_bg_color ?: '#FFF'?>;
+        }
+    }
+</style>

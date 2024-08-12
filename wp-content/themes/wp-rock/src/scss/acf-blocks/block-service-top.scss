@@ -80,26 +80,28 @@
 
         & + .service-top {
             &__custom-container {
-                padding-top: 50px !important;
-                padding-bottom: 50px !important;
-                height: 702px;
+                padding-top: 80px !important;
+                padding-bottom: 80px !important;
+                min-height: 702px;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
+                align-items: flex-start;
 
                 @media screen and (max-width: 1600px) {
-                    height: 570px;
+                    min-height: 570px;
                 }
 
                 @media screen and (max-width: 1470px) {
-                    height: 500px;
+                    min-height: 500px;
                 }
 
                 @media screen and (max-width: 768px) {
-                    height: 360px;
+                    min-height: 360px;
                 }
 
                 @media screen and (max-width: 570px) {
-                    height: 226px;
+                    min-height: 226px;
                 }
             }
         }
