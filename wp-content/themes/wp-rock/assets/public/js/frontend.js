@@ -11533,6 +11533,7 @@ function fadeIn(el, display = 'block') {
 
     domElement.style.opacity = 0;
     domElement.style.display = display || 'block';
+    domElement.scrollTop = 0;
 
     (function fade() {
         let val = parseFloat(domElement.style.opacity);

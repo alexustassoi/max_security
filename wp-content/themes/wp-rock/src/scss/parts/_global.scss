@@ -62,7 +62,9 @@ body {
         box-sizing: border-box;
     }
 
-    &.scroll-header, &.added-scroll-header {
+    &.scroll-header,
+    &.filled-header,
+    &.added-scroll-header {
         #main-wrapper {
             padding-top: 70px;
 
@@ -1647,7 +1649,7 @@ ul ul li {
             p.body-type-3,
             p.body-type-4 {
                 position: relative;
-                display: flex;
+                display: block;
             }
 
             /*p.body-type-1-regular {
