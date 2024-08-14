@@ -42,13 +42,17 @@ $pt_space_class = wp_rock_block_space_class($block_pt, 'block_pt');
 $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
 
-$hide_block        = get_field_value($fields, 'hide_block');
+$hide_block = get_field_value($fields, 'hide_block');
 
 if ($hide_block) {
     return '';
 }
 ?>
-<div class="mirror-repeater <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : ''; echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : ''; echo ' space-top-type-' . do_shortcode($space_top_type) . ' '; echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>" style="background-color: <?php echo $bg_color ? do_shortcode($bg_color) : '#FFF'; ?>;">
+<div class="mirror-repeater <?php echo $pt_space_class ? do_shortcode($pt_space_class) . ' ' : '';
+echo $pb_space_class ? do_shortcode($pb_space_class) . ' ' : '';
+echo ' space-top-type-' . do_shortcode($space_top_type) . ' ';
+echo ' space-bottom-type-' . $space_bottom_type . ' '; ?>"
+     style="background-color: <?php echo $bg_color ? do_shortcode($bg_color) : '#FFF'; ?>;">
     <div class="custom-container mirror-repeater__custom-container">
         <?php
         $courses_query = [
@@ -58,7 +62,7 @@ if ($hide_block) {
         ?>
         <div class="mirror-repeater__container js-mirror-repeater">
             <?php
-            include(locate_template('/template-courses-item.php', false, false, $courses_query));
+            include(locate_template('template-courses-item.php', false, false, $courses_query));
             ?>
         </div>
     </div>
@@ -79,7 +83,7 @@ if ($hide_block) {
                         ?>
                         <span class="line"></span>
 
-                        <?php if ( $popup_title ) { ?>
+                        <?php if ($popup_title) { ?>
                             <div class="name">
                                 <?php echo $popup_title; ?>
                             </div>

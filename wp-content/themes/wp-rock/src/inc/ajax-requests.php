@@ -142,7 +142,7 @@ function load_more_courses_post() {
 
         // Buffer the output of the template.
         ob_start();
-        include( locate_template( '/template-courses-item.php', false, false, $courses_query) );
+        include( locate_template( 'template-courses-item.php', false, false, $courses_query) );
 
         // Send JSON response with posts and count.
         wp_send_json_success(

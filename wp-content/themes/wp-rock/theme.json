@@ -5,34 +5,7 @@
         "useRootPaddingAwareAlignments": true,
         "appearanceTools": true,
         "color": {
-            "defaultPalette": false,
-            /*"palette": [
-                {
-                    "name": "White",
-                    "color": "#FFFFFF",
-                    "slug": "white"
-                },
-                {
-                    "name": "Family office services",
-                    "color": "#685b4c",
-                    "slug": "family-office-services"
-                },
-                {
-                    "name": "Intelligence",
-                    "color": "#5a7153",
-                    "slug": "intelligence"
-                },
-                {
-                    "name": "Max academy",
-                    "color": "#7e97a6",
-                    "slug": "max-academy"
-                },
-                {
-                    "name": "Protection",
-                    "color": "#445c5a",
-                    "slug": "protection"
-                }
-            ]*/
+            "defaultPalette": false
         },
         "spacing": {
             "units": [
