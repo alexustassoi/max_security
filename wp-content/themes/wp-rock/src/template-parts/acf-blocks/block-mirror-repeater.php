@@ -44,7 +44,7 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 
 $hide_block = get_field_value($fields, 'hide_block');
 
-if ($hide_block) {
+if ($hide_block || !$mirror_items) {
     return '';
 }
 ?>
