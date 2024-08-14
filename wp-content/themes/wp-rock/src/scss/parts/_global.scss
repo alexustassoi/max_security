@@ -12,7 +12,6 @@ body {
     background-color: #f5f5f5;
     font-family: Turbine, sans-serif;
 
-
     p {
         margin-bottom: 0.875rem;
     }
@@ -311,6 +310,11 @@ body {
         }
 
         .wp-block-column {
+
+            & +  .wp-block-column {
+                margin-bottom: 24px;
+            }
+
             p,
             img {
                 //@media screen and (max-width: 768px) {
@@ -330,6 +334,14 @@ body {
                 @media screen and (max-width: 480px) {
                     height: 195px;
                     object-fit: cover;
+                }
+            }
+
+            .custom-content__content {
+                img {
+                    @media screen and (max-width: 480px) {
+                        object-fit: contain;
+                    }
                 }
             }
         }

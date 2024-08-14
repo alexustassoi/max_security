@@ -134,12 +134,14 @@ function ready() {
     window.document.addEventListener('scroll', () => {
         const operationType = header && Math.floor(window.scrollY) > 20 ? 'add' : 'remove';
         header.classList[operationType]('scroll-header');
+        document.body.classList[operationType]('scroll-header');
     });
 
     {
         // Detect Initial scroll of page
         const operationType = header && Math.floor(window.scrollY) > 20 ? 'add' : 'remove';
         header.classList[operationType]('scroll-header');
+        document.body.classList[operationType]('scroll-header');
 
         // if (document.body.classList.contains('single-resources') || document.body.querySelector('.browse-topic')) {
         //     const siteHeader = document.querySelector('.js-site-header');

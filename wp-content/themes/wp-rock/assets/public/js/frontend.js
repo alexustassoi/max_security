@@ -12102,10 +12102,12 @@ function ready() {
   window.document.addEventListener('scroll', function () {
     var operationType = header && Math.floor(window.scrollY) > 20 ? 'add' : 'remove';
     header.classList[operationType]('scroll-header');
+    document.body.classList[operationType]('scroll-header');
   });
   {
     var operationType = header && Math.floor(window.scrollY) > 20 ? 'add' : 'remove';
     header.classList[operationType]('scroll-header');
+    document.body.classList[operationType]('scroll-header');
   }
   document.body.addEventListener('click', function (e) {
     var target = e.target;

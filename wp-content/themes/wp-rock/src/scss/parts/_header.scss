@@ -48,11 +48,21 @@
                 justify-content: space-between;
             }
 
-            .services__item {
-                transition: all 0.3s;
+            .services {
+                &__item {
+                    transition: all 0.3s;
 
-                &:hover {
-                    box-shadow: 0px 0px 34px 0px #aa6902;
+                    &:hover {
+                        box-shadow: 0px 0px 34px 0px #aa6902;
+                    }
+                }
+
+                &__item-button {
+
+                    &:before {
+                        background: #EDEAE5;
+                        border-radius: 100% 100% 0 0;
+                    }
                 }
             }
         }
