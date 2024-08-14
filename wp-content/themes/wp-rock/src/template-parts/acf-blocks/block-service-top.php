@@ -27,7 +27,7 @@ $pb_space_class = wp_rock_block_space_class($block_pb, 'block_pb');
 if (!$hide_block) :
     ?>
 
-    <div class="service-top js-top-block <?php echo $banner_is_small ? 'banner-small ' : '';
+    <div id="service-top" class="service-top js-top-block <?php echo $banner_is_small ? 'banner-small ' : '';
     echo (!$icon) ? 'icon-is-missing' : '';
     echo esc_html($class_name); ?>" id="<?php echo $args['id']; ?>"
          style="background-image: url(<?php echo !$banner_is_video ? $background_image : 'none'; ?>)">

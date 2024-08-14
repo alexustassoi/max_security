@@ -506,7 +506,7 @@ class WP_Rock {
      */
     private function px_no_link_current_page() {
         // Remove cycling links from menu.
-        add_filter( 'wp_nav_menu', array( $this, 'remove_cycling' ) );
+        // add_filter( 'wp_nav_menu', array( $this, 'remove_cycling' ) );
         add_filter( 'wp_list_categories', array( $this, 'remove_cycling' ) );
     }
 }
