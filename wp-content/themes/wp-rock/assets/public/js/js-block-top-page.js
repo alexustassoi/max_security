@@ -495,7 +495,6 @@
 /******/ 	}();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 !function() {
 "use strict";
@@ -11926,6 +11925,7 @@ var initBlockExample = function initBlockExample() {
       keyboard: false,
       grabCursor: false,
       noSwiping: true,
+      allowTouchMove: false,
       loopedSlides: 8,
       freeMode: {
         enabled: true,

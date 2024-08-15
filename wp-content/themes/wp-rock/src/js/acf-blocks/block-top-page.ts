@@ -47,6 +47,7 @@ const initBlockExample = () => {
             // allowSlidePrev: false,
             // allowSlideNext: false,
             noSwiping: true,
+            allowTouchMove: false,
             loopedSlides: 8,
             freeMode: {
                 enabled: true,
