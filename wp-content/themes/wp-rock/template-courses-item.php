@@ -16,8 +16,14 @@ if ($mirror_items || $key) {
         $title                = get_field_value($item, 'title');
         $description          = get_field_value($item, 'description');
         $btn_name             = get_field_value($item, 'btn_name');
+
+        $add_class = '';
+
+        if ( empty($image) && empty($title) && empty($description) ) {
+            $add_class = 'empty';
+        }
         ?>
-        <div class="mirror-repeater__item js-mirror-item">
+        <div class="mirror-repeater__item js-mirror-item <?php echo $add_class; ?>">
             <?php
             if (!empty($image)) {
                 echo '<figure class="mirror-repeater__item-image"><img src="' . $image . '" alt="image"></figure>';

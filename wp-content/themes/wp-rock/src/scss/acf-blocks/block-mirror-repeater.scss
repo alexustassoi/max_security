@@ -6,6 +6,20 @@
         padding: 32px 0;
     }
 
+    &__custom-container {
+        padding-bottom: 40px !important;
+
+        @media screen and (max-width: 1199px) {
+            padding-bottom: 35px !important;
+        }
+        @media screen and (max-width: 850px) {
+            padding-bottom: 24px !important;
+        }
+        @media screen and (max-width: 480px) {
+            padding-bottom: 32px !important;
+        }
+    }
+
     &__top-description {
         color: #f3f0ec;
         font-size: 30px;
@@ -41,6 +55,10 @@
     &__item {
         display: flex;
         gap: 42px;
+
+        &.empty {
+            display: none;
+        }
 
         @media screen and (max-width: 992px) {
             flex-direction: column;
@@ -109,7 +127,7 @@
 
         @media screen and (max-width: 992px) {
             font-size: 26px;
-            color: #f3f0ec;
+           // color: #f3f0ec;
         }
 
         @media screen and (max-width: 768px) {

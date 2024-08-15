@@ -42,8 +42,11 @@ const initBlockExample = () => {
             loop: true,
             slidesPerView: 'auto',
             modules: [Autoplay],
-
-            grabCursor: true,
+            keyboard: false,
+            grabCursor: false,
+            // allowSlidePrev: false,
+            // allowSlideNext: false,
+            noSwiping: true,
             loopedSlides: 8,
             freeMode: {
                 enabled: true,
