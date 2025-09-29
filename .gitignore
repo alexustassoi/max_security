@@ -38,3 +38,5 @@ vendor/
 /wp-content/deployment-folder/
 /wp-content/themes/wp-rock/assets/public/css/*.css.map
 /wp-content/themes/wp-rock/assets/public/js/*.js.map
+.DS_Store
+.github/workflows/
